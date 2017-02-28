@@ -1,0 +1,27 @@
+Zoo.h - NYO
+class Zoo
+
+Renderable.h - RIK
+
+Animal.h (Land Fly Water) - RIK
+class animal, land fly water
+
+Cell.h - VER
+class Cell Facility Habitat dll
+
+Diet.h - WIL
+class (Carnv, Herb, Omni)
+
+Taxonomy.h - WIL
+class Aves Reptile Amfibi Mammals dll
+
+Species.h
+land : gajah, jerapah, singa, harimau, orangutan, gory, komodo, bear
+water : paus, lumba2, nemo, dory, piranha, kuda laut, ms puff
+air : elang, cendrawasih, hantu, kelelawar, macau, kakatua
+
+land + air : mega aerodactyl
+land + water : kodok, aligator, hippoe, turtle
+water + air : bikin spesies sendiri
+
+Cage.h TBD
