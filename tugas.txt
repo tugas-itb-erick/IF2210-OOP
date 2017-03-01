@@ -2,11 +2,12 @@ Zoo.h - NYO
 class Zoo
 
 Renderable.h - RIK
+class Renderable, Cell, Cage
 
 Animal.h (Land Fly Water) - RIK
 class animal, land fly water
 
-Cell.h - VER
+Facility.h, Habitat.h - VER
 class Cell Facility Habitat dll
 
 Diet.h - WIL
