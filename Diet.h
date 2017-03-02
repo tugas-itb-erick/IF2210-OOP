@@ -44,7 +44,7 @@ public:
 	
 	/** @brief Destructor.
     */
-	~Carnivore(); 
+	~Herbivore(); 
 	
 	/** @brief Operator=.
 	  * Menjamin bukan bitwise copy.
