@@ -8,7 +8,24 @@
   */
 class Carnivore {
 public:
-  
+	/** @brief Constructor
+	*/
+	Carnivore();
+	
+	/** @brief Copy Constructor
+	* @param Carnivore C yang diacu cctor
+	*/
+	Carnivore(const Carnivore& C);
+	
+	/** @brief Destructor.
+    */
+	~Carnivore(); 
+	
+	/** @brief Operator=.
+	  * Menjamin bukan bitwise copy.
+	  * @param C Carnivore berisi data untuk diassign
+	  */
+	Carnivore& operator= (const Carnivore& C);
 };
 
 /** @class Herbivore
@@ -16,6 +33,24 @@ public:
   */
 class Herbivore{
 public:  
+	/** @brief Constructor
+	*/
+	Herbivore();
+	
+	/** @brief Copy Constructor
+	* @param Herbivore H yang diacu cctor
+	*/
+	Herbivore(const Herbivore& H);
+	
+	/** @brief Destructor.
+    */
+	~Carnivore(); 
+	
+	/** @brief Operator=.
+	  * Menjamin bukan bitwise copy.
+	  * @param Herbivore H berisi data untuk diassign
+	  */
+	Herbivore& operator= (const Herbivore& H);
 };
 
 /** @class Omnivore
@@ -23,4 +58,22 @@ public:
   */
 class Omnivore{
 public:
+/** @brief Constructor
+	*/
+	Omnivore();
+	
+	/** @brief Copy Constructor
+	* @param Omnivore O yang diacu cctor
+	*/
+	Omnivore(const Omnivore& O);
+	
+	/** @brief Destructor.
+    */
+	~Omnivore(); 
+	
+	/** @brief Operator=.
+	  * Menjamin bukan bitwise copy.
+	  * @param Omnivore O berisi data untuk diassign
+	  */
+	Omnivore& operator= (const Omnivore& H);
 };
