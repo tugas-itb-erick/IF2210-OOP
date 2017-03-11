@@ -36,7 +36,7 @@ Zoo::Zoo(const Zoo& Z){
   for(int i=0; i<row; i++){
     c[i] = new Cell*[col];
     for(int j=0; j<col; j++){
-      // c[i][j] = NULL;
+      c[i][j] = Z.c[i][j]->clone();
     }
   }
 }
@@ -65,14 +65,17 @@ Zoo& Zoo::operator=(const Zoo& Z){
     // assign
     row = Z.row;
     col = Z.col;
+
     c = new Cell**[row];
     for(int i=0; i<row; i++){
       c[i] = new Cell*[col];
       for(int j=0; j<col; j++){
-        // c[i][j] = NULL;
+        c[i][j] = Z.c[i][j]->clone();
       }
     }
   }
+
+  return *this;
 }
 
 istream& operator>>(istream& in, Zoo& Z){
@@ -86,9 +89,9 @@ istream& operator>>(istream& in, Zoo& Z){
     for(int j=0; j<c; j++){
       in >> k;
       switch (k){
-        case '#' : input[i][j] = new WaterHabitat(); break;
-        case 'O' : input[i][j] = new AirHabitat(); break;
-        case 'X' : input[i][j] = new LandHabitat(); break;
+        case '#' : input[i][j] = new Park(); break;
+        case 'O' : input[i][j] = new Park(); break;
+        case 'X' : input[i][j] = new Park(); break;
         case '*' : input[i][j] = new Park(); break;
         case 'R' : input[i][j] = new Restaurant(); break;
         case '-' : input[i][j] = new Road(); break;
@@ -106,7 +109,9 @@ ostream& operator<<(ostream& os, const Zoo& Z){
   for(int i=0; i<Z.row; i++){
     for(int j=0; j<Z.col; j++){
       Z.c[i][j]->render();
+      os << " ";
     }
+    os << endl;
   }
   return os;
 }

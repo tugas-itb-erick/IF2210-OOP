@@ -6,7 +6,7 @@
 #include <iostream>
 #include "Renderable.h"
 #include "Facility.h"
-#include "Habitat.h"
+// #include "Habitat.h"
 using namespace std;
 
 /** @class Zoo
@@ -38,7 +38,7 @@ public:
 	  */
 	Zoo& operator=(const Zoo& Z);
 
-	friend istream& operator>>(istream& in, const Zoo& Z);
+	friend istream& operator>>(istream& in, Zoo& Z);
 	friend ostream& operator<<(ostream& os, const Zoo& Z);
 
 
@@ -65,6 +65,6 @@ private:
 	Cell ** *c;  	                  /* matriks of pointer to cell */
 	int row; 				                /* ukuran baris */
 	int col; 				                /* ukuran kolom */
-	static const int defRow = 10; 	/* default baris = 10 */
-	static const int defCol = 10; 	/* default kolom = 10*/
+	static const int defRow = 50; 	/* default baris = 10 */
+	static const int defCol = 50; 	/* default kolom = 10*/
 };

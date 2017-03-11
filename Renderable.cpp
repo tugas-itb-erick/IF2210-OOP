@@ -6,3 +6,7 @@
 void Cage::render(){
 
 }
+
+istream& operator>>(){
+
+}

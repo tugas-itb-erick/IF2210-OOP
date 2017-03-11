@@ -8,20 +8,20 @@
 class Habitat : public Cell {
 public:
 	/** @brief Constructor.
-     * Menciptakan Habitat kosong. 
+     * Menciptakan Habitat kosong.
      */
 	Habitat();
-	
+
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari Habitat.
      * @param H Habitat yang ingin disalin.
      */
 	Habitat(const Habitat&);
-	
+
 	/** @brief Destructor.
     */
 	virtual ~Habitat();
-	
+
 	/** @brief Operator=.
      * Menginisialisasi Habitat tanpa terjadi bitwise copy
      * @return Habitat yang sudah di assign nilai dari current object
@@ -34,20 +34,20 @@ public:
 class LandHabitat : public Habitat {
 public:
 	/** @brief Constructor.
-     * Menciptakan LandHabitat kosong. 
+     * Menciptakan LandHabitat kosong.
      */
 	LandHabitat();
-	
+
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari LandHabitat.
      * @param L LandHabitat yang ingin disalin.
      */
 	LandHabitat(const LandHabitat&);
-	
+
 	/** @brief Destructor.
     */
 	virtual ~LandHabitat();
-	
+
 	/** @brief Operator=.
      * Menginisialisasi LandHabitat tanpa terjadi bitwise copy
      * @return LandHabitat yang sudah di assign nilai dari current object
@@ -60,20 +60,20 @@ public:
 class WaterHabitat : public Habitat {
 public:
 	/** @brief Constructor.
-     * Menciptakan WaterHabitat kosong. 
+     * Menciptakan WaterHabitat kosong.
      */
 	WaterHabitat();
-	
+
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari WaterHabitat.
      * @param W WaterHabitat yang ingin disalin.
      */
 	WaterHabitat(const WaterHabitat&);
-	
+
 	/** @brief Destructor.
     */
 	virtual ~WaterHabitat();
-	
+
 	/** @brief Operator=.
      * Menginisialisasi WaterHabitat tanpa terjadi bitwise copy
      * @return WaterHabitat yang sudah di assign nilai dari current object
@@ -86,20 +86,20 @@ public:
 class AirHabitat : public Habitat {
 public:
 	/** @brief Constructor.
-     * Menciptakan AirHabitat kosong. 
+     * Menciptakan AirHabitat kosong.
      */
 	AirHabitat();
-	
+
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari AirHabitat.
      * @param A AirHabitat yang ingin disalin.
      */
 	AirHabitat(const AirHabitat&);
-	
+
 	/** @brief Destructor.
     */
 	virtual ~AirHabitat();
-	
+
 	/** @brief Operator=.
      * Menginisialisasi AirHabitat tanpa terjadi bitwise copy
      * @return AirHabitat yang sudah di assign nilai dari current object
