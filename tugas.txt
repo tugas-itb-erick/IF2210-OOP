@@ -17,12 +17,10 @@ Taxonomy.h - WIL
 class Aves Reptile Amfibi Mammals dll
 
 Species.h
-land : gajah, jerapah, singa, harimau, orangutan, gory, komodo, bear
-water : paus, lumba2, nemo, dory, piranha, kuda laut, ms puff
-air : elang, cendrawasih, hantu, kelelawar, macau, kakatua
-
-land + air : mega aerodactyl
-land + water : kodok, aligator, hippoe, turtle
-water + air : bikin spesies sendiri
-
+land 		: elephant, giraffe, lion, tiger, orangutan, chimpanzee, komodo, bear
+water 		: Whale, Dolphin, ClownFish, BlueTang, Piranha, PuffFish
+air			: Eagle, Cendrawasih, Owl, Bat, Macau, Cockatoo
+land + air 	: 
+land + water : frog, alligator, hippopotamus, turtle
+water + air :
 Cage.h TBD
