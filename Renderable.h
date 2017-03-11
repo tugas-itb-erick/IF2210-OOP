@@ -19,7 +19,7 @@ public:
   virtual void render();
 
 };
-
+/*
 class Cage : public Renderable {
 public:
   virtual void render();
@@ -28,4 +28,4 @@ private:
   Habitat * *h;
   Animal * *a;
 
-};
+};*/
