@@ -12,6 +12,8 @@ public:
     * Adalah pure virtual function, diimplementasikan pada kelas anaknya.
     */
   virtual void render() = 0;
+protected:
+  enum color {RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};
 };
 
 class Cell : public Renderable {

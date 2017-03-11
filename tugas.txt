@@ -1,26 +1,35 @@
-Zoo.h - NYO
-class Zoo
+TO DO
 
-Renderable.h - RIK
-class Renderable, Cell, Cage
+1. Kelas Taxonomy
 
-Animal.h (Land Fly Water) - RIK
-class animal, land fly water
+class Taxonomy (abstract) {
+public: getter, sekawan
+private:
+const char blood {'h','c'}
+const int heartChamber {2,3,4}
+const alat pernapasan {paru, insang}
+}
 
-Facility.h, Habitat.h - VER
-class Cell Facility Habitat dll
+class Pisces {
+public: sekawan panggil sekawan dr parent
+tapi pas di sekawan didefisiin blood heart dll sesuai kelasnya
+private: gaada
+}
 
-Diet.h - WIL
-class (Carnv, Herb, Omni)
+---------------------------------------------------------------
 
-Taxonomy.h - WIL
-class Aves Reptile Amfibi Mammals dll
+2. Fasilitas dn Habitat
+KOSONG
 
-Species.h
-land 		: elephant, giraffe, lion, tiger, orangutan, chimpanzee, komodo, bear
-water 		: Whale, Dolphin, ClownFish, BlueTang, Piranha, PuffFish
-air			: Eagle, Cendrawasih, Owl, Bat, Macau, Cockatoo
-land + air 	: 
-land + water : frog, alligator, hippopotamus, turtle
-water + air :
-Cage.h TBD
+3. Land Water Air ANIMAL
+KOSONG
+
+4. Driver
+masih hrs menunggu zoo dn renderable
+
+----------------------------------------------------------------
+
+Direktori (coming really soon)
+/ : main location
+/Taxonomy : isinya taxonomy.h mamalia.h dll.h
+/Diet : isinya Carnivore.h, Herbivore.h
