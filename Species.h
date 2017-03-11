@@ -1,5 +1,8 @@
 /* NIM/Nama  : 13515144 / William 	*/
 /* File      : Species.h            */
+#include "Diet.h"
+#include "Animal.h"
+#include "Taxonomy.h"
 
 #pragma once
 
@@ -16,7 +19,7 @@ public:
 	void render();
 };
 
-class Girrafe : public Herbivore, public LandAnimal, public Mammalia {
+class Giraffe : public Herbivore, public LandAnimal, public Mammalia {
 public:	
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
