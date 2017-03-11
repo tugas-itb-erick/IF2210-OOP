@@ -25,8 +25,7 @@ public:
   virtual void render();
 
 private:
-  int * x;
-  int * y;
+  Habitat * *h;
   Animal * *a;
 
 };

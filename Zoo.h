@@ -29,6 +29,7 @@ public:
 	  */
 	Zoo& operator=(const Zoo& Z);
 
+	friend ostream& operator>>(ostream& os, const Zoo& Z);
 
 private:
 	Cell ** *c;  	          /* matriks of pointer to cell */
