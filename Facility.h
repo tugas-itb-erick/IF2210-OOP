@@ -27,6 +27,7 @@ public:
      * @return Facility yang sudah di assign nilai dari current object
      */
 	Facility& operator=(const Facility&);
+
 };
 
 class Park : public Facility {
@@ -51,11 +52,13 @@ public:
      * @return Park yang sudah di assign nilai dari current object
      */
 	Park& operator=(const Park&);
-	
+
 	/** @brief render.
      *  Mencetak karakter sesuai representasi kelas Park
      */
 	void render();
+
+	virtual Park* clone() const;
 
 };
 
@@ -81,11 +84,13 @@ public:
      * @return Restaurant yang sudah di assign nilai dari current object
      */
 	Restaurant& operator=(const Restaurant&);
-	
+
 	/** @brief render.
      *  Mencetak karakter sesuai representasi kelas Restoran
      */
 	void render();
+
+	virtual Restaurant* clone() const;
 
 };
 
@@ -111,12 +116,13 @@ public:
      * @return Road yang sudah di assign nilai dari current object
      */
 	Road& operator=(const Road&);
-	
+
 	/** @brief render.
      *  Mencetak karakter sesuai representasi kelas Road
      */
 	void render();
 
+	virtual Road* clone() const;
 };
 
 class Entrance : public Road {
@@ -141,12 +147,13 @@ public:
      * @return Entrance yang sudah di assign nilai dari current object
      */
 	Entrance& operator=(const Entrance&);
-	
+
 	/** @brief render.
      *  Mencetak karakter sesuai representasi kelas Entrance
      */
 	void render();
 
+	virtual Entrance* clone() const;
 };
 
 class Exit : public Road {
@@ -171,10 +178,12 @@ public:
      * @return Exit yang sudah di assign nilai dari current object
      */
 	Exit& operator=(const Exit&);
-	
+
 	/** @brief render.
      *  Mencetak karakter sesuai representasi kelas Exit
      */
 	void render();
+
+	virtual Exit* clone() const;
 
 };

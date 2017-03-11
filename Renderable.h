@@ -16,13 +16,16 @@ public:
 
 class Cell : public Renderable {
 public:
-  virtual void render();
-
+  //virtual void render();
+  virtual Cell* clone() const = 0;
 };
 /*
 class Cage : public Renderable {
 public:
+  Cage();
   virtual void render();
+  friend istream& operator>>();
+  friend ostream& operator<<();
 
 private:
   Habitat * *h;

@@ -7,9 +7,15 @@
 using namespace std;
 
 int main(){
-  ifstream fin("zoo.txt");
-  Zoo a;
+  ifstream fin;
+  Zoo a(3,3);
 
+  fin.open("zoo.txt");
+  fin >> a;
+  cout << a;
+
+
+  fin.close();
 
   return 0;
 }

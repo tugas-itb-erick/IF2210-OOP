@@ -1,10 +1,10 @@
 /* NIM/Nama  : 13515AAA / AAA AAA   */
 /* File      : AAA.h                */
 
-#pragma once
-
+#include <iostream>
 #include "Renderable.h"
-
+#include "Facility.h"
+using namespace std;
 
 	/***** FACILITY *****/
 	Facility::Facility()
@@ -13,19 +13,18 @@
 	Facility::Facility(const Facility&)
 	{}
 
-	virtual Facility::~Facility()
+	Facility::~Facility()
 	{}
 
 	Facility& Facility::operator=(const Facility&)
 	{}
-	
 
 	/***** PARK *****/
 	Park::Park()
 	{}
 	Park::Park(const Park&)
 	{}
-	virtual Park::~Park()
+	Park::~Park()
 	{}
 	Park& Park::operator=(const Park&)
 	{}
@@ -33,13 +32,16 @@
 	{
 		cout << "*";
 	}
-	
+	Park* Park::clone() const {
+  	return new Park(*this);
+	}
+
 	/***** RESTAURANT *****/
 	Restaurant::Restaurant()
 	{}
 	Restaurant::Restaurant(const Restaurant&)
 	{}
-	virtual Restaurant::~Restaurant()
+	Restaurant::~Restaurant()
 	{}
 	Restaurant& Restaurant::operator=(const Restaurant&)
 	{}
@@ -47,56 +49,67 @@
 	{
 		cout << "R";
 	}
+	Restaurant* Restaurant::clone() const {
+  	return new Restaurant(*this);
+	}
 
 	/***** ROAD *****/
 	Road::Road()
 	{}
 	Road::Road(const Road&)
 	{}
-	virtual Road::~Road()
+	Road::~Road()
 	{}
 	Road& Road::operator=(const Road&)
 	{}
-	
+
 	void Road::render()
 	{
 		cout << "-";
 	}
-	
-	
+	Road* Road::clone() const {
+  	return new Road(*this);
+	}
+
 	/***** ENTRANCE *****/
-	Entrance()
+	Entrance::Entrance()
 	{}
 
-	Entrance(const Entrance&)
+	Entrance::Entrance(const Entrance&)
 	{}
 
-	virtual ~Entrance()
+	Entrance::~Entrance()
 	{}
 
-	Entrance& operator=(const Entrance&)
+	Entrance& Entrance::operator=(const Entrance&)
 	{}
 
-	
+
 	void Entrance::render()
 	{
 		cout << "i";
 	}
-	
+	Entrance* Entrance::clone() const {
+  	return new Entrance(*this);
+	}
+
 	/***** EXIT *****/
 	Exit::Exit()
 	{}
-	
+
 	Exit::Exit(const Exit&)
 	{}
 
-	virtual Exit::~Exit()
+	Exit::~Exit()
 	{}
 
 	Exit& Exit::operator=(const Exit&)
 	{}
-	
+
 	void Exit::render()
 	{
 		cout << "o";
+	}
+	Exit* Exit::clone() const {
+  	return new Exit(*this);
 	}
