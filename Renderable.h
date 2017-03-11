@@ -3,8 +3,14 @@
 
 #pragma once
 
+/** @class Renderable
+  * Kelas abstrak yang memiliki metode render untuk mencetak karakter.
+  */
 class Renderable {
 public:
+  /** @brief Mencetak karakter sesuai dengan kelas yang memanggil fungsi ini.
+    * Adalah pure virtual function, diimplementasikan pada kelas anaknya.
+    */
   virtual void render() = 0;
 };
 
@@ -14,8 +20,13 @@ public:
 
 };
 
-class Cage : public Renderable { // TBD
+class Cage : public Renderable {
 public:
   virtual void render();
+
+private:
+  int * x;
+  int * y;
+  Animal * *a;
 
 };
