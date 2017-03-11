@@ -3,13 +3,24 @@
 
 #pragma once
 
-enum Sex {male, female}
+#include <iostream>
+#include "Renderable.h"
 
-class Animal {
+using namespace std;
+enum Sex {male, female};
+
+class Animal : public Renderable{
 public:
 	/** @brief Constructor
 	*/
 	Animal();
+	
+	/** @brief Constructor
+	* @param _name nama binatang
+	* @param _weight berat binatang
+	* @param _s jenis kelamin
+	*/
+	Animal(string _name, double _weight, Sex _s);
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.
 	*/
@@ -27,9 +38,11 @@ public:
 	  * Menampilkan experience yang dialami pengguna dengan hewan.
 	  */
 	virtual void interact() = 0;
-
+	
 protected:
 	string name;
+	double weight;
+	Sex s;
 };
 
 class LandAnimal : public Animal {

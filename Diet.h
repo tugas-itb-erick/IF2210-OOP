@@ -17,15 +17,15 @@ public:
 	*/
 	Carnivore(const Carnivore& C);
 	
-	/** @brief Destructor.
-    */
-	~Carnivore(); 
-	
 	/** @brief Operator=.
 	  * Menjamin bukan bitwise copy.
 	  * @param C Carnivore berisi data untuk diassign
 	  */
 	Carnivore& operator= (const Carnivore& C);
+	
+protected:
+	double meatRatio;
+	const double vegRatio;
 };
 
 /** @class Herbivore
@@ -51,6 +51,10 @@ public:
 	  * @param Herbivore H berisi data untuk diassign
 	  */
 	Herbivore& operator= (const Herbivore& H);
+	
+protected:
+	const double meatRatio;
+	double vegRatio;
 };
 
 /** @class Omnivore
@@ -76,4 +80,8 @@ public:
 	  * @param Omnivore O berisi data untuk diassign
 	  */
 	Omnivore& operator= (const Omnivore& H);
+
+protected:
+	double meatRatio;
+	double vegRatio;
 };
