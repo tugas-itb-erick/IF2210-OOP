@@ -3,42 +3,88 @@
 
 #pragma once
 
+enum Sex {male, female}
+
 class Animal {
 public:
-  Animal();
-  Animal(const Animal&);
-  virtual ~Animal();
-  Animal& operator=(const Animal&);
-
-  virtual void interact() = 0;
+	/** @brief Constructor
+	*/
+	Animal();
+	/** @brief Copy Constructor
+	* @param Animal A yang ingin disalin.
+	*/
+	Animal(const Animal&);
+	/** @brief Destructor.
+    */
+	virtual ~Animal();
+	/** @brief Operator=
+	  * Menjamin bukan bitwise copy.
+	  * @return Animal yang sudah di assign nilai dari current object.
+	  */
+	Animal& operator=(const Animal&);
+	
+	/** @brief Interact
+	  * Menampilkan experience yang dialami pengguna dengan hewan.
+	  */
+	virtual void interact() = 0;
 
 protected:
-  string name;
+	string name;
 };
 
 class LandAnimal : public Animal {
 public:
-  LandAnimal();
-  LandAnimal(const Animal&);
-  virtual ~LandAnimal();
-  LandAnimal& operator=(const LandAnimal&);
-
+	/** @brief Constructor
+	*/
+	LandAnimal();
+	/** @brief Copy Constructor
+	* @param Animal A yang ingin disalin.
+	*/
+	LandAnimal(const Animal&);
+	/** @brief Destructor.
+    */
+	virtual ~LandAnimal();
+	/** @brief Operator=
+	  * Menjamin bukan bitwise copy.
+	  * @return Animal yang sudah di assign nilai dari current object.
+	  */
+	LandAnimal& operator=(const LandAnimal&);
 };
 
 class WaterAnimal : public Animal {
 public:
-  WaterAnimal();
-  WaterAnimal(const Animal&);
-  virtual ~WaterAnimal();
-  WaterAnimal& operator=(const WaterAnimal&);
-
+	/** @brief Constructor
+	*/
+	WaterAnimal();
+	/** @brief Copy Constructor
+	* @param WaterAnimal A yang ingin disalin.
+	*/
+	WaterAnimal(const Animal&);
+	/** @brief Destructor.
+    */
+	virtual ~WaterAnimal();
+	/** @brief Operator=
+	  * Menjamin bukan bitwise copy.
+	  * @return WaterAnimal yang sudah di assign nilai dari current object.
+	  */
+	WaterAnimal& operator=(const WaterAnimal&);
 };
 
 class FlyingAnimal : public Animal {
 public:
-  FlyingAnimal();
-  FlyingAnimal(const Animal&);
-  virtual ~FlyingAnimal();
-  FlyingAnimal& operator=(const FlyingAnimal&);
-
+	/** @brief Constructor
+	*/
+	FlyingAnimal();
+	/** @brief Copy Constructor
+	* @param Animal A yang ingin disalin.
+	*/
+	FlyingAnimal(const Animal&);
+	/** @brief Destructor.
+    */
+	virtual ~FlyingAnimal();
+	/** @brief Operator=
+	  * Menjamin bukan bitwise copy.
+	  * @return Animal yang sudah di assign nilai dari current object.
+	  */
+	FlyingAnimal& operator=(const FlyingAnimal&);
 };
