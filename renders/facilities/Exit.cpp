@@ -9,7 +9,7 @@ using namespace std;
 Exit::Exit() : Road('o', WHITE)
 {}
 
-Exit::Exit(const Exit& E) : Facility(E)
+Exit::Exit(const Exit& E) : Road(E)
 {}
 
 Exit::~Exit()

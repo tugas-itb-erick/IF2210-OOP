@@ -9,7 +9,7 @@ using namespace std;
 Entrance::Entrance() : Road('i', WHITE)
 {}
 
-Entrance::Entrance(const Entrance& E) : Facility(E)
+Entrance::Entrance(const Entrance& E) : Road(E)
 {}
 
 Entrance::~Entrance()

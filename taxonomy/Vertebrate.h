@@ -17,12 +17,12 @@ public:
 	* Mengembalikan temperatur tubuh hewan (hot/cold)
 	* @return temperatur tubuh hewan {'h','c'}
 	*/
-	virtual char getBloodTemp() const = 0;
+	virtual char getBloodTemp() const;
 	/** @brief getHeartChamber()
 	* Mengembalikan ruang jantung hewan
 	* @return ruang jantung hewan {2,3,4}
 	*/
-	virtual int getHeartChamber() const = 0;
+	virtual int getHeartChamber() const;
 
 protected:
 	const char bloodTemp; // {'h','c'}

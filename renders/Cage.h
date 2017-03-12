@@ -3,7 +3,9 @@
 
 #pragma once
 
-#include "Renderable.h"
+#include <iostream>
+#include "renders.h"
+using namespace std;
 
 class Cage : public Renderable {
 public:
