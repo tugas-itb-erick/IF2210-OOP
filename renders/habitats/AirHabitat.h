@@ -23,10 +23,16 @@ public:
 	/** @brief Destructor.
     */
 	virtual ~AirHabitat();
-
+	
 	/** @brief Operator=.
      * Menginisialisasi AirHabitat tanpa terjadi bitwise copy
      * @return AirHabitat yang sudah di assign nilai dari current object
      */
 	AirHabitat& operator=(const AirHabitat&);
+	
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
+     */
+	virtual AirHabitat* clone() const;
 };
