@@ -9,14 +9,20 @@ Habitat::Habitat()
 {
 }
 
-Habitat::Habitat(const Habitat&)
+Habitat::Habitat(char _id, Color _color) : Renderable(_id,_color)
 {
 }
 
-virtual Habitat::~Habitat()
+Habitat::Habitat(const Habitat& H) : Renderable (H)
 {
 }
 
-Habitat& Habitat::operator=(const Habitat&)
+Habitat::~Habitat()
 {
+}
+
+Habitat& Habitat::operator=(const Habitat& H)
+{
+	Renderable::operator=(H);
+	return *this;
 }

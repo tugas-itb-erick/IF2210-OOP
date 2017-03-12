@@ -13,6 +13,13 @@ public:
      * Menciptakan Habitat kosong.
      */
 	Habitat();
+	
+	/** @brief Constructor dengan parameter.
+     * Menciptakan Habitat dengan parameter id dan color
+     * @param id char renderable
+     * @param color warna renderable
+     */
+	Habitat::Habitat(char _id, Color _color);
 
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari Habitat.
