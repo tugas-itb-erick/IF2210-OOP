@@ -8,7 +8,7 @@ using namespace std;
 WaterHabitat::WaterHabitat() : Habitat('#', WHITE)
 {
 }
-WaterHabitat::WaterHabitat(const WaterHabitat& W) : Habitat(W.id, W.color)
+WaterHabitat::WaterHabitat(const WaterHabitat& W) : Habitat(W)
 {
 }
 WaterHabitat::~WaterHabitat()
@@ -16,6 +16,8 @@ WaterHabitat::~WaterHabitat()
 }
 WaterHabitat& WaterHabitat::operator=(const WaterHabitat& W)
 {
+	Habitat::operator=(W);
+	return *this;
 }
 char WaterHabitat::render()
 {
