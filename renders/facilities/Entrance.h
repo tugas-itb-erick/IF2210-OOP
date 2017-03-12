@@ -33,4 +33,8 @@ public:
      * @return value object hasil kloning
      */
 	virtual Entrance* clone() const;
+
+	/** @brief Mencetak karakter yang merepresentasikan kelas Entrance
+    */
+	virtual void render();
 };
