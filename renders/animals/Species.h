@@ -18,7 +18,7 @@ public:
 	  * @param _weight berat
 	  * @param _s jenis kelamin
 	  */
-	Elephant(string _name, double _weight, Sex _s, int _r, int _c, char _id, Color _color);
+	Elephant(string _name, double _weight, Sex _s, int _r, int _c);
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
@@ -116,7 +116,7 @@ public:
 	* Menduplikat diri sendiri
 	* @return value object hasil kloning
     */
-	virtual Tiger* clone() const;	
+	virtual Tiger* clone() const;
 	/** @brief render
 	* Mengembalikan karakter id tiap hewan
 	* @return karakter tiap hewan
@@ -297,14 +297,14 @@ public:
 	Color getColor();
 };
 
-class ClownFish : public Omnivore, public WaterAnimal, public Pisces {
+class Clownfish : public Omnivore, public WaterAnimal, public Pisces {
 public:
 	/** @brief Consructor.
 	  * @param _name nama binatang
 	  * @param _weight berat
 	  * @param _s jenis kelamin
 	  */
-	ClownFish(string _name, double _weight, Sex _s, int _r, int _c);	/** @brief interact.
+	Clownfish(string _name, double _weight, Sex _s, int _r, int _c);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
@@ -312,7 +312,7 @@ public:
 	* Menduplikat diri sendiri
 	* @return value object hasil kloning
     */
-	virtual ClownFish* clone() const;
+	virtual Clownfish* clone() const;
 	/** @brief render
 	* Mengembalikan karakter id tiap hewan
 	* @return karakter tiap hewan

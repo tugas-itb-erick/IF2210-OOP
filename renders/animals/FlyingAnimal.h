@@ -5,7 +5,7 @@
 
 #include "Animal.h"
 
-class FlyingAnimal : public Animal {
+class FlyingAnimal : public virtual Animal {
 public:
 	/** @brief Constructor
 	*/
@@ -19,7 +19,7 @@ public:
 	/** @brief Destructor.
     */
 	virtual ~FlyingAnimal();
-	
+
 	/** @brief Operator=
 	  * Menjamin bukan bitwise copy.
 	  * @return Animal yang sudah di assign nilai dari current object.

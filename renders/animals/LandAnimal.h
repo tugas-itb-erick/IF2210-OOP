@@ -5,7 +5,7 @@
 
 #include "Animal.h"
 
-class LandAnimal : public Animal {
+class LandAnimal : public virtual Animal {
 public:
 	/** @brief Constructor
 	*/

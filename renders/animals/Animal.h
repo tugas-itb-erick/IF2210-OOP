@@ -10,7 +10,6 @@
 #include <iostream>
 using namespace std;
 
-
 class Animal : public Renderable{
 public:
 	/** @brief Constructor
@@ -44,7 +43,7 @@ public:
 	  */
 	virtual void interact() = 0;
 
-	friend istream& operator>>(istream& in, Animal& A);
+	friend istream& operator>>(istream& in, Animal* A);
 
 protected:
 	string name;
