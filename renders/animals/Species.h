@@ -1,319 +1,325 @@
 /* NIM/Nama  : 13515144 / William 	*/
 /* File      : Species.h            */
-#include "Diet.h"
-#include "Animal.h"
-#include "Taxonomy.h"
 
 #pragma once
 
+#include "Diet.h"
+#include "Taxonomy.h"
+#include "Animal.h"
+
 class Elephant : public Herbivore, public LandAnimal, public Mammalia {
 public:	
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Elephant(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
+
 
 class Giraffe : public Herbivore, public LandAnimal, public Mammalia {
 public:	
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Giraffe(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Lion : public Carnivore, public LandAnimal, public Mammalia {
 public:	
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Lion(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Tiger : public Carnivore, public LandAnimal, public Mammalia {
 public:	
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Tiger(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);
 	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Orangutan : public Herbivore, public LandAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Orangutan(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Chimpanzee : public Herbivore, public LandAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Chimpanzee(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Komodo : public Carnivore, public LandAnimal, public Reptilia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Komodo(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Bear : public Herbivore, public LandAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Bear(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Whale : public Carnivore, public WaterAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Whale(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Dolphin : public Carnivore, public WaterAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Dolphin(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class ClownFish : public Omnivore, public WaterAnimal, public Pisces {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	ClownFish(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class BlueTang : public Omnivore, public WaterAnimal, public Pisces {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	BlueTang(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Piranha : public Carnivore, public WaterAnimal, public Pisces {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Piranha(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class PuffFish : public Omnivore, public WaterAnimal, public Pisces {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	PuffFish(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Eagle : public Carnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Eagle(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Cendrawasih : public Omnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Cendrawasih(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Owl : public Omnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Owl(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Bat : public Omnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Bat(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Macau : public Omnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Macau(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Cockatoo : public Omnivore, public FlyingAnimal, public Aves {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Cockatoo(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Frog : public Carnivore, public WaterAnimal, public LandAnimal, public Amphibia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Frog(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Alligator : public Carnivore, public WaterAnimal, public LandAnimal, public Reptilia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Alligator(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Hippopotamus : public Herbivore, public WaterAnimal, public LandAnimal, public Mammalia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Hippopotamus(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
 };
 
 class Turtle : public Omnivore, public WaterAnimal, public LandAnimal, public Reptilia {
 public:	
-	/** @brief interact.
+	/** @brief Consructor.
+	  * @param _name nama binatang
+	  * @param _weight berat
+	  * @param _s jenis kelamin
+	  */
+	Turtle(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s);	/** @brief interact.
 	  * Menampilkan interaksi hewan ke layar
 	  */
 	void interact();
-	
-	/** @brief render.
-	* Menampilkan hewan ke layar.
-	*/
-	void render();
-};
+}
