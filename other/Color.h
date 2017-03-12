@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#pragma once
 
 /* FOREGROUND */
 #define RST  "\x1B[0m"
@@ -21,3 +20,5 @@ using namespace std;
 
 #define BOLD(x) "\x1B[1m" x RST
 #define UNDL(x) "\x1B[4m" x RST
+
+enum color {RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};

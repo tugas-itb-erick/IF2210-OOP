@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include "../other/Color.h"
+
 /** @class Renderable
   * Kelas abstrak yang memiliki metode render untuk mencetak karakter.
   */
@@ -15,5 +17,5 @@ public:
 
 protected:
   char id;
-  enum color {RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};
+  color color;
 };

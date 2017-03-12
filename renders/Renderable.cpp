@@ -2,7 +2,3 @@
 /* File      : Renderable.cpp          */
 
 #include "Renderable.h"
-
-void Renderable::render(){
-
-}
