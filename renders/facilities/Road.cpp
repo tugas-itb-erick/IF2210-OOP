@@ -6,17 +6,20 @@
 using namespace std;
 
 /***** ROAD *****/
-Road::Road()  : id('-'), color(WHITE)
+Road::Road() : Facility('-', WHITE)
 {}
 
-Road::Road(const Road&)  : id('-'), color(WHITE)
+Road::Road(const Road& R) : Facility(R)
 {}
 
 Road::~Road()
 {}
 
-Road& Road::operator=(const Road&)
-{}
+Road& Road::operator=(const Road& R)
+{
+  Facility::operator=(R);
+  return *this;
+}
 
 Road* Road::clone() const {
   return new Road(*this);

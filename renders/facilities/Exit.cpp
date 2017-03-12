@@ -6,17 +6,20 @@
 using namespace std;
 
 /***** EXIT *****/
-Exit::Exit()  : id('o'), color(WHITE)
+Exit::Exit() : Facility('o', WHITE)
 {}
 
-Exit::Exit(const Exit&)  : id('o'), color(WHITE)
+Exit::Exit(const Exit& E) : Facility(E)
 {}
 
 Exit::~Exit()
 {}
 
-Exit& Exit::operator=(const Exit&)
-{}
+Exit& Exit::operator=(const Exit& E)
+{
+  Facility::operator=(E);
+  return *this;
+}
 
 Exit* Exit::clone() const {
   return new Exit(*this);
