@@ -16,6 +16,8 @@ public:
 	
 	/** @brief Constructor dengan parameter.
 	 * Menciptakan renderable dengan parameter id dan color
+	 * @param id char renderable
+     * @param color warna renderable
      */
 	Renderable(char _id, Color _color);
 

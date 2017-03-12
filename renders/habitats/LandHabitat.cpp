@@ -8,16 +8,24 @@ using namespace std;
 LandHabitat::LandHabitat() : id('X'), color(WHITE)
 {
 }
-LandHabitat::LandHabitat(const LandHabitat&) : id('X'), color(WHITE)
+LandHabitat::LandHabitat(const LandHabitat& L) : id('X'), color(WHITE)
 {
 }
 LandHabitat::~LandHabitat()
 {
 }
-LandHabitat& LandHabitat::operator=(const LandHabitat&)
+LandHabitat& LandHabitat::operator=(const LandHabitat& L)
 {
 }
 LandHabitat* LandHabitat::clone() const
 {
 	return new LandHabitat(*this);
+}
+char LandHabitat::render()
+{
+	return id;
+}
+Color LandHabitat::getColor()
+{
+	return color;
 }

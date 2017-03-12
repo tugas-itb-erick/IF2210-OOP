@@ -22,7 +22,7 @@ public:
 
 	/** @brief Destructor.
     */
-	virtual ~LandHabitat();
+	~LandHabitat();
 
 	/** @brief Operator=.
      * Menginisialisasi LandHabitat tanpa terjadi bitwise copy
@@ -34,5 +34,8 @@ public:
      * Menduplikat diri sendiri
      * @return value object hasil kloning
      */
-	virtual LandHabitat* clone() const;
+	LandHabitat* clone() const;
+	
+	char render();
+	Color getColor();
 };

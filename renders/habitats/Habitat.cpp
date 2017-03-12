@@ -9,11 +9,11 @@ Habitat::Habitat()
 {
 }
 
-Habitat::Habitat(char _id, Color _color) : Renderable(_id,_color)
+Habitat::Habitat(char _id, Color _color) : Cell(_id,_color)
 {
 }
 
-Habitat::Habitat(const Habitat& H) : Renderable (H)
+Habitat::Habitat(const Habitat& H) : Cell (H)
 {
 }
 
