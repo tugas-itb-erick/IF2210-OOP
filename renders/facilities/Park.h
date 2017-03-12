@@ -39,7 +39,7 @@ public:
      * @return color warna renderable
      */
 
-	Color Park::getColor()
+	Color Park::getColor();
 	
 	/** @brief Clone.
      * Menduplikat diri sendiri

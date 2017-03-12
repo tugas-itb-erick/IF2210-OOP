@@ -9,7 +9,7 @@ using namespace std;
 Facility::Facility()
 {}
 
-Facility(char _id, Color _color) : Cell(_id, _color)
+Facility::Facility(char _id, Color _color) : Cell(_id, _color)
 {}
 
 Facility::Facility(const Facility& F) : Cell(F)
