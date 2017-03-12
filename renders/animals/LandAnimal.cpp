@@ -2,7 +2,7 @@
 
 LandAnimal::LandAnimal(){
 }
-LandAnimal::LandAnimal(const Animal&){
+LandAnimal::LandAnimal(const LandAnimal&){
 }
 LandAnimal::~LandAnimal(){
 }
