@@ -35,10 +35,11 @@ public:
 	char render();
 	
 	/** @brief GetColor.
-     * Mengembalikan warna renderable
-     * @return color
+     * Mengembalikan warna untuk ditampilkan ke layar
+     * @return color warna renderable
      */
-	Color getColor();
+
+	Color Park::getColor()
 	
 	/** @brief Clone.
      * Menduplikat diri sendiri
