@@ -18,6 +18,11 @@ Park::~Park()
 Park& Park::operator=(const Park&)
 {}
 
+char render() const
+{
+	return id;
+}
+
 Park* Park::clone() const {
   return new Park(*this);
 }

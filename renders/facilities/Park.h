@@ -27,7 +27,13 @@ public:
      * @return Park yang sudah di assign nilai dari current object
      */
 	Park& operator=(const Park&);
-
+	
+	/** @brief Render.
+     * Mengembalikan karakter untuk ditampilkan ke layar
+     * @return id Facility bertipe char
+     */
+	char render() const;
+	
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning
