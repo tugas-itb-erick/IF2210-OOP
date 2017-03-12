@@ -17,17 +17,25 @@ public:
 	*/
 	Herbivore(const Herbivore& H);
 
-	/** @brief Destructor.
-    */
-	~Herbivore();
-
 	/** @brief Operator=.
 	  * Menjamin bukan bitwise copy.
 	  * @param Herbivore H berisi data untuk diassign
 	  */
 	Herbivore& operator= (const Herbivore& H);
 
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio daging
+		*/
+	double getMeatRatio() const;
+
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio sayur
+		*/
+	double getVegRatio() const;
+
 protected:
-	const double meatRatio;
+	const double meatRatio = 0;
 	double vegRatio;
 };

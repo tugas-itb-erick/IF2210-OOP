@@ -23,7 +23,19 @@ public:
 	  */
 	Carnivore& operator= (const Carnivore& C);
 
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio daging
+		*/
+	double getMeatRatio() const;
+
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio sayur
+		*/
+	double getVegRatio() const;
+
 protected:
 	double meatRatio;
-	const double vegRatio;
+	const double vegRatio = 0.0;
 };

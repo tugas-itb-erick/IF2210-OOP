@@ -11,13 +11,21 @@ Omnivore::Omnivore()
 
 Omnivore::Omnivore(const Omnivore& O)
 {
-	meatRatio = C.meatRatio;
-	vegRatio = C.meat;
+	meatRatio = O.meatRatio;
+	vegRatio = O.vegRatio;
 }
 
-Omnivore& Omnivore::operator= (const Omnivore& H)
+Omnivore& Omnivore::operator= (const Omnivore& O)
 {
-	meatRatio = C.meatRatio;
-	vegRatio = C.meat;
+	meatRatio = O.meatRatio;
+	vegRatio = O.vegRatio;
 	return *this;
+}
+
+double Omnivore::getMeatRatio() const{
+	return meatRatio;
+}
+
+double Omnivore::getVegRatio() const{
+	return vegRatio;
 }

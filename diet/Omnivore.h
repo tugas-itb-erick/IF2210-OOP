@@ -17,15 +17,23 @@ public:
 	*/
 	Omnivore(const Omnivore& O);
 
-	/** @brief Destructor.
-    */
-	~Omnivore();
-
 	/** @brief Operator=.
 	  * Menjamin bukan bitwise copy.
 	  * @param Omnivore O berisi data untuk diassign
 	  */
-	Omnivore& operator= (const Omnivore& H);
+	Omnivore& operator= (const Omnivore& O);
+
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio daging
+		*/
+	double getMeatRatio() const;
+
+	/** @brief Getter.
+		* Mengembalikan nilai rasio daging.
+		* @return nilai rasio sayur
+		*/
+	double getVegRatio() const;
 
 protected:
 	double meatRatio;

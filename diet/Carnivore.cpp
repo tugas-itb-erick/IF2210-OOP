@@ -3,12 +3,12 @@
 
 #include "Carnivore.h"
 
-Carnivore::Carnivore() : vegRatio(0)
+Carnivore::Carnivore()
 {
 	meatRatio = 0.5;
 }
 
-Carnivore::Carnivore(const Carnivore& C) : vegRatio(C.meat)
+Carnivore::Carnivore(const Carnivore& C)
 {
 	meatRatio = C.meatRatio;
 }
@@ -16,6 +16,13 @@ Carnivore::Carnivore(const Carnivore& C) : vegRatio(C.meat)
 Carnivore& Carnivore::operator= (const Carnivore& C)
 {
 	meatRatio = C.meatRatio;
-	vegRatio = C.meat;
 	return *this;
+}
+
+double Carnivore::getMeatRatio() const{
+	return meatRatio;
+}
+
+double Carnivore::getVegRatio() const{
+	return vegRatio;
 }
