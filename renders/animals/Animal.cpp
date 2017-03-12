@@ -6,11 +6,7 @@
 using namespace std;
 
 Animal::Animal(){
-	name=" ";
-	weight=0;
-	s=male;
-	row=-1;
-	col=-1;
+	
 }
 
 Animal::Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color) : Renderable(_id,_color) {

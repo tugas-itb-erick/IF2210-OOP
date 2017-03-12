@@ -272,7 +272,7 @@ Color Macau::getColor(){
 
 Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(RED){}
 void Cockatoo::interact(){
-	cout << "This cockatoo is repeating what " << endl;
+	cout << "This cockatoo is repeating what you're saying!" << endl;
 }
 Cockatoo* Cockatoo::clone() const{
 	return new Cockatoo(*this);
