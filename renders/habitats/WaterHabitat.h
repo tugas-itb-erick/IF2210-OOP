@@ -29,4 +29,10 @@ public:
      * @return WaterHabitat yang sudah di assign nilai dari current object
      */
 	WaterHabitat& operator=(const WaterHabitat&);
+	
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
+     */
+	virtual WaterHabitat* clone() const;
 };

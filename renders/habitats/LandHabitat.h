@@ -29,4 +29,10 @@ public:
      * @return LandHabitat yang sudah di assign nilai dari current object
      */
 	LandHabitat& operator=(const LandHabitat&);
+	
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
+     */
+	virtual LandHabitat* clone() const;
 };
