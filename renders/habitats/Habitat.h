@@ -19,7 +19,7 @@ public:
      * @param id char renderable
      * @param color warna renderable
      */
-	Habitat::Habitat(char _id, Color _color);
+	Habitat(char _id, Color _color);
 
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari Habitat.
