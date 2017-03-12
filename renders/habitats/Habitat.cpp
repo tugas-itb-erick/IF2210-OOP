@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Habitat::Habitat()
+Habitat::Habitat() : Cell()
 {
 }
 
@@ -23,6 +23,6 @@ Habitat::~Habitat()
 
 Habitat& Habitat::operator=(const Habitat& H)
 {
-	Renderable::operator=(H);
+	Cell::operator=(H);
 	return *this;
 }

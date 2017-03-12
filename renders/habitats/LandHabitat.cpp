@@ -5,10 +5,10 @@
 
 using namespace std;
 
-LandHabitat::LandHabitat() : id('X'), color(WHITE)
+LandHabitat::LandHabitat() : Habitat('X', WHITE)
 {
 }
-LandHabitat::LandHabitat(const LandHabitat& L) : id('X'), color(WHITE)
+LandHabitat::LandHabitat(const LandHabitat& L) : Habitat(L.id, L.color)
 {
 }
 LandHabitat::~LandHabitat()
