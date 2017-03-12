@@ -12,6 +12,13 @@ public:
      */
 	Facility();
 
+	/** @brief Constructor.
+     * Menciptakan Facility dengan parameter _id dan _color.
+		 * @param _id bertipe char
+		 * @param _color bertipe Color
+     */
+	Facility(char _id, Color _color);
+
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari Facility.
      * @param F Facility yang ingin disalin.
