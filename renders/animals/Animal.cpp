@@ -1,14 +1,14 @@
-/* NIM/Nama  : 13515144 / Erick Wijaya */
-/* File      : Animal.h                */
+/* NIM/Nama  : 13515144 / William      */
+/* File      : Animal.cpp              */
 
 #include <iostream>
-using namespace std;
 #include "Animal.h"
+using namespace std;
 
 Animal::Animal(){
 	name=" ";
 	weight=0;
-	s=male;	
+	s=male;
 }
 
 Animal::Animal(string _name, double _weight, Sex _s){

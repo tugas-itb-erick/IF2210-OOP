@@ -2,11 +2,3 @@
 /* File      : Renderable.cpp          */
 
 #include "Renderable.h"
-
-void Cage::render(){
-
-}
-
-istream& operator>>(){
-
-}

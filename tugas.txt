@@ -4,7 +4,7 @@ TO DO
 
 class Taxonomy (abstract) {
 public: getter, sekawan
-private:
+protected:
 const char blood {'h','c'}
 const int heartChamber {2,3,4}
 const alat pernapasan {paru, insang}
