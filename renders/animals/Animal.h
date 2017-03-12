@@ -43,6 +43,18 @@ public:
 	  */
 	virtual void interact() = 0;
 
+	int getRow();
+	int getCol();
+	double getWeight();
+	string getName();
+	Sex getSex();
+
+	int setRow(int r);
+	int setCol(int c);
+	double setWeight(double w);
+	string setName(string n);
+	Sex setSex(Sex ns);
+
 	friend istream& operator>>(istream& in, Animal* A);
 
 protected:

@@ -71,7 +71,7 @@ void Cage::AddAnimal(const Animal * A){
     int i=0;
     while (a[i] != NULL)
       i++;
-    // a[i] = A.clone();
+      a[i] = A->clone();
   }
 }
 

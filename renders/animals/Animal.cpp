@@ -6,7 +6,7 @@
 using namespace std;
 
 Animal::Animal(){
-	
+
 }
 
 Animal::Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color) : Renderable(_id,_color) {
@@ -36,4 +36,44 @@ Animal& Animal::operator=(const Animal& A){
 	row=A.row;
 	col=A.col;
 	return *this;
+}
+
+int Animal::getRow(){
+	return row;
+}
+
+int Animal::getCol(){
+	return col;
+}
+
+double Animal::getWeight(){
+	return weight;
+}
+
+string Animal::getName(){
+	return name;
+}
+
+Sex Animal::getSex(){
+	return s;
+}
+
+int Animal::setRow(int r){
+	row = r;
+}
+
+int Animal::setCol(int c){
+	col = c;
+}
+
+double Animal::setWeight(double w){
+	weight = w;
+}
+
+string Animal::setName(string n){
+	name = n;
+}
+
+Sex Animal::setSex(Sex ns){
+	s = ns;
 }
