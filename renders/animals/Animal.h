@@ -43,11 +43,11 @@ public:
 	  */
 	virtual void interact() = 0;
 
-	int getRow();
-	int getCol();
-	double getWeight();
-	string getName();
-	Sex getSex();
+	int getRow() const;
+	int getCol() const;
+	double getWeight() const;
+	string getName() const;
+	Sex getSex() const;
 
 	int setRow(int r);
 	int setCol(int c);

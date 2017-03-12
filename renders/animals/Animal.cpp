@@ -38,23 +38,23 @@ Animal& Animal::operator=(const Animal& A){
 	return *this;
 }
 
-int Animal::getRow(){
+int Animal::getRow() const{
 	return row;
 }
 
-int Animal::getCol(){
+int Animal::getCol() const{
 	return col;
 }
 
-double Animal::getWeight(){
+double Animal::getWeight() const{
 	return weight;
 }
 
-string Animal::getName(){
+string Animal::getName() const{
 	return name;
 }
 
-Sex Animal::getSex(){
+Sex Animal::getSex() const{
 	return s;
 }
 

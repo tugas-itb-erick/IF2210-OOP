@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Zoo.h"
 using namespace std;
-
+/*
 int main(){
   ifstream fin;
   Zoo a(3,3);
@@ -18,4 +18,4 @@ int main(){
   fin.close();
 
   return 0;
-}
+}*/

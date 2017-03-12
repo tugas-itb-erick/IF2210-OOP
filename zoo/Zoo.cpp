@@ -15,6 +15,7 @@ Zoo::Zoo(){
       c[i][j] = NULL;
     }
   }
+  cg = new Cage[row];
 }
 
 Zoo::Zoo(int _r, int _c){
@@ -27,6 +28,7 @@ Zoo::Zoo(int _r, int _c){
       c[i][j] = NULL;
     }
   }
+  cg = new Cage[row];
 }
 
 Zoo::Zoo(const Zoo& Z){
@@ -39,18 +41,18 @@ Zoo::Zoo(const Zoo& Z){
       c[i][j] = Z.c[i][j]->clone();
     }
   }
+  cg = new Cage[row];
 }
 
 Zoo::~Zoo(){
   for(int i=0; i<row; i++){
     for(int j=0; j<col; j++){
-      delete c[i][j];
+      if (c[i][j] != 0) delete c[i][j];
     }
-    delete [] c[i];
+    if (c[i] != 0) delete [] c[i];
   }
-  delete [] c;
-
-  delete [] cg;
+  if (c != 0) delete [] c;
+  if (cg != 0) delete [] cg;
 }
 
 Zoo& Zoo::operator=(const Zoo& Z){
@@ -58,11 +60,12 @@ Zoo& Zoo::operator=(const Zoo& Z){
     // delete
     for(int i=0; i<row; i++){
       for(int j=0; j<col; j++){
-        delete c[i][j];
+        if (c[i][j] != 0) delete c[i][j];
       }
-      delete [] c[i];
+      if (c[i] != 0) delete [] c[i];
     }
-    delete [] c;
+    if (c != 0) delete [] c;
+    if (cg != 0) delete [] cg;
 
     // assign
     row = Z.row;
@@ -75,7 +78,7 @@ Zoo& Zoo::operator=(const Zoo& Z){
         c[i][j] = Z.c[i][j]->clone();
       }
     }
-
+    cg = new Cage[row];
 
   }
 
@@ -112,7 +115,7 @@ istream& operator>>(istream& in, Zoo& Z){
 ostream& operator<<(ostream& os, const Zoo& Z){
   for(int i=0; i<Z.row; i++){
     for(int j=0; j<Z.col; j++){
-      Z.c[i][j]->render();
+      cout << Z.c[i][j]->render();
       os << " ";
     }
     os << endl;
@@ -131,5 +134,5 @@ void Zoo::print(int x1, int y1, int x2, int y2){
 
 void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
   fzoo >> (*this);
-  fcg
+
 }

@@ -13,7 +13,7 @@ public:
      * Menciptakan Habitat kosong.
      */
 	Habitat();
-	
+
 	/** @brief Constructor dengan parameter.
      * Menciptakan Habitat dengan parameter id dan color
      * @param id char renderable
@@ -36,4 +36,10 @@ public:
      * @return Habitat yang sudah di assign nilai dari current object
      */
 	Habitat& operator=(const Habitat&);
+
+	/** @brief clone.
+     * Menduplikasi Habitat tanpa terjadi bitwise copy
+     * @return Habitat yang sudah diduplikasi.
+     */
+  virtual Habitat* clone() const = 0;
 };

@@ -13,29 +13,54 @@ Cage::Cage(){
 
 Cage::Cage(int s){
   size = s;
-  row = new int[s];
-  col = new int[s];
-  a = new Animal*[s];
+  row = new int[size];
+  col = new int[size];
+  a = new Animal*[size];
+  for(int i=0; i<size; i++){
+    row[i] = -1;
+    col[i] = -1;
+  }
   h = 0;
 }
 
 Cage::Cage(const Cage& C){
   size = C.size;
-
+  row = new int[size];
+  col = new int[size];
+  a = new Animal*[size];
+  for(int i=0; i<size; i++){
+    row[i] = C.row[i];
+    col[i] = C.col[i];
+    if (C.a[i] != 0)
+      a[i] = C.a[i]->clone();
+  }
+  if (C.h != 0)
+    h = C.h->clone();
 }
 
 Cage::~Cage(){
-  delete [] row;
-  delete [] col;
+  if (row != 0) delete [] row;
+  if (col != 0) delete [] col;
   for(int i=0; i<size; i++)
-    delete [] a[i];
-  delete [] a;
-  delete h;
+    if (a[i] != 0) delete [] a[i];
+  if (a != 0) delete [] a;
+  if (h != 0) delete h;
 }
 
 Cage& Cage::operator=(const Cage& C){
   if (this != &C){
-
+    size = C.size;
+    row = new int[size];
+    col = new int[size];
+    a = new Animal*[size];
+    for(int i=0; i<size; i++){
+      row[i] = C.row[i];
+      col[i] = C.col[i];
+      if (C.a[i] != 0)
+        a[i] = C.a[i]->clone();
+    }
+    if (C.h != 0)
+      h = C.h->clone();
   }
   return *this;
 }
@@ -69,9 +94,15 @@ bool Cage::isFull() const{
 void Cage::AddAnimal(const Animal * A){
   if (!isFull()){
     int i=0;
-    while (a[i] != NULL)
-      i++;
-      a[i] = A->clone();
+    bool stop = false;
+
+    while ((i < size) && !stop){
+      if ((row[i] == A->getRow()) && (col[i] == A->getCol()) && (a[i] != NULL)){
+        a[i] = A->clone();
+        stop = true;
+      }else
+        i++;
+    }
   }
 }
 
@@ -103,6 +134,10 @@ Color Cage::getColor(){
   return h->getColor();
 }
 
+void Cage::setHabitat(Habitat * nh){
+  h = nh->clone();
+}
+
 istream& operator>>(istream& in, Cage& C){
   char c;
   vector<int> vb, vk;
@@ -121,8 +156,11 @@ istream& operator>>(istream& in, Cage& C){
     temp.getCol()[i] = vk[i];
   }
 
+  C = temp;
+
+  return in;
 }
 
-Animal* Cage::operator[](int x);
+Animal* Cage::operator[](int x){
   return a[x];
 }

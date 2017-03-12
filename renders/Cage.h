@@ -12,6 +12,7 @@ using namespace std;
 class Cage : public Renderable {
 public:
   /** @brief Constructor
+    * membuat cage kosong.
 	*/
   Cage();
 
@@ -19,7 +20,6 @@ public:
     * @param s ukuran cage
     */
   Cage(int s);
-
 
   /** @brief Copy Constructor
 	* @param Cage C yang diacu cctor
@@ -90,6 +90,8 @@ public:
   char render();
 
   Color getColor();
+
+  void setHabitat(Habitat * nh);
 
   /** @brief Operator>>.
 	 * Menambahkan binatang ke dalam cage

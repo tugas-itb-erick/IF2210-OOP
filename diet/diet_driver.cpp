@@ -1,7 +1,7 @@
 #include <iostream>
 #include "diet.h"
 using namespace std;
-
+/*
 int main(){
   Carnivore a;
   Herbivore b;
@@ -12,4 +12,4 @@ int main(){
   cout << "c: " << c.getMeatRatio() << " " << c.getVegRatio() << endl;
 
   return 0;
-}
+}*/
