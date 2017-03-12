@@ -67,9 +67,9 @@ public:
 
   /** @brief AddAnimal.
 	 * Menambahkan binatang ke dalam cage
-	 * @param A animal
+	 * @param pointer A animal
 	 */
-  void AddAnimal(const Animal& A);
+  void AddAnimal(const Animal * A);
 
   /** @brief countConsumedMeat.
 	 * Menghitung jumlah makanan daging
@@ -85,7 +85,9 @@ public:
 
   /** @brief render.
 	 */
-  void render();
+  char render();
+
+  Color getColor();
 
   /** @brief Operator>>.
 	 * Menambahkan binatang ke dalam cage
@@ -97,8 +99,7 @@ public:
 	 * Operator subscript
 	 * @param x integer indeks
 	 */
-	 Animal*& operator[](int x);
->>>>>>> 213b73bd81652b653f7d662408b143eb668811e1
+	 Animal* operator[](int x);
 
 private:
   int * row; // posisi baris
