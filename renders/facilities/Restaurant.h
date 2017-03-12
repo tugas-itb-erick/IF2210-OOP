@@ -28,6 +28,18 @@ public:
      */
 	Restaurant& operator=(const Restaurant&);
 
+	/** @brief Render.
+     * Mengembalikan karakter untuk ditampilkan ke layar
+     * @return id bertipe char
+     */
+	char render();
+
+	/** @brief GetColor.
+     * Mengembalikan warna untuk ditampilkan ke layar
+     * @return color warna untuk dirender
+     */
+	Color getColor();
+	
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning

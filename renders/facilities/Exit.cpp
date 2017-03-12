@@ -6,7 +6,7 @@
 using namespace std;
 
 /***** EXIT *****/
-Exit::Exit() : Facility('o', WHITE)
+Exit::Exit() : Road('o', WHITE)
 {}
 
 Exit::Exit(const Exit& E) : Facility(E)
@@ -19,6 +19,16 @@ Exit& Exit::operator=(const Exit& E)
 {
   Facility::operator=(E);
   return *this;
+}
+
+char Exit::render()
+{
+	return id;
+}
+
+Color Exit::getColor()
+{
+	return color;
 }
 
 Exit* Exit::clone() const {
