@@ -17,7 +17,7 @@ public:
      * @param id char renderable
      * @param color warna renderable
      */
-	Cell::Cell(char _id, Color _color);
+	Cell(char _id, Color _color);
 
 	/** @brief Copy Constructor.
      * Menciptakan salinan dari Cell.
