@@ -6,10 +6,10 @@
 using namespace std;
 
 /***** ENTRANCE *****/
-Entrance::Entrance()
+Entrance::Entrance()  : id('i'), color(WHITE)
 {}
 
-Entrance::Entrance(const Entrance&)
+Entrance::Entrance(const Entrance&)  : id('i'), color(WHITE)
 {}
 
 Entrance::~Entrance()
@@ -17,11 +17,6 @@ Entrance::~Entrance()
 
 Entrance& Entrance::operator=(const Entrance&)
 {}
-
-void Entrance::render()
-{
-  cout << "i";
-}
 
 Entrance* Entrance::clone() const {
   return new Entrance(*this);

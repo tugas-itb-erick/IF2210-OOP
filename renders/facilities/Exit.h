@@ -28,11 +28,10 @@ public:
      */
 	Exit& operator=(const Exit&);
 
-	/** @brief render.
-     *  Mencetak karakter sesuai representasi kelas Exit
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
      */
-	void render();
-
 	virtual Exit* clone() const;
 
 };

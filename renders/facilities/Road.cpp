@@ -6,10 +6,10 @@
 using namespace std;
 
 /***** ROAD *****/
-Road::Road()
+Road::Road()  : id('-'), color(WHITE)
 {}
 
-Road::Road(const Road&)
+Road::Road(const Road&)  : id('-'), color(WHITE)
 {}
 
 Road::~Road()
@@ -17,11 +17,6 @@ Road::~Road()
 
 Road& Road::operator=(const Road&)
 {}
-
-void Road::render()
-{
-  cout << "-";
-}
 
 Road* Road::clone() const {
   return new Road(*this);

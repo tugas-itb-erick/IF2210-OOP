@@ -6,10 +6,10 @@
 using namespace std;
 
 /***** PARK *****/
-Park::Park()
+Park::Park()  : id('*'), color(WHITE)
 {}
 
-Park::Park(const Park&)
+Park::Park(const Park&)  : id('*'), color(WHITE)
 {}
 
 Park::~Park()
@@ -17,11 +17,6 @@ Park::~Park()
 
 Park& Park::operator=(const Park&)
 {}
-
-void Park::render()
-{
-  cout << "*";
-}
 
 Park* Park::clone() const {
   return new Park(*this);

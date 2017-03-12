@@ -28,10 +28,9 @@ public:
      */
 	Entrance& operator=(const Entrance&);
 
-	/** @brief render.
-     *  Mencetak karakter sesuai representasi kelas Entrance
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
      */
-	void render();
-
 	virtual Entrance* clone() const;
 };

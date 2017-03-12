@@ -28,10 +28,9 @@ public:
      */
 	Park& operator=(const Park&);
 
-	/** @brief render.
-     *  Mencetak karakter sesuai representasi kelas Park
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
      */
-	void render();
-
 	virtual Park* clone() const;
 };

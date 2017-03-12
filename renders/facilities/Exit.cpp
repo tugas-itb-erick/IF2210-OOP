@@ -6,10 +6,10 @@
 using namespace std;
 
 /***** EXIT *****/
-Exit::Exit()
+Exit::Exit()  : id('o'), color(WHITE)
 {}
 
-Exit::Exit(const Exit&)
+Exit::Exit(const Exit&)  : id('o'), color(WHITE)
 {}
 
 Exit::~Exit()
@@ -17,11 +17,6 @@ Exit::~Exit()
 
 Exit& Exit::operator=(const Exit&)
 {}
-
-void Exit::render()
-{
-  cout << "o";
-}
 
 Exit* Exit::clone() const {
   return new Exit(*this);

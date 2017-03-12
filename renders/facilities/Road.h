@@ -28,10 +28,9 @@ public:
      */
 	Road& operator=(const Road&);
 
-	/** @brief render.
-     *  Mencetak karakter sesuai representasi kelas Road
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
      */
-	void render();
-
 	virtual Road* clone() const;
 };

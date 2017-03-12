@@ -28,11 +28,10 @@ public:
      */
 	Restaurant& operator=(const Restaurant&);
 
-	/** @brief render.
-     *  Mencetak karakter sesuai representasi kelas Restoran
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
      */
-	void render();
-
 	virtual Restaurant* clone() const;
 
 };
