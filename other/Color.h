@@ -21,4 +21,4 @@
 #define BOLD(x) "\x1B[1m" x RST
 #define UNDL(x) "\x1B[4m" x RST
 
-enum color {RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};
+enum Color {RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA, CYAN, WHITE};

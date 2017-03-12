@@ -1,0 +1,2 @@
+Elephant e1 1.500 m 0 1
+Elephant e2 100.0 f 2 7

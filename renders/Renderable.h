@@ -17,5 +17,5 @@ public:
 
 protected:
   char id;
-  color color;
+  Color color;
 };

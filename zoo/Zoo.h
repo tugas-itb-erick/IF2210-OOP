@@ -39,8 +39,8 @@ public:
 	friend istream& operator>>(istream& in, Zoo& Z);
 	friend ostream& operator<<(ostream& os, const Zoo& Z);
 
-
 	void print(int x1, int y1, int x2, int y2);
+	void readAll(istream& fzoo, istream& fcg, istream& fanim);
 
 	class Proxy {
 				friend class Zoo;
@@ -61,8 +61,11 @@ public:
 
 private:
 	Cell ** *c;  	                  /* matriks of pointer to cell */
+	Cage * cg;                      /* array of cage */
 	int row; 				                /* ukuran baris */
 	int col; 				                /* ukuran kolom */
-	static const int defRow = 50; 	/* default baris = 10 */
-	static const int defCol = 50; 	/* default kolom = 10*/
+
+	static const int defRow = 50; 	/* default baris = 50 */
+	static const int defCol = 50; 	/* default kolom = 50 */
+	static const int defCage = 50;  /* default jumlah cage = 50 */
 };

@@ -49,6 +49,8 @@ Zoo::~Zoo(){
     delete [] c[i];
   }
   delete [] c;
+
+  delete [] cg;
 }
 
 Zoo& Zoo::operator=(const Zoo& Z){
@@ -73,6 +75,8 @@ Zoo& Zoo::operator=(const Zoo& Z){
         c[i][j] = Z.c[i][j]->clone();
       }
     }
+
+
   }
 
   return *this;
@@ -89,9 +93,9 @@ istream& operator>>(istream& in, Zoo& Z){
     for(int j=0; j<c; j++){
       in >> k;
       switch (k){
-        case '#' : input[i][j] = new Park(); break;
-        case 'O' : input[i][j] = new Park(); break;
-        case 'X' : input[i][j] = new Park(); break;
+        case '#' : input[i][j] = new WaterHabitat(); break;
+        case 'O' : input[i][j] = new AirHabitat(); break;
+        case 'X' : input[i][j] = new LandHabitat(); break;
         case '*' : input[i][j] = new Park(); break;
         case 'R' : input[i][j] = new Restaurant(); break;
         case '-' : input[i][j] = new Road(); break;
@@ -123,4 +127,9 @@ void Zoo::print(int x1, int y1, int x2, int y2){
     }
     cout << endl;
   }
+}
+
+void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
+  fzoo >> (*this);
+  fcg
 }

@@ -44,7 +44,7 @@ public:
 	  */
 	virtual void interact() = 0;
 
-	istream& operator=(istream &is, const Animal& A);
+	friend istream& operator>>(istream& in, Animal& A);
 
 protected:
 	string name;
