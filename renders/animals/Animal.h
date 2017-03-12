@@ -7,9 +7,9 @@
 #include "../../diet/diet.h"
 #include "../../taxonomy/taxonomy.h"
 #include "../../other/Sex.h"
+#include <iostream>
 using namespace std;
 
-enum Sex {male, female};
 
 class Animal : public Renderable{
 public:

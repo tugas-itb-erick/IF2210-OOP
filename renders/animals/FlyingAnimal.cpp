@@ -2,9 +2,9 @@
 
 FlyingAnimal::FlyingAnimal(){
 }
-FlyingAnimal::FlyingAnimal(const Animal&){
+FlyingAnimal::FlyingAnimal(const FlyingAnimal& F){
 }
 FlyingAnimal::~FlyingAnimal(){
 }
-FlyingAnimal& FlyingAnimal::operator=(const FlyingAnimal&){
+FlyingAnimal& FlyingAnimal::operator=(const FlyingAnimal& F){
 }

@@ -14,7 +14,7 @@ public:
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.
 	*/
-	LandAnimal(const Animal&);
+	LandAnimal(const LandAnimal&);
 
 	/** @brief Destructor.
     */

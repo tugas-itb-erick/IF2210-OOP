@@ -14,7 +14,7 @@ public:
 	/** @brief Copy Constructor
 	* @param WaterAnimal A yang ingin disalin.
 	*/
-	WaterAnimal(const Animal&);
+	WaterAnimal(const WaterAnimal&);
 
 	/** @brief Destructor.
     */

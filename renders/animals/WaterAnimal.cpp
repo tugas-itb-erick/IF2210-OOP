@@ -2,9 +2,9 @@
 
 WaterAnimal::WaterAnimal(){
 }
-WaterAnimal::WaterAnimal(const Animal&){
+WaterAnimal::WaterAnimal(const WaterAnimal& W){
 }
 WaterAnimal::~WaterAnimal(){
 }
-WaterAnimal& WaterAnimal::operator=(const WaterAnimal&){
+WaterAnimal& WaterAnimal::operator=(const WaterAnimal& W){
 }
