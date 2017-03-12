@@ -32,7 +32,13 @@ public:
      * Mengembalikan karakter untuk ditampilkan ke layar
      * @return id Facility bertipe char
      */
-	char render() const;
+	char render();
+	
+	/** @brief GetColor.
+     * Mengembalikan warna renderable
+     * @return color
+     */
+	Color getColor();
 	
 	/** @brief Clone.
      * Menduplikat diri sendiri

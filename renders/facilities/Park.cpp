@@ -18,9 +18,14 @@ Park::~Park()
 Park& Park::operator=(const Park&)
 {}
 
-char render() const
+char Park::render()
 {
 	return id;
+}
+
+Color Park::getColor()
+{
+	return color;
 }
 
 Park* Park::clone() const {
