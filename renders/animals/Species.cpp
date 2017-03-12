@@ -4,207 +4,238 @@
 using namespace std;
 
 
+Elephant::Elephant(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='E';
+	color=YELLOW;
+}
 void Elephant::interact(){
 	cout<< "This elephant is trumpeting!!" << endl;
 }
 
-void Elephant::render(){
-	cout<<FYEL("E");
+Giraffe::Giraffe(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='E';
+	color=YELLOW;
 }
-
 void Giraffe::interact(){
 	cout<< "This girrafe is eating high tree leaves" << endl;
 }
 
-void Giraffe::render(){
-	cout<<FYEL("G");
+Lion::Lion(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='L';
+	color=YELLOW;
 }
-
-void Lion::interact(){
+void Lion::interact()
+{
 	cout<< "Roarrrr..!!" << endl;
 }
 
-void Lion::render(){
-	cout<<FYEL("L");
-}
 
-void Tiger::interact(){
+Tiger::Tiger(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='T';
+	color=YELLOW;
+}
+void Tiger::interact()
+{
 	cout<< "Grrrr...!! Grrr...!!" << endl;
 }
 
-void Tiger::render(){
-	cout<<FYEL("T");
+Orangutan::Orangutan(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='O';
+	color=YELLOW;
 }
-
-void Orangutan::interact(){
+void Orangutan::interact()
+{
 	cout<< "This orangutan is playing on a tree!" << endl;
 }
 
-void Orangutan::render(){
-	cout<<FYEL("O");
+
+Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='C';
+	color=YELLOW;
+}
+void Chimpanzee::interact()
+{
+	cout<< "U u a a ... U u a a" << endl;
 }
 
-void Chimpanzee::interact(){
-cout<< "U u a a ... U u a a" << endl;
+Komodo::Komodo(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='K';
+	color=YELLOW;
 }
-
-void Chimpanzee::render(){
-cout<<FYEL("C");
-}
-
 void Komodo::interact(){
 cout<< "So amazing komodo!!" << endl;
 }
 
-void Komodo::render(){
-cout<<FYEL("K");
-}
 
+Bear::Bear(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='B';
+	color=YELLOW;
+}
 void Bear::interact(){
 cout<< "Growl.. Growl.." << endl;
 }
 
-void Bear::render(){
-cout<<FYEL("B");
+Whale::Whale(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='W';
+	color=CYAN;
 }
-
 void Whale::interact()
 {
 	cout<< "This whale created a huge splash!" << endl;
 }
-void Whale::render()
+
+Dolphin::Dolphin(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("W");
+	id='D';
+	color=CYAN;
 }
 void Dolphin::interact()
 {
 	cout << "This dolphin loves to jump!" << endl;
 }
-void Dolphin::render()
+
+ClownFish::ClownFish(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("D");
+	id='C';
+	color=CYAN;
 }
 void ClownFish::interact()
 {
 	cout << "This clownfish lives among the anemone" << endl;
 }
 
-void ClownFish::render()
+BlueTang::BlueTang(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("C");
+	id='B';
+	color=CYAN;
 }
 void BlueTang::interact()
 {
 	cout << "This blue tang just keeps swimmming!" << endl;
 }
-void BlueTang::render()
+
+Piranha::Piranha(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("B");
+	id='P';
+	color=CYAN;
 }
 void Piranha::interact()
 {
 	cout << "This piranha eats voraciously!" << endl;
 }
 
-void Piranha::render()
+PuffFish::PuffFish(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("P");
-}	
-
+	id='F';
+	color=CYAN;
+}
 void PuffFish::interact()
 {
 	cout << "This puff fish is fat!"<< endl;
 }
-void PuffFish::render()
+
+Eagle::Eagle(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FCYN("F");
+	id='E';
+	color=RED;
 }
 void Eagle::interact()
 {
 	cout << "This eagle is soaring in the sky!" << endl;
 }
 
-void Eagle::render()
+Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("E");
+	id='W';
+	color=RED;
 }
 void Cendrawasih::interact()
 {
 	cout << "This cendrawasih is resting gracefully!"<< endl;
 }
 
-void Cendrawasih::render()
+Owl::Owl(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("W");
+	id='O';
+	color=RED;
 }
-
 void Owl::interact()
 {
 	cout << "Hooo... Hooo..." << endl;
 }
 
-void Owl::render()
+Bat::Bat(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("O");
+	id='B';
+	color=RED;
 }
-
 void Bat::interact()
 {
 	cout << "This bat is sleeping upside down!" << endl;
 }
 
-void Bat::render()
+Eagle::Eagle(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("B");
+	id='M';
+	color=RED;
 }
-
 void Macau::interact()
 {
 	cout << "This macau is very pretty!" << endl;
 }
 
-void Macau::render()
+Cockatoo::Cockatoo(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("M");
+	id='C';
+	color=RED;
 }
 void Cockatoo::interact()
 {
 	cout << "This cockatoo is repeating what " << endl;
 }
 
-void Cockatoo::render()
+Frog::Frog(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
 {
-	cout << FRED("C");
+	id='F';
+	color=GREEN;
 }
-
-void Frog::interact(){
+void Frog::interact()
+{
 	cout<< "Croag.... Croag.... Ribbet... Ribbet..." << endl;
 }
 
-void Frog::render(){
-	cout<<FGRN("F");
+Frog::Frog(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='A';
+	color=GREEN;
 }
-
 void Alligator::interact(){
 	cout<< "Hiss....." << endl;
 }
 
-void Alligator::render(){
-	cout<<FGRN("A");
+Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='H';
+	color=GREEN;
 }
-
 void Hippopotamus::interact(){
 	cout<< "This hippo is so big" << endl;
 }
 
-void Hippopotamus::render(){
-	cout<<FGRN("H");
+Turtle::Turtle(string _name, double _weight, Sex _s): Animal(string _name, double _weight, Sex _s)
+{
+	id='T';
+	color=GREEN;
 }
-
 void Turtle::interact(){
 	cout<< "This turtle is walking slowly" << endl;
-}
-
-void Turtle::render(){
-	cout<<FGRN("T");
 }
