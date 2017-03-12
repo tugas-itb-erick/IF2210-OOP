@@ -8,6 +8,7 @@ using namespace std;
 
 Cage::Cage(){
   size = 0;
+  h = 0;
 }
 
 Cage::Cage(int s){
@@ -15,6 +16,7 @@ Cage::Cage(int s){
   row = new int[s];
   col = new int[s];
   a = new Animal*[s];
+  h = 0;
 }
 
 Cage::Cage(const Cage& C){
@@ -28,10 +30,14 @@ Cage::~Cage(){
   for(int i=0; i<size; i++)
     delete [] a[i];
   delete [] a;
+  delete h;
 }
 
 Cage& Cage::operator=(const Cage& C){
+  if (this != &C){
 
+  }
+  return *this;
 }
 
 int Cage::getSize() const{
@@ -60,7 +66,7 @@ bool Cage::isFull() const{
   return getAnimal() > getSize()*0.3;
 }
 
-void Cage::AddAnimal(const Animal& A){
+void Cage::AddAnimal(const Animal * A){
   if (!isFull()){
     int i=0;
     while (a[i] != NULL)
@@ -89,15 +95,12 @@ int Cage::countConsumedVeggie(){
   }
 }
 
-void Cage::render(){
-  for(int i=0; i<size; i++){
-    cout << "<" << row[i] << "," << col[i] << "> ";
-    if (a[i] == 0)
-      cout << "Empty"
-    else
-      cout << *(a[i]);
-    cout << endl;
-  }
+char Cage::render(){
+  return h->render();
+}
+
+Color Cage::getColor(){
+  return h->getColor();
 }
 
 istream& operator>>(istream& in, Cage& C){
@@ -120,6 +123,6 @@ istream& operator>>(istream& in, Cage& C){
 
 }
 
-Animal*& Cage::operator[](int x);
-  return Animal();
+Animal* Cage::operator[](int x);
+  return a[x];
 }
