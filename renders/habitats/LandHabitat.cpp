@@ -8,7 +8,7 @@ using namespace std;
 LandHabitat::LandHabitat() : Habitat('X', WHITE)
 {
 }
-LandHabitat::LandHabitat(const LandHabitat& L) : Habitat(L.id, L.color)
+LandHabitat::LandHabitat(const LandHabitat& L) : Habitat(L)
 {
 }
 LandHabitat::~LandHabitat()
@@ -16,6 +16,8 @@ LandHabitat::~LandHabitat()
 }
 LandHabitat& LandHabitat::operator=(const LandHabitat& L)
 {
+	Habitat::operator=(L);
+	return *this;
 }
 LandHabitat* LandHabitat::clone() const
 {

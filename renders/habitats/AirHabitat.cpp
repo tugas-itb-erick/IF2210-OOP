@@ -8,7 +8,7 @@ using namespace std;
 AirHabitat::AirHabitat() : Habitat('O', WHITE)
 {
 }
-AirHabitat::AirHabitat(const AirHabitat& A) : Habitat(A.id, A.color)
+AirHabitat::AirHabitat(const AirHabitat& A) : Habitat(A)
 {
 }
 AirHabitat::~AirHabitat()
@@ -16,6 +16,8 @@ AirHabitat::~AirHabitat()
 }
 AirHabitat& AirHabitat::operator=(const AirHabitat& A)
 {
+	Habitat::operator=(A);
+	return *this;
 }
 char AirHabitat::render()
 {
