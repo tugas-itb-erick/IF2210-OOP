@@ -11,7 +11,7 @@ public:
      * Menciptakan Cell kosong.
      */
 	Cell();
-	
+
 	/** @brief Constructor dengan parameter.
      * Menciptakan Cell dengan parameter id dan color
      * @param id char renderable
@@ -31,13 +31,14 @@ public:
 
 	/** @brief Operator=.
      * Menginisialisasi Cell tanpa terjadi bitwise copy
-     * @return Cell yang sudah di assign nilai dari current object
+		 * @param C Cell yang akan dicopy
+     * @return Cell current object yang sudah diassign dengan C
      */
 	Cell& operator=(const Cell&);
 
-	/** @brief Operator=.
-     * Menginisialisasi Cell tanpa terjadi bitwise copy
-     * @return Cell yang sudah di assign nilai dari current object
+	/** @brief clone.
+     * Menduplikasi Cell tanpa terjadi bitwise copy
+     * @return Cell yang sudah diduplikasi.
      */
-    virtual Cell* clone() const = 0;
+  virtual Cell* clone() const = 0;
 };

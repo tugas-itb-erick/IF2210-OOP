@@ -57,6 +57,12 @@ public:
 
 	friend istream& operator>>(istream& in, Animal* A);
 
+	/** @brief clone.
+     * Menduplikasi Animal tanpa terjadi bitwise copy
+     * @return Animal yang sudah diduplikasi.
+     */
+  virtual Animal* clone() const = 0;
+
 protected:
 	string name;
 	double weight;

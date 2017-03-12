@@ -25,8 +25,8 @@ Cage::Cage(const Cage& C){
 }
 
 Cage::~Cage(){
-  delete [] b;
-  delete [] k;
+  delete [] row;
+  delete [] col;
   for(int i=0; i<size; i++)
     delete [] a[i];
   delete [] a;
@@ -63,7 +63,7 @@ int * Cage::getCol() const{
 }
 
 bool Cage::isFull() const{
-  return getAnimal() > getSize()*0.3;
+  return getTotalAnimal() > getSize()*0.3;
 }
 
 void Cage::AddAnimal(const Animal * A){
