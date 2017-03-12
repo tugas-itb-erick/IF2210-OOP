@@ -2,195 +2,194 @@
 #include "Species.h"
 using namespace std;
 
-Elephant::Elephant(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('E'), color(YELLOW)
-{
-}
-
+Elephant::Elephant(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('E'), color(YELLOW){}
 void Elephant::interact(){
 	cout<< "This elephant is trumpeting!!" << endl;
 }
-
 Elephant* Elephant::clone() const{
 	return new Elephant(*this);
 }
 
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('G'), color(YELLOW)
-{
-}
+Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('G'), color(YELLOW){}
 void Giraffe::interact(){
 	cout<< "This girrafe is eating high tree leaves" << endl;
 }
-
-Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('L'), color(YELLOW)
-{
+Giraffe* Giraffe::clone() const{
+	return new Giraffe(*this);
 }
-void Lion::interact()
-{
+
+Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('L'), color(YELLOW){}
+void Lion::interact(){
 	cout<< "Roarrrr..!!" << endl;
 }
-
-
-Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('T'), color(YELLOW)
-{
+Lion* Lion::clone() const{
+	return new Lion(*this);
 }
-void Tiger::interact()
-{
+
+Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('T'), color(YELLOW){}
+void Tiger::interact(){
 	cout<< "Grrrr...!! Grrr...!!" << endl;
 }
-
-Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('O'), color(YELLOW)
-{
+Tiger* Tiger::clone() const{
+	return new Tiger(*this);
 }
-void Orangutan::interact()
-{
+
+Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('O'), color(YELLOW){}
+void Orangutan::interact(){
 	cout<< "This orangutan is playing on a tree!" << endl;
 }
-
-
-Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(YELLOW)
-{
+Orangutan* Orangutan::clone() const{
+	return new Orangutan(*this);
 }
-void Chimpanzee::interact()
-{
+
+Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(YELLOW){}
+void Chimpanzee::interact(){
 	cout<< "U u a a ... U u a a" << endl;
 }
-
-Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('K'), color(YELLOW)
-{
+Chimpanzee* Chimpanzee::clone() const{
+	return new Chimpanzee(*this);
 }
+
+Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('K'), color(YELLOW){}
 void Komodo::interact(){
 	cout<< "So amazing komodo!!" << endl;
 }
-
-
-Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(YELLOW)
-{
+Komodo* Komodo::clone() const{
+	return new Komodo(*this);
 }
+
+Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(YELLOW){}
 void Bear::interact(){
 	cout<< "Growl.. Growl.." << endl;
 }
-
-Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('W'), color(CYAN)
-{
+Bear* Bear::clone() const{
+	return new Bear(*this);
 }
-void Whale::interact()
-{
+
+Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('W'), color(CYAN){}
+void Whale::interact(){
 	cout<< "This whale created a huge splash!" << endl;
 }
-
-Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('D'), color(CYAN)
-{
+Whale* Whale::clone() const{
+	return new Whale(*this);
 }
-void Dolphin::interact()
-{
+
+Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('D'), color(CYAN){}
+void Dolphin::interact(){
 	cout << "This dolphin loves to jump!" << endl;
 }
-
-ClownFish::ClownFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(CYAN)
-{
+Dolphin* Dolphin::clone() const{
+	return new Dolphin(*this);
 }
-void ClownFish::interact()
-{
+
+ClownFish::ClownFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(CYAN){}
+void ClownFish::interact(){
 	cout << "This clownfish lives among the anemone" << endl;
 }
-
-BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(CYAN)
-{
+ClownFish* ClownFish::clone() const{
+	return new ClownFish(*this);
 }
-void BlueTang::interact()
-{
+
+BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(CYAN){}
+void BlueTang::interact(){
 	cout << "This blue tang just keeps swimmming!" << endl;
 }
-
-Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('P'), color(CYAN)
-{
+BlueTang* BlueTang::clone() const{
+	return new BlueTang(*this);
 }
-void Piranha::interact()
-{
+
+Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('P'), color(CYAN){}
+void Piranha::interact(){
 	cout << "This piranha eats voraciously!" << endl;
 }
-
-PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('F'), color(CYAN)
-{
+Piranha* Piranha::clone() const{
+	return new Piranha(*this);
 }
-void PuffFish::interact()
-{
+
+PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('F'), color(CYAN){}
+void PuffFish::interact(){
 	cout << "This puff fish is fat!"<< endl;
 }
-
-Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('E'), color(RED)
-{
+PuffFish* PuffFish::clone() const{
+	return new PuffFish(*this);
 }
-void Eagle::interact()
-{
+
+Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('E'), color(RED){}
+void Eagle::interact(){
 	cout << "This eagle is soaring in the sky!" << endl;
 }
-
-Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('W'), color(RED)
-{
+Eagle* Eagle::clone() const{
+	return new Eagle(*this);
 }
-void Cendrawasih::interact()
-{
+
+Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('W'), color(RED){}
+void Cendrawasih::interact(){
 	cout << "This cendrawasih is resting gracefully!"<< endl;
 }
-
-Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('O'), color(RED)
-{
+Cendrawasih* Cendrawasih::clone() const{
+	return new Cendrawasih(*this);
 }
-void Owl::interact()
-{
+
+Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('O'), color(RED){}
+void Owl::interact(){
 	cout << "Hooo... Hooo..." << endl;
 }
-
-Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(RED)
-{
+Owl* Owl::clone() const{
+	return new Owl(*this);
 }
-void Bat::interact()
-{
+
+Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('B'), color(RED){}
+void Bat::interact(){
 	cout << "This bat is sleeping upside down!" << endl;
 }
-
-Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('M'), color(RED)
-{
+Bat* Bat::clone() const{
+	return new Bat(*this);
 }
-void Macau::interact()
-{
+
+Macau:: Macau(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('M'), color(RED){}
+void Macau::interact(){
 	cout << "This macau is very pretty!" << endl;
 }
-
-Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(RED)
-{
+Macau* Macau::clone() const{
+	return new Macau(*this);
 }
-void Cockatoo::interact()
-{
+
+Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('C'), color(RED){}
+void Cockatoo::interact(){
 	cout << "This cockatoo is repeating what " << endl;
 }
-
-Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('F'), color(GREEN)
-{
+Cockatoo* Cockatoo::clone() const{
+	return new Cockatoo(*this);
 }
-void Frog::interact()
-{
+
+Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('F'), color(GREEN){}
+void Frog::interact(){
 	cout<< "Croag.... Croag.... Ribbet... Ribbet..." << endl;
 }
-
-Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('A'), color(GREEN)
-{
+Frog* Frog::clone() const{
+	return new Frog(*this);
 }
+
+Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('A'), color(GREEN){}
 void Alligator::interact(){
 	cout<< "Hiss....." << endl;
 }
-
-Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('H'), color(GREEN)
-{
+Alligator* Alligator::clone() const{
+	return new Alligator(*this);
 }
+
+Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('H'), color(GREEN){}
 void Hippopotamus::interact(){
 	cout<< "This hippo is so big" << endl;
 }
-
-Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('T'), color(GREEN)
-{
+Hippopotamus* Hippopotamus::clone() const{
+	return new Hippopotamus(*this);
 }
+
+Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name, _weight, _s, _r, _c), id('T'), color(GREEN){}
 void Turtle::interact(){
 	cout<< "This turtle is walking slowly" << endl;
+}
+Turtle* Turtle::clone() const{
+	return new Turtle(*this);
 }
