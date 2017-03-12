@@ -5,17 +5,25 @@
 
 using namespace std;
 
-AirHabitat::AirHabitat() : id('O'), color(WHITE)
+AirHabitat::AirHabitat() : Habitat('O', WHITE)
 {
 }
-AirHabitat::AirHabitat(const AirHabitat&) : id('O'), color(WHITE)
+AirHabitat::AirHabitat(const AirHabitat& A) : Habitat(A.id, A.color)
 {
 }
 AirHabitat::~AirHabitat()
 {
 }
-AirHabitat& AirHabitat::operator=(const AirHabitat&)
+AirHabitat& AirHabitat::operator=(const AirHabitat& A)
 {
+}
+char AirHabitat::render()
+{
+	return id;
+}
+Color AirHabitat::getColor()
+{
+	return color;
 }
 AirHabitat* AirHabitat::clone() const
 {

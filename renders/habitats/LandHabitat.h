@@ -30,12 +30,32 @@ public:
      */
 	LandHabitat& operator=(const LandHabitat&);
 	
+	/** @brief Render.
+     * Mengembalikan karakter untuk ditampilkan ke layar
+     * @return id bertipe char
+     */
+	char render();
+	
+	/** @brief GetColor.
+     * Mengembalikan warna untuk ditampilkan ke layar
+     * @return color warna renderable
+     */
+	Color getColor();
+	
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning
      */
 	LandHabitat* clone() const;
 	
+	/** @brief Render.
+     * Mengembalikan karakter untuk ditampilkan ke layar
+     * @return id bertipe char
+     */
 	char render();
+	/** @brief Clone.
+     * Menduplikat diri sendiri
+     * @return value object hasil kloning
+     */
 	Color getColor();
 };
