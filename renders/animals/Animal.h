@@ -22,7 +22,7 @@ public:
 	* @param _weight berat binatang
 	* @param _s jenis kelamin
 	*/
-	Animal(string _name, double _weight, Sex _s, int _r, int _c);
+	Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
 
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.

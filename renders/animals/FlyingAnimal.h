@@ -9,7 +9,7 @@ class FlyingAnimal : public Animal {
 public:
 	/** @brief Constructor
 	*/
-	FlyingAnimal();
+	FlyingAnimal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
 
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.

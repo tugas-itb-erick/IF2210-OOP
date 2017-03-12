@@ -21,6 +21,16 @@ Restaurant& Restaurant::operator=(const Restaurant& R)
   return *this;
 }
 
+char Restaurant::render()
+{
+	return id;
+}
+
+Color Restaurant::getColor()
+{
+	return color;
+}
+
 Restaurant* Restaurant::clone() const {
   return new Restaurant(*this);
 }

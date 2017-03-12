@@ -36,7 +36,7 @@ public:
 
 	/** @brief GetColor.
      * Mengembalikan warna untuk ditampilkan ke layar
-     * @return color warna renderable
+     * @return color warna untuk dirender
      */
 	Color getColor();
 

@@ -9,6 +9,9 @@ using namespace std;
 Road::Road() : Facility('-', WHITE)
 {}
 
+Road::Road(char _id, Color _color) : Facility(_id, _color)
+{}
+
 Road::Road(const Road& R) : Facility(R)
 {}
 
@@ -19,6 +22,16 @@ Road& Road::operator=(const Road& R)
 {
   Facility::operator=(R);
   return *this;
+}
+
+char Road::render()
+{
+	return id;
+}
+
+Color Road::getColor()
+{
+	return color;
 }
 
 Road* Road::clone() const {
