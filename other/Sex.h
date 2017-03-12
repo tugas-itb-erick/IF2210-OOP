@@ -1,3 +1,3 @@
 #pragma once
 
-enum Sex {MALE, FEMALE};
+enum Sex {male, female};
