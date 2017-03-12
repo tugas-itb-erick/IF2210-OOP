@@ -32,30 +32,3 @@ Animal& Animal::operator=(const Animal& A){
 	s=A.s;
 	return *this;
 }
-
-LandAnimal::LandAnimal(){
-}
-LandAnimal::LandAnimal(const Animal&){
-}
-LandAnimal::~LandAnimal(){
-}
-LandAnimal& LandAnimal::operator=(const LandAnimal&){
-}
-
-WaterAnimal::WaterAnimal(){
-}
-WaterAnimal::WaterAnimal(const Animal&){
-}
-WaterAnimal::~WaterAnimal(){
-}
-WaterAnimal& WaterAnimal::operator=(const WaterAnimal&){
-}
-
-FlyingAnimal::FlyingAnimal(){
-}
-FlyingAnimal::FlyingAnimal(const Animal&){
-}
-FlyingAnimal::~FlyingAnimal(){
-}
-FlyingAnimal& FlyingAnimal::operator=(const FlyingAnimal&){
-}
