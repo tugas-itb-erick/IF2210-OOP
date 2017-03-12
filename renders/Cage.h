@@ -5,16 +5,33 @@
 
 #include "Renderable.h"
 
-/*
 class Cage : public Renderable {
 public:
   Cage();
-  virtual void render();
-  friend istream& operator>>();
-  friend ostream& operator<<();
+  Cage(int s);
+  Cage(const Cage& C);
+  ~Cage();
+  Cage& operator=(const Cage& C);
+
+  int getSize() const;
+  int getTotalAnimal() const;
+  int * getRow() const;
+  int * getCol() const;
+
+  bool isFull() const;
+  void AddAnimal(const Animal& A);
+
+  int countConsumedMeat();
+  int countConsumedVeggie();
+
+  void render();
+  friend istream& operator>>(istream& in, Cage& C);
+
+  Animal*& operator[](int x);
 
 private:
-  Habitat * *h;
+  int * row; // posisi baris
+  int * col; // posisi kolom
   Animal * *a;
-
-};*/
+  int size;
+};

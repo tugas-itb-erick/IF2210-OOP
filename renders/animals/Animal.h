@@ -46,5 +46,5 @@ public:
 protected:
 	string name;
 	double weight;
-	Sex s;
+	Sex s;z
 };
