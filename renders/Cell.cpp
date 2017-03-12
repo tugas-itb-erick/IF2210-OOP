@@ -1,7 +1,6 @@
 /* NIM/Nama  : 13515057 / Erick Wijaya */
 /* File      : Cell.cpp                  */
 
-#pragma once
 #include "Cell.h"
 	
 	Cell::Cell()

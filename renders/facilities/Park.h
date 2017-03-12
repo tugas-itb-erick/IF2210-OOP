@@ -27,13 +27,19 @@ public:
      * @return Park yang sudah di assign nilai dari current object
      */
 	Park& operator=(const Park&);
-	
+
 	/** @brief Render.
      * Mengembalikan karakter untuk ditampilkan ke layar
-     * @return id Facility bertipe char
+     * @return id bertipe char
      */
-	char render() const;
-	
+	char render();
+
+	/** @brief GetColor.
+     * Mengembalikan warna untuk ditampilkan ke layar
+     * @return color warna untuk dirender
+     */
+	Color getColor();
+
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning
