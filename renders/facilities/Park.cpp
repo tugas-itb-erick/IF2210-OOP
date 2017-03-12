@@ -6,17 +6,20 @@
 using namespace std;
 
 /***** PARK *****/
-Park::Park()  : id('*'), color(WHITE)
+Park::Park() : Facility('*', WHITE)
 {}
 
-Park::Park(const Park&)  : id('*'), color(WHITE)
+Park::Park(const Park& P) : Facility(P)
 {}
 
 Park::~Park()
 {}
 
-Park& Park::operator=(const Park&)
-{}
+Park& Park::operator=(const Park& P)
+{
+	Facility::operator=(P);
+  return *this;
+}
 
 char Park::render()
 {
