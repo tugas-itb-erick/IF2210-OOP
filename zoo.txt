@@ -1,10 +1,16 @@
-8 9
-# # # O O O X X X
-# # # O O O X X X
-# O O O O O X X X
-o - - O O X X X X
-R R - - - - - * *
-R R * * * - - * *
-X X - - - - - R *
-X X i i # # # # *
-
+15 15
+# # o O O O X X X X o # # # # 
+# # - O O O X X X X - # # # #
+# # - O O O - - - - - # # # #
+# # - - - - - * * * - - - - O 
+# # - # # O O * * * - O O O O
+X R - # # O O - - - - - O O O
+X R - # # O O R R X X - - - i
+X X - # # O O X X X X # # # #
+X X - # # O O X X X X # # # #
+X X - - - - - - - - - # # # #
+X X - # # # # # # # - - - O #
+O O - # # # # # # # X X - O O
+O O - - - - - - - X X X - O O
+O O O X X X X X - X X X - O O
+O O O X X X X X i X X X O O O
