@@ -16,7 +16,8 @@ int main(){
 
   Zoo z1(1,2);
 
-  f1 >> z1;
+  z1.readAll(f1,f2,f3);
+
   cout << z1;
 
   f1.close();

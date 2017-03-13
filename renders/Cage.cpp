@@ -7,8 +7,15 @@
 using namespace std;
 
 Cage::Cage(){
-  size = 0;
-  h = 0;
+  size = 1;
+  row = new int[size];
+  col = new int[size];
+  a = new Animal*[size];
+  for(int i=0; i<size; i++){
+    row[i] = -1;
+    col[i] = -1;
+  }
+  h = NULL;
 }
 
 Cage::Cage(int s){
@@ -20,7 +27,7 @@ Cage::Cage(int s){
     row[i] = -1;
     col[i] = -1;
   }
-  h = 0;
+  h = NULL;
 }
 
 Cage::Cage(const Cage& C){
@@ -31,24 +38,33 @@ Cage::Cage(const Cage& C){
   for(int i=0; i<size; i++){
     row[i] = C.row[i];
     col[i] = C.col[i];
-    if (C.a[i] != 0)
+    if (C.a[i] != NULL)
       a[i] = C.a[i]->clone();
   }
-  if (C.h != 0)
+  if (C.h != NULL)
     h = C.h->clone();
 }
 
 Cage::~Cage(){
-  if (row != 0) delete [] row;
-  if (col != 0) delete [] col;
+  if (row != NULL) delete [] row;
+  if (col != NULL) delete [] col;
   for(int i=0; i<size; i++)
-    if (a[i] != 0) delete [] a[i];
-  if (a != 0) delete [] a;
-  if (h != 0) delete h;
+    if (a[i] != NULL) delete a[i];
+  if (a != NULL) delete [] a;
+  if (h != NULL) delete h;
 }
 
 Cage& Cage::operator=(const Cage& C){
   if (this != &C){
+    // delete
+    if (row != NULL) delete [] row;
+    if (col != NULL) delete [] col;
+    for(int i=0; i<size; i++)
+      if (a[i] != NULL) delete a[i];
+    if (a != NULL) delete [] a;
+    if (h != NULL) delete h;
+
+    // assign
     size = C.size;
     row = new int[size];
     col = new int[size];

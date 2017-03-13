@@ -29,7 +29,7 @@ public:
 
   /** @brief Destructor
 	*/
-  ~Cage();
+  virtual ~Cage();
 
   /** @brief Operator=.
 	  * Menjamin bukan bitwise copy.

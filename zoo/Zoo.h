@@ -59,6 +59,8 @@ public:
 			return Proxy(*this, x);
 	}
 
+	void AddCage(Cage& C);
+
 private:
 	Cell ** *c;  	                  /* matriks of pointer to cell */
 	Cage * cg;                      /* array of cage */
@@ -67,5 +69,4 @@ private:
 
 	static const int defRow = 50; 	/* default baris = 50 */
 	static const int defCol = 50; 	/* default kolom = 50 */
-	static const int defCage = 50;  /* default jumlah cage = 50 */
 };

@@ -2,6 +2,7 @@
 /* File      : Zoo.cpp                 */
 
 #include <iostream>
+#include <cstdio>
 #include "Zoo.h"
 using namespace std;
 
@@ -15,7 +16,7 @@ Zoo::Zoo(){
       c[i][j] = NULL;
     }
   }
-  cg = new Cage[row];
+  cg = new Cage[row*col];
 }
 
 Zoo::Zoo(int _r, int _c){
@@ -28,7 +29,7 @@ Zoo::Zoo(int _r, int _c){
       c[i][j] = NULL;
     }
   }
-  cg = new Cage[row];
+  cg = new Cage[row*col];
 }
 
 Zoo::Zoo(const Zoo& Z){
@@ -41,18 +42,17 @@ Zoo::Zoo(const Zoo& Z){
       c[i][j] = Z.c[i][j]->clone();
     }
   }
-  cg = new Cage[row];
+  cg = new Cage[row*col];
 }
 
 Zoo::~Zoo(){
   for(int i=0; i<row; i++){
     for(int j=0; j<col; j++){
-      if (c[i][j] != 0) delete c[i][j];
+      if (c[i][j] != NULL) delete c[i][j];
     }
-    if (c[i] != 0) delete [] c[i];
+    if (c[i] != NULL) delete [] c[i];
   }
-  if (c != 0) delete [] c;
-  if (cg != 0) delete [] cg;
+  if (c != NULL) delete [] c;
 }
 
 Zoo& Zoo::operator=(const Zoo& Z){
@@ -78,8 +78,7 @@ Zoo& Zoo::operator=(const Zoo& Z){
         c[i][j] = Z.c[i][j]->clone();
       }
     }
-    cg = new Cage[row];
-
+    cg = new Cage[row*col];
   }
 
   return *this;
@@ -132,7 +131,56 @@ void Zoo::print(int x1, int y1, int x2, int y2){
   }
 }
 
-void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
-  fzoo >> (*this);
+void Zoo::AddCage(Cage& C){
+  bool valid = true;
+  int i = 0;
 
+  if (C.getSize() > 0){
+    while ((i < C.getSize()) && valid){
+      if ((C.getRow()[i] < 0) || (C.getCol()[i] < 0))
+        valid = false;
+      else{
+        int j = 0;
+        while ((j < sizeof(cg)/sizeof(Cage)) && valid){
+          int k = 0;
+          while ((k < cg[j].getSize()) && valid){
+            if ((C.getRow()[i] == cg[j].getRow()[k]) && (C.getCol()[i] == cg[j].getCol()[k]))
+              valid = false;
+            else
+              k++;
+          }
+          j++;
+        }
+      }
+      i++;
+    }
+
+    if (valid){
+      i = 0;
+      while ((i<row*col) && (cg[i].getSize()==0))
+        i++;
+      if (i<row*col)
+        cg[i] = C;
+    }
+  }
+
+  else {
+    valid = false;
+  }
+
+
+}
+
+void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
+  char a;
+  Cage b;
+
+  fzoo >> (*this);
+  fcg >> a;
+  while (a != EOF){
+    fcg.putback(a);
+    fcg >> b;
+    Zoo::AddCage(b);
+    fcg >> a;
+  }
 }
