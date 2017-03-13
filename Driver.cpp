@@ -18,7 +18,7 @@ int main(){
 
   z1.readAll(f1,f2,f3);
 
-  cout << z1;
+  // cout << z1;
 
   f1.close();
   f2.close();

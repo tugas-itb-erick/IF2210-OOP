@@ -157,7 +157,7 @@ void Zoo::AddCage(Cage& C){
 
     if (valid){
       i = 0;
-      while ((i<row*col) && (cg[i].getSize()==0))
+      while ((i<row*col) && (cg[i].getHabitat() != NULL))
         i++;
       if (i<row*col)
         cg[i] = C;
@@ -174,12 +174,18 @@ void Zoo::AddCage(Cage& C){
 void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
   char a;
   Cage b;
+  int i, j;
 
   fzoo >> (*this);
   fcg >> a;
   while (a != EOF){
     fcg.putback(a);
+
     fcg >> b;
+    i = b.getRow()[0];
+    j = b.getCol()[0];
+    b.setHabitat(c[i][j]);
+
     Zoo::AddCage(b);
     fcg >> a;
   }

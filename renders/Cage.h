@@ -61,6 +61,8 @@ public:
 	 */
   int * getCol() const;
 
+  char getHabitat() const;
+
   /** @brief isFull.
 	 * Mengembalikan true jika 30% cage berisi binatang
 	 * @return mengembalikan true/false
@@ -91,7 +93,7 @@ public:
 
   Color getColor();
 
-  void setHabitat(Habitat * nh);
+  void setHabitat(char c);
 
   /** @brief Operator>>.
 	 * Menambahkan binatang ke dalam cage
@@ -108,7 +110,7 @@ public:
 private:
   int * row; // posisi baris
   int * col; // posisi kolom
-  Animal * *a;
-  Habitat *h;
-  int size;
+  Animal * *a; // hewan yang tinggal di kandang
+  char habitat; // habitat kandang
+  int size; // ukuran kandang
 };

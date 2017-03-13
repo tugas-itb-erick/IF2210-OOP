@@ -7,7 +7,7 @@
 using namespace std;
 
 Cage::Cage(){
-  size = 1;
+  size = 10;
   row = new int[size];
   col = new int[size];
   a = new Animal*[size];
@@ -101,6 +101,10 @@ int * Cage::getRow() const{
 
 int * Cage::getCol() const{
   return col;
+}
+
+Habitat * Cage::getHabitat() const{
+  return h;
 }
 
 bool Cage::isFull() const{
