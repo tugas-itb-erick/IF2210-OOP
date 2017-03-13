@@ -1,3 +1,10 @@
+Elephant     el1  1500 f 0 0 
+Giraffe      gr1  1200 m 0 1 
+Giraffe      gr2  1200 f 0 4 
+
+Lion	     ln1   150 m 0 7 
+Lion	     ln1   150 m 0 8 
+
 Clownfish    cf1   0.1 m 0 13 
 Clownfish    cf2   0.1 m 0 12 
 
