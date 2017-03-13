@@ -18,6 +18,7 @@ Zoo::Zoo(){
     }
   }
   cg = new Cage[row*col];
+  ncage = 0;
 }
 
 Zoo::Zoo(int _r, int _c){
@@ -31,6 +32,7 @@ Zoo::Zoo(int _r, int _c){
     }
   }
   cg = new Cage[row*col];
+  ncage = 0;
 }
 
 Zoo::Zoo(const Zoo& Z){
@@ -44,6 +46,7 @@ Zoo::Zoo(const Zoo& Z){
     }
   }
   cg = new Cage[row*col];
+  ncage = Z.ncage;
 }
 
 Zoo::~Zoo(){
@@ -80,6 +83,7 @@ Zoo& Zoo::operator=(const Zoo& Z){
       }
     }
     cg = new Cage[row*col];
+    ncage = Z.ncage;
   }
 
   return *this;
@@ -115,7 +119,11 @@ istream& operator>>(istream& in, Zoo& Z){
 ostream& operator<<(ostream& os, const Zoo& Z){
   for(int i=0; i<Z.row; i++){
     for(int j=0; j<Z.col; j++){
-      cout << Z.c[i][j]->render();
+      if (Z.c[i][j] != 0){
+        os << Z.c[i][j]->render();
+      }else{
+        os << '0';
+      }
       os << " ";
     }
     os << endl;
@@ -123,7 +131,7 @@ ostream& operator<<(ostream& os, const Zoo& Z){
   return os;
 }
 
-void Zoo::print(int x1, int y1, int x2, int y2){
+void Zoo::display(int x1, int y1, int x2, int y2){
   if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >=col) || (x1 > x2) || (y1 > y2)){
     cout << "Indeks posisi zoo menyalahi aturan." << endl;
   }
@@ -132,13 +140,15 @@ void Zoo::print(int x1, int y1, int x2, int y2){
       for(int j=y1; j<=y2; j++){
         int k = 0;
         bool found = false;
-        while ((k < sizeof(cg)/sizeof(Cage)) && !found){
+
+        while ((k < ncage) && !found){
           int l = 0;
           while ((l < cg[k].getSize()) && !found){
             if ((cg[k].getRow()[l] == i) && (cg[k].getCol()[l] == j)){
               found = true;
-              if (cg[k][l] != NULL){
-                cout << cg[k][l]->render();
+              if (cg[k].getAnimal(l) != NULL){
+                //cout << cg[k].getAnimal(l)->render();
+                cout << c[i][j]->render();
               }else{
                 cout << cg[k].render();
               }
@@ -152,22 +162,26 @@ void Zoo::print(int x1, int y1, int x2, int y2){
         }
         cout << " ";
       }
+      cout << endl;
     }
-    cout << endl;
   }
 }
 
-void Zoo::AddCage(Cage& C){
-  bool valid = true;
-  int i = 0;
+void Zoo::display(){
+  Zoo::display(0, 0, row-1, col-1);
+}
 
+void Zoo::AddCage(Cage& C){
   if (C.getSize() > 0){
+    bool valid = true;
+    int i = 0;
+
     while ((i < C.getSize()) && valid){
       if ((C.getRow()[i] < 0) || (C.getCol()[i] < 0))
         valid = false;
       else{
         int j = 0;
-        while ((j < sizeof(cg)/sizeof(Cage)) && valid){
+        while ((j < ncage) && valid){
           int k = 0;
           while ((k < cg[j].getSize()) && valid){
             if ((C.getRow()[i] == cg[j].getRow()[k]) && (C.getCol()[i] == cg[j].getCol()[k]))
@@ -185,20 +199,16 @@ void Zoo::AddCage(Cage& C){
       i = 0;
       while ((i<row*col) && (cg[i].getHabitat() != '?'))
         i++;
-      if (i<row*col)
+      if (i<row*col){
         cg[i] = C;
+        ++ncage;
+      }
     }
   }
-
-  else {
-    valid = false;
-  }
-
 
 }
 
 void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
-  char a;
   int i, j;
   Cage b;
   vector<Animal*> av;
@@ -221,9 +231,9 @@ void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
 
   // Add Animal to Cages
   i = 0;
-  while ((i<sizeof(cg)/sizeof(Cage)) && (cg[i].getHabitat() != '?')){
+  while ((i < ncage) && (cg[i].getHabitat() != '?')){
     for(j=0; j<(int)av.size(); j++){
-      cg[i].AddAnimal(av[i]);
+      cg[i].AddAnimal(av[j]);
     }
     i++;
   }

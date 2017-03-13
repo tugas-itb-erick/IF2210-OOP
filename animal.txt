@@ -16,8 +16,8 @@ Piranha      pr1   0.3 m 2 4
 
 Piranha      pr2   0.3 m 6 3 
 
-Bluetang     bt1   0.4 m 3 0 
-Bluetang     bt2   0.3 f 4 0 
+BlueTang     bt1   0.4 m 3 0 
+BlueTang     bt2   0.3 f 4 0 
 
 Alligator    al1   450 m 3 7  
 
@@ -61,4 +61,5 @@ Macau        ma3   0.3 f 6 7
 
 Cockatoo     co1   0.2 f 13 10 
 
-Bear         be1   100 m  10 10  
+Bear         be1   100 m  10 10
+

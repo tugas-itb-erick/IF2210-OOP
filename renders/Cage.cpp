@@ -100,6 +100,10 @@ char Cage::getHabitat() const{
   return habitat;
 }
 
+Animal* Cage::getAnimal(int x) const{
+  return a[x];
+}
+
 bool Cage::isFull() const{
   return getTotalAnimal() > getSize()*0.3;
 }
@@ -124,7 +128,7 @@ int Cage::countConsumedMeat(){
 
   for(int i=0; i<size; i++){
     if (a[i] != 0){
-      consume += 10; // TBD
+      consume += 10 // tbd
     }
   }
 }
@@ -172,8 +176,4 @@ istream& operator>>(istream& in, Cage& C){
   C = temp;
 
   return in;
-}
-
-Animal* Cage::operator[](int x){
-  return a[x];
 }

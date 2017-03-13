@@ -2,8 +2,16 @@
 #include "Species.h"
 using namespace std;
 
-Elephant::Elephant(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'E', YELLOW){}
+Elephant::Elephant(string _name, double _weight, Sex _s, int _r, int _c) : LandAnimal(_name, _weight, _s, _r, _c, 'E', YELLOW){
 
+}
+Elephant::Elephant(const Elephant& E) : LandAnimal(E) {
+
+}
+Elephant& Elephant::operator=(const Elephant& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Elephant::interact(){
 	cout<< "This elephant is trumpeting!!" << endl;
 }
@@ -17,8 +25,16 @@ Color Elephant::getColor(){
 	return color;
 }
 
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'G', YELLOW){}
+Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : LandAnimal(_name, _weight, _s, _r, _c, 'G', YELLOW){
 
+}
+Giraffe::Giraffe(const Giraffe& G) : LandAnimal(G) {
+
+}
+Giraffe& Giraffe::operator=(const Giraffe& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Giraffe::interact(){
 	cout<< "This girrafe is eating high tree leaves" << endl;
 }
@@ -32,8 +48,16 @@ Color Giraffe::getColor(){
 	return color;
 }
 
-Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'L', YELLOW){}
+Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'L', YELLOW){
 
+}
+Lion::Lion(const Lion& L) : LandAnimal(L) {
+
+}
+Lion& Lion::operator=(const Lion& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Lion::interact(){
 	cout<< "Roarrrr..!!" << endl;
 }
@@ -47,9 +71,16 @@ Color Lion::getColor(){
 	return color;
 }
 
+Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', YELLOW){
 
-Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', YELLOW){}
+}
+Tiger::Tiger(const Tiger& T) : LandAnimal(T) {
 
+}
+Tiger& Tiger::operator=(const Tiger& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Tiger::interact(){
 	cout<< "Grrrr...!! Grrr...!!" << endl;
 }
@@ -64,8 +95,16 @@ Color Tiger::getColor(){
 }
 
 
-Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'O', YELLOW){}
+Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'O', YELLOW){
 
+}
+Orangutan::Orangutan(const Orangutan& O) : LandAnimal(O) {
+
+}
+Orangutan& Orangutan::operator=(const Orangutan& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Orangutan::interact(){
 	cout<< "This orangutan is playing on a tree!" << endl;
 }
@@ -79,9 +118,16 @@ Color Orangutan::getColor(){
 	return color;
 }
 
+Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'C', YELLOW){
 
-Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'C', YELLOW){}
+}
+Chimpanzee::Chimpanzee(const Chimpanzee& C) : LandAnimal(C) {
 
+}
+Chimpanzee& Chimpanzee::operator=(const Chimpanzee& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Chimpanzee::interact(){
 	cout<< "U u a a ... U u a a" << endl;
 }
@@ -96,8 +142,16 @@ Color Chimpanzee::getColor(){
 }
 
 
-Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'K', YELLOW){}
+Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'K', YELLOW){
 
+}
+Komodo::Komodo(const Komodo& K) : LandAnimal(K) {
+
+}
+Komodo& Komodo::operator=(const Komodo& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Komodo::interact(){
 	cout<< "So amazing komodo!!" << endl;
 }
@@ -112,8 +166,16 @@ Color Komodo::getColor(){
 }
 
 
-Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'B', YELLOW){}
+Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'B', YELLOW){
 
+}
+Bear::Bear(const Bear& B) : LandAnimal(B) {
+
+}
+Bear& Bear::operator=(const Bear& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Bear::interact(){
 	cout<< "Growl.. Growl.." << endl;
 }
@@ -128,8 +190,16 @@ Color Bear::getColor(){
 }
 
 
-Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'W', CYAN){}
+Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'W', CYAN){
 
+}
+Whale::Whale(const Whale& W) : WaterAnimal(W) {
+
+}
+Whale& Whale::operator=(const Whale& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void Whale::interact(){
 	cout<< "This whale created a huge splash!" << endl;
 }
@@ -144,8 +214,16 @@ Color Whale::getColor(){
 }
 
 
-Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'D', CYAN){}
+Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'D', CYAN){
 
+}
+Dolphin::Dolphin(const Dolphin& D) : WaterAnimal(D) {
+
+}
+Dolphin& Dolphin::operator=(const Dolphin& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void Dolphin::interact(){
 	cout << "This dolphin loves to jump!" << endl;
 }
@@ -160,7 +238,16 @@ Color Dolphin::getColor(){
 }
 
 
-Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'C', CYAN){}
+Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'C', CYAN){
+
+}
+Clownfish::Clownfish(const Clownfish& C) : WaterAnimal(C) {
+
+}
+Clownfish& Clownfish::operator=(const Clownfish& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void Clownfish::interact(){
 	cout << "This Clownfish lives among the anemone" << endl;
 }
@@ -175,8 +262,16 @@ Color Clownfish::getColor(){
 }
 
 
-BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'B', CYAN){}
+BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'B', CYAN){
 
+}
+BlueTang::BlueTang(const BlueTang& B) : WaterAnimal(B) {
+
+}
+BlueTang& BlueTang::operator=(const BlueTang& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void BlueTang::interact(){
 	cout << "This blue tang just keeps swimmming!" << endl;
 }
@@ -191,8 +286,16 @@ Color BlueTang::getColor(){
 }
 
 
-Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'P', CYAN){}
+Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'P', CYAN){
 
+}
+Piranha::Piranha(const Piranha& P) : WaterAnimal(P) {
+
+}
+Piranha& Piranha::operator=(const Piranha& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void Piranha::interact(){
 	cout << "This piranha eats voraciously!" << endl;
 }
@@ -206,8 +309,16 @@ Color Piranha::getColor(){
 	return color;
 }
 
-PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'F', CYAN){}
+PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'F', CYAN){
 
+}
+PuffFish::PuffFish(const PuffFish& P) : WaterAnimal(P) {
+
+}
+PuffFish& PuffFish::operator=(const PuffFish& E){
+	WaterAnimal::operator=(E);
+	return *this;
+}
 void PuffFish::interact(){
 	cout << "This puff fish is fat!"<< endl;
 }
@@ -222,8 +333,16 @@ Color PuffFish::getColor(){
 }
 
 
-Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'E', RED){}
+Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'E', RED){
 
+}
+Eagle::Eagle(const Eagle& E) : FlyingAnimal(E) {
+
+}
+Eagle& Eagle::operator=(const Eagle& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Eagle::interact(){
 	cout << "This eagle is soaring in the sky!" << endl;
 }
@@ -238,8 +357,16 @@ Color Eagle::getColor(){
 }
 
 
-Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'W', RED){}
+Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'W', RED){
 
+}
+Cendrawasih::Cendrawasih(const Cendrawasih& C) : FlyingAnimal(C) {
+
+}
+Cendrawasih& Cendrawasih::operator=(const Cendrawasih& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Cendrawasih::interact(){
 	cout << "This cendrawasih is resting gracefully!"<< endl;
 }
@@ -254,8 +381,16 @@ Color Cendrawasih::getColor(){
 }
 
 
-Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'O', RED){}
+Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'O', RED){
 
+}
+Owl::Owl(const Owl& O) : FlyingAnimal(O) {
+
+}
+Owl& Owl::operator=(const Owl& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Owl::interact(){
 	cout << "Hooo... Hooo..." << endl;
 }
@@ -270,8 +405,16 @@ Color Owl::getColor(){
 }
 
 
-Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'B', RED){}
+Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'B', RED){
 
+}
+Bat::Bat(const Bat& B) : FlyingAnimal(B) {
+
+}
+Bat& Bat::operator=(const Bat& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Bat::interact(){
 	cout << "This bat is sleeping upside down!" << endl;
 }
@@ -285,8 +428,16 @@ Color Bat::getColor(){
 	return color;
 }
 
-Macau:: Macau(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'M', RED){}
+Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'M', RED){
 
+}
+Macau::Macau(const Macau& M) : FlyingAnimal(M) {
+
+}
+Macau& Macau::operator=(const Macau& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Macau::interact(){
 	cout << "This macau is very pretty!" << endl;
 }
@@ -300,8 +451,16 @@ Color Macau::getColor(){
 	return color;
 }
 
-Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'C', RED){}
+Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'C', RED){
 
+}
+Cockatoo::Cockatoo(const Cockatoo& C) : FlyingAnimal(C) {
+
+}
+Cockatoo& Cockatoo::operator=(const Cockatoo& E){
+	FlyingAnimal::operator=(E);
+	return *this;
+}
 void Cockatoo::interact(){
 	cout << "This cockatoo is repeating what you're saying!" << endl;
 }
@@ -315,8 +474,16 @@ Color Cockatoo::getColor(){
 	return color;
 }
 
-Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'F', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'F', GREEN){}
+Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'F', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'F', GREEN){
 
+}
+Frog::Frog(const Frog& F) : LandAnimal(F), WaterAnimal(F) {
+
+}
+Frog& Frog::operator=(const Frog& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Frog::interact(){
 	cout<< "Croag.... Croag.... Ribbet... Ribbet..." << endl;
 }
@@ -331,8 +498,16 @@ Color Frog::getColor(){
 }
 
 
-Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'A', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'A', GREEN){}
+Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'A', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'A', GREEN){
 
+}
+Alligator::Alligator(const Alligator& A) : LandAnimal(A), WaterAnimal(A) {
+
+}
+Alligator& Alligator::operator=(const Alligator& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Alligator::interact(){
 	cout<< "Hiss....." << endl;
 }
@@ -346,9 +521,16 @@ Color Alligator::getColor(){
 	return color;
 }
 
+Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'H', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'H', GREEN){
 
-Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'H', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'H', GREEN){}
+}
+Hippopotamus::Hippopotamus(const Hippopotamus& H) : LandAnimal(H), WaterAnimal(H) {
 
+}
+Hippopotamus& Hippopotamus::operator=(const Hippopotamus& E){
+	LandAnimal::operator=(E);
+	return *this;
+}
 void Hippopotamus::interact(){
 	cout<< "This hippo is so big" << endl;
 }
@@ -362,8 +544,16 @@ Color Hippopotamus::getColor(){
 	return color;
 }
 
-Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'T', GREEN){}
+Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'T', GREEN){
 
+}
+Turtle::Turtle(const Turtle& T) : LandAnimal(T), WaterAnimal(T) {
+
+}
+Turtle& Turtle::operator=(const Turtle& E){
+	Turtle::operator=(E);
+	return *this;
+}
 void Turtle::interact(){
 	cout<< "This turtle is walking slowly" << endl;
 }
@@ -377,7 +567,7 @@ Color Turtle::getColor(){
 	return color;
 }
 
-istream& operator>>(istream& in, Animal* A){
+istream& operator>>(istream& in, Animal* &A){
 	string kelas;
 	string name;
 	double weight;
@@ -386,6 +576,7 @@ istream& operator>>(istream& in, Animal* A){
 	int row, col;
 
 	in >> kelas >> name >> weight >> sc >> row >> col;
+	// cout << kelas<<" "<<name<<" "<<weight;
 	if (sc == 'm')
 		s = male;
 	else
@@ -491,6 +682,6 @@ istream& operator>>(istream& in, Animal* A){
 	{
 		A = new Elephant(name, weight, s, row, col);
 	}
-	
+
 	return in;
 }

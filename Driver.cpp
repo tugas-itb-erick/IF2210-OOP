@@ -14,9 +14,11 @@ int main(){
   f2.open("cage.txt");
   f3.open("animal.txt");
 
-  Zoo z1(1,2);
+  Zoo z1;
   z1.readAll(f1,f2,f3);
-  cout << z1;
+  z1.display();
+
+  //z1.display();
 
   f1.close();
   f2.close();

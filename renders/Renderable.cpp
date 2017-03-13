@@ -25,7 +25,7 @@ Renderable::Renderable(const Renderable& R) : id(R.id), color(R.color)
 /** @brief Destructor.
 */
 Renderable::~Renderable()
-{	
+{
 }
 /** @brief Operator=.
  * Menginisialisasi Renderable tanpa terjadi bitwise copy
@@ -33,4 +33,5 @@ Renderable::~Renderable()
  */
 Renderable& Renderable::operator=(const Renderable& R)
 {
+  return *this;
 }

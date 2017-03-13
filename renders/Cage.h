@@ -63,6 +63,8 @@ public:
 
   char getHabitat() const;
 
+  Animal* getAnimal(int x) const;
+
   /** @brief isFull.
 	 * Mengembalikan true jika 30% cage berisi binatang
 	 * @return mengembalikan true/false
@@ -105,7 +107,7 @@ public:
 	 * Operator subscript
 	 * @param x integer indeks
 	 */
-	 Animal* operator[](int x);
+	 // Animal* operator[](int x);
 
 private:
   int * row; // posisi baris

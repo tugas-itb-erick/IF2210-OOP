@@ -43,6 +43,10 @@ public:
 	  */
 	virtual void interact() = 0;
 
+	virtual int countConsumedMeat() = 0;
+
+	virtual int countConsumedVeggie() = 0;
+
 	int getRow() const;
 	int getCol() const;
 	double getWeight() const;
@@ -55,7 +59,7 @@ public:
 	void setName(string n);
 	void setSex(Sex ns);
 
-	friend istream& operator>>(istream& in, Animal* A);
+	friend istream& operator>>(istream& in, Animal* &A);
 
 	/** @brief clone.
      * Menduplikasi Animal tanpa terjadi bitwise copy

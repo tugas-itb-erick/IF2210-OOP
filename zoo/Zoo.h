@@ -39,7 +39,8 @@ public:
 	friend istream& operator>>(istream& in, Zoo& Z);
 	friend ostream& operator<<(ostream& os, const Zoo& Z);
 
-	void print(int x1, int y1, int x2, int y2);
+	void display(int x1, int y1, int x2, int y2);
+	void display();
 	void readAll(istream& fzoo, istream& fcg, istream& fanim);
 
 	class Proxy {
@@ -66,6 +67,7 @@ private:
 	Cage * cg;                      /* array of cage */
 	int row; 				                /* ukuran baris */
 	int col; 				                /* ukuran kolom */
+	int ncage;
 
 	static const int defRow = 50; 	/* default baris = 50 */
 	static const int defCol = 50; 	/* default kolom = 50 */
