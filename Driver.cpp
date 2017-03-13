@@ -15,10 +15,8 @@ int main(){
   f3.open("animal.txt");
 
   Zoo z1(1,2);
-
   z1.readAll(f1,f2,f3);
-
-  // cout << z1;
+  cout << z1;
 
   f1.close();
   f2.close();

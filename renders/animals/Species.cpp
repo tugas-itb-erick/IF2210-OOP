@@ -489,7 +489,8 @@ istream& operator>>(istream& in, Animal* A){
 	}
 	else
 	{
-
+		A = new Elephant(name, weight, s, row, col);
 	}
+	
 	return in;
 }

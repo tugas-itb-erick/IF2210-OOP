@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdio>
+#include <vector>
 #include "Zoo.h"
 using namespace std;
 
@@ -123,9 +124,34 @@ ostream& operator<<(ostream& os, const Zoo& Z){
 }
 
 void Zoo::print(int x1, int y1, int x2, int y2){
-  for(int i=0; i<row; i++){
-    for(int j=0; j<col; j++){
-      c[i][j]->render();
+  if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >=col) || (x1 > x2) || (y1 > y2)){
+    cout << "Indeks posisi zoo menyalahi aturan." << endl;
+  }
+  else{
+    for(int i=x1; i<=x2; i++){
+      for(int j=y1; j<=y2; j++){
+        int k = 0;
+        bool found = false;
+        while ((k < sizeof(cg)/sizeof(Cage)) && !found){
+          int l = 0;
+          while ((l < cg[k].getSize()) && !found){
+            if ((cg[k].getRow()[l] == i) && (cg[k].getCol()[l] == j)){
+              found = true;
+              if (cg[k][l] != NULL){
+                cout << cg[k][l]->render();
+              }else{
+                cout << cg[k].render();
+              }
+            }
+            ++l;
+          }
+          ++k;
+        }
+        if (!found){
+          cout << c[i][j]->render();
+        }
+        cout << " ";
+      }
     }
     cout << endl;
   }
@@ -157,7 +183,7 @@ void Zoo::AddCage(Cage& C){
 
     if (valid){
       i = 0;
-      while ((i<row*col) && (cg[i].getHabitat() != NULL))
+      while ((i<row*col) && (cg[i].getHabitat() != '?'))
         i++;
       if (i<row*col)
         cg[i] = C;
@@ -173,20 +199,33 @@ void Zoo::AddCage(Cage& C){
 
 void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
   char a;
-  Cage b;
   int i, j;
+  Cage b;
+  vector<Animal*> av;
+  Animal * ain;
 
+  // Read Zoo
   fzoo >> (*this);
-  fcg >> a;
-  while (a != EOF){
-    fcg.putback(a);
 
-    fcg >> b;
+  // Read Cages and Add them to Zoo
+  while (fcg >> b){
     i = b.getRow()[0];
     j = b.getCol()[0];
-    b.setHabitat(c[i][j]);
-
+    b.setHabitat(c[i][j]->render());
     Zoo::AddCage(b);
-    fcg >> a;
   }
+
+  // Read All Animals
+  while (fanim >> ain)
+    av.push_back(ain);
+
+  // Add Animal to Cages
+  i = 0;
+  while ((i<sizeof(cg)/sizeof(Cage)) && (cg[i].getHabitat() != '?')){
+    for(j=0; j<(int)av.size(); j++){
+      cg[i].AddAnimal(av[i]);
+    }
+    i++;
+  }
+
 }

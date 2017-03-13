@@ -49,11 +49,11 @@ public:
 	string getName() const;
 	Sex getSex() const;
 
-	int setRow(int r);
-	int setCol(int c);
-	double setWeight(double w);
-	string setName(string n);
-	Sex setSex(Sex ns);
+	void setRow(int r);
+	void setCol(int c);
+	void setWeight(double w);
+	void setName(string n);
+	void setSex(Sex ns);
 
 	friend istream& operator>>(istream& in, Animal* A);
 

@@ -6,7 +6,11 @@
 using namespace std;
 
 Animal::Animal(){
-
+	name="unnamed";
+	weight=0;
+	s=female;
+	row=0;
+	col=0;
 }
 
 Animal::Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color) : Renderable(_id,_color) {
@@ -58,22 +62,22 @@ Sex Animal::getSex() const{
 	return s;
 }
 
-int Animal::setRow(int r){
+void Animal::setRow(int r){
 	row = r;
 }
 
-int Animal::setCol(int c){
+void Animal::setCol(int c){
 	col = c;
 }
 
-double Animal::setWeight(double w){
+void Animal::setWeight(double w){
 	weight = w;
 }
 
-string Animal::setName(string n){
+void Animal::setName(string n){
 	name = n;
 }
 
-Sex Animal::setSex(Sex ns){
+void Animal::setSex(Sex ns){
 	s = ns;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cctype>
 #include "Cage.h"
 using namespace std;
 
@@ -15,7 +16,7 @@ Cage::Cage(){
     row[i] = -1;
     col[i] = -1;
   }
-  h = NULL;
+  habitat = '?';
 }
 
 Cage::Cage(int s){
@@ -27,7 +28,7 @@ Cage::Cage(int s){
     row[i] = -1;
     col[i] = -1;
   }
-  h = NULL;
+  habitat = '?';
 }
 
 Cage::Cage(const Cage& C){
@@ -38,31 +39,24 @@ Cage::Cage(const Cage& C){
   for(int i=0; i<size; i++){
     row[i] = C.row[i];
     col[i] = C.col[i];
-    if (C.a[i] != NULL)
+    if (C.a[i] != 0)
       a[i] = C.a[i]->clone();
   }
-  if (C.h != NULL)
-    h = C.h->clone();
+  habitat = C.habitat;
 }
 
 Cage::~Cage(){
-  if (row != NULL) delete [] row;
-  if (col != NULL) delete [] col;
-  for(int i=0; i<size; i++)
-    if (a[i] != NULL) delete a[i];
-  if (a != NULL) delete [] a;
-  if (h != NULL) delete h;
+  delete [] row;
+  delete [] col;
+  delete [] a;
 }
 
 Cage& Cage::operator=(const Cage& C){
   if (this != &C){
     // delete
-    if (row != NULL) delete [] row;
-    if (col != NULL) delete [] col;
-    for(int i=0; i<size; i++)
-      if (a[i] != NULL) delete a[i];
-    if (a != NULL) delete [] a;
-    if (h != NULL) delete h;
+    delete [] row;
+    delete [] col;
+    delete [] a;
 
     // assign
     size = C.size;
@@ -72,11 +66,10 @@ Cage& Cage::operator=(const Cage& C){
     for(int i=0; i<size; i++){
       row[i] = C.row[i];
       col[i] = C.col[i];
-      if (C.a[i] != 0)
-        a[i] = C.a[i]->clone();
+//      if (C.a[i] != 0)
+//        a[i] = C.a[i]->clone();
     }
-    if (C.h != 0)
-      h = C.h->clone();
+    habitat = C.habitat;
   }
   return *this;
 }
@@ -103,8 +96,8 @@ int * Cage::getCol() const{
   return col;
 }
 
-Habitat * Cage::getHabitat() const{
-  return h;
+char Cage::getHabitat() const{
+  return habitat;
 }
 
 bool Cage::isFull() const{
@@ -147,15 +140,15 @@ int Cage::countConsumedVeggie(){
 }
 
 char Cage::render(){
-  return h->render();
+  return tolower(habitat);
 }
 
 Color Cage::getColor(){
-  return h->getColor();
+  return WHITE;
 }
 
-void Cage::setHabitat(Habitat * nh){
-  h = nh->clone();
+void Cage::setHabitat(char c){
+  habitat = c;
 }
 
 istream& operator>>(istream& in, Cage& C){
