@@ -54,10 +54,10 @@ char Giraffe::render(){
 Color Giraffe::getColor(){
   return color;
 }
-double Elephant::countConsumedMeat(){
+double Giraffe::countConsumedMeat(){
   return weight*meatRatio;
 }
-double Elephant::countConsumedVeggie(){
+double Giraffe::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
@@ -378,12 +378,12 @@ char Piranha::render(){
 }
 Color Piranha::getColor(){
   return color;
+}
 double Piranha::countConsumedMeat(){
   return weight*meatRatio;
 }
 double Piranha::countConsumedVeggie(){
   return weight*vegRatio;
-}
 }
 
 PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'F', CYAN){

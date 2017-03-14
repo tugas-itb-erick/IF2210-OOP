@@ -115,6 +115,13 @@ public:
      */
   virtual Animal* clone() const = 0;
 
+  /** @brief operator<<
+    * Mencetak informasi dari hewan
+    * @param os stream output
+    * @return stream output
+     */
+  ostream& operator<< (ostream& os);
+
 protected:
   string name;
   double weight;
