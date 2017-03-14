@@ -1,3 +1,6 @@
+/* NIM/Nama  : 13515144 / William      */
+/* File      : Animal.cpp              */
+
 #include <iostream>
 #include <string>
 #include "LandAnimal.h"

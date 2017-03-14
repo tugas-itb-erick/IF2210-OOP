@@ -1,1 +1,0 @@
-g++ Carnivore.cpp Herbivore.cpp Omnivore.cpp diet_driver.cpp -o diet -std=c++11

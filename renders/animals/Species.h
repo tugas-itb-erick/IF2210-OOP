@@ -1,4 +1,4 @@
-/* NIM/Nama  : 13515144 / William   */
+/* NIM/Nama  : 13515057 / Erick Wijaya */
 /* File      : Species.h            */
 
 #pragma once
