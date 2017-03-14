@@ -22,7 +22,7 @@ public:
 	* @param _weight berat binatang
 	* @param _s jenis kelamin
 	*/
-	Animal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
+	Animal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color, bool _w);
 
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.
@@ -79,6 +79,11 @@ public:
     */
   Sex getSex() const;
 
+	/** @brief Mengembalikan TRUE bila hewan tidak jinak
+    * @return kejinakan hewan dalam boolean
+    */
+	bool getWild() const;
+
   /** @brief Mengatur posisi baris hewan
     * @param posisi baris
     */
@@ -128,4 +133,5 @@ protected:
   Sex s;
   int row;
   int col;
+	bool wild;
 };

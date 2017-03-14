@@ -13,7 +13,7 @@ public:
 	WaterAnimal();
 	/** @brief Constructor
 	*/
-	WaterAnimal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
+	WaterAnimal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color, bool _w);
 
 	/** @brief Copy Constructor
 	* @param WaterAnimal A yang ingin disalin.

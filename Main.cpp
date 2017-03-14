@@ -7,14 +7,7 @@ int main(){
   Zoo z;
   int n;
 
-  Driver::ShowInputOpt();
-  do{
-    cin >> n;
-  }while ((n < 1) || (n > 2));
-  if (n == 1)
-    Driver::InputZoo(z);
-  else
-    Driver::InputZoo(z, cin, cin, cin);
+  Driver::InputZoo(z);
 
   do{
     cout << endl;
@@ -37,6 +30,8 @@ int main(){
         Driver::ActivateTour(z);
         break;
       case 5:
+        break;
+      default:
         break;
     }
   }while(n != 5);

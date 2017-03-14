@@ -12,16 +12,17 @@ Animal::Animal(){
 	s=female;
 	row=0;
 	col=0;
-	cout << "ctor"<<endl;
+	wild = false;
 }
 
-Animal::Animal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color)
+Animal::Animal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color, bool _w)
 	: Renderable(_id,_color) {
 	name=_name;
 	weight=_weight;
 	s=_s;
 	row=_r;
 	col=_c;
+	wild = _w;
 }
 
 Animal::Animal(const Animal& A) : Renderable(A) {
@@ -63,6 +64,10 @@ string Animal::getName() const{
 
 Sex Animal::getSex() const{
   return s;
+}
+
+bool Animal::getWild() const{
+	return wild;
 }
 
 void Animal::setRow(int r){

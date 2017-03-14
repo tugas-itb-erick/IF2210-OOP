@@ -3,7 +3,7 @@
 #include "Species.h"
 using namespace std;
 
-Elephant::Elephant(std::string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'E', YELLOW){
+Elephant::Elephant(std::string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'E', YELLOW, false){
 
 }
 Elephant::Elephant(const Elephant& E) : Animal(E) {
@@ -33,7 +33,7 @@ double Elephant::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name, _weight, _s, _r, _c, 'G', YELLOW){
+Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name, _weight, _s, _r, _c, 'G', YELLOW, false){
 
 }
 Giraffe::Giraffe(const Giraffe& G) : Animal(G) {
@@ -62,7 +62,7 @@ double Giraffe::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'L', YELLOW){
+Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'L', YELLOW, true){
 
 }
 Lion::Lion(const Lion& L) : Animal(L) {
@@ -91,7 +91,7 @@ double Lion::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', YELLOW){
+Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', YELLOW, true){
 
 }
 Tiger::Tiger(const Tiger& T) : Animal(T) {
@@ -121,7 +121,7 @@ double Tiger::countConsumedVeggie(){
 }
 
 
-Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', YELLOW){
+Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', YELLOW, false){
 
 }
 Orangutan::Orangutan(const Orangutan& O) : Animal(O) {
@@ -150,7 +150,7 @@ double Orangutan::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', YELLOW){
+Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', YELLOW, false){
 
 }
 Chimpanzee::Chimpanzee(const Chimpanzee& C) : Animal(C) {
@@ -180,7 +180,7 @@ double Chimpanzee::countConsumedVeggie(){
 }
 
 
-Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'K', YELLOW){
+Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'K', YELLOW, true){
 
 }
 Komodo::Komodo(const Komodo& K) : Animal(K) {
@@ -210,7 +210,7 @@ double Komodo::countConsumedVeggie(){
 }
 
 
-Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', YELLOW){
+Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', YELLOW, true){
 
 }
 Bear::Bear(const Bear& B) : Animal(B) {
@@ -239,7 +239,7 @@ double Bear::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', CYAN){
+Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', CYAN, false){
 
 }
 Whale::Whale(const Whale& W) : Animal(W) {
@@ -268,7 +268,7 @@ double Whale::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'D', CYAN){
+Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'D', CYAN, false){
 
 }
 Dolphin::Dolphin(const Dolphin& D) : Animal(D) {
@@ -298,7 +298,7 @@ double Dolphin::countConsumedVeggie(){
 }
 
 
-Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', CYAN){
+Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', CYAN, false){
 
 }
 Clownfish::Clownfish(const Clownfish& C) : Animal(C) {
@@ -328,7 +328,7 @@ double Clownfish::countConsumedVeggie(){
 }
 
 
-BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', CYAN){
+BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', CYAN, false){
 
 }
 BlueTang::BlueTang(const BlueTang& B) : Animal(B) {
@@ -358,7 +358,7 @@ double BlueTang::countConsumedVeggie(){
 }
 
 
-Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'P', CYAN){
+Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'P', CYAN, true){
 
 }
 Piranha::Piranha(const Piranha& P) : Animal(P) {
@@ -387,7 +387,7 @@ double Piranha::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', CYAN){
+PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', CYAN, false){
 
 }
 PuffFish::PuffFish(const PuffFish& P) : Animal(P) {
@@ -417,7 +417,7 @@ double PuffFish::countConsumedVeggie(){
 }
 
 
-Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'E', RED){
+Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'E', RED, true){
 
 }
 Eagle::Eagle(const Eagle& E) : Animal(E) {
@@ -447,7 +447,7 @@ double Eagle::countConsumedVeggie(){
 }
 
 
-Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', RED){
+Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', RED, false){
 
 }
 Cendrawasih::Cendrawasih(const Cendrawasih& C) : Animal(C) {
@@ -477,7 +477,7 @@ double Cendrawasih::countConsumedVeggie(){
 }
 
 
-Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', RED){
+Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', RED, false){
 
 }
 Owl::Owl(const Owl& O) : Animal(O) {
@@ -507,7 +507,7 @@ double Owl::countConsumedVeggie(){
 }
 
 
-Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', RED){
+Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', RED, false){
 
 }
 Bat::Bat(const Bat& B) : Animal(B) {
@@ -536,7 +536,7 @@ double Bat::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'M', RED){
+Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'M', RED, false){
 
 }
 Macau::Macau(const Macau& M) : Animal(M) {
@@ -565,7 +565,7 @@ double Macau::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', RED){
+Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', RED, false){
 
 }
 Cockatoo::Cockatoo(const Cockatoo& C) : Animal(C) {
@@ -594,7 +594,7 @@ double Cockatoo::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', GREEN){
+Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', GREEN, false){
 
 }
 Frog::Frog(const Frog& F) : Animal(F) {
@@ -624,7 +624,7 @@ double Frog::countConsumedVeggie(){
 }
 
 
-Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'A', GREEN){
+Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'A', GREEN, true){
 
 }
 Alligator::Alligator(const Alligator& A) : Animal(A) {
@@ -653,7 +653,7 @@ double Alligator::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'H', GREEN){
+Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'H', GREEN, true){
 
 }
 Hippopotamus::Hippopotamus(const Hippopotamus& H) : Animal(H) {
@@ -682,7 +682,7 @@ double Hippopotamus::countConsumedVeggie(){
   return weight*vegRatio;
 }
 
-Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', GREEN){
+Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', GREEN, false){
 
 }
 Turtle::Turtle(const Turtle& T) : Animal(T) {

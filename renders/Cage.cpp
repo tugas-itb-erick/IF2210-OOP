@@ -114,8 +114,21 @@ bool Cage::isFull() const{
 
 void Cage::AddAnimal(const Animal * A){
   if (!isFull()){
-    a[animal] = A->clone();
-    ++animal;
+    bool valid = false;
+    if (!(A->getWild()))
+      valid = true;
+    else{
+      for(int i=0; i<animal; i++){
+        if (!(a[i]->getWild()))
+          valid = false;
+        /*else
+          valid = (a[i]->render() == A->render()) && (a[i]->getColor() == A->getColor());*/
+      }
+    }
+    if (valid){
+      a[animal] = A->clone();
+      ++animal;
+    }
   }
 }
 
