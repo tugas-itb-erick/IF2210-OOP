@@ -3,7 +3,7 @@
 #include "Species.h"
 using namespace std;
 
-Elephant::Elephant(string _name, double _weight, Sex _s, int _r, int _c) : LandAnimal(_name, _weight, _s, _r, _c, 'E', YELLOW){
+Elephant::Elephant(std::string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'E', YELLOW){
 
 }
 Elephant::Elephant(const Elephant& E) : LandAnimal(E) {
@@ -26,7 +26,7 @@ Color Elephant::getColor(){
 	return color;
 }
 
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : LandAnimal(_name, _weight, _s, _r, _c, 'G', YELLOW){
+Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'G', YELLOW){
 
 }
 Giraffe::Giraffe(const Giraffe& G) : LandAnimal(G) {
@@ -49,7 +49,7 @@ Color Giraffe::getColor(){
 	return color;
 }
 
-Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'L', YELLOW){
+Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'L', YELLOW){
 
 }
 Lion::Lion(const Lion& L) : LandAnimal(L) {
@@ -72,7 +72,7 @@ Color Lion::getColor(){
 	return color;
 }
 
-Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', YELLOW){
+Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', YELLOW){
 
 }
 Tiger::Tiger(const Tiger& T) : LandAnimal(T) {
@@ -96,7 +96,7 @@ Color Tiger::getColor(){
 }
 
 
-Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'O', YELLOW){
+Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', YELLOW){
 
 }
 Orangutan::Orangutan(const Orangutan& O) : LandAnimal(O) {
@@ -119,7 +119,7 @@ Color Orangutan::getColor(){
 	return color;
 }
 
-Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'C', YELLOW){
+Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', YELLOW){
 
 }
 Chimpanzee::Chimpanzee(const Chimpanzee& C) : LandAnimal(C) {
@@ -143,7 +143,7 @@ Color Chimpanzee::getColor(){
 }
 
 
-Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'K', YELLOW){
+Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'K', YELLOW){
 
 }
 Komodo::Komodo(const Komodo& K) : LandAnimal(K) {
@@ -167,7 +167,7 @@ Color Komodo::getColor(){
 }
 
 
-Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'B', YELLOW){
+Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', YELLOW){
 
 }
 Bear::Bear(const Bear& B) : LandAnimal(B) {
@@ -191,7 +191,7 @@ Color Bear::getColor(){
 }
 
 
-Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'W', CYAN){
+Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', CYAN){
 
 }
 Whale::Whale(const Whale& W) : WaterAnimal(W) {
@@ -215,7 +215,7 @@ Color Whale::getColor(){
 }
 
 
-Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'D', CYAN){
+Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'D', CYAN){
 
 }
 Dolphin::Dolphin(const Dolphin& D) : WaterAnimal(D) {
@@ -239,7 +239,7 @@ Color Dolphin::getColor(){
 }
 
 
-Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'C', CYAN){
+Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', CYAN){
 
 }
 Clownfish::Clownfish(const Clownfish& C) : WaterAnimal(C) {
@@ -263,7 +263,7 @@ Color Clownfish::getColor(){
 }
 
 
-BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'B', CYAN){
+BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', CYAN){
 
 }
 BlueTang::BlueTang(const BlueTang& B) : WaterAnimal(B) {
@@ -287,7 +287,7 @@ Color BlueTang::getColor(){
 }
 
 
-Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'P', CYAN){
+Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'P', CYAN){
 
 }
 Piranha::Piranha(const Piranha& P) : WaterAnimal(P) {
@@ -310,7 +310,7 @@ Color Piranha::getColor(){
 	return color;
 }
 
-PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): WaterAnimal(_name, _weight, _s, _r, _c, 'F', CYAN){
+PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', CYAN){
 
 }
 PuffFish::PuffFish(const PuffFish& P) : WaterAnimal(P) {
@@ -334,7 +334,7 @@ Color PuffFish::getColor(){
 }
 
 
-Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'E', RED){
+Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'E', RED){
 
 }
 Eagle::Eagle(const Eagle& E) : FlyingAnimal(E) {
@@ -358,7 +358,7 @@ Color Eagle::getColor(){
 }
 
 
-Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'W', RED){
+Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', RED){
 
 }
 Cendrawasih::Cendrawasih(const Cendrawasih& C) : FlyingAnimal(C) {
@@ -382,7 +382,7 @@ Color Cendrawasih::getColor(){
 }
 
 
-Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'O', RED){
+Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', RED){
 
 }
 Owl::Owl(const Owl& O) : FlyingAnimal(O) {
@@ -406,7 +406,7 @@ Color Owl::getColor(){
 }
 
 
-Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'B', RED){
+Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', RED){
 
 }
 Bat::Bat(const Bat& B) : FlyingAnimal(B) {
@@ -429,7 +429,7 @@ Color Bat::getColor(){
 	return color;
 }
 
-Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'M', RED){
+Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'M', RED){
 
 }
 Macau::Macau(const Macau& M) : FlyingAnimal(M) {
@@ -452,7 +452,7 @@ Color Macau::getColor(){
 	return color;
 }
 
-Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): FlyingAnimal(_name, _weight, _s, _r, _c, 'C', RED){
+Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', RED){
 
 }
 Cockatoo::Cockatoo(const Cockatoo& C) : FlyingAnimal(C) {
@@ -475,7 +475,7 @@ Color Cockatoo::getColor(){
 	return color;
 }
 
-Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'F', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'F', GREEN){
+Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', GREEN){
 
 }
 Frog::Frog(const Frog& F) : LandAnimal(F), WaterAnimal(F) {
@@ -499,7 +499,7 @@ Color Frog::getColor(){
 }
 
 
-Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'A', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'A', GREEN){
+Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'A', GREEN){
 
 }
 Alligator::Alligator(const Alligator& A) : LandAnimal(A), WaterAnimal(A) {
@@ -522,7 +522,7 @@ Color Alligator::getColor(){
 	return color;
 }
 
-Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'H', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'H', GREEN){
+Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'H', GREEN){
 
 }
 Hippopotamus::Hippopotamus(const Hippopotamus& H) : LandAnimal(H), WaterAnimal(H) {
@@ -545,7 +545,7 @@ Color Hippopotamus::getColor(){
 	return color;
 }
 
-Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): LandAnimal(_name, _weight, _s, _r, _c, 'T', GREEN), WaterAnimal(_name, _weight, _s, _r, _c, 'T', GREEN){
+Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', GREEN){
 
 }
 Turtle::Turtle(const Turtle& T) : LandAnimal(T), WaterAnimal(T) {
@@ -577,7 +577,7 @@ istream& operator>>(istream& in, Animal* &A){
 	int row, col;
 
 	in >> kelas >> name >> weight >> sc >> row >> col;
-	cout << kelas<<" "<<name<<" "<<weight<<endl;
+
 	if (sc == 'm')
 		s = male;
 	else

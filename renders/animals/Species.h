@@ -13,14 +13,14 @@
 #include "../../diet/diet.h"
 using namespace std;
 
-class Elephant : public Herbivore, public LandAnimal, public Mammalia {
+class Elephant : public LandAnimal, public Herbivore, public Mammalia {
 public:
 	/** @brief Consructor.
 	  * @param _name nama binatang
 	  * @param _weight berat
 	  * @param _s jenis kelamin
 	  */
-	Elephant(string _name, double _weight, Sex _s, int _r, int _c);
+	Elephant(std::string _name, double _weight, Sex _s, int _r, int _c);
 	/** @brief Copy Consructor.
 	  * @param E objek yang akan disalin
 	  */

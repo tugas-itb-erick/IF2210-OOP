@@ -226,6 +226,77 @@ void Zoo::display(){
 }
 
 void Zoo::Tour(){
+  bool found = false;
+  int xen, yen, xex, yex;
+
+  // Get Entrance
+  while (!found){
+    int x = rand()%row;
+    int y = rand()%col;
+    int choice = rand()%4;
+    if (choice == 0){
+      if (c[x][0]->render() == 'i'){
+        found = true;
+        xen = x;
+        yen = 0;
+      }
+    }else if (choice == 1){
+      if (c[x][col-1]->render() == 'i'){
+        found = true;
+        xen = x;
+        yen = col-1;
+      }
+    }else if (choice == 2){
+      if (c[0][y]->render() == 'i'){
+        found = true;
+        xen = 0;
+        yen = y;
+      }
+    }else{
+      if (c[row-1][y]->render() == 'i'){
+        found = true;
+        xen = row-1;
+        yen = y;
+      }
+    }
+  }
+
+  // Get Exit
+  found = false;
+  while (!found){
+    int x = rand()%row;
+    int y = rand()%col;
+    int choice = rand()%4;
+    if (choice == 0){
+      if (c[x][0]->render() == 'o'){
+        found = true;
+        xex = x;
+        yex = 0;
+      }
+    }else if (choice == 1){
+      if (c[x][col-1]->render() == 'o'){
+        found = true;
+        xex = x;
+        yex = col-1;
+      }
+    }else if (choice == 2){
+      if (c[0][y]->render() == 'o'){
+        found = true;
+        xex = 0;
+        yex = y;
+      }
+    }else{
+      if (c[row-1][y]->render() == 'o'){
+        found = true;
+        xex = row-1;
+        yex = y;
+      }
+    }
+  }
+
+
+
+
 
 }
 

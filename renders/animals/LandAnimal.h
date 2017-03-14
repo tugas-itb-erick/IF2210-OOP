@@ -8,11 +8,12 @@
 #include "Animal.h"
 using namespace std;
 
-class LandAnimal : public virtual Animal {
+class LandAnimal : virtual public Animal {
 public:
+	LandAnimal();
 	/** @brief Constructor
 	*/
-	LandAnimal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
+	LandAnimal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
 
 	/** @brief Copy Constructor
 	* @param Animal A yang ingin disalin.

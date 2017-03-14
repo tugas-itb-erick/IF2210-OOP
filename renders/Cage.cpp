@@ -13,6 +13,7 @@ Cage::Cage(){
   col = new int[size];
   a = new Animal*[size];
   for(int i=0; i<size; i++){
+    a[i] = 0;
     row[i] = 0;
     col[i] = 0;
   }
@@ -25,6 +26,7 @@ Cage::Cage(int s){
   col = new int[size];
   a = new Animal*[size];
   for(int i=0; i<size; i++){
+    a[i] = 0;
     row[i] = 0;
     col[i] = 0;
   }
@@ -41,6 +43,8 @@ Cage::Cage(const Cage& C){
     col[i] = C.col[i];
     if (C.a[i] != 0)
       a[i] = C.a[i]->clone();
+    else
+      a[i] = 0;
   }
   habitat = C.habitat;
 }
@@ -66,8 +70,10 @@ Cage& Cage::operator=(const Cage& C){
     for(int i=0; i<size; i++){
       row[i] = C.row[i];
       col[i] = C.col[i];
-//      if (C.a[i] != 0)
-//        a[i] = C.a[i]->clone();
+      /*if (C.a[i] != 0)
+        a[i] = C.a[i]->clone();
+      else
+        a[i] = 0;*/
     }
     habitat = C.habitat;
   }
@@ -120,43 +126,57 @@ void Cage::AddAnimal(const Animal * A){
   }
 }
 
-void Cage::Move(){
-  int i = 0;
-  int minx=row[0], miny=col[0], maxx=row[0], maxy=col[0];
-  for(i=1; i<size; i++){
-    if (row[i] < minx)
-      minx = row[i];
-    if (row[i] > maxx)
-      maxx = row[i];
+bool Cage::SearchPos(int r, int c){
+  int i=0;
+  bool found = false;
 
-    if (col[i] < miny)
-      miny = col[i];
-    if (col[i] > maxy)
-      maxy = col[i];
+  while ((i<size) && (!found)){
+    if ((row[i] == r) && (col[i] == c))
+      found = true;
+    else
+      i++;
   }
 
-  while ((i<size) && (a[i] != 0)){
-    int rd = rand()%5;
-    switch (rd){ // 1-up, 2-right, 3-down, 4-left
-      case 0: break;
+  return found;
+}
 
+bool Cage::SearchAnimal(int r, int c){
+  int i=0;
+  bool found = false;
+
+  while ((i<size) && (a[i] != 0) && (!found)){
+    if ((a[i]->getRow() == r) && (a[i]->getCol() == c))
+      found = true;
+    else
+      i++;
+  }
+
+  return found;
+}
+
+void Cage::Move(){
+  int i = 0;
+
+  while ((i<size) && (a[i] != 0)){
+    int rd = rand()%4 + 1;
+    switch (rd){ // 1-up, 2-right, 3-down, 4-left
       case 1:
-      if (a[i]->getRow()-1 >= minx)
+      if (Cage::SearchPos(a[i]->getRow()-1, a[i]->getCol()) && !Cage::SearchAnimal(a[i]->getRow()-1, a[i]->getCol()))
         a[i]->setRow(a[i]->getRow()-1);
       break;
 
       case 2:
-      if (a[i]->getCol()+1 <= maxy)
+      if (Cage::SearchPos(a[i]->getRow(), a[i]->getCol()+1) && !Cage::SearchAnimal(a[i]->getRow(), a[i]->getCol()+1))
         a[i]->setCol(a[i]->getCol()+1);
       break;
 
       case 3:
-      if (a[i]->getRow()+1 <= maxx)
+      if (Cage::SearchPos(a[i]->getRow()+1, a[i]->getCol()) && !Cage::SearchAnimal(a[i]->getRow()+1, a[i]->getCol()))
         a[i]->setRow(a[i]->getRow()+1);
       break;
 
       case 4:
-      if (a[i]->getCol()-1 >= miny)
+      if (Cage::SearchPos(a[i]->getRow(), a[i]->getCol()-1) && !Cage::SearchAnimal(a[i]->getRow(), a[i]->getCol()-1))
         a[i]->setCol(a[i]->getCol()-1);
       break;
     }

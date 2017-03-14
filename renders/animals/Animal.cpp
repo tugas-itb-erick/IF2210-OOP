@@ -12,9 +12,11 @@ Animal::Animal(){
 	s=female;
 	row=0;
 	col=0;
+	cout << "ctor"<<endl;
 }
 
-Animal::Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color) : Renderable(_id,_color) {
+Animal::Animal(std::string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color)
+	: Renderable(_id,_color) {
 	name=_name;
 	weight=_weight;
 	s=_s;

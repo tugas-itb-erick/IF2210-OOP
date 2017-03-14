@@ -106,11 +106,8 @@ public:
 	 */
   friend istream& operator>>(istream& in, Cage& C);
 
-    /** @brief Operator [].
-	 * Operator subscript
-	 * @param x integer indeks
-	 */
-	 // Animal* operator[](int x);
+  bool SearchPos(int r, int c);
+  bool SearchAnimal(int r, int c);
 
 private:
   int * row; // posisi baris
