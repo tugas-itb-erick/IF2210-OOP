@@ -13,8 +13,8 @@ Cage::Cage(){
   col = new int[size];
   a = new Animal*[size];
   for(int i=0; i<size; i++){
-    row[i] = -1;
-    col[i] = -1;
+    row[i] = 0;
+    col[i] = 0;
   }
   habitat = '?';
 }
@@ -25,8 +25,8 @@ Cage::Cage(int s){
   col = new int[size];
   a = new Animal*[size];
   for(int i=0; i<size; i++){
-    row[i] = -1;
-    col[i] = -1;
+    row[i] = 0;
+    col[i] = 0;
   }
   habitat = '?';
 }
@@ -111,16 +111,60 @@ bool Cage::isFull() const{
 void Cage::AddAnimal(const Animal * A){
   if (!isFull()){
     int i=0;
-    bool stop = false;
 
-    while ((i < size) && !stop){
-      if ((row[i] == A->getRow()) && (col[i] == A->getCol()) && (a[i] != NULL)){
-        a[i] = A->clone();
-        stop = true;
-      }else
-        i++;
-    }
+    while ((i < size) && (a[i] != 0))
+      i++;
+
+    a[i] = A->clone();
+
   }
+}
+
+void Cage::Move(){
+  int i = 0;
+  int minx=row[0], miny=col[0], maxx=row[0], maxy=col[0];
+  for(i=1; i<size; i++){
+    if (row[i] < minx)
+      minx = row[i];
+    if (row[i] > maxx)
+      maxx = row[i];
+
+    if (col[i] < miny)
+      miny = col[i];
+    if (col[i] > maxy)
+      maxy = col[i];
+  }
+
+  while ((i<size) && (a[i] != 0)){
+    int rd = rand()%5;
+    switch (rd){ // 1-up, 2-right, 3-down, 4-left
+      case 0: break;
+
+      case 1:
+      if (a[i]->getRow()-1 >= minx)
+        a[i]->setRow(a[i]->getRow()-1);
+      break;
+
+      case 2:
+      if (a[i]->getCol()+1 <= maxy)
+        a[i]->setCol(a[i]->getCol()+1);
+      break;
+
+      case 3:
+      if (a[i]->getRow()+1 <= maxx)
+        a[i]->setRow(a[i]->getRow()+1);
+      break;
+
+      case 4:
+      if (a[i]->getCol()-1 >= miny)
+        a[i]->setCol(a[i]->getCol()-1);
+      break;
+    }
+
+    i++;
+  }
+
+
 }
 
 int Cage::countConsumedMeat(){
@@ -128,7 +172,7 @@ int Cage::countConsumedMeat(){
 
   for(int i=0; i<size; i++){
     if (a[i] != 0){
-      consume += 10 // tbd
+      consume += 10; // tbd a[i]->countConsumedMeat()
     }
   }
 }
@@ -138,7 +182,7 @@ int Cage::countConsumedVeggie(){
 
   for(int i=0; i<size; i++){
     if (a[i] != 0){
-      consume += 12; // TBD
+      consume += 12; // tbd a[i]->countConsumedVeggie()
     }
   }
 }

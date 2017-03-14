@@ -81,6 +81,9 @@ public:
 	 * Menghitung jumlah makanan daging
 	 * @return jumlah daging
 	 */
+
+  void Move();
+
   int countConsumedMeat();
 
   /** @brief countConsumedVeggie.

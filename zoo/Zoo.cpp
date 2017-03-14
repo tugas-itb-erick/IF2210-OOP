@@ -89,6 +89,43 @@ Zoo& Zoo::operator=(const Zoo& Z){
   return *this;
 }
 
+void Zoo::AddCage(Cage& C){
+  if (C.getSize() > 0){
+    bool valid = true;
+    int i = 0;
+
+    while ((i < C.getSize()) && valid){
+      if ((C.getRow()[i] < 0) || (C.getCol()[i] < 0))
+        valid = false;
+      else{
+        int j = 0;
+        while ((j < ncage) && valid){
+          int k = 0;
+          while ((k < cg[j].getSize()) && valid){
+            if ((C.getRow()[i] == cg[j].getRow()[k]) && (C.getCol()[i] == cg[j].getCol()[k]))
+              valid = false;
+            else
+              k++;
+          }
+          j++;
+        }
+      }
+      i++;
+    }
+
+    if (valid){
+      i = 0;
+      while ((i<row*col) && (cg[i].getHabitat() != '?'))
+        i++;
+      if (i<row*col){
+        cg[i] = C;
+        ++ncage;
+      }
+    }
+  }
+
+}
+
 istream& operator>>(istream& in, Zoo& Z){
   int r, c;
   char k;
@@ -133,7 +170,7 @@ ostream& operator<<(ostream& os, const Zoo& Z){
 
 void Zoo::display(int x1, int y1, int x2, int y2){
   if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >=col) || (x1 > x2) || (y1 > y2)){
-    cout << "Indeks posisi zoo menyalahi aturan." << endl;
+    cout << "Indeks posisi zoo tidak boleh negatif atau lebih besar dari ukuran sebenarnya." << endl;
   }
   else{
     for(int i=x1; i<=x2; i++){
@@ -141,17 +178,34 @@ void Zoo::display(int x1, int y1, int x2, int y2){
         int k = 0;
         bool found = false;
 
+        // search cage
         while ((k < ncage) && !found){
           int l = 0;
           while ((l < cg[k].getSize()) && !found){
             if ((cg[k].getRow()[l] == i) && (cg[k].getCol()[l] == j)){
               found = true;
-              if (cg[k].getAnimal(l) != NULL){
+
+              // search animal
+              int i2 = 0;
+              bool found2 = false;
+              while ((i2 < cg[k].getSize()) && !found2){
+                if (cg[k].getAnimal(i2) == 0)
+                  break;
+                else{
+                  if ((cg[k].getAnimal(i2)->getRow() == i) && (cg[k].getAnimal(i2)->getCol() == j))
+                    found2 = true;
+                  else
+                    i2++;
+                }
+              }
+
+              if (found2){
                 //cout << cg[k].getAnimal(l)->render();
                 cout << c[i][j]->render();
               }else{
                 cout << cg[k].render();
               }
+
             }
             ++l;
           }
@@ -171,40 +225,11 @@ void Zoo::display(){
   Zoo::display(0, 0, row-1, col-1);
 }
 
-void Zoo::AddCage(Cage& C){
-  if (C.getSize() > 0){
-    bool valid = true;
-    int i = 0;
+void Zoo::Tour(){
 
-    while ((i < C.getSize()) && valid){
-      if ((C.getRow()[i] < 0) || (C.getCol()[i] < 0))
-        valid = false;
-      else{
-        int j = 0;
-        while ((j < ncage) && valid){
-          int k = 0;
-          while ((k < cg[j].getSize()) && valid){
-            if ((C.getRow()[i] == cg[j].getRow()[k]) && (C.getCol()[i] == cg[j].getCol()[k]))
-              valid = false;
-            else
-              k++;
-          }
-          j++;
-        }
-      }
-      i++;
-    }
+}
 
-    if (valid){
-      i = 0;
-      while ((i<row*col) && (cg[i].getHabitat() != '?'))
-        i++;
-      if (i<row*col){
-        cg[i] = C;
-        ++ncage;
-      }
-    }
-  }
+void Zoo::showFood(){
 
 }
 
@@ -231,11 +256,32 @@ void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
 
   // Add Animal to Cages
   i = 0;
+  for(i=0; i<(int)av.size(); i++){
+    j = 0;
+    bool found = false;
+    while ((j < ncage) && (cg[j].getHabitat() != '?') && !found){
+      int k = 0;
+      while ((k < cg[j].getSize()) && !found){
+        if ((cg[j].getRow()[k] == av[i]->getRow()) && (cg[j].getCol()[k] == av[i]->getCol()))
+          found = true;
+        else
+          k++;
+      }
+      if (!found)
+        j++;
+    }
+    if (found){
+      cg[j].AddAnimal(av[i]);
+    }
+
+  }
+
+  /*
   while ((i < ncage) && (cg[i].getHabitat() != '?')){
     for(j=0; j<(int)av.size(); j++){
       cg[i].AddAnimal(av[j]);
     }
     i++;
-  }
+  }*/
 
 }

@@ -39,9 +39,13 @@ public:
 	friend istream& operator>>(istream& in, Zoo& Z);
 	friend ostream& operator<<(ostream& os, const Zoo& Z);
 
+	void readAll(istream& fzoo, istream& fcg, istream& fanim);
+
 	void display(int x1, int y1, int x2, int y2);
 	void display();
-	void readAll(istream& fzoo, istream& fcg, istream& fanim);
+
+	void Tour();
+	void showFood();
 
 	class Proxy {
 				friend class Zoo;

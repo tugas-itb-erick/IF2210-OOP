@@ -47,8 +47,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-	virtual int countConsumedMeat();
-	virtual int countConsumedVeggie();
+	//virtual int countConsumedMeat();
+	//virtual int countConsumedVeggie();
 };
 
 class Giraffe : public Herbivore, public LandAnimal, public Mammalia {
@@ -87,8 +87,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 
 };
 
@@ -128,8 +128,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Tiger : public Carnivore, public LandAnimal, public Mammalia {
@@ -168,8 +168,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Orangutan : public Herbivore, public LandAnimal, public Mammalia {
@@ -208,8 +208,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Chimpanzee : public Herbivore, public LandAnimal, public Mammalia {
@@ -248,8 +248,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Komodo : public Carnivore, public LandAnimal, public Reptilia {
@@ -288,8 +288,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Bear : public Herbivore, public LandAnimal, public Mammalia {
@@ -328,8 +328,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Whale : public Carnivore, public WaterAnimal, public Mammalia {
@@ -368,8 +368,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Dolphin : public Carnivore, public WaterAnimal, public Mammalia {
@@ -408,8 +408,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Clownfish : public Omnivore, public WaterAnimal, public Pisces {
@@ -448,8 +448,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class BlueTang : public Omnivore, public WaterAnimal, public Pisces {
@@ -488,8 +488,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Piranha : public Carnivore, public WaterAnimal, public Pisces {
@@ -528,8 +528,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class PuffFish : public Omnivore, public WaterAnimal, public Pisces {
@@ -568,8 +568,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Eagle : public Carnivore, public FlyingAnimal, public Aves {
@@ -608,8 +608,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Cendrawasih : public Omnivore, public FlyingAnimal, public Aves {
@@ -648,8 +648,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Owl : public Omnivore, public FlyingAnimal, public Aves {
@@ -688,8 +688,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Bat : public Omnivore, public FlyingAnimal, public Aves {
@@ -728,8 +728,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Macau : public Omnivore, public FlyingAnimal, public Aves {
@@ -768,8 +768,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Cockatoo : public Omnivore, public FlyingAnimal, public Aves {
@@ -808,8 +808,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Frog : public Carnivore, public WaterAnimal, public LandAnimal, public Amphibia {
@@ -848,8 +848,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Alligator : public Carnivore, public WaterAnimal, public LandAnimal, public Reptilia {
@@ -888,8 +888,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Hippopotamus : public Herbivore, public WaterAnimal, public LandAnimal, public Mammalia {
@@ -928,8 +928,8 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
 
 class Turtle : public Omnivore, public WaterAnimal, public LandAnimal, public Reptilia {
@@ -968,6 +968,6 @@ public:
 	* @return warna cetak hewan
 	*/
 	virtual Color getColor();
-  virtual int countConsumedMeat();
-  virtual int countConsumedVeggie();
+  //virtual int countConsumedMeat();
+  //virtual int countConsumedVeggie();
 };
