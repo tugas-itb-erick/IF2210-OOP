@@ -4,7 +4,6 @@
 using namespace std;
 
 void printColor(char k, Color c){
-	string s(1,k);
 	switch(c){
 		case RED    : printf(KRED "%c" RST, k); break;
 		case YELLOW : printf(KYEL "%c" RST, k); break;

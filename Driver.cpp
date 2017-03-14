@@ -1,30 +1,46 @@
 #include <iostream>
 #include <fstream>
-#include "zoo/Zoo.h"
+#include "Driver.h"
 using namespace std;
-/*
-class Driver {
 
-};*/
-
-int main(){
-  ifstream f1, f2, f3;
-
-  f1.open("zoo.txt");
-  f2.open("cage.txt");
-  f3.open("animal.txt");
-
-  Zoo z1;
-  z1.readAll(f1,f2,f3);
-  z1.display();
-  z1.Tour();
-  z1.showFood();
-
-  //z1.display();
-
-  f1.close();
-  f2.close();
-  f3.close();
-
-  return 0;
+void Driver::ShowInputOpt(){
+  cout << "Konstruksi Zoo dengan dua pilihan:" << endl;
+  cout << "1. Dengan File" << endl;
+  cout << "2. Tanpa File" << endl;
+  cout << "Pilih [1] atau [2]: ";
+}
+void Driver::ShowMenu(){
+  cout << "Selamat datang di Kebun Binatang Virtual Zoo!" << endl;
+  cout << "1. Menampilkan peta Kebun Binatang" << endl;
+  cout << "2. Menampilkan hewan pada Kebun Binatang" << endl;
+  cout << "3. Menampilkan total makanan yang dimakan seluruh hewan" << endl;
+  cout << "4. Tour Kebun Binatang!" << endl;
+  cout << "5. Quit" << endl;
+  cout << "Pilih angka 1..5 :";
+  cout << endl;
+}
+void Driver::ActivateTour(Zoo &Z){
+  Z.Tour();
+}
+void Driver::PrintZoo(Zoo &Z, int x1, int y1, int x2, int y2){
+  Z.display(x1, y1, x2, y2);
+}
+void Driver::PrintZooWithAnimal(Zoo &Z){
+  Z.display();
+}
+void Driver::PrintFood(Zoo &Z){
+  Z.showFood();
+}
+void Driver::InputZoo(Zoo &Z){
+  ifstream in1, in2, in3;
+  in1.open("zoo.txt");
+  in2.open("cage.txt");
+  in3.open("animal.txt");
+  Z.readAll(in1, in2, in3);
+  in1.close();
+  in2.close();
+  in3.close();
+}
+void Driver::InputZoo(Zoo &Z, istream& in1, istream& in2, istream& in3){
+  Z.readAll(in1, in2, in3);
 }
