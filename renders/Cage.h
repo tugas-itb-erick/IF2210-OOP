@@ -106,11 +106,17 @@ public:
 	 */
   friend istream& operator>>(istream& in, Cage& C);
 
-    /** @brief Operator [].
+  /** @brief Operator [].
 	 * Operator subscript
 	 * @param x integer indeks
 	 */
 	 // Animal* operator[](int x);
+
+   /** @brief Search.
+   * Mngecek apakah ada pasangan r dan c pada cage
+   * @return true jika ada,false jika tidak ada
+   */
+   bool Search(int r, int c);
 
 private:
   int * row; // posisi baris

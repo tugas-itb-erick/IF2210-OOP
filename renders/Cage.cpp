@@ -221,3 +221,14 @@ istream& operator>>(istream& in, Cage& C){
 
   return in;
 }
+
+bool Cage::Search(int r, int c){
+  bool found=false;
+  while ((i<size)&&!found){
+    if ((row[i]==r) && (col[i]==c))
+      found=true;
+    else
+      i++;
+  }
+  return found;
+}
