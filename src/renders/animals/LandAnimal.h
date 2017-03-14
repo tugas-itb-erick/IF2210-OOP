@@ -8,6 +8,10 @@
 #include "Animal.h"
 using namespace std;
 
+/** @class LandAnimal.
+	 * Adalah kelas anak Animal.
+	 * Menggunakan virtual inheritance untuk menghindari ambiguitas karena diamond inheritance.
+	 */
 class LandAnimal : virtual public Animal {
 public:
 	LandAnimal();

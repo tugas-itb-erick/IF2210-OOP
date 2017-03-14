@@ -11,6 +11,10 @@
 #include <string>
 using namespace std;
 
+/** @class Animal.
+	 * Adalah kelas anak dari Renderable karena Animal dapat dicetak.
+	 * Adalah kelas yang memiliki metode dan atribut binatang.
+	 */
 class Animal : public Renderable{
 public:
 	/** @brief Constructor
@@ -40,15 +44,18 @@ public:
   Animal& operator=(const Animal& A);
 
   /** @brief Menampilkan experience yang dialami pengamat dengan hewan.
+		*	Adalah fungsi virtual murni, diimplementasikan oleh kelas anaknya.
     */
   virtual void interact() = 0;
 
   /** @brief Menghitung jumlah daging yang dikonsumsi
+	  *	Adalah fungsi virtual murni, diimplementasikan oleh kelas anaknya.
     * @return jumlah daging yang dikonsumsi
     */
   virtual double countConsumedMeat() = 0;
 
   /** @brief Menghitung jumlah tumbuhan yang dikonsumsi
+	  *	Adalah fungsi virtual murni, diimplementasikan oleh kelas anaknya.
     * @return jumlah tumbuhan yang dikonsumsi
     */
   virtual double countConsumedVeggie() = 0;
@@ -125,7 +132,7 @@ public:
     * @param os stream output
     * @return stream output
      */
-  ostream& operator<< (ostream& os);
+  friend ostream& operator<< (ostream& os, Animal &A);
 
 protected:
   string name;

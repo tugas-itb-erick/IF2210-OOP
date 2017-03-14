@@ -9,6 +9,10 @@
 #include "habitats/habitats.h"
 using namespace std;
 
+/** @class Cage
+  * Kelas yang merepresentasikan kandang yang terdiri dari habitat kandang, posisi-posisi yang
+  * dicakup kandang, dan hewan yang tinggal di kandang.
+  */
 class Cage : public Renderable {
 public:
   /** @brief Constructor
@@ -61,8 +65,17 @@ public:
 	 */
   int * getCol() const;
 
+  /** @brief getHabitat.
+	 * Mengembalikan nilai habitat kandang.
+	 * @return karakter habitat
+	 */
   char getHabitat() const;
 
+  /** @brief getAnimal.
+	 * Mengembalikan pointer ke hewan dari array pada indeks x.
+   * @param x indeks pada array hewan
+	 * @return pointer to Animal
+	 */
   Animal* getAnimal(int x) const;
 
   /** @brief isFull.
@@ -77,13 +90,15 @@ public:
 	 */
   void AddAnimal(const Animal * A);
 
-  /** @brief countConsumedMeat.
-	 * Menghitung jumlah makanan daging
-	 * @return jumlah daging
-	 */
-
+  /** @brief Move.
+   * Menggerakan semua hewan ke posisi yang berbeda dari semula bila memungkinkan.
+   */
   void Move();
 
+  /** @brief countConsumedMeat.
+   * Menghitung jumlah makanan daging
+   * @return jumlah daging
+   */
   double countConsumedMeat();
 
   /** @brief countConsumedVeggie.
@@ -93,11 +108,22 @@ public:
   double countConsumedVeggie();
 
   /** @brief render.
+    * Mengembalikan karakter yang merepresentasikan cage sesuai habitatnya
+    * @return karakter representasi cage
 	 */
   char render();
 
+  /** @brief getColor.
+    * Mengembalikan warna yang merepresentasikan cage
+    * @return color warna cage
+	 */
   Color getColor();
 
+  /** @brief Setter Habitat.
+    * Menginisialisasi habitat cage dengan c
+    * I.S. kandang belum dihuni animal
+    * @param c karakter yang merepresentasikan habitat
+	 */
   void setHabitat(char c);
 
   /** @brief Operator>>.
@@ -106,13 +132,22 @@ public:
 	 */
   friend istream& operator>>(istream& in, Cage& C);
 
-  /** @brief Search.
-  * Mngecek apakah ada pasangan r dan c pada cage
+  /** @brief SearchPos.
+  * Mengecek apakah ada pasangan r dan c pada cage
   * @return true jika ada,false jika tidak ada
   */
   bool SearchPos(int r, int c);
+
+  /** @brief SearchAnimal.
+  * Mengecek apakah ada animal yang berposisi r dan c pada cage
+  * @return true jika ada,false jika tidak ada
+  */
   bool SearchAnimal(int r, int c);
 
+  /** @brief Mencetak interaksi.
+	 * Mencetak interaksi pengunjung terhadap suatu kandang.
+   * Prosesnya dengan mencetak semua interaksi dengan hewan yang ada di kandang.
+	 */
   void printInteract();
 
 private:

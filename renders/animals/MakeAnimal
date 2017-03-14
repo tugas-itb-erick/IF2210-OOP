@@ -1,1 +1,0 @@
-g++ Species.cpp Animal.cpp FlyingAnimal.cpp LandAnimal.cpp WaterAnimal.cpp ../Renderable.cpp ../../taxonomy/*.cpp ../../diet/*.cpp -std=c++11

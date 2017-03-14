@@ -5,6 +5,9 @@
 
 #include "Renderable.h"
 
+/** @class Cell
+  * Kelas abstrak yang merepresentasikan satuan unit tempat dari zoo.
+  */
 class Cell : public Renderable {
 public:
 	/** @brief Constructor.
@@ -30,14 +33,14 @@ public:
 	virtual ~Cell();
 
 	/** @brief Operator=.
-     * Menginisialisasi Cell tanpa terjadi bitwise copy
+     * Menginisialisasi Cell dari Cell lain
 		 * @param C Cell yang akan dicopy
      * @return Cell current object yang sudah diassign dengan C
      */
 	Cell& operator=(const Cell&);
 
 	/** @brief clone.
-     * Menduplikasi Cell tanpa terjadi bitwise copy
+     * Menduplikasi Cell objek diri sendiri
      * @return Cell yang sudah diduplikasi.
      */
   virtual Cell* clone() const = 0;

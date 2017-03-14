@@ -5,6 +5,10 @@
 
 #include "Facility.h"
 
+/** @class Road.
+	 * Adalah kelas anak dari Facility.
+	 * Adalah representasi dari jalanan di zoo.
+	 */
 class Road : public Facility {
 public:
 	/** @brief Constructor.

@@ -5,6 +5,10 @@
 
 #include "Facility.h"
 
+/** @class Park.
+	 * Adalah kelas anak dari Facility.
+	 * Adalah representasi dari taman di zoo.
+	 */
 class Park : public Facility {
 public:
 	/** @brief Constructor.

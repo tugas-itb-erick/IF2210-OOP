@@ -5,6 +5,10 @@
 
 #include "Road.h"
 
+/** @class Entrance.
+	 * Adalah kelas anak dari Road.
+	 * Adalah representasi dari jalan masuk ke zoo.
+	 */
 class Entrance : public Road {
 public:
 	/** @brief Constructor.
@@ -39,7 +43,7 @@ public:
      * @return color warna untuk dirender
      */
 	Color getColor();
-	
+
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning

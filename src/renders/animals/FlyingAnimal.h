@@ -8,6 +8,10 @@
 #include "Animal.h"
 using namespace std;
 
+/** @class FlyingAnimal.
+	 * Adalah kelas anak Animal.
+	 * Menggunakan virtual inheritance untuk menghindari ambiguitas karena diamond inheritance.
+	 */
 class FlyingAnimal : virtual public Animal {
 public:
 	FlyingAnimal();

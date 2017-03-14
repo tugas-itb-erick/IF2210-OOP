@@ -5,6 +5,10 @@
 
 #include "../Cell.h"
 
+/** @class Facility.
+	 * Adalah kelas anak dari Cell.
+	 * Adalah kelas abstrak yang merepresentasikan fasilitas zoo.
+	 */
 class Facility : public Cell {
 public:
 	/** @brief Constructor.

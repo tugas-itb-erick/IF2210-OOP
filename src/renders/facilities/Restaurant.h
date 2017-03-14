@@ -5,6 +5,10 @@
 
 #include "Facility.h"
 
+/** @class Restaurant.
+	 * Adalah kelas anak dari Facility.
+	 * Adalah representasi dari restoran.
+	 */
 class Restaurant : public Facility {
 public:
 	/** @brief Constructor.
@@ -39,7 +43,7 @@ public:
      * @return color warna untuk dirender
      */
 	Color getColor();
-	
+
 	/** @brief Clone.
      * Menduplikat diri sendiri
      * @return value object hasil kloning
