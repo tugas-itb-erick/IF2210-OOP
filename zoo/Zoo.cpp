@@ -2,6 +2,7 @@
 /* File      : Zoo.cpp                 */
 
 #include <iostream>
+#include <iomanip>
 #include <cstdio>
 #include <vector>
 #include "Zoo.h"
@@ -200,10 +201,9 @@ void Zoo::display(int x1, int y1, int x2, int y2){
               }
 
               if (found2){
-                cout << cg[k].getAnimal(i2)->render();
-                //cout << c[i][j]->render();
+                printColor(cg[k].getAnimal(i2)->render(), cg[k].getAnimal(i2)->getColor());
               }else{
-                cout << cg[k].render();
+                printColor(cg[k].render(), cg[k].getColor());
               }
 
             }
@@ -229,7 +229,7 @@ void Zoo::Tour(){
   bool found = false;
   int xen, yen, xex, yex;
 
-  // Get Entrance
+  /* Get Random Entrance n Exit
   while (!found){
     int x = rand()%row;
     int y = rand()%col;
@@ -293,22 +293,126 @@ void Zoo::Tour(){
       }
     }
   }
+  */
 
+  // Non Randomized Entrance Exit for testcases
+  int i = 0;
+  while ((i<row) && !found){
+    int j = 0;
+    while ((j<col) && !found){
+      if (c[i][j]->render() == 'i'){
+        found = true;
+        xen = i;
+        yen = j;
+      }else
+        j++;
+    }
+    i++;
+  }
 
+  i = 0;
+  found = false;
+  while ((i<row) && !found){
+    int j = 0;
+    while ((j<col) && !found){
+      if (c[i][j]->render() == 'o'){
+        found = true;
+        xex = i;
+        yex = j;
+      }else
+        j++;
+    }
+    i++;
+  }
 
+  bool path[row][col];
+  for(int i=0; i<row; i++){
+    for(int j=0; j<col; j++){
+      if ((c[i][j]->render() == 'o') || (c[i][j]->render() == '-') || (c[i][j]->render() == 'i'))
+        path[i][j] = true;
+      else
+        path[i][j] = false;
+    }
+  }
 
+  i = xen;
+  int j = yen; cout << xex << " " << yex << endl;
+  while ((i != xex) || (j != yex)){
+    path[i][j] = false;
+    cout << "(" << i << "," << j << ") :" << endl;
 
+    bool fcage = false;
+    int icage = 0;
+    while ((icage < ncage) && !fcage){
+      if (cg[icage].SearchPos(i+1, j)){
+        cg[icage].printInteract();
+        fcage = true;
+      }else{
+        icage++;
+      }
+    }
+
+    fcage = false;
+    icage = 0;
+    while ((icage < ncage) && !fcage){
+      if (cg[icage].SearchPos(i-1, j)){
+        cg[icage].printInteract();
+        fcage = true;
+      }else{
+        icage++;
+      }
+    }
+
+    fcage = false;
+    icage = 0;
+    while ((icage < ncage) && !fcage){
+      if (cg[icage].SearchPos(i, j+1)){
+        cg[icage].printInteract();
+        fcage = true;
+      }else{
+        icage++;
+      }
+    }
+
+    fcage = false;
+    icage = 0;
+    while ((icage < ncage) && !fcage){
+      if (cg[icage].SearchPos(i, j-1)){
+        cg[icage].printInteract();
+        fcage = true;
+      }else{
+        icage++;
+      }
+    }
+
+    if ((i+1<row) && path[i+1][j])
+      i++;
+    else if ((i-1>=0) && path[i-1][j])
+      i--;
+    else if ((j+1<col) && path[i][j+1])
+      j++;
+    else if ((j-1>=0) && path[i][j-1])
+      j--;
+    else
+      break;
+  }
 }
 
 void Zoo::showFood(){
-
+  double countm = 0, countv = 0;
+  for(int i=0; i<ncage; i++){
+    countm += cg[i].countConsumedMeat();
+    countv += cg[i].countConsumedVeggie();
+  }
+  cout << "Total Daging yang dikonsumsi: " << countm << endl;
+  cout << "Total Sayur yang dikonsumsi: " << countv << endl;
 }
 
 void Zoo::readAll(istream& fzoo, istream& fcg, istream& fanim){
   int i, j;
   Cage b;
   vector<Animal*> av;
-  Animal * ain;
+  Animal * ain = 0;
 
   // Read Zoo
   fzoo >> (*this);

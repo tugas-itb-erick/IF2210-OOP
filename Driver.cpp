@@ -17,6 +17,8 @@ int main(){
   Zoo z1;
   z1.readAll(f1,f2,f3);
   z1.display();
+  z1.Tour();
+  z1.showFood();
 
   //z1.display();
 

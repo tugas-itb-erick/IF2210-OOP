@@ -15,44 +15,6 @@ using namespace std;
 
 class Elephant : public LandAnimal, public Herbivore, public Mammalia {
 public:
-<<<<<<< HEAD
-	/** @brief Consructor.
-	  * @param _name nama binatang
-	  * @param _weight berat
-	  * @param _s jenis kelamin
-	  */
-	Elephant(std::string _name, double _weight, Sex _s, int _r, int _c);
-	/** @brief Copy Consructor.
-	  * @param E objek yang akan disalin
-	  */
-	Elephant(const Elephant& E);
-	/** @brief Operator=.
-		* Melakukan assignment pada objek
-	  * @param E objek yang akan disalin
-	  */
-	Elephant& operator=(const Elephant& E);
-	/** @brief interact.
-	  * Menampilkan interaksi hewan ke layar
-	  */
-	virtual void interact();
-	/** @brief clone
-	* Menduplikat diri sendiri
-	* @return value object hasil kloning
-    */
-	virtual Elephant* clone() const;
-	/** @brief render
-	* Mengembalikan karakter id tiap hewan
-	* @return karakter tiap hewan
-	*/
-	virtual char render();
-	/** @brief getColor
-	* Mengembalikan warna dari hewan
-	* @return warna cetak hewan
-	*/
-	virtual Color getColor();
-	//virtual int countConsumedMeat();
-	//virtual int countConsumedVeggie();
-=======
   /** @brief Consructor.
     * @param _name nama binatang
     * @param _weight berat
@@ -97,7 +59,6 @@ public:
   * @return jumlah makanan tumbuhan yang dikonsumsi
   */
   virtual double countConsumedVeggie();
->>>>>>> 0477cd3b925336f27229d110b5ab44c7debe132b
 };
 
 class Giraffe : public Herbivore, public LandAnimal, public Mammalia {

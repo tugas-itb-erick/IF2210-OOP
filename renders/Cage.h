@@ -84,13 +84,13 @@ public:
 
   void Move();
 
-  int countConsumedMeat();
+  double countConsumedMeat();
 
   /** @brief countConsumedVeggie.
 	 * Menghitung jumlah makanan sayuran
 	 * @return jumlah sayuran
 	 */
-  int countConsumedVeggie();
+  double countConsumedVeggie();
 
   /** @brief render.
 	 */
@@ -113,10 +113,13 @@ public:
   bool SearchPos(int r, int c);
   bool SearchAnimal(int r, int c);
 
+  void printInteract();
+
 private:
   int * row; // posisi baris
   int * col; // posisi kolom
   Animal * *a; // hewan yang tinggal di kandang
   char habitat; // habitat kandang
   int size; // ukuran kandang
+  int animal; // total exist animal in cage
 };

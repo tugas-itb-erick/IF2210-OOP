@@ -9,6 +9,7 @@ using namespace std;
 
 Cage::Cage(){
   size = 10;
+  animal = 0;
   row = new int[size];
   col = new int[size];
   a = new Animal*[size];
@@ -22,6 +23,7 @@ Cage::Cage(){
 
 Cage::Cage(int s){
   size = s;
+  animal = 0;
   row = new int[size];
   col = new int[size];
   a = new Animal*[size];
@@ -35,6 +37,7 @@ Cage::Cage(int s){
 
 Cage::Cage(const Cage& C){
   size = C.size;
+  animal = 0;
   row = new int[size];
   col = new int[size];
   a = new Animal*[size];
@@ -64,6 +67,7 @@ Cage& Cage::operator=(const Cage& C){
 
     // assign
     size = C.size;
+    animal = C.animal;
     row = new int[size];
     col = new int[size];
     a = new Animal*[size];
@@ -85,13 +89,7 @@ int Cage::getSize() const{
 }
 
 int Cage::getTotalAnimal() const{
-  int count = 0;
-
-  for(int i=0; i<size; i++){
-    if (a[i] != NULL)
-      ++count;
-  }
-  return count;
+  return animal;
 }
 
 int * Cage::getRow() const{
@@ -111,18 +109,13 @@ Animal* Cage::getAnimal(int x) const{
 }
 
 bool Cage::isFull() const{
-  return getTotalAnimal() > getSize()*0.3;
+  return animal > getSize()*0.3;
 }
 
 void Cage::AddAnimal(const Animal * A){
   if (!isFull()){
-    int i=0;
-
-    while ((i < size) && (a[i] != 0))
-      i++;
-
-    a[i] = A->clone();
-
+    a[animal] = A->clone();
+    ++animal;
   }
 }
 
@@ -144,7 +137,7 @@ bool Cage::SearchAnimal(int r, int c){
   int i=0;
   bool found = false;
 
-  while ((i<size) && (a[i] != 0) && (!found)){
+  while ((i<animal) && (!found)){
     if ((a[i]->getRow() == r) && (a[i]->getCol() == c))
       found = true;
     else
@@ -187,24 +180,24 @@ void Cage::Move(){
 
 }
 
-int Cage::countConsumedMeat(){
-  int consume = 0;
+double Cage::countConsumedMeat(){
+  double consume = 0;
 
-  for(int i=0; i<size; i++){
-    if (a[i] != 0){
-      consume += 10; // tbd a[i]->countConsumedMeat()
-    }
+  for(int i=0; i<animal; i++){
+    consume += a[i]->countConsumedMeat();
   }
+
+  return consume;
 }
 
-int Cage::countConsumedVeggie(){
-  int consume = 0;
+double Cage::countConsumedVeggie(){
+  double consume = 0;
 
-  for(int i=0; i<size; i++){
-    if (a[i] != 0){
-      consume += 12; // tbd a[i]->countConsumedVeggie()
-    }
+  for(int i=0; i<animal; i++){
+    consume += a[i]->countConsumedVeggie();
   }
+
+  return consume;
 }
 
 char Cage::render(){
@@ -240,4 +233,12 @@ istream& operator>>(istream& in, Cage& C){
   C = temp;
 
   return in;
+}
+
+void Cage::printInteract(){
+  int i = 0;
+  while (i < animal){
+    a[i]->interact();
+    i++;
+  }
 }

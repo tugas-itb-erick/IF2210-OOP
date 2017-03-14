@@ -6,11 +6,11 @@ using namespace std;
 Elephant::Elephant(std::string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'E', YELLOW){
 
 }
-Elephant::Elephant(const Elephant& E) : LandAnimal(E) {
+Elephant::Elephant(const Elephant& E) : Animal(E) {
 
 }
 Elephant& Elephant::operator=(const Elephant& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Elephant::interact(){
@@ -25,26 +25,22 @@ char Elephant::render(){
 Color Elephant::getColor(){
   return color;
 }
-<<<<<<< HEAD
 
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name,  _weight, _s,  _r, _c, 'G', YELLOW){
-=======
 double Elephant::countConsumedMeat(){
   return weight*meatRatio;
 }
 double Elephant::countConsumedVeggie(){
   return weight*vegRatio;
 }
-  
-Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : LandAnimal(_name, _weight, _s, _r, _c, 'G', YELLOW){
->>>>>>> 0477cd3b925336f27229d110b5ab44c7debe132b
+
+Giraffe::Giraffe(string _name, double _weight, Sex _s, int _r, int _c) : Animal(_name, _weight, _s, _r, _c, 'G', YELLOW){
 
 }
-Giraffe::Giraffe(const Giraffe& G) : LandAnimal(G) {
+Giraffe::Giraffe(const Giraffe& G) : Animal(G) {
 
 }
 Giraffe& Giraffe::operator=(const Giraffe& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Giraffe::interact(){
@@ -69,11 +65,11 @@ double Giraffe::countConsumedVeggie(){
 Lion::Lion(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'L', YELLOW){
 
 }
-Lion::Lion(const Lion& L) : LandAnimal(L) {
+Lion::Lion(const Lion& L) : Animal(L) {
 
 }
 Lion& Lion::operator=(const Lion& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Lion::interact(){
@@ -98,11 +94,11 @@ double Lion::countConsumedVeggie(){
 Tiger::Tiger(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', YELLOW){
 
 }
-Tiger::Tiger(const Tiger& T) : LandAnimal(T) {
+Tiger::Tiger(const Tiger& T) : Animal(T) {
 
 }
 Tiger& Tiger::operator=(const Tiger& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Tiger::interact(){
@@ -128,11 +124,11 @@ double Tiger::countConsumedVeggie(){
 Orangutan::Orangutan(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', YELLOW){
 
 }
-Orangutan::Orangutan(const Orangutan& O) : LandAnimal(O) {
+Orangutan::Orangutan(const Orangutan& O) : Animal(O) {
 
 }
 Orangutan& Orangutan::operator=(const Orangutan& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Orangutan::interact(){
@@ -157,11 +153,11 @@ double Orangutan::countConsumedVeggie(){
 Chimpanzee::Chimpanzee(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', YELLOW){
 
 }
-Chimpanzee::Chimpanzee(const Chimpanzee& C) : LandAnimal(C) {
+Chimpanzee::Chimpanzee(const Chimpanzee& C) : Animal(C) {
 
 }
 Chimpanzee& Chimpanzee::operator=(const Chimpanzee& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Chimpanzee::interact(){
@@ -187,11 +183,11 @@ double Chimpanzee::countConsumedVeggie(){
 Komodo::Komodo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'K', YELLOW){
 
 }
-Komodo::Komodo(const Komodo& K) : LandAnimal(K) {
+Komodo::Komodo(const Komodo& K) : Animal(K) {
 
 }
 Komodo& Komodo::operator=(const Komodo& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Komodo::interact(){
@@ -217,11 +213,11 @@ double Komodo::countConsumedVeggie(){
 Bear::Bear(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', YELLOW){
 
 }
-Bear::Bear(const Bear& B) : LandAnimal(B) {
+Bear::Bear(const Bear& B) : Animal(B) {
 
 }
 Bear& Bear::operator=(const Bear& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Bear::interact(){
@@ -246,11 +242,11 @@ double Bear::countConsumedVeggie(){
 Whale::Whale(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', CYAN){
 
 }
-Whale::Whale(const Whale& W) : WaterAnimal(W) {
+Whale::Whale(const Whale& W) : Animal(W) {
 
 }
 Whale& Whale::operator=(const Whale& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Whale::interact(){
@@ -275,11 +271,11 @@ double Whale::countConsumedVeggie(){
 Dolphin::Dolphin(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'D', CYAN){
 
 }
-Dolphin::Dolphin(const Dolphin& D) : WaterAnimal(D) {
+Dolphin::Dolphin(const Dolphin& D) : Animal(D) {
 
 }
 Dolphin& Dolphin::operator=(const Dolphin& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Dolphin::interact(){
@@ -305,11 +301,11 @@ double Dolphin::countConsumedVeggie(){
 Clownfish::Clownfish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', CYAN){
 
 }
-Clownfish::Clownfish(const Clownfish& C) : WaterAnimal(C) {
+Clownfish::Clownfish(const Clownfish& C) : Animal(C) {
 
 }
 Clownfish& Clownfish::operator=(const Clownfish& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Clownfish::interact(){
@@ -335,11 +331,11 @@ double Clownfish::countConsumedVeggie(){
 BlueTang::BlueTang(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', CYAN){
 
 }
-BlueTang::BlueTang(const BlueTang& B) : WaterAnimal(B) {
+BlueTang::BlueTang(const BlueTang& B) : Animal(B) {
 
 }
 BlueTang& BlueTang::operator=(const BlueTang& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void BlueTang::interact(){
@@ -365,11 +361,11 @@ double BlueTang::countConsumedVeggie(){
 Piranha::Piranha(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'P', CYAN){
 
 }
-Piranha::Piranha(const Piranha& P) : WaterAnimal(P) {
+Piranha::Piranha(const Piranha& P) : Animal(P) {
 
 }
 Piranha& Piranha::operator=(const Piranha& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Piranha::interact(){
@@ -394,11 +390,11 @@ double Piranha::countConsumedVeggie(){
 PuffFish::PuffFish(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', CYAN){
 
 }
-PuffFish::PuffFish(const PuffFish& P) : WaterAnimal(P) {
+PuffFish::PuffFish(const PuffFish& P) : Animal(P) {
 
 }
 PuffFish& PuffFish::operator=(const PuffFish& E){
-  WaterAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void PuffFish::interact(){
@@ -424,11 +420,11 @@ double PuffFish::countConsumedVeggie(){
 Eagle::Eagle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'E', RED){
 
 }
-Eagle::Eagle(const Eagle& E) : FlyingAnimal(E) {
+Eagle::Eagle(const Eagle& E) : Animal(E) {
 
 }
 Eagle& Eagle::operator=(const Eagle& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Eagle::interact(){
@@ -454,11 +450,11 @@ double Eagle::countConsumedVeggie(){
 Cendrawasih::Cendrawasih(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'W', RED){
 
 }
-Cendrawasih::Cendrawasih(const Cendrawasih& C) : FlyingAnimal(C) {
+Cendrawasih::Cendrawasih(const Cendrawasih& C) : Animal(C) {
 
 }
 Cendrawasih& Cendrawasih::operator=(const Cendrawasih& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Cendrawasih::interact(){
@@ -484,11 +480,11 @@ double Cendrawasih::countConsumedVeggie(){
 Owl::Owl(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'O', RED){
 
 }
-Owl::Owl(const Owl& O) : FlyingAnimal(O) {
+Owl::Owl(const Owl& O) : Animal(O) {
 
 }
 Owl& Owl::operator=(const Owl& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Owl::interact(){
@@ -514,11 +510,11 @@ double Owl::countConsumedVeggie(){
 Bat::Bat(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'B', RED){
 
 }
-Bat::Bat(const Bat& B) : FlyingAnimal(B) {
+Bat::Bat(const Bat& B) : Animal(B) {
 
 }
 Bat& Bat::operator=(const Bat& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Bat::interact(){
@@ -543,11 +539,11 @@ double Bat::countConsumedVeggie(){
 Macau::Macau(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'M', RED){
 
 }
-Macau::Macau(const Macau& M) : FlyingAnimal(M) {
+Macau::Macau(const Macau& M) : Animal(M) {
 
 }
 Macau& Macau::operator=(const Macau& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Macau::interact(){
@@ -572,11 +568,11 @@ double Macau::countConsumedVeggie(){
 Cockatoo::Cockatoo(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'C', RED){
 
 }
-Cockatoo::Cockatoo(const Cockatoo& C) : FlyingAnimal(C) {
+Cockatoo::Cockatoo(const Cockatoo& C) : Animal(C) {
 
 }
 Cockatoo& Cockatoo::operator=(const Cockatoo& E){
-  FlyingAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Cockatoo::interact(){
@@ -601,11 +597,11 @@ double Cockatoo::countConsumedVeggie(){
 Frog::Frog(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'F', GREEN){
 
 }
-Frog::Frog(const Frog& F) : LandAnimal(F), WaterAnimal(F) {
+Frog::Frog(const Frog& F) : Animal(F) {
 
 }
 Frog& Frog::operator=(const Frog& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Frog::interact(){
@@ -631,11 +627,11 @@ double Frog::countConsumedVeggie(){
 Alligator::Alligator(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'A', GREEN){
 
 }
-Alligator::Alligator(const Alligator& A) : LandAnimal(A), WaterAnimal(A) {
+Alligator::Alligator(const Alligator& A) : Animal(A) {
 
 }
 Alligator& Alligator::operator=(const Alligator& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Alligator::interact(){
@@ -660,11 +656,11 @@ double Alligator::countConsumedVeggie(){
 Hippopotamus::Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'H', GREEN){
 
 }
-Hippopotamus::Hippopotamus(const Hippopotamus& H) : LandAnimal(H), WaterAnimal(H) {
+Hippopotamus::Hippopotamus(const Hippopotamus& H) : Animal(H) {
 
 }
 Hippopotamus& Hippopotamus::operator=(const Hippopotamus& E){
-  LandAnimal::operator=(E);
+  Animal::operator=(E);
   return *this;
 }
 void Hippopotamus::interact(){
@@ -689,7 +685,7 @@ double Hippopotamus::countConsumedVeggie(){
 Turtle::Turtle(string _name, double _weight, Sex _s, int _r, int _c): Animal(_name,  _weight, _s,  _r, _c, 'T', GREEN){
 
 }
-Turtle::Turtle(const Turtle& T) : LandAnimal(T), WaterAnimal(T) {
+Turtle::Turtle(const Turtle& T) : Animal(T) {
 
 }
 Turtle& Turtle::operator=(const Turtle& E){
@@ -716,7 +712,6 @@ double Turtle::countConsumedVeggie(){
 }
 
 istream& operator>>(istream& in, Animal* &A){
-<<<<<<< HEAD
 	string kelas;
 	string name;
 	double weight;
@@ -832,127 +827,6 @@ istream& operator>>(istream& in, Animal* &A){
 		A = new Elephant(name, weight, s, row, col);
 	}
 
-	cout << A->getName() << " " << A->getWeight() << " " << A->getRow() << " " << A->getCol() << endl;
-
 	return in;
-=======
-  string kelas;
-  string name;
-  double weight;
-  char sc;
-  Sex s;
-  int row, col;
 
-  in >> kelas >> name >> weight >> sc >> row >> col;
-  cout << kelas<<" "<<name<<" "<<weight<<endl;
-  if (sc == 'm')
-    s = male;
-  else
-    s = female;
-
-  if (kelas == "Elephant")
-  {
-    A = new Elephant(name, weight, s, row, col);
-  }
-  else if (kelas == "Giraffe")
-  {
-    A = new Giraffe(name, weight, s, row, col);
-  }
-  else if (kelas == "Lion")
-  {
-    A = new Lion(name, weight, s, row, col);
-  }
-  else if (kelas == "Tiger")
-  {
-    A = new Tiger(name, weight, s, row, col);
-  }
-  else if (kelas == "Orangutan")
-  {
-    A = new Orangutan(name, weight, s, row, col);
-  }
-  else if (kelas == "Chimpanzee")
-  {
-    A = new Chimpanzee(name, weight, s, row, col);
-  }
-  else if (kelas == "Komodo")
-  {
-    A = new Komodo(name, weight, s, row, col);
-  }
-  else if (kelas == "Bear")
-  {
-    A = new Bear(name, weight, s, row, col);
-  }
-  else if (kelas == "Whale")
-  {
-    A = new Whale(name, weight, s, row, col);
-  }
-  else if (kelas == "Dolphin")
-  {
-    A = new Dolphin(name, weight, s, row, col);
-  }
-  else if (kelas == "Clownfish")
-  {
-    A = new Clownfish(name, weight, s, row, col);
-  }
-  else if (kelas == "BlueTang")
-  {
-    A = new BlueTang(name, weight, s, row, col);
-  }
-  else if (kelas == "Piranha")
-  {
-    A = new Piranha(name, weight, s, row, col);
-  }
-  else if (kelas == "PuffFish")
-  {
-    A = new PuffFish(name, weight, s, row, col);
-  }
-  else if (kelas == "Eagle")
-  {
-    A = new Eagle(name, weight, s, row, col);
-  }
-  else if (kelas == "Cendrawasih")
-  {
-    A = new Cendrawasih(name, weight, s, row, col);
-  }
-  else if (kelas == "Owl")
-  {
-    A = new Owl(name, weight, s, row, col);
-  }
-  else if (kelas == "Bat")
-  {
-    A = new Bat(name, weight, s, row, col);
-  }
-  else if (kelas == "Macau")
-  {
-    A = new Macau(name, weight, s, row, col);
-  }
-  else if (kelas == "Cockatoo")
-  {
-    A = new Cockatoo(name, weight, s, row, col);
-  }
-  else if (kelas == "Frog")
-  {
-    A = new Frog(name, weight, s, row, col);
-  }
-  else if (kelas == "Alligator")
-  {
-    A = new Alligator(name, weight, s, row, col);
-  }
-  else if (kelas == "Hippopotamus")
-  {
-    A = new Hippopotamus(name, weight, s, row, col);
-  }
-  else if (kelas == "Turtle")
-  {
-    A = new Turtle(name, weight, s, row, col);
-  }
-  else
-  {
-    A = new Elephant(name, weight, s, row, col);
-  }
-
-  cout << A->getName() << " " << A->getWeight() << " " << A->getRow() << " " << A->getCol() << endl;
-
-  return in;
->>>>>>> 0477cd3b925336f27229d110b5ab44c7debe132b
 }

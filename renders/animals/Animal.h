@@ -13,7 +13,6 @@ using namespace std;
 
 class Animal : public Renderable{
 public:
-<<<<<<< HEAD
 	/** @brief Constructor
 	*/
 	Animal();
@@ -30,24 +29,6 @@ public:
 	*/
 	Animal(const Animal& A);
 
-	/** @brief Destructor.
-=======
-  /** @brief Constructor
-  */
-  Animal();
-
-  /** @brief Constructor
-  * @param _name nama binatang
-  * @param _weight berat binatang
-  * @param _s jenis kelamin
-  */
-  Animal(string _name, double _weight, Sex _s, int _r, int _c,char _id, Color _color);
-
-  /** @brief Copy Constructor
-  * @param Animal A yang ingin disalin.
-  */
-  Animal(const Animal& A);
-
   /** @brief Destructor.
     */
   virtual ~Animal();
@@ -59,7 +40,6 @@ public:
   Animal& operator=(const Animal& A);
 
   /** @brief Menampilkan experience yang dialami pengamat dengan hewan.
->>>>>>> 0477cd3b925336f27229d110b5ab44c7debe132b
     */
   virtual void interact() = 0;
 
@@ -111,7 +91,7 @@ public:
 
   /** @brief Mengatur berat hewan
       * @param berat hewan
-      */  
+      */
   void setWeight(double w);
 
   /** @brief Mengatur nama hewan
