@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Species.h"
 using namespace std;
 
@@ -576,7 +577,7 @@ istream& operator>>(istream& in, Animal* &A){
 	int row, col;
 
 	in >> kelas >> name >> weight >> sc >> row >> col;
-	// cout << kelas<<" "<<name<<" "<<weight;
+	cout << kelas<<" "<<name<<" "<<weight<<endl;
 	if (sc == 'm')
 		s = male;
 	else
@@ -682,6 +683,8 @@ istream& operator>>(istream& in, Animal* &A){
 	{
 		A = new Elephant(name, weight, s, row, col);
 	}
+
+	cout << A->getName() << " " << A->getWeight() << " " << A->getRow() << " " << A->getCol() << endl;
 
 	return in;
 }

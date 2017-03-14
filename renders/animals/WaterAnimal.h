@@ -3,7 +3,10 @@
 
 #pragma once
 
+#include <iostream>
+#include <string>
 #include "Animal.h"
+using namespace std;
 
 class WaterAnimal : public virtual Animal {
 public:

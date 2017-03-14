@@ -8,6 +8,7 @@
 #include "../../taxonomy/taxonomy.h"
 #include "../../other/Sex.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Animal : public Renderable{

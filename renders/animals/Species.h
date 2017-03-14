@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include <iostream>
+#include <string>
 #include "LandAnimal.h"
 #include "FlyingAnimal.h"
 #include "WaterAnimal.h"

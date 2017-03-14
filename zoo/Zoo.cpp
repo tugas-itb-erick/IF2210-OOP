@@ -200,8 +200,8 @@ void Zoo::display(int x1, int y1, int x2, int y2){
               }
 
               if (found2){
-                //cout << cg[k].getAnimal(l)->render();
-                cout << c[i][j]->render();
+                cout << cg[k].getAnimal(i2)->render();
+                //cout << c[i][j]->render();
               }else{
                 cout << cg[k].render();
               }
