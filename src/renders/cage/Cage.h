@@ -4,9 +4,9 @@
 #pragma once
 
 #include <iostream>
-#include "Renderable.h"
-#include "animals/animals.h"
-#include "habitats/habitats.h"
+#include "../Renderable.h"
+#include "../animals/animals.h"
+#include "../habitats/habitats.h"
 using namespace std;
 
 /** @class Cage

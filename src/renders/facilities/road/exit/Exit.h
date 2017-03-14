@@ -1,36 +1,36 @@
 /* NIM/Nama  : 13515AAA / AAA AAA   */
-/* File      : Park.h               */
+/* File      : Exit.h               */
 
 #pragma once
 
-#include "Facility.h"
+#include "../Road.h"
 
-/** @class Park.
-	 * Adalah kelas anak dari Facility.
-	 * Adalah representasi dari taman di zoo.
+/** @class Exit.
+	 * Adalah kelas anak dari Road.
+	 * Adalah representasi dari jalan keluar ke zoo.
 	 */
-class Park : public Facility {
+class Exit : public Road {
 public:
 	/** @brief Constructor.
-     * Menciptakan Park.
+     * Menciptakan Exit.
      */
-	Park();
+	Exit();
 
 	/** @brief Copy Constructor.
-     * Menciptakan salinan dari Park.
-     * @param P Park yang ingin disalin.
+     * Menciptakan salinan dari Exit.
+     * @param X Exit yang ingin disalin.
      */
-	Park(const Park&);
+	Exit(const Exit&);
 
 	/** @brief Destructor.
     */
-	virtual ~Park();
+	virtual ~Exit();
 
 	/** @brief Operator=.
-     * Menginisialisasi Park tanpa terjadi bitwise copy
-     * @return Park yang sudah di assign nilai dari current object
+     * Menginisialisasi Exit tanpa terjadi bitwise copy
+     * @return Exit yang sudah di assign nilai dari current object
      */
-	Park& operator=(const Park&);
+	Exit& operator=(const Exit&);
 
 	/** @brief Render.
      * Mengembalikan karakter untuk ditampilkan ke layar
@@ -48,5 +48,6 @@ public:
      * Menduplikat diri sendiri
      * @return value object hasil kloning
      */
-	virtual Park* clone() const;
+	virtual Exit* clone() const;
+
 };

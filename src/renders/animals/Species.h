@@ -9,8 +9,8 @@
 #include "FlyingAnimal.h"
 #include "WaterAnimal.h"
 #include "../Renderable.h"
-#include "../../taxonomy/taxonomy.h"
-#include "../../diet/diet.h"
+#include "taxonomy/taxonomy.h"
+#include "diet/diet.h"
 using namespace std;
 
 class Elephant : public LandAnimal, public Herbivore, public Mammalia {

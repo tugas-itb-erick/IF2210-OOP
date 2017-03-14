@@ -1,36 +1,36 @@
 /* NIM/Nama  : 13515AAA / AAA AAA   */
-/* File      : Restaurant.h         */
+/* File      : Park.h               */
 
 #pragma once
 
-#include "Facility.h"
+#include "../Facility.h"
 
-/** @class Restaurant.
+/** @class Park.
 	 * Adalah kelas anak dari Facility.
-	 * Adalah representasi dari restoran.
+	 * Adalah representasi dari taman di zoo.
 	 */
-class Restaurant : public Facility {
+class Park : public Facility {
 public:
 	/** @brief Constructor.
-     * Menciptakan Restaurant.
+     * Menciptakan Park.
      */
-	Restaurant();
+	Park();
 
 	/** @brief Copy Constructor.
-     * Menciptakan salinan dari Restaurant.
-     * @param R Restaurant yang ingin disalin.
+     * Menciptakan salinan dari Park.
+     * @param P Park yang ingin disalin.
      */
-	Restaurant(const Restaurant&);
+	Park(const Park&);
 
 	/** @brief Destructor.
     */
-	virtual ~Restaurant();
+	virtual ~Park();
 
 	/** @brief Operator=.
-     * Menginisialisasi Restaurant tanpa terjadi bitwise copy
-     * @return Restaurant yang sudah di assign nilai dari current object
+     * Menginisialisasi Park tanpa terjadi bitwise copy
+     * @return Park yang sudah di assign nilai dari current object
      */
-	Restaurant& operator=(const Restaurant&);
+	Park& operator=(const Park&);
 
 	/** @brief Render.
      * Mengembalikan karakter untuk ditampilkan ke layar
@@ -48,6 +48,5 @@ public:
      * Menduplikat diri sendiri
      * @return value object hasil kloning
      */
-	virtual Restaurant* clone() const;
-
+	virtual Park* clone() const;
 };

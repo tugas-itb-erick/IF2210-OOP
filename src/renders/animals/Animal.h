@@ -4,8 +4,8 @@
 #pragma once
 
 #include "../Renderable.h"
-#include "../../diet/diet.h"
-#include "../../taxonomy/taxonomy.h"
+#include "diet/diet.h"
+#include "taxonomy/taxonomy.h"
 #include "../../other/Sex.h"
 #include <iostream>
 #include <string>

@@ -1,36 +1,36 @@
 /* NIM/Nama  : 13515AAA / AAA AAA   */
-/* File      : Exit.h               */
+/* File      : Entrance.h           */
 
 #pragma once
 
-#include "Road.h"
+#include "../Road.h"
 
-/** @class Exit.
+/** @class Entrance.
 	 * Adalah kelas anak dari Road.
-	 * Adalah representasi dari jalan keluar ke zoo.
+	 * Adalah representasi dari jalan masuk ke zoo.
 	 */
-class Exit : public Road {
+class Entrance : public Road {
 public:
 	/** @brief Constructor.
-     * Menciptakan Exit.
+     * Menciptakan Entrance.
      */
-	Exit();
+	Entrance();
 
 	/** @brief Copy Constructor.
-     * Menciptakan salinan dari Exit.
-     * @param X Exit yang ingin disalin.
+     * Menciptakan salinan dari Entrance.
+     * @param E Entrance yang ingin disalin.
      */
-	Exit(const Exit&);
+	Entrance(const Entrance&);
 
 	/** @brief Destructor.
     */
-	virtual ~Exit();
+	virtual ~Entrance();
 
 	/** @brief Operator=.
-     * Menginisialisasi Exit tanpa terjadi bitwise copy
-     * @return Exit yang sudah di assign nilai dari current object
+     * Menginisialisasi Entrance tanpa terjadi bitwise copy
+     * @return Entrance yang sudah di assign nilai dari current object
      */
-	Exit& operator=(const Exit&);
+	Entrance& operator=(const Entrance&);
 
 	/** @brief Render.
      * Mengembalikan karakter untuk ditampilkan ke layar
@@ -48,6 +48,5 @@ public:
      * Menduplikat diri sendiri
      * @return value object hasil kloning
      */
-	virtual Exit* clone() const;
-
+	virtual Entrance* clone() const;
 };
