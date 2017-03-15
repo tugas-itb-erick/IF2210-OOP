@@ -336,7 +336,7 @@ void Zoo::Tour(){
   }
 
   i = xen;
-  int j = yen; 
+  int j = yen;  
   while ((i != xex) || (j != yex)){
     path[i][j] = false;
     cout << "(" << i << "," << j << ") :" << endl;
