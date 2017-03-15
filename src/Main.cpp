@@ -21,7 +21,7 @@ int main(){
         Driver::PrintZoo(z, x1, y1, x2, y2);
         break;
       case 2:
-        Driver::PrintZooWithAnimal(z);
+        Driver::PrintZooAll(z);
         break;
       case 3:
         Driver::PrintFood(z);

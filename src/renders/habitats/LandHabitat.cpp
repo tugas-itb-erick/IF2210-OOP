@@ -5,7 +5,7 @@
 
 using namespace std;
 
-LandHabitat::LandHabitat() : Habitat('X', WHITE)
+LandHabitat::LandHabitat() : Habitat('L', WHITE)
 {
 }
 LandHabitat::LandHabitat(const LandHabitat& L) : Habitat(L)

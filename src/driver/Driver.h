@@ -33,7 +33,7 @@ public:
    * Memanggil fungsi display dari zoo untuk menampilkan seluruh zoo.
    * @param Z kebun binatang yang dicetak
    */
-  static void PrintZooWithAnimal(Zoo &Z);
+  static void PrintZooAll(Zoo &Z);
 
   /** @brief Menampilkan makanan yang dikonsumsi hewan di kebun Z.
    * @param Z kebun binatang yang ingin dihitung makanan yang dikonsumsinya.

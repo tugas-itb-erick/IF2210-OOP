@@ -5,7 +5,7 @@
 
 using namespace std;
 
-WaterHabitat::WaterHabitat() : Habitat('#', WHITE)
+WaterHabitat::WaterHabitat() : Habitat('W', WHITE)
 {
 }
 WaterHabitat::WaterHabitat(const WaterHabitat& W) : Habitat(W)

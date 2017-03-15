@@ -5,7 +5,7 @@
 
 using namespace std;
 
-AirHabitat::AirHabitat() : Habitat('O', WHITE)
+AirHabitat::AirHabitat() : Habitat('A', WHITE)
 {
 }
 AirHabitat::AirHabitat(const AirHabitat& A) : Habitat(A)

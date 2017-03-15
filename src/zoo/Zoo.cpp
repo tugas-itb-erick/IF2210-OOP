@@ -138,9 +138,9 @@ istream& operator>>(istream& in, Zoo& Z){
     for(int j=0; j<c; j++){
       in >> k;
       switch (k){
-        case '#' : input[i][j] = new WaterHabitat(); break;
-        case 'O' : input[i][j] = new AirHabitat(); break;
-        case 'X' : input[i][j] = new LandHabitat(); break;
+        case 'W' : input[i][j] = new WaterHabitat(); break;
+        case 'A' : input[i][j] = new AirHabitat(); break;
+        case 'L' : input[i][j] = new LandHabitat(); break;
         case '*' : input[i][j] = new Park(); break;
         case 'R' : input[i][j] = new Restaurant(); break;
         case '-' : input[i][j] = new Road(); break;
