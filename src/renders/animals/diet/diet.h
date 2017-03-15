@@ -1,5 +1,5 @@
 #pragma once
 
-#include "Herbivore.h"
-#include "Carnivore.h"
-#include "Omnivore.h"
+#include "herbivore.h"
+#include "carnivore.h"
+#include "omnivore.h"

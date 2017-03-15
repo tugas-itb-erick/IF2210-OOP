@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LandAnimal.h"
-#include "FlyingAnimal.h"
-#include "WaterAnimal.h"
-#include "Species.h"
+#include "land_animal.h"
+#include "flying_animal.h"
+#include "water_animal.h"
+#include "species.h"

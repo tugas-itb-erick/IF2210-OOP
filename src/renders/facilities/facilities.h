@@ -1,7 +1,7 @@
 #pragma once
 
-#include "road/entrance/Entrance.h"
-#include "road/exit/Exit.h"
-#include "park/Park.h"
-#include "restaurant/Restaurant.h"
-#include "road/Road.h"
+#include "road/entrance/entrance.h"
+#include "road/exit/exit.h"
+#include "park/park.h"
+#include "restaurant/restaurant.h"
+#include "road/road.h"

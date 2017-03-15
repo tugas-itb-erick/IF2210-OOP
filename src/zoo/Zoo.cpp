@@ -5,7 +5,7 @@
 #include <iomanip>
 #include <cstdio>
 #include <vector>
-#include "Zoo.h"
+#include "zoo.h"
 using namespace std;
 
 Zoo::Zoo(){
