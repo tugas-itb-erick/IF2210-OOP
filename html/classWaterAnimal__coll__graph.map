@@ -1,0 +1,4 @@
+<map id="WaterAnimal" name="WaterAnimal">
+<area shape="rect" id="node2" href="$classAnimal.html" title="{Animal\n|# name\l# weight\l# s\l# row\l# col\l# wild\l|+ Animal()\l+ Animal()\l+ Animal()\l+ ~Animal()\l+ operator=()\l+ interact()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l+ getRow()\l+ getCol()\land 10 more...\l}" alt="" coords="5,233,183,531"/>
+<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="36,5,152,185"/>
+</map>

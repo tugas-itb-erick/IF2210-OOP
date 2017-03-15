@@ -1,0 +1,221 @@
+\hypertarget{classWhale}{}\section{Whale Class Reference}
+\label{classWhale}\index{Whale@{Whale}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Whale\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classWhale__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Whale\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classWhale__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWhale_a69b176f8dd6eb515205d8a4a4aa3ff9a}{Whale} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classWhale_a151e8c27f7142d945a16e14bd693077a}{Whale} (const \hyperlink{classWhale}{Whale} \&W)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classWhale}{Whale} \& \hyperlink{classWhale_a08dff5d0db8fa709a41e8958c5857eca}{operator=} (const \hyperlink{classWhale}{Whale} \&W)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classWhale_a4c8a19ea11861b215901cf6e8863f841}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classWhale}{Whale} $\ast$ \hyperlink{classWhale_afaae0fbf8fa68bb122a8b977e174991b}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classWhale_af9e70c8db18076c856da5bbad27c50b7}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classWhale_a0cc555d9f7a0d8792ddabd38f58ec43e}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classWhale_a0b35a77b6aaea6b15ebc93d854fbb41d}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classWhale_ab11932aef7e81d1013eaf4a12ab835b3}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Whale@{Whale}!Whale@{Whale}}
+\index{Whale@{Whale}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{Whale(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Whale(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Whale\+::\+Whale (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classWhale_a69b176f8dd6eb515205d8a4a4aa3ff9a}{}\label{classWhale_a69b176f8dd6eb515205d8a4a4aa3ff9a}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Whale@{Whale}!Whale@{Whale}}
+\index{Whale@{Whale}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{Whale(const Whale \&\+W)}{Whale(const Whale &W)}}]{\setlength{\rightskip}{0pt plus 5cm}Whale\+::\+Whale (
+\begin{DoxyParamCaption}
+\item[{const {\bf Whale} \&}]{W}
+\end{DoxyParamCaption}
+)}\hypertarget{classWhale_a151e8c27f7142d945a16e14bd693077a}{}\label{classWhale_a151e8c27f7142d945a16e14bd693077a}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em W} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Whale@{Whale}!clone@{clone}}
+\index{clone@{clone}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Whale} $\ast$ Whale\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_afaae0fbf8fa68bb122a8b977e174991b}{}\label{classWhale_afaae0fbf8fa68bb122a8b977e174991b}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Whale@{Whale}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Whale\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_a0b35a77b6aaea6b15ebc93d854fbb41d}{}\label{classWhale_a0b35a77b6aaea6b15ebc93d854fbb41d}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Whale@{Whale}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Whale\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_ab11932aef7e81d1013eaf4a12ab835b3}{}\label{classWhale_ab11932aef7e81d1013eaf4a12ab835b3}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Whale@{Whale}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Whale\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_a0cc555d9f7a0d8792ddabd38f58ec43e}{}\label{classWhale_a0cc555d9f7a0d8792ddabd38f58ec43e}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Whale@{Whale}!interact@{interact}}
+\index{interact@{interact}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Whale\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_a4c8a19ea11861b215901cf6e8863f841}{}\label{classWhale_a4c8a19ea11861b215901cf6e8863f841}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Whale@{Whale}!operator=@{operator=}}
+\index{operator=@{operator=}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{operator=(const Whale \&\+W)}{operator=(const Whale &W)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Whale} \& Whale\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Whale} \&}]{W}
+\end{DoxyParamCaption}
+)}\hypertarget{classWhale_a08dff5d0db8fa709a41e8958c5857eca}{}\label{classWhale_a08dff5d0db8fa709a41e8958c5857eca}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em W} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Whale@{Whale}!render@{render}}
+\index{render@{render}!Whale@{Whale}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Whale\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWhale_af9e70c8db18076c856da5bbad27c50b7}{}\label{classWhale_af9e70c8db18076c856da5bbad27c50b7}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

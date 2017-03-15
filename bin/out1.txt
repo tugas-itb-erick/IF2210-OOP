@@ -1,0 +1,49 @@
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :Input angka x1 y1 x2 y2 : [37mw[0m [37mw[0m - 
+[37ml[0m [37ml[0m - 
+[37ml[0m [37ml[0m - 
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :[33mE[0m [33mG[0m [37ml[0m [37ml[0m [33mG[0m * [37ml[0m [37ml[0m [37ml[0m [37ml[0m [37mw[0m [37mw[0m [36mC[0m [36mC[0m [37mw[0m 
+[37ml[0m [37ml[0m [37ml[0m [37ml[0m [37ml[0m * R [37ml[0m [37ml[0m [37ml[0m [37mw[0m [37mw[0m [37mw[0m [37mw[0m [37mw[0m 
+o - - [37ma[0m [37mw[0m [37mw[0m - - - - - - - - i 
+[36mB[0m [37mw[0m - [37ma[0m [37mw[0m [37mw[0m - [37mw[0m [37mw[0m [37ml[0m [37ml[0m [37mw[0m [37mw[0m [37mw[0m [37mw[0m 
+[36mB[0m [37mw[0m - [37ma[0m [37ml[0m [37ml[0m - [37mw[0m [37mw[0m [37ml[0m [37ml[0m [37ml[0m [37mw[0m [37mw[0m [37mw[0m 
+[37mw[0m [37mw[0m - [37ma[0m [37ml[0m [37ml[0m - - - - [33mE[0m [37mw[0m - - o 
+[37mw[0m * - [37mw[0m [37mw[0m [31mM[0m [31mM[0m [31mM[0m [37ma[0m - [33mE[0m [37mw[0m - [31mO[0m [37ma[0m 
+* R - [37mw[0m [37mw[0m [37ma[0m [37ma[0m [37ma[0m [37ma[0m - [33mE[0m [37mw[0m - [31mO[0m [37ma[0m 
+[31mW[0m [37ma[0m - - - - - [37ma[0m [37ma[0m - [37mw[0m [37mw[0m - [31mB[0m [37ma[0m 
+[31mW[0m [37ma[0m - [33mO[0m [37ml[0m [37ml[0m - [36mW[0m [37mw[0m - [37mw[0m [37mw[0m - [37ma[0m [37ma[0m 
+[31mW[0m [37ma[0m - [33mO[0m [37ml[0m [37ml[0m - [36mW[0m [37mw[0m - [37ml[0m [37ml[0m - [37ma[0m [37ma[0m 
+[37ma[0m [37ma[0m - [33mC[0m [37ml[0m [37ml[0m - [36mD[0m [37mw[0m - [37ml[0m [37ml[0m - [32mF[0m [37mw[0m 
+o - - [33mC[0m [37ml[0m [37ml[0m - [36mD[0m [37mw[0m - - - - [32mF[0m [37mw[0m 
+[32mT[0m [32mT[0m [32mT[0m [37mw[0m [37ml[0m [37ml[0m - [37mw[0m [37mw[0m [37mw[0m [31mC[0m [37ma[0m [37ma[0m [37mw[0m [37mw[0m 
+[37mw[0m [37mw[0m [37mw[0m [37mw[0m [37mw[0m [37mw[0m i [37mw[0m [37mw[0m [37mw[0m [37ma[0m [37ma[0m [37ma[0m [37mw[0m [37mw[0m 
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :Total Daging yang dikonsumsi: 35075.9
+Total Sayur yang dikonsumsi: 1242.15
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :

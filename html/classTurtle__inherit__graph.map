@@ -1,0 +1,9 @@
+<map id="Turtle" name="Turtle">
+<area shape="rect" id="node2" href="$classOmnivore.html" title="{Omnivore\n|# meatRatio\l# vegRatio\l|+ Omnivore()\l+ Omnivore()\l+ operator=()\l+ getMeatRatio()\l+ getVegRatio()\l}" alt="" coords="5,579,125,729"/>
+<area shape="rect" id="node3" href="$classWaterAnimal.html" title="{WaterAnimal\n||+ WaterAnimal()\l+ WaterAnimal()\l+ WaterAnimal()\l+ ~WaterAnimal()\l+ operator=()\l}" alt="" coords="149,586,275,722"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="{Animal\n|# name\l# weight\l# s\l# row\l# col\l# wild\l|+ Animal()\l+ Animal()\l+ Animal()\l+ ~Animal()\l+ operator=()\l+ interact()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l+ getRow()\l+ getCol()\land 10 more...\l}" alt="" coords="167,233,345,531"/>
+<area shape="rect" id="node6" href="$classLandAnimal.html" title="{LandAnimal\n||+ LandAnimal()\l+ LandAnimal()\l+ LandAnimal()\l+ ~LandAnimal()\l+ operator=()\l}" alt="" coords="299,586,418,722"/>
+<area shape="rect" id="node5" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="198,5,314,185"/>
+<area shape="rect" id="node7" href="$classReptilia.html" title="{Reptilia\n||+ Reptilia()\l}" alt="" coords="442,615,529,693"/>
+<area shape="rect" id="node8" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="413,321,558,443"/>
+</map>

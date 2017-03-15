@@ -1,0 +1,221 @@
+\hypertarget{classPiranha}{}\section{Piranha Class Reference}
+\label{classPiranha}\index{Piranha@{Piranha}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Piranha\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPiranha__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Piranha\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPiranha__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPiranha_a943037a0b0d5f151052d39abace8af3c}{Piranha} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classPiranha_a22d9ff01ea904789fbd3221f2789117b}{Piranha} (const \hyperlink{classPiranha}{Piranha} \&P)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classPiranha}{Piranha} \& \hyperlink{classPiranha_aee78b0eb2bea763ef07a75365463376e}{operator=} (const \hyperlink{classPiranha}{Piranha} \&P)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPiranha_a115e6e7d67f93c005eaec8ba77d209a7}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classPiranha}{Piranha} $\ast$ \hyperlink{classPiranha_a7f844252f5836441f77dc90e12822813}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classPiranha_aa0cd9c03f7ce955dfa234eba4b3d7d7c}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classPiranha_a50b9683cea9c7cd12f69ebc57b75f6cf}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPiranha_a7dbc301f51652df5cbba42896ba4b54b}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPiranha_a78ae3e98577fe780b1d768a08632df67}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Piranha@{Piranha}!Piranha@{Piranha}}
+\index{Piranha@{Piranha}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{Piranha(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Piranha(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Piranha\+::\+Piranha (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classPiranha_a943037a0b0d5f151052d39abace8af3c}{}\label{classPiranha_a943037a0b0d5f151052d39abace8af3c}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Piranha@{Piranha}!Piranha@{Piranha}}
+\index{Piranha@{Piranha}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{Piranha(const Piranha \&\+P)}{Piranha(const Piranha &P)}}]{\setlength{\rightskip}{0pt plus 5cm}Piranha\+::\+Piranha (
+\begin{DoxyParamCaption}
+\item[{const {\bf Piranha} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPiranha_a22d9ff01ea904789fbd3221f2789117b}{}\label{classPiranha_a22d9ff01ea904789fbd3221f2789117b}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Piranha@{Piranha}!clone@{clone}}
+\index{clone@{clone}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piranha} $\ast$ Piranha\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_a7f844252f5836441f77dc90e12822813}{}\label{classPiranha_a7f844252f5836441f77dc90e12822813}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Piranha@{Piranha}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Piranha\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_a7dbc301f51652df5cbba42896ba4b54b}{}\label{classPiranha_a7dbc301f51652df5cbba42896ba4b54b}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Piranha@{Piranha}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Piranha\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_a78ae3e98577fe780b1d768a08632df67}{}\label{classPiranha_a78ae3e98577fe780b1d768a08632df67}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Piranha@{Piranha}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Piranha\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_a50b9683cea9c7cd12f69ebc57b75f6cf}{}\label{classPiranha_a50b9683cea9c7cd12f69ebc57b75f6cf}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Piranha@{Piranha}!interact@{interact}}
+\index{interact@{interact}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Piranha\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_a115e6e7d67f93c005eaec8ba77d209a7}{}\label{classPiranha_a115e6e7d67f93c005eaec8ba77d209a7}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Piranha@{Piranha}!operator=@{operator=}}
+\index{operator=@{operator=}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{operator=(const Piranha \&\+P)}{operator=(const Piranha &P)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piranha} \& Piranha\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Piranha} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPiranha_aee78b0eb2bea763ef07a75365463376e}{}\label{classPiranha_aee78b0eb2bea763ef07a75365463376e}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Piranha@{Piranha}!render@{render}}
+\index{render@{render}!Piranha@{Piranha}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Piranha\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPiranha_aa0cd9c03f7ce955dfa234eba4b3d7d7c}{}\label{classPiranha_aa0cd9c03f7ce955dfa234eba4b3d7d7c}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

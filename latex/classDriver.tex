@@ -1,0 +1,146 @@
+\hypertarget{classDriver}{}\section{Driver Class Reference}
+\label{classDriver}\index{Driver@{Driver}}
+
+
+{\ttfamily \#include $<$driver.\+h$>$}
+
+
+
+Collaboration diagram for Driver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classDriver__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classDriver_a3cbec9699953cf65b23eae3ced1338bb}{Show\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Menampilkan menu. Mencetak menu tampilan utama bagi pengguna. \end{DoxyCompactList}\item 
+static void \hyperlink{classDriver_ab43c2330f27a0391bc39be75d348562a}{Activate\+Tour} (\hyperlink{classZoo}{Zoo} \&Z)
+\begin{DoxyCompactList}\small\item\em Aktivasi Tour Memulai Tour kebun binatang. \end{DoxyCompactList}\item 
+static void \hyperlink{classDriver_a631e22aab57fd7ac4200bccd6fbcb221}{Print\+Zoo} (\hyperlink{classZoo}{Zoo} \&Z, int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em Menampilkan kebun binatang. Memanggil fungsi display dari zoo untuk menampilkan zoo. \end{DoxyCompactList}\item 
+static void \hyperlink{classDriver_a73f290d28efdb356bbf0355cf99e3b1f}{Print\+Zoo\+All} (\hyperlink{classZoo}{Zoo} \&Z)
+\begin{DoxyCompactList}\small\item\em Menampilkan kebun binatang. Memanggil fungsi display dari zoo untuk menampilkan seluruh zoo. \end{DoxyCompactList}\item 
+static void \hyperlink{classDriver_aa7c89da61c5d5810a71048e6a49024e4}{Print\+Food} (\hyperlink{classZoo}{Zoo} \&Z)
+\begin{DoxyCompactList}\small\item\em Menampilkan makanan yang dikonsumsi hewan di kebun Z. \end{DoxyCompactList}\item 
+static void \hyperlink{classDriver_aff036df2efc67fbf6c20a1dcd3547855}{Input\+Zoo} (\hyperlink{classZoo}{Zoo} \&Z)
+\begin{DoxyCompactList}\small\item\em Membaca \hyperlink{classZoo}{Zoo} Z dari File Memanfaatkan method read\+All pada kelas \hyperlink{classZoo}{Zoo}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kelas yang menjalankan kebun binatang virtual 
+
+\subsection{Member Function Documentation}
+\index{Driver@{Driver}!Activate\+Tour@{Activate\+Tour}}
+\index{Activate\+Tour@{Activate\+Tour}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Activate\+Tour(\+Zoo \&\+Z)}{ActivateTour(Zoo &Z)}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Activate\+Tour (
+\begin{DoxyParamCaption}
+\item[{{\bf Zoo} \&}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_ab43c2330f27a0391bc39be75d348562a}{}\label{classDriver_ab43c2330f27a0391bc39be75d348562a}
+
+
+Aktivasi Tour Memulai Tour kebun binatang. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & kebun binatang yang memulai tour \\
+\hline
+\end{DoxyParams}
+\index{Driver@{Driver}!Input\+Zoo@{Input\+Zoo}}
+\index{Input\+Zoo@{Input\+Zoo}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Input\+Zoo(\+Zoo \&\+Z)}{InputZoo(Zoo &Z)}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Input\+Zoo (
+\begin{DoxyParamCaption}
+\item[{{\bf Zoo} \&}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_aff036df2efc67fbf6c20a1dcd3547855}{}\label{classDriver_aff036df2efc67fbf6c20a1dcd3547855}
+
+
+Membaca \hyperlink{classZoo}{Zoo} Z dari File Memanfaatkan method read\+All pada kelas \hyperlink{classZoo}{Zoo}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & kebun binatang yang ingin dibaca dari file. \\
+\hline
+\end{DoxyParams}
+\index{Driver@{Driver}!Print\+Food@{Print\+Food}}
+\index{Print\+Food@{Print\+Food}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Print\+Food(\+Zoo \&\+Z)}{PrintFood(Zoo &Z)}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Print\+Food (
+\begin{DoxyParamCaption}
+\item[{{\bf Zoo} \&}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_aa7c89da61c5d5810a71048e6a49024e4}{}\label{classDriver_aa7c89da61c5d5810a71048e6a49024e4}
+
+
+Menampilkan makanan yang dikonsumsi hewan di kebun Z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & kebun binatang yang ingin dihitung makanan yang dikonsumsinya. \\
+\hline
+\end{DoxyParams}
+\index{Driver@{Driver}!Print\+Zoo@{Print\+Zoo}}
+\index{Print\+Zoo@{Print\+Zoo}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Print\+Zoo(\+Zoo \&\+Z, int x1, int y1, int x2, int y2)}{PrintZoo(Zoo &Z, int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Print\+Zoo (
+\begin{DoxyParamCaption}
+\item[{{\bf Zoo} \&}]{Z, }
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_a631e22aab57fd7ac4200bccd6fbcb221}{}\label{classDriver_a631e22aab57fd7ac4200bccd6fbcb221}
+
+
+Menampilkan kebun binatang. Memanggil fungsi display dari zoo untuk menampilkan zoo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & kebun binatang yang dicetak \\
+\hline
+{\em x1} & indeks baris ujung kiri \\
+\hline
+{\em y1} & indeks kolom ujung kiri \\
+\hline
+{\em x2} & indeks baris ujung kanan \\
+\hline
+{\em y2} & indeks kolom ujung kanan \\
+\hline
+\end{DoxyParams}
+\index{Driver@{Driver}!Print\+Zoo\+All@{Print\+Zoo\+All}}
+\index{Print\+Zoo\+All@{Print\+Zoo\+All}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Print\+Zoo\+All(\+Zoo \&\+Z)}{PrintZooAll(Zoo &Z)}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Print\+Zoo\+All (
+\begin{DoxyParamCaption}
+\item[{{\bf Zoo} \&}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_a73f290d28efdb356bbf0355cf99e3b1f}{}\label{classDriver_a73f290d28efdb356bbf0355cf99e3b1f}
+
+
+Menampilkan kebun binatang. Memanggil fungsi display dari zoo untuk menampilkan seluruh zoo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & kebun binatang yang dicetak \\
+\hline
+\end{DoxyParams}
+\index{Driver@{Driver}!Show\+Menu@{Show\+Menu}}
+\index{Show\+Menu@{Show\+Menu}!Driver@{Driver}}
+\subsubsection[{\texorpdfstring{Show\+Menu()}{ShowMenu()}}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+::\+Show\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classDriver_a3cbec9699953cf65b23eae3ced1338bb}{}\label{classDriver_a3cbec9699953cf65b23eae3ced1338bb}
+
+
+Menampilkan menu. Mencetak menu tampilan utama bagi pengguna. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/driver/\hyperlink{driver_8h}{driver.\+h}\item 
+src/driver/\hyperlink{driver_8cpp}{driver.\+cpp}\end{DoxyCompactItemize}

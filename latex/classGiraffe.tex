@@ -1,0 +1,221 @@
+\hypertarget{classGiraffe}{}\section{Giraffe Class Reference}
+\label{classGiraffe}\index{Giraffe@{Giraffe}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Giraffe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classGiraffe__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Giraffe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classGiraffe__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGiraffe_a9035d9accbc1aa1aba873b5f1ab7f350}{Giraffe} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classGiraffe_ad0e9bb43e9f3ff379e21d70e6c9656ee}{Giraffe} (const \hyperlink{classGiraffe}{Giraffe} \&G)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classGiraffe}{Giraffe} \& \hyperlink{classGiraffe_a11f42a66f815b024ffa71f65934a1621}{operator=} (const \hyperlink{classGiraffe}{Giraffe} \&G)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGiraffe_a70da7b25c32699f3b2a2bc85cd61b2e0}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classGiraffe}{Giraffe} $\ast$ \hyperlink{classGiraffe_a37a4621ceb9515e1069a691971c4a31b}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classGiraffe_a4dc522e81fb41129ecc73861180194ca}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classGiraffe_a7ee9e17f63db1805a36a3d8ad209ef35}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classGiraffe_a18d770d4819d5c82ef9887a546765c89}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classGiraffe_ac998c481a5228750394bb8929174c618}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Giraffe@{Giraffe}!Giraffe@{Giraffe}}
+\index{Giraffe@{Giraffe}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{Giraffe(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Giraffe(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Giraffe\+::\+Giraffe (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classGiraffe_a9035d9accbc1aa1aba873b5f1ab7f350}{}\label{classGiraffe_a9035d9accbc1aa1aba873b5f1ab7f350}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Giraffe@{Giraffe}!Giraffe@{Giraffe}}
+\index{Giraffe@{Giraffe}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{Giraffe(const Giraffe \&\+G)}{Giraffe(const Giraffe &G)}}]{\setlength{\rightskip}{0pt plus 5cm}Giraffe\+::\+Giraffe (
+\begin{DoxyParamCaption}
+\item[{const {\bf Giraffe} \&}]{G}
+\end{DoxyParamCaption}
+)}\hypertarget{classGiraffe_ad0e9bb43e9f3ff379e21d70e6c9656ee}{}\label{classGiraffe_ad0e9bb43e9f3ff379e21d70e6c9656ee}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Giraffe@{Giraffe}!clone@{clone}}
+\index{clone@{clone}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Giraffe} $\ast$ Giraffe\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_a37a4621ceb9515e1069a691971c4a31b}{}\label{classGiraffe_a37a4621ceb9515e1069a691971c4a31b}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Giraffe@{Giraffe}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Giraffe\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_a18d770d4819d5c82ef9887a546765c89}{}\label{classGiraffe_a18d770d4819d5c82ef9887a546765c89}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Giraffe@{Giraffe}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Giraffe\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_ac998c481a5228750394bb8929174c618}{}\label{classGiraffe_ac998c481a5228750394bb8929174c618}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Giraffe@{Giraffe}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Giraffe\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_a7ee9e17f63db1805a36a3d8ad209ef35}{}\label{classGiraffe_a7ee9e17f63db1805a36a3d8ad209ef35}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Giraffe@{Giraffe}!interact@{interact}}
+\index{interact@{interact}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Giraffe\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_a70da7b25c32699f3b2a2bc85cd61b2e0}{}\label{classGiraffe_a70da7b25c32699f3b2a2bc85cd61b2e0}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Giraffe@{Giraffe}!operator=@{operator=}}
+\index{operator=@{operator=}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{operator=(const Giraffe \&\+G)}{operator=(const Giraffe &G)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Giraffe} \& Giraffe\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Giraffe} \&}]{G}
+\end{DoxyParamCaption}
+)}\hypertarget{classGiraffe_a11f42a66f815b024ffa71f65934a1621}{}\label{classGiraffe_a11f42a66f815b024ffa71f65934a1621}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Giraffe@{Giraffe}!render@{render}}
+\index{render@{render}!Giraffe@{Giraffe}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Giraffe\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGiraffe_a4dc522e81fb41129ecc73861180194ca}{}\label{classGiraffe_a4dc522e81fb41129ecc73861180194ca}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

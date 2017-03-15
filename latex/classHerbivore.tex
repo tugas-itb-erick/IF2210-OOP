@@ -1,0 +1,141 @@
+\hypertarget{classHerbivore}{}\section{Herbivore Class Reference}
+\label{classHerbivore}\index{Herbivore@{Herbivore}}
+
+
+{\ttfamily \#include $<$herbivore.\+h$>$}
+
+
+
+Inheritance diagram for Herbivore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHerbivore__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Herbivore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classHerbivore__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHerbivore_aeed0ccda0f35ecc74f56a7ea21aa5286}{Herbivore} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classHerbivore_a8158d0b440b52ed984c444367ef7990d}{Herbivore} (const \hyperlink{classHerbivore}{Herbivore} \&H)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classHerbivore}{Herbivore} \& \hyperlink{classHerbivore_a8c5a037a616f3475696e6984f1a60545}{operator=} (const \hyperlink{classHerbivore}{Herbivore} \&H)
+\begin{DoxyCompactList}\small\item\em Operator=. Menjamin bukan bitwise copy. \end{DoxyCompactList}\item 
+double \hyperlink{classHerbivore_a4c381eb2420800585b927caf008c48d8}{get\+Meat\+Ratio} () const 
+\begin{DoxyCompactList}\small\item\em Getter. Mengembalikan nilai rasio daging. \end{DoxyCompactList}\item 
+double \hyperlink{classHerbivore_aed86c22a9551c7ad0aab5488e6db6c94}{get\+Veg\+Ratio} () const 
+\begin{DoxyCompactList}\small\item\em Getter. Mengembalikan nilai rasio daging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{classHerbivore_afc971698b03df63c433e8e6300f43347}{meat\+Ratio} = 0
+\item 
+double \hyperlink{classHerbivore_a4d0aec1023006ba35707eb15b7092360}{veg\+Ratio}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kelas untuk hewan herbivora (pemakan tanaman) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Herbivore@{Herbivore}!Herbivore@{Herbivore}}
+\index{Herbivore@{Herbivore}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{Herbivore()}{Herbivore()}}]{\setlength{\rightskip}{0pt plus 5cm}Herbivore\+::\+Herbivore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classHerbivore_aeed0ccda0f35ecc74f56a7ea21aa5286}{}\label{classHerbivore_aeed0ccda0f35ecc74f56a7ea21aa5286}
+
+
+Constructor. 
+
+\index{Herbivore@{Herbivore}!Herbivore@{Herbivore}}
+\index{Herbivore@{Herbivore}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{Herbivore(const Herbivore \&\+H)}{Herbivore(const Herbivore &H)}}]{\setlength{\rightskip}{0pt plus 5cm}Herbivore\+::\+Herbivore (
+\begin{DoxyParamCaption}
+\item[{const {\bf Herbivore} \&}]{H}
+\end{DoxyParamCaption}
+)}\hypertarget{classHerbivore_a8158d0b440b52ed984c444367ef7990d}{}\label{classHerbivore_a8158d0b440b52ed984c444367ef7990d}
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classHerbivore}{Herbivore}} & H yang diacu cctor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Herbivore@{Herbivore}!get\+Meat\+Ratio@{get\+Meat\+Ratio}}
+\index{get\+Meat\+Ratio@{get\+Meat\+Ratio}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{get\+Meat\+Ratio() const }{getMeatRatio() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Herbivore\+::get\+Meat\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classHerbivore_a4c381eb2420800585b927caf008c48d8}{}\label{classHerbivore_a4c381eb2420800585b927caf008c48d8}
+
+
+Getter. Mengembalikan nilai rasio daging. 
+
+\begin{DoxyReturn}{Returns}
+nilai rasio daging 
+\end{DoxyReturn}
+\index{Herbivore@{Herbivore}!get\+Veg\+Ratio@{get\+Veg\+Ratio}}
+\index{get\+Veg\+Ratio@{get\+Veg\+Ratio}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{get\+Veg\+Ratio() const }{getVegRatio() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Herbivore\+::get\+Veg\+Ratio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classHerbivore_aed86c22a9551c7ad0aab5488e6db6c94}{}\label{classHerbivore_aed86c22a9551c7ad0aab5488e6db6c94}
+
+
+Getter. Mengembalikan nilai rasio daging. 
+
+\begin{DoxyReturn}{Returns}
+nilai rasio sayur 
+\end{DoxyReturn}
+\index{Herbivore@{Herbivore}!operator=@{operator=}}
+\index{operator=@{operator=}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{operator=(const Herbivore \&\+H)}{operator=(const Herbivore &H)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Herbivore} \& Herbivore\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Herbivore} \&}]{H}
+\end{DoxyParamCaption}
+)}\hypertarget{classHerbivore_a8c5a037a616f3475696e6984f1a60545}{}\label{classHerbivore_a8c5a037a616f3475696e6984f1a60545}
+
+
+Operator=. Menjamin bukan bitwise copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classHerbivore}{Herbivore}} & H berisi data untuk diassign \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Herbivore@{Herbivore}!meat\+Ratio@{meat\+Ratio}}
+\index{meat\+Ratio@{meat\+Ratio}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{meat\+Ratio}{meatRatio}}]{\setlength{\rightskip}{0pt plus 5cm}const double Herbivore\+::meat\+Ratio = 0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classHerbivore_afc971698b03df63c433e8e6300f43347}{}\label{classHerbivore_afc971698b03df63c433e8e6300f43347}
+\index{Herbivore@{Herbivore}!veg\+Ratio@{veg\+Ratio}}
+\index{veg\+Ratio@{veg\+Ratio}!Herbivore@{Herbivore}}
+\subsubsection[{\texorpdfstring{veg\+Ratio}{vegRatio}}]{\setlength{\rightskip}{0pt plus 5cm}double Herbivore\+::veg\+Ratio\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classHerbivore_a4d0aec1023006ba35707eb15b7092360}{}\label{classHerbivore_a4d0aec1023006ba35707eb15b7092360}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/diet/\hyperlink{herbivore_8h}{herbivore.\+h}\item 
+src/renders/animals/diet/\hyperlink{herbivore_8cpp}{herbivore.\+cpp}\end{DoxyCompactItemize}

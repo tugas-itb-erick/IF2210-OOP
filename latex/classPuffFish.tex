@@ -1,0 +1,221 @@
+\hypertarget{classPuffFish}{}\section{Puff\+Fish Class Reference}
+\label{classPuffFish}\index{Puff\+Fish@{Puff\+Fish}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Puff\+Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPuffFish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Puff\+Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPuffFish__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPuffFish_aafea19bb86fb11ccd0736d97c23a4475}{Puff\+Fish} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classPuffFish_a1379ba33f40ea4164b795dc5839445aa}{Puff\+Fish} (const \hyperlink{classPuffFish}{Puff\+Fish} \&P)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classPuffFish}{Puff\+Fish} \& \hyperlink{classPuffFish_ab3fd8767ee1571a35f472bd363275079}{operator=} (const \hyperlink{classPuffFish}{Puff\+Fish} \&P)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPuffFish_abf242b48a31ec87e38d2c8d13d8470d4}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classPuffFish}{Puff\+Fish} $\ast$ \hyperlink{classPuffFish_a4e8098eefcedd557fe9e490646ef14d9}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classPuffFish_ae9b8d83c4f05909f28b62d69de792799}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classPuffFish_aae2f0c82503fcf2d1d0d968b7e12d585}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPuffFish_a4e3b5bc7adbe6a683fbe0ec03c00ea0c}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPuffFish_a356a72134c1005851ffd5ee8d71a296c}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Puff\+Fish@{Puff\+Fish}!Puff\+Fish@{Puff\+Fish}}
+\index{Puff\+Fish@{Puff\+Fish}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{Puff\+Fish(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{PuffFish(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Puff\+Fish\+::\+Puff\+Fish (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classPuffFish_aafea19bb86fb11ccd0736d97c23a4475}{}\label{classPuffFish_aafea19bb86fb11ccd0736d97c23a4475}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Puff\+Fish@{Puff\+Fish}!Puff\+Fish@{Puff\+Fish}}
+\index{Puff\+Fish@{Puff\+Fish}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{Puff\+Fish(const Puff\+Fish \&\+P)}{PuffFish(const PuffFish &P)}}]{\setlength{\rightskip}{0pt plus 5cm}Puff\+Fish\+::\+Puff\+Fish (
+\begin{DoxyParamCaption}
+\item[{const {\bf Puff\+Fish} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPuffFish_a1379ba33f40ea4164b795dc5839445aa}{}\label{classPuffFish_a1379ba33f40ea4164b795dc5839445aa}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Puff\+Fish@{Puff\+Fish}!clone@{clone}}
+\index{clone@{clone}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Puff\+Fish} $\ast$ Puff\+Fish\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_a4e8098eefcedd557fe9e490646ef14d9}{}\label{classPuffFish_a4e8098eefcedd557fe9e490646ef14d9}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Puff\+Fish@{Puff\+Fish}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Puff\+Fish\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_a4e3b5bc7adbe6a683fbe0ec03c00ea0c}{}\label{classPuffFish_a4e3b5bc7adbe6a683fbe0ec03c00ea0c}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Puff\+Fish@{Puff\+Fish}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Puff\+Fish\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_a356a72134c1005851ffd5ee8d71a296c}{}\label{classPuffFish_a356a72134c1005851ffd5ee8d71a296c}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Puff\+Fish@{Puff\+Fish}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Puff\+Fish\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_aae2f0c82503fcf2d1d0d968b7e12d585}{}\label{classPuffFish_aae2f0c82503fcf2d1d0d968b7e12d585}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Puff\+Fish@{Puff\+Fish}!interact@{interact}}
+\index{interact@{interact}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Puff\+Fish\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_abf242b48a31ec87e38d2c8d13d8470d4}{}\label{classPuffFish_abf242b48a31ec87e38d2c8d13d8470d4}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Puff\+Fish@{Puff\+Fish}!operator=@{operator=}}
+\index{operator=@{operator=}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{operator=(const Puff\+Fish \&\+P)}{operator=(const PuffFish &P)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Puff\+Fish} \& Puff\+Fish\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Puff\+Fish} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPuffFish_ab3fd8767ee1571a35f472bd363275079}{}\label{classPuffFish_ab3fd8767ee1571a35f472bd363275079}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Puff\+Fish@{Puff\+Fish}!render@{render}}
+\index{render@{render}!Puff\+Fish@{Puff\+Fish}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Puff\+Fish\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPuffFish_ae9b8d83c4f05909f28b62d69de792799}{}\label{classPuffFish_ae9b8d83c4f05909f28b62d69de792799}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

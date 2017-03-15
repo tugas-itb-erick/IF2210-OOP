@@ -1,0 +1,221 @@
+\hypertarget{classClownfish}{}\section{Clownfish Class Reference}
+\label{classClownfish}\index{Clownfish@{Clownfish}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Clownfish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classClownfish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Clownfish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classClownfish__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classClownfish_a77d6bd74aea35e208436e32b88ae67da}{Clownfish} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classClownfish_ac3b7c19260b48e42dc72df3212c43685}{Clownfish} (const \hyperlink{classClownfish}{Clownfish} \&C)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classClownfish}{Clownfish} \& \hyperlink{classClownfish_a4d2b9efc9a7001f17bb6433c7f12a20b}{operator=} (const \hyperlink{classClownfish}{Clownfish} \&C)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classClownfish_a7c4cae7b0676de4ba55273db65d929f5}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classClownfish}{Clownfish} $\ast$ \hyperlink{classClownfish_aa4ee84fc66ce7a63aa8a8d64abb26de5}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classClownfish_a14417b8b2f3a9273eb9fedef9bbe9e92}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classClownfish_a5c1bf33027516001957aa1e4d657ac04}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classClownfish_a891dd1c6ccb470273d37f4a39bfbfea8}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classClownfish_ad7c3808e5d5b7ec463e80447b505886b}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Clownfish@{Clownfish}!Clownfish@{Clownfish}}
+\index{Clownfish@{Clownfish}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{Clownfish(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Clownfish(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Clownfish\+::\+Clownfish (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classClownfish_a77d6bd74aea35e208436e32b88ae67da}{}\label{classClownfish_a77d6bd74aea35e208436e32b88ae67da}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Clownfish@{Clownfish}!Clownfish@{Clownfish}}
+\index{Clownfish@{Clownfish}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{Clownfish(const Clownfish \&\+C)}{Clownfish(const Clownfish &C)}}]{\setlength{\rightskip}{0pt plus 5cm}Clownfish\+::\+Clownfish (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clownfish} \&}]{C}
+\end{DoxyParamCaption}
+)}\hypertarget{classClownfish_ac3b7c19260b48e42dc72df3212c43685}{}\label{classClownfish_ac3b7c19260b48e42dc72df3212c43685}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em C} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Clownfish@{Clownfish}!clone@{clone}}
+\index{clone@{clone}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clownfish} $\ast$ Clownfish\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_aa4ee84fc66ce7a63aa8a8d64abb26de5}{}\label{classClownfish_aa4ee84fc66ce7a63aa8a8d64abb26de5}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Clownfish@{Clownfish}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Clownfish\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_a891dd1c6ccb470273d37f4a39bfbfea8}{}\label{classClownfish_a891dd1c6ccb470273d37f4a39bfbfea8}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Clownfish@{Clownfish}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Clownfish\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_ad7c3808e5d5b7ec463e80447b505886b}{}\label{classClownfish_ad7c3808e5d5b7ec463e80447b505886b}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Clownfish@{Clownfish}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Clownfish\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_a5c1bf33027516001957aa1e4d657ac04}{}\label{classClownfish_a5c1bf33027516001957aa1e4d657ac04}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Clownfish@{Clownfish}!interact@{interact}}
+\index{interact@{interact}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Clownfish\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_a7c4cae7b0676de4ba55273db65d929f5}{}\label{classClownfish_a7c4cae7b0676de4ba55273db65d929f5}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Clownfish@{Clownfish}!operator=@{operator=}}
+\index{operator=@{operator=}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{operator=(const Clownfish \&\+C)}{operator=(const Clownfish &C)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clownfish} \& Clownfish\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clownfish} \&}]{C}
+\end{DoxyParamCaption}
+)}\hypertarget{classClownfish_a4d2b9efc9a7001f17bb6433c7f12a20b}{}\label{classClownfish_a4d2b9efc9a7001f17bb6433c7f12a20b}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em C} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Clownfish@{Clownfish}!render@{render}}
+\index{render@{render}!Clownfish@{Clownfish}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Clownfish\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classClownfish_a14417b8b2f3a9273eb9fedef9bbe9e92}{}\label{classClownfish_a14417b8b2f3a9273eb9fedef9bbe9e92}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

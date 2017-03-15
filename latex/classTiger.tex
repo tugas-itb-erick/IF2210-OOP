@@ -1,0 +1,221 @@
+\hypertarget{classTiger}{}\section{Tiger Class Reference}
+\label{classTiger}\index{Tiger@{Tiger}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Tiger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classTiger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tiger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classTiger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTiger_a226f75b71d3779e1257b822266d553a8}{Tiger} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classTiger_a312f6ba4e6af4866e7891660b6b799a9}{Tiger} (const \hyperlink{classTiger}{Tiger} \&T)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classTiger}{Tiger} \& \hyperlink{classTiger_a24238e503c28e123a3fb7b273b828557}{operator=} (const \hyperlink{classTiger}{Tiger} \&T)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classTiger_ac1b9958a8e7c05090bf7283627d37745}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classTiger}{Tiger} $\ast$ \hyperlink{classTiger_a9c253adc25d2ecf06da155a402e5437c}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classTiger_a8896e2f02f31532632f3681a8dedb0ea}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classTiger_ac1a32c141c442b257ed0898462ca0b2b}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classTiger_a049d69f6adde018719d8a661c22cd3de}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classTiger_aa1cfc0f2b4923202857925c699084cc3}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tiger@{Tiger}!Tiger@{Tiger}}
+\index{Tiger@{Tiger}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{Tiger(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Tiger(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Tiger\+::\+Tiger (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiger_a226f75b71d3779e1257b822266d553a8}{}\label{classTiger_a226f75b71d3779e1257b822266d553a8}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Tiger@{Tiger}!Tiger@{Tiger}}
+\index{Tiger@{Tiger}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{Tiger(const Tiger \&\+T)}{Tiger(const Tiger &T)}}]{\setlength{\rightskip}{0pt plus 5cm}Tiger\+::\+Tiger (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tiger} \&}]{T}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiger_a312f6ba4e6af4866e7891660b6b799a9}{}\label{classTiger_a312f6ba4e6af4866e7891660b6b799a9}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Tiger@{Tiger}!clone@{clone}}
+\index{clone@{clone}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tiger} $\ast$ Tiger\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_a9c253adc25d2ecf06da155a402e5437c}{}\label{classTiger_a9c253adc25d2ecf06da155a402e5437c}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Tiger@{Tiger}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Tiger\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_a049d69f6adde018719d8a661c22cd3de}{}\label{classTiger_a049d69f6adde018719d8a661c22cd3de}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Tiger@{Tiger}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Tiger\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_aa1cfc0f2b4923202857925c699084cc3}{}\label{classTiger_aa1cfc0f2b4923202857925c699084cc3}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Tiger@{Tiger}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Tiger\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_ac1a32c141c442b257ed0898462ca0b2b}{}\label{classTiger_ac1a32c141c442b257ed0898462ca0b2b}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Tiger@{Tiger}!interact@{interact}}
+\index{interact@{interact}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Tiger\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_ac1b9958a8e7c05090bf7283627d37745}{}\label{classTiger_ac1b9958a8e7c05090bf7283627d37745}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Tiger@{Tiger}!operator=@{operator=}}
+\index{operator=@{operator=}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{operator=(const Tiger \&\+T)}{operator=(const Tiger &T)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tiger} \& Tiger\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tiger} \&}]{T}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiger_a24238e503c28e123a3fb7b273b828557}{}\label{classTiger_a24238e503c28e123a3fb7b273b828557}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Tiger@{Tiger}!render@{render}}
+\index{render@{render}!Tiger@{Tiger}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Tiger\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTiger_a8896e2f02f31532632f3681a8dedb0ea}{}\label{classTiger_a8896e2f02f31532632f3681a8dedb0ea}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

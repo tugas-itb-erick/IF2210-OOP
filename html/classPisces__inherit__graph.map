@@ -1,0 +1,7 @@
+<map id="Pisces" name="Pisces">
+<area shape="rect" id="node3" href="$classBlueTang.html" title="{BlueTang\n||+ BlueTang()\l+ BlueTang()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="5,300,183,495"/>
+<area shape="rect" id="node4" href="$classClownfish.html" title="{Clownfish\n||+ Clownfish()\l+ Clownfish()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="207,300,384,495"/>
+<area shape="rect" id="node5" href="$classPiranha.html" title="{Piranha\n||+ Piranha()\l+ Piranha()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="408,300,585,495"/>
+<area shape="rect" id="node6" href="$classPuffFish.html" title="{PuffFish\n||+ PuffFish()\l+ PuffFish()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="609,300,787,495"/>
+<area shape="rect" id="node2" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="323,5,468,127"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Entrance" name="Entrance">
+<area shape="rect" id="node2" href="$classRoad.html" title="{Road\n||+ Road()\l+ Road()\l+ Road()\l+ ~Road()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="15,616,112,796"/>
+<area shape="rect" id="node3" href="$classFacility.html" title="{Facility\n||+ Facility()\l+ Facility()\l+ Facility()\l+ ~Facility()\l+ operator=()\l}" alt="" coords="15,432,112,568"/>
+<area shape="rect" id="node4" href="$classCell.html" title="{Cell\n||+ Cell()\l+ Cell()\l+ Cell()\l+ ~Cell()\l+ operator=()\l+ clone()\l}" alt="" coords="15,233,112,384"/>
+<area shape="rect" id="node5" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="5,5,121,185"/>
+</map>

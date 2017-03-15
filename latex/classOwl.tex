@@ -1,0 +1,221 @@
+\hypertarget{classOwl}{}\section{Owl Class Reference}
+\label{classOwl}\index{Owl@{Owl}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Owl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classOwl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Owl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classOwl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOwl_a4bb6bd3794000f439fbbfae52aad4da6}{Owl} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classOwl_aa84b8620ad90ec3fd6490263129b9637}{Owl} (const \hyperlink{classOwl}{Owl} \&O)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classOwl}{Owl} \& \hyperlink{classOwl_a21cf9c6fec0e88ca7a14f5bcabfe0323}{operator=} (const \hyperlink{classOwl}{Owl} \&O)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classOwl_a1ffe69fc425d9f13cb045b8c49d62760}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classOwl}{Owl} $\ast$ \hyperlink{classOwl_a2bb2b61736ff978ec96223cc67ba2dfa}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classOwl_a9ff543ef6e2ee3d70cbb6189e743620a}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classOwl_a5c11e4766ff63168dbbe81688f7c360b}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classOwl_ad17ff8e684fbf199bb191e3ecb6e3e37}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classOwl_ad8c5f218317a583204300a3ad353442b}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Owl@{Owl}!Owl@{Owl}}
+\index{Owl@{Owl}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{Owl(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Owl(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Owl\+::\+Owl (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classOwl_a4bb6bd3794000f439fbbfae52aad4da6}{}\label{classOwl_a4bb6bd3794000f439fbbfae52aad4da6}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Owl@{Owl}!Owl@{Owl}}
+\index{Owl@{Owl}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{Owl(const Owl \&\+O)}{Owl(const Owl &O)}}]{\setlength{\rightskip}{0pt plus 5cm}Owl\+::\+Owl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Owl} \&}]{O}
+\end{DoxyParamCaption}
+)}\hypertarget{classOwl_aa84b8620ad90ec3fd6490263129b9637}{}\label{classOwl_aa84b8620ad90ec3fd6490263129b9637}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Owl@{Owl}!clone@{clone}}
+\index{clone@{clone}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Owl} $\ast$ Owl\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_a2bb2b61736ff978ec96223cc67ba2dfa}{}\label{classOwl_a2bb2b61736ff978ec96223cc67ba2dfa}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Owl@{Owl}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Owl\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_ad17ff8e684fbf199bb191e3ecb6e3e37}{}\label{classOwl_ad17ff8e684fbf199bb191e3ecb6e3e37}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Owl@{Owl}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Owl\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_ad8c5f218317a583204300a3ad353442b}{}\label{classOwl_ad8c5f218317a583204300a3ad353442b}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Owl@{Owl}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Owl\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_a5c11e4766ff63168dbbe81688f7c360b}{}\label{classOwl_a5c11e4766ff63168dbbe81688f7c360b}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Owl@{Owl}!interact@{interact}}
+\index{interact@{interact}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Owl\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_a1ffe69fc425d9f13cb045b8c49d62760}{}\label{classOwl_a1ffe69fc425d9f13cb045b8c49d62760}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Owl@{Owl}!operator=@{operator=}}
+\index{operator=@{operator=}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{operator=(const Owl \&\+O)}{operator=(const Owl &O)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Owl} \& Owl\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Owl} \&}]{O}
+\end{DoxyParamCaption}
+)}\hypertarget{classOwl_a21cf9c6fec0e88ca7a14f5bcabfe0323}{}\label{classOwl_a21cf9c6fec0e88ca7a14f5bcabfe0323}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Owl@{Owl}!render@{render}}
+\index{render@{render}!Owl@{Owl}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Owl\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOwl_a9ff543ef6e2ee3d70cbb6189e743620a}{}\label{classOwl_a9ff543ef6e2ee3d70cbb6189e743620a}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

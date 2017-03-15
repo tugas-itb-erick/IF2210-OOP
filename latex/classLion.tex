@@ -1,0 +1,221 @@
+\hypertarget{classLion}{}\section{Lion Class Reference}
+\label{classLion}\index{Lion@{Lion}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Lion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classLion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classLion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLion_a313e00fc3a3f6d5a933f9df8c49b1630}{Lion} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classLion_ad8f1422453d3eddb895596db203b6af0}{Lion} (const \hyperlink{classLion}{Lion} \&L)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classLion}{Lion} \& \hyperlink{classLion_abad282e42c825207050e3046f5ac118c}{operator=} (const \hyperlink{classLion}{Lion} \&L)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLion_a4e12205d48a96d7cc32c8fa45cd1f5e0}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classLion}{Lion} $\ast$ \hyperlink{classLion_a7c094b9988d5d1dae6136bca49f3b91b}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classLion_a8a827731ad01527ff54bdd9a8e3a8f50}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classLion_a152121feca5df18cb8a76cadb37770e1}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classLion_a3ab5c2ab285a4f098a1d37eba7624f01}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classLion_adcd29cbbaf55e6a930271980406e725d}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Lion@{Lion}!Lion@{Lion}}
+\index{Lion@{Lion}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{Lion(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Lion(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Lion\+::\+Lion (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classLion_a313e00fc3a3f6d5a933f9df8c49b1630}{}\label{classLion_a313e00fc3a3f6d5a933f9df8c49b1630}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Lion@{Lion}!Lion@{Lion}}
+\index{Lion@{Lion}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{Lion(const Lion \&\+L)}{Lion(const Lion &L)}}]{\setlength{\rightskip}{0pt plus 5cm}Lion\+::\+Lion (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lion} \&}]{L}
+\end{DoxyParamCaption}
+)}\hypertarget{classLion_ad8f1422453d3eddb895596db203b6af0}{}\label{classLion_ad8f1422453d3eddb895596db203b6af0}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Lion@{Lion}!clone@{clone}}
+\index{clone@{clone}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lion} $\ast$ Lion\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_a7c094b9988d5d1dae6136bca49f3b91b}{}\label{classLion_a7c094b9988d5d1dae6136bca49f3b91b}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Lion@{Lion}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Lion\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_a3ab5c2ab285a4f098a1d37eba7624f01}{}\label{classLion_a3ab5c2ab285a4f098a1d37eba7624f01}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Lion@{Lion}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Lion\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_adcd29cbbaf55e6a930271980406e725d}{}\label{classLion_adcd29cbbaf55e6a930271980406e725d}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Lion@{Lion}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Lion\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_a152121feca5df18cb8a76cadb37770e1}{}\label{classLion_a152121feca5df18cb8a76cadb37770e1}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Lion@{Lion}!interact@{interact}}
+\index{interact@{interact}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Lion\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_a4e12205d48a96d7cc32c8fa45cd1f5e0}{}\label{classLion_a4e12205d48a96d7cc32c8fa45cd1f5e0}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Lion@{Lion}!operator=@{operator=}}
+\index{operator=@{operator=}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{operator=(const Lion \&\+L)}{operator=(const Lion &L)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lion} \& Lion\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lion} \&}]{L}
+\end{DoxyParamCaption}
+)}\hypertarget{classLion_abad282e42c825207050e3046f5ac118c}{}\label{classLion_abad282e42c825207050e3046f5ac118c}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Lion@{Lion}!render@{render}}
+\index{render@{render}!Lion@{Lion}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Lion\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLion_a8a827731ad01527ff54bdd9a8e3a8f50}{}\label{classLion_a8a827731ad01527ff54bdd9a8e3a8f50}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

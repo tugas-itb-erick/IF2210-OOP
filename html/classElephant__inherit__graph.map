@@ -1,0 +1,8 @@
+<map id="Elephant" name="Elephant">
+<area shape="rect" id="node2" href="$classLandAnimal.html" title="{LandAnimal\n||+ LandAnimal()\l+ LandAnimal()\l+ LandAnimal()\l+ ~LandAnimal()\l+ operator=()\l}" alt="" coords="35,586,153,722"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="{Animal\n|# name\l# weight\l# s\l# row\l# col\l# wild\l|+ Animal()\l+ Animal()\l+ Animal()\l+ ~Animal()\l+ operator=()\l+ interact()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l+ getRow()\l+ getCol()\land 10 more...\l}" alt="" coords="5,233,183,531"/>
+<area shape="rect" id="node4" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="36,5,152,185"/>
+<area shape="rect" id="node5" href="$classHerbivore.html" title="{Herbivore\n|# meatRatio\l# vegRatio\l|+ Herbivore()\l+ Herbivore()\l+ operator=()\l+ getMeatRatio()\l+ getVegRatio()\l}" alt="" coords="178,579,298,729"/>
+<area shape="rect" id="node6" href="$classMammalia.html" title="{Mammalia\n||+ Mammalia()\l}" alt="" coords="323,615,425,693"/>
+<area shape="rect" id="node7" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="301,321,447,443"/>
+</map>

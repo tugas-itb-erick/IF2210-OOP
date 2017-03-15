@@ -1,0 +1,165 @@
+\hypertarget{classPark}{}\section{Park Class Reference}
+\label{classPark}\index{Park@{Park}}
+
+
+{\ttfamily \#include $<$park.\+h$>$}
+
+
+
+Inheritance diagram for Park\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPark__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Park\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPark__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPark_a56d1f4a8bbab72856a17a8de83898f1a}{Park} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Menciptakan \hyperlink{classPark}{Park}. \end{DoxyCompactList}\item 
+\hyperlink{classPark_ab60984ca006dcb34568dba4308ea858c}{Park} (const \hyperlink{classPark}{Park} \&)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. Menciptakan salinan dari \hyperlink{classPark}{Park}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classPark_aae611d70a5a38a5716cb2358a4a62c7c}{$\sim$\+Park} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classPark}{Park} \& \hyperlink{classPark_aefd718f71cb2061f2050d5af4b63d202}{operator=} (const \hyperlink{classPark}{Park} \&)
+\begin{DoxyCompactList}\small\item\em Operator=. Menginisialisasi \hyperlink{classPark}{Park} tanpa terjadi bitwise copy. \end{DoxyCompactList}\item 
+char \hyperlink{classPark_a43155d9ce8ce04264d004970e8e838be}{render} ()
+\begin{DoxyCompactList}\small\item\em Render. Mengembalikan karakter untuk ditampilkan ke layar. \end{DoxyCompactList}\item 
+\hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classPark_ab03596b80f84ce005d879cae98d7ac5e}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em Get\+Color. Mengembalikan warna untuk ditampilkan ke layar. \end{DoxyCompactList}\item 
+virtual \hyperlink{classPark}{Park} $\ast$ \hyperlink{classPark_a94b4494ebee327cbee81ca6b95d11532}{clone} () const 
+\begin{DoxyCompactList}\small\item\em Clone. Menduplikat diri sendiri. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Adalah kelas anak dari \hyperlink{classFacility}{Facility}. Adalah representasi dari taman di zoo. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Park@{Park}!Park@{Park}}
+\index{Park@{Park}!Park@{Park}}
+\subsubsection[{\texorpdfstring{Park()}{Park()}}]{\setlength{\rightskip}{0pt plus 5cm}Park\+::\+Park (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPark_a56d1f4a8bbab72856a17a8de83898f1a}{}\label{classPark_a56d1f4a8bbab72856a17a8de83898f1a}
+
+
+Constructor. Menciptakan \hyperlink{classPark}{Park}. 
+
+\index{Park@{Park}!Park@{Park}}
+\index{Park@{Park}!Park@{Park}}
+\subsubsection[{\texorpdfstring{Park(const Park \&)}{Park(const Park &)}}]{\setlength{\rightskip}{0pt plus 5cm}Park\+::\+Park (
+\begin{DoxyParamCaption}
+\item[{const {\bf Park} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPark_ab60984ca006dcb34568dba4308ea858c}{}\label{classPark_ab60984ca006dcb34568dba4308ea858c}
+
+
+Copy Constructor. Menciptakan salinan dari \hyperlink{classPark}{Park}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & \hyperlink{classPark}{Park} yang ingin disalin. \\
+\hline
+\end{DoxyParams}
+\index{Park@{Park}!````~Park@{$\sim$\+Park}}
+\index{````~Park@{$\sim$\+Park}!Park@{Park}}
+\subsubsection[{\texorpdfstring{$\sim$\+Park()}{~Park()}}]{\setlength{\rightskip}{0pt plus 5cm}Park\+::$\sim$\+Park (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPark_aae611d70a5a38a5716cb2358a4a62c7c}{}\label{classPark_aae611d70a5a38a5716cb2358a4a62c7c}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Park@{Park}!clone@{clone}}
+\index{clone@{clone}!Park@{Park}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Park} $\ast$ Park\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPark_a94b4494ebee327cbee81ca6b95d11532}{}\label{classPark_a94b4494ebee327cbee81ca6b95d11532}
+
+
+Clone. Menduplikat diri sendiri. 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classCell_aafd03896d9a6131f14273752f9fb9815}{Cell}.
+
+\index{Park@{Park}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Park@{Park}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Park\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPark_ab03596b80f84ce005d879cae98d7ac5e}{}\label{classPark_ab03596b80f84ce005d879cae98d7ac5e}
+
+
+Get\+Color. Mengembalikan warna untuk ditampilkan ke layar. 
+
+\begin{DoxyReturn}{Returns}
+color warna untuk dirender 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Park@{Park}!operator=@{operator=}}
+\index{operator=@{operator=}!Park@{Park}}
+\subsubsection[{\texorpdfstring{operator=(const Park \&)}{operator=(const Park &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Park} \& Park\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Park} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{classPark_aefd718f71cb2061f2050d5af4b63d202}{}\label{classPark_aefd718f71cb2061f2050d5af4b63d202}
+
+
+Operator=. Menginisialisasi \hyperlink{classPark}{Park} tanpa terjadi bitwise copy. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classPark}{Park} yang sudah di assign nilai dari current object 
+\end{DoxyReturn}
+\index{Park@{Park}!render@{render}}
+\index{render@{render}!Park@{Park}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Park\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPark_a43155d9ce8ce04264d004970e8e838be}{}\label{classPark_a43155d9ce8ce04264d004970e8e838be}
+
+
+Render. Mengembalikan karakter untuk ditampilkan ke layar. 
+
+\begin{DoxyReturn}{Returns}
+id bertipe char 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/facilities/park/\hyperlink{park_8h}{park.\+h}\item 
+src/renders/facilities/park/\hyperlink{park_8cpp}{park.\+cpp}\end{DoxyCompactItemize}

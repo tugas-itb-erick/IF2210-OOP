@@ -1,0 +1,9 @@
+<map id="Aves" name="Aves">
+<area shape="rect" id="node3" href="$classBat.html" title="{Bat\n||+ Bat()\l+ Bat()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="5,300,183,495"/>
+<area shape="rect" id="node4" href="$classCendrawasih.html" title="{Cendrawasih\n||+ Cendrawasih()\l+ Cendrawasih()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="207,300,384,495"/>
+<area shape="rect" id="node5" href="$classCockatoo.html" title="{Cockatoo\n||+ Cockatoo()\l+ Cockatoo()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="408,300,585,495"/>
+<area shape="rect" id="node6" href="$classEagle.html" title="{Eagle\n||+ Eagle()\l+ Eagle()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="609,300,787,495"/>
+<area shape="rect" id="node7" href="$classMacau.html" title="{Macau\n||+ Macau()\l+ Macau()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="811,300,988,495"/>
+<area shape="rect" id="node8" href="$classOwl.html" title="{Owl\n||+ Owl()\l+ Owl()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1012,300,1189,495"/>
+<area shape="rect" id="node2" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="524,5,669,127"/>
+</map>

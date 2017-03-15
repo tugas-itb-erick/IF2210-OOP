@@ -1,0 +1,8 @@
+<map id="Clownfish" name="Clownfish">
+<area shape="rect" id="node2" href="$classOmnivore.html" title="{Omnivore\n|# meatRatio\l# vegRatio\l|+ Omnivore()\l+ Omnivore()\l+ operator=()\l+ getMeatRatio()\l+ getVegRatio()\l}" alt="" coords="5,579,125,729"/>
+<area shape="rect" id="node3" href="$classWaterAnimal.html" title="{WaterAnimal\n||+ WaterAnimal()\l+ WaterAnimal()\l+ WaterAnimal()\l+ ~WaterAnimal()\l+ operator=()\l}" alt="" coords="149,586,275,722"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="{Animal\n|# name\l# weight\l# s\l# row\l# col\l# wild\l|+ Animal()\l+ Animal()\l+ Animal()\l+ ~Animal()\l+ operator=()\l+ interact()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l+ getRow()\l+ getCol()\land 10 more...\l}" alt="" coords="109,233,286,531"/>
+<area shape="rect" id="node5" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="139,5,255,185"/>
+<area shape="rect" id="node6" href="$classPisces.html" title="{Pisces\n||+ Pisces()\l}" alt="" coords="313,615,396,693"/>
+<area shape="rect" id="node7" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="310,321,455,443"/>
+</map>

@@ -1,0 +1,156 @@
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :2 0
+(2,14) :
+This Clownfish lives among the anemone
+This Clownfish lives among the anemone
+(2,13) :
+This Clownfish lives among the anemone
+This Clownfish lives among the anemone
+(2,12) :
+This Clownfish lives among the anemone
+This Clownfish lives among the anemone
+(2,11) :
+This Clownfish lives among the anemone
+This Clownfish lives among the anemone
+(2,10) :
+This Clownfish lives among the anemone
+This Clownfish lives among the anemone
+(2,9) :
+(2,8) :
+(2,7) :
+(2,6) :
+(3,6) :
+(4,6) :
+(5,6) :
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(5,7) :
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(5,8) :
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(5,9) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(6,9) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(7,9) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(8,9) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This macau is very pretty!
+This macau is very pretty!
+This macau is very pretty!
+(9,9) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This whale created a huge splash!
+This whale created a huge splash!
+This dolphin loves to jump!
+This dolphin loves to jump!
+(10,9) :
+This whale created a huge splash!
+This whale created a huge splash!
+This dolphin loves to jump!
+This dolphin loves to jump!
+(11,9) :
+This whale created a huge splash!
+This whale created a huge splash!
+This dolphin loves to jump!
+This dolphin loves to jump!
+(12,9) :
+This whale created a huge splash!
+This whale created a huge splash!
+This dolphin loves to jump!
+This dolphin loves to jump!
+This whale created a huge splash!
+This whale created a huge splash!
+This dolphin loves to jump!
+This dolphin loves to jump!
+(12,10) :
+This cockatoo is repeating what you're saying!
+(12,11) :
+This cockatoo is repeating what you're saying!
+(12,12) :
+This cockatoo is repeating what you're saying!
+Croag.... Croag.... Ribbet... Ribbet...
+Croag.... Croag.... Ribbet... Ribbet...
+(11,12) :
+Croag.... Croag.... Ribbet... Ribbet...
+Croag.... Croag.... Ribbet... Ribbet...
+(10,12) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+(9,12) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(8,12) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(7,12) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(6,12) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(5,12) :
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+This elephant is trumpeting!!
+(5,13) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+(5,14) :
+Hooo... Hooo...
+Hooo... Hooo...
+This bat is sleeping upside down!
+
+Selamat datang di Kebun Binatang Virtual Zoo!
+1. Menampilkan peta Kebun Binatang
+2. Menampilkan seluruh peta pada Kebun Binatang
+3. Menampilkan total makanan yang dimakan seluruh hewan
+4. Tour Kebun Binatang!
+5. Quit
+Pilih angka 1..5 :

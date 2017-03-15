@@ -1,0 +1,190 @@
+\hypertarget{classRoad}{}\section{Road Class Reference}
+\label{classRoad}\index{Road@{Road}}
+
+
+{\ttfamily \#include $<$road.\+h$>$}
+
+
+
+Inheritance diagram for Road\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRoad__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Road\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRoad__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRoad_a90bb6be2a5c3b6997849a915e2af0cf0}{Road} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Menciptakan \hyperlink{classRoad}{Road}. \end{DoxyCompactList}\item 
+\hyperlink{classRoad_a91233046ec07fb84ebd9864dfeef340e}{Road} (char \+\_\+id, \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \+\_\+color)
+\begin{DoxyCompactList}\small\item\em Constructor. Menciptakan \hyperlink{classRoad}{Road} dengan parameter \+\_\+id dan \+\_\+color. \end{DoxyCompactList}\item 
+\hyperlink{classRoad_aa3071c703c996ca10117c265dd151b03}{Road} (const \hyperlink{classRoad}{Road} \&)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. Menciptakan salinan dari \hyperlink{classRoad}{Road}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classRoad_a3fa0feda8a96c3763d5f5a1f06f2972e}{$\sim$\+Road} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classRoad}{Road} \& \hyperlink{classRoad_ac75dba35f2699126aabf59aca8728288}{operator=} (const \hyperlink{classRoad}{Road} \&)
+\begin{DoxyCompactList}\small\item\em Operator=. Menginisialisasi \hyperlink{classRoad}{Road} tanpa terjadi bitwise copy. \end{DoxyCompactList}\item 
+char \hyperlink{classRoad_ac85e0bc6f4e956622724401f14bf7ac4}{render} ()
+\begin{DoxyCompactList}\small\item\em Render. Mengembalikan karakter untuk ditampilkan ke layar. \end{DoxyCompactList}\item 
+\hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classRoad_a3c10c7a5d1064b7008d8b8245e7e9757}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em Get\+Color. Mengembalikan warna untuk ditampilkan ke layar. \end{DoxyCompactList}\item 
+virtual \hyperlink{classRoad}{Road} $\ast$ \hyperlink{classRoad_a0dae048f0e2f56afa5e3fda6f30bf262}{clone} () const 
+\begin{DoxyCompactList}\small\item\em Clone. Menduplikat diri sendiri. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Adalah kelas anak dari \hyperlink{classFacility}{Facility}. Adalah representasi dari jalanan di zoo. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\subsubsection[{\texorpdfstring{Road()}{Road()}}]{\setlength{\rightskip}{0pt plus 5cm}Road\+::\+Road (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRoad_a90bb6be2a5c3b6997849a915e2af0cf0}{}\label{classRoad_a90bb6be2a5c3b6997849a915e2af0cf0}
+
+
+Constructor. Menciptakan \hyperlink{classRoad}{Road}. 
+
+\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\subsubsection[{\texorpdfstring{Road(char \+\_\+id, Color \+\_\+color)}{Road(char _id, Color _color)}}]{\setlength{\rightskip}{0pt plus 5cm}Road\+::\+Road (
+\begin{DoxyParamCaption}
+\item[{char}]{\+\_\+id, }
+\item[{{\bf Color}}]{\+\_\+color}
+\end{DoxyParamCaption}
+)}\hypertarget{classRoad_a91233046ec07fb84ebd9864dfeef340e}{}\label{classRoad_a91233046ec07fb84ebd9864dfeef340e}
+
+
+Constructor. Menciptakan \hyperlink{classRoad}{Road} dengan parameter \+\_\+id dan \+\_\+color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & bertipe char \\
+\hline
+{\em \+\_\+color} & bertipe Color \\
+\hline
+\end{DoxyParams}
+\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\subsubsection[{\texorpdfstring{Road(const Road \&)}{Road(const Road &)}}]{\setlength{\rightskip}{0pt plus 5cm}Road\+::\+Road (
+\begin{DoxyParamCaption}
+\item[{const {\bf Road} \&}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{classRoad_aa3071c703c996ca10117c265dd151b03}{}\label{classRoad_aa3071c703c996ca10117c265dd151b03}
+
+
+Copy Constructor. Menciptakan salinan dari \hyperlink{classRoad}{Road}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D} & \hyperlink{classRoad}{Road} yang ingin disalin. \\
+\hline
+\end{DoxyParams}
+\index{Road@{Road}!````~Road@{$\sim$\+Road}}
+\index{````~Road@{$\sim$\+Road}!Road@{Road}}
+\subsubsection[{\texorpdfstring{$\sim$\+Road()}{~Road()}}]{\setlength{\rightskip}{0pt plus 5cm}Road\+::$\sim$\+Road (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRoad_a3fa0feda8a96c3763d5f5a1f06f2972e}{}\label{classRoad_a3fa0feda8a96c3763d5f5a1f06f2972e}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Road@{Road}!clone@{clone}}
+\index{clone@{clone}!Road@{Road}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Road} $\ast$ Road\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRoad_a0dae048f0e2f56afa5e3fda6f30bf262}{}\label{classRoad_a0dae048f0e2f56afa5e3fda6f30bf262}
+
+
+Clone. Menduplikat diri sendiri. 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classCell_aafd03896d9a6131f14273752f9fb9815}{Cell}.
+
+
+
+Reimplemented in \hyperlink{classEntrance_a5f20360c5b495b5ed4163deb33ff06de}{Entrance}, and \hyperlink{classExit_a01a14491e2f7148b0e03b4297c60a0a0}{Exit}.
+
+\index{Road@{Road}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Road@{Road}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Road\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRoad_a3c10c7a5d1064b7008d8b8245e7e9757}{}\label{classRoad_a3c10c7a5d1064b7008d8b8245e7e9757}
+
+
+Get\+Color. Mengembalikan warna untuk ditampilkan ke layar. 
+
+\begin{DoxyReturn}{Returns}
+color warna untuk dirender 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Road@{Road}!operator=@{operator=}}
+\index{operator=@{operator=}!Road@{Road}}
+\subsubsection[{\texorpdfstring{operator=(const Road \&)}{operator=(const Road &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Road} \& Road\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Road} \&}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{classRoad_ac75dba35f2699126aabf59aca8728288}{}\label{classRoad_ac75dba35f2699126aabf59aca8728288}
+
+
+Operator=. Menginisialisasi \hyperlink{classRoad}{Road} tanpa terjadi bitwise copy. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classRoad}{Road} yang sudah di assign nilai dari current object 
+\end{DoxyReturn}
+\index{Road@{Road}!render@{render}}
+\index{render@{render}!Road@{Road}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Road\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRoad_ac85e0bc6f4e956622724401f14bf7ac4}{}\label{classRoad_ac85e0bc6f4e956622724401f14bf7ac4}
+
+
+Render. Mengembalikan karakter untuk ditampilkan ke layar. 
+
+\begin{DoxyReturn}{Returns}
+id bertipe char 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/facilities/road/\hyperlink{road_8h}{road.\+h}\item 
+src/renders/facilities/road/\hyperlink{road_8cpp}{road.\+cpp}\end{DoxyCompactItemize}

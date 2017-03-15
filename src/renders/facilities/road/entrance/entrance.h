@@ -5,7 +5,7 @@
 
 #include "../road.h"
 
-/** @class Entrance.
+/** @class Entrance
 	 * Adalah kelas anak dari Road.
 	 * Adalah representasi dari jalan masuk ke zoo.
 	 */

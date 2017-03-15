@@ -5,7 +5,7 @@
 
 #include "../cell.h"
 
-/** @class Facility.
+/** @class Facility
 	 * Adalah kelas anak dari Cell.
 	 * Adalah kelas abstrak yang merepresentasikan fasilitas zoo.
 	 */

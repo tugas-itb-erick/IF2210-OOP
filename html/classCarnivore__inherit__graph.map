@@ -1,0 +1,11 @@
+<map id="Carnivore" name="Carnivore">
+<area shape="rect" id="node2" href="$classAlligator.html" title="{Alligator\n||+ Alligator()\l+ Alligator()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="5,204,183,399"/>
+<area shape="rect" id="node3" href="$classDolphin.html" title="{Dolphin\n||+ Dolphin()\l+ Dolphin()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="207,204,384,399"/>
+<area shape="rect" id="node4" href="$classEagle.html" title="{Eagle\n||+ Eagle()\l+ Eagle()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="408,204,585,399"/>
+<area shape="rect" id="node5" href="$classFrog.html" title="{Frog\n||+ Frog()\l+ Frog()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="609,204,787,399"/>
+<area shape="rect" id="node6" href="$classKomodo.html" title="{Komodo\n||+ Komodo()\l+ Komodo()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="811,204,988,399"/>
+<area shape="rect" id="node7" href="$classLion.html" title="{Lion\n||+ Lion()\l+ Lion()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1012,204,1189,399"/>
+<area shape="rect" id="node8" href="$classPiranha.html" title="{Piranha\n||+ Piranha()\l+ Piranha()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1213,204,1391,399"/>
+<area shape="rect" id="node9" href="$classTiger.html" title="{Tiger\n||+ Tiger()\l+ Tiger()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1415,204,1592,399"/>
+<area shape="rect" id="node10" href="$classWhale.html" title="{Whale\n||+ Whale()\l+ Whale()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1616,204,1793,399"/>
+</map>

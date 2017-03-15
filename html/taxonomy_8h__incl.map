@@ -1,0 +1,8 @@
+<map id="src/renders/animals/taxonomy/taxonomy.h" name="src/renders/animals/taxonomy/taxonomy.h">
+<area shape="rect" id="node2" href="$pisces_8h.html" title="pisces.h" alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node4" href="$amphibia_8h.html" title="amphibia.h" alt="" coords="101,95,186,121"/>
+<area shape="rect" id="node5" href="$reptilia_8h.html" title="reptilia.h" alt="" coords="211,95,281,121"/>
+<area shape="rect" id="node6" href="$aves_8h.html" title="aves.h" alt="" coords="306,95,367,121"/>
+<area shape="rect" id="node7" href="$mammalia_8h.html" title="mammalia.h" alt="" coords="391,95,485,121"/>
+<area shape="rect" id="node3" href="$vertebrate_8h.html" title="vertebrate.h" alt="" coords="201,169,291,196"/>
+</map>

@@ -1,0 +1,221 @@
+\hypertarget{classFrog}{}\section{Frog Class Reference}
+\label{classFrog}\index{Frog@{Frog}}
+
+
+{\ttfamily \#include $<$species.\+h$>$}
+
+
+
+Inheritance diagram for Frog\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classFrog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Frog\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classFrog__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFrog_a9d2d178018dce67508988cfbee10a45b}{Frog} (string \+\_\+name, double \+\_\+weight, \hyperlink{sex_8h_a2633cb393c68bb2ee8080db58fb7ba93}{Sex} \+\_\+s, int \+\_\+r, int \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classFrog_ad799dd037bbf07877f47f512478f5971}{Frog} (const \hyperlink{classFrog}{Frog} \&F)
+\begin{DoxyCompactList}\small\item\em Copy Consructor. \end{DoxyCompactList}\item 
+\hyperlink{classFrog}{Frog} \& \hyperlink{classFrog_a6ae0b058647cf4fe8565f27029d1d02a}{operator=} (const \hyperlink{classFrog}{Frog} \&F)
+\begin{DoxyCompactList}\small\item\em Operator=. Melakukan assignment pada objek. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFrog_a1f48dff9c7eb100579f938c53c9fa25b}{interact} ()
+\begin{DoxyCompactList}\small\item\em interact. Menampilkan interaksi hewan ke layar \end{DoxyCompactList}\item 
+virtual \hyperlink{classFrog}{Frog} $\ast$ \hyperlink{classFrog_aab84684c4f6729ab89b1dd7470471d06}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone Menduplikat diri sendiri \end{DoxyCompactList}\item 
+virtual char \hyperlink{classFrog_a000e111ff655934cde3f06132841e736}{render} ()
+\begin{DoxyCompactList}\small\item\em render Mengembalikan karakter id tiap hewan \end{DoxyCompactList}\item 
+virtual \hyperlink{color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color} \hyperlink{classFrog_a6c7683144ff8beae2b66905178f74ed4}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em get\+Color Mengembalikan warna dari hewan \end{DoxyCompactList}\item 
+virtual double \hyperlink{classFrog_a5297e5e8eebab6d3f67c36e318db56fe}{count\+Consumed\+Meat} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi \end{DoxyCompactList}\item 
+virtual double \hyperlink{classFrog_a0e6b1ee5d8a1dee1adde9ca4f3c7367e}{count\+Consumed\+Veggie} ()
+\begin{DoxyCompactList}\small\item\em count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Frog@{Frog}!Frog@{Frog}}
+\index{Frog@{Frog}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{Frog(string \+\_\+name, double \+\_\+weight, Sex \+\_\+s, int \+\_\+r, int \+\_\+c)}{Frog(string _name, double _weight, Sex _s, int _r, int _c)}}]{\setlength{\rightskip}{0pt plus 5cm}Frog\+::\+Frog (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{double}]{\+\_\+weight, }
+\item[{{\bf Sex}}]{\+\_\+s, }
+\item[{int}]{\+\_\+r, }
+\item[{int}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{classFrog_a9d2d178018dce67508988cfbee10a45b}{}\label{classFrog_a9d2d178018dce67508988cfbee10a45b}
+
+
+Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & nama binatang \\
+\hline
+{\em \+\_\+weight} & berat \\
+\hline
+{\em \+\_\+s} & jenis kelamin \\
+\hline
+\end{DoxyParams}
+\index{Frog@{Frog}!Frog@{Frog}}
+\index{Frog@{Frog}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{Frog(const Frog \&\+F)}{Frog(const Frog &F)}}]{\setlength{\rightskip}{0pt plus 5cm}Frog\+::\+Frog (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frog} \&}]{F}
+\end{DoxyParamCaption}
+)}\hypertarget{classFrog_ad799dd037bbf07877f47f512478f5971}{}\label{classFrog_ad799dd037bbf07877f47f512478f5971}
+
+
+Copy Consructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Frog@{Frog}!clone@{clone}}
+\index{clone@{clone}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frog} $\ast$ Frog\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_aab84684c4f6729ab89b1dd7470471d06}{}\label{classFrog_aab84684c4f6729ab89b1dd7470471d06}
+
+
+clone Menduplikat diri sendiri 
+
+\begin{DoxyReturn}{Returns}
+value object hasil kloning 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a1430e040ea4ff43bc453fa0ad19c308d}{Animal}.
+
+\index{Frog@{Frog}!count\+Consumed\+Meat@{count\+Consumed\+Meat}}
+\index{count\+Consumed\+Meat@{count\+Consumed\+Meat}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Meat()}{countConsumedMeat()}}]{\setlength{\rightskip}{0pt plus 5cm}double Frog\+::count\+Consumed\+Meat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_a5297e5e8eebab6d3f67c36e318db56fe}{}\label{classFrog_a5297e5e8eebab6d3f67c36e318db56fe}
+
+
+count\+Consumed\+Meat Mengembalikan jumlah daging yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah daging yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_a84ccc380d237650f2bf24d792627d376}{Animal}.
+
+\index{Frog@{Frog}!count\+Consumed\+Veggie@{count\+Consumed\+Veggie}}
+\index{count\+Consumed\+Veggie@{count\+Consumed\+Veggie}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{count\+Consumed\+Veggie()}{countConsumedVeggie()}}]{\setlength{\rightskip}{0pt plus 5cm}double Frog\+::count\+Consumed\+Veggie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_a0e6b1ee5d8a1dee1adde9ca4f3c7367e}{}\label{classFrog_a0e6b1ee5d8a1dee1adde9ca4f3c7367e}
+
+
+count\+Consumed\+Veggie Mengembalikan jumlah makanan tumbuhan yang dikonsumsi 
+
+\begin{DoxyReturn}{Returns}
+jumlah makanan tumbuhan yang dikonsumsi 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAnimal_aaa7e4bdb7f5a10060b6dcaf09215f822}{Animal}.
+
+\index{Frog@{Frog}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Frog\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_a6c7683144ff8beae2b66905178f74ed4}{}\label{classFrog_a6c7683144ff8beae2b66905178f74ed4}
+
+
+get\+Color Mengembalikan warna dari hewan 
+
+\begin{DoxyReturn}{Returns}
+warna cetak hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_ab3bcc93b20929c6e92b64223344a73d5}{Renderable}.
+
+\index{Frog@{Frog}!interact@{interact}}
+\index{interact@{interact}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{interact()}{interact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Frog\+::interact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_a1f48dff9c7eb100579f938c53c9fa25b}{}\label{classFrog_a1f48dff9c7eb100579f938c53c9fa25b}
+
+
+interact. Menampilkan interaksi hewan ke layar 
+
+
+
+Implements \hyperlink{classAnimal_af47626b050b665e9a19525227d2b840f}{Animal}.
+
+\index{Frog@{Frog}!operator=@{operator=}}
+\index{operator=@{operator=}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{operator=(const Frog \&\+F)}{operator=(const Frog &F)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frog} \& Frog\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frog} \&}]{F}
+\end{DoxyParamCaption}
+)}\hypertarget{classFrog_a6ae0b058647cf4fe8565f27029d1d02a}{}\label{classFrog_a6ae0b058647cf4fe8565f27029d1d02a}
+
+
+Operator=. Melakukan assignment pada objek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & objek yang akan disalin \\
+\hline
+\end{DoxyParams}
+\index{Frog@{Frog}!render@{render}}
+\index{render@{render}!Frog@{Frog}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}char Frog\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFrog_a000e111ff655934cde3f06132841e736}{}\label{classFrog_a000e111ff655934cde3f06132841e736}
+
+
+render Mengembalikan karakter id tiap hewan 
+
+\begin{DoxyReturn}{Returns}
+karakter tiap hewan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_aafa9280e6dcfa557b3cd675221fd97b4}{Renderable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/renders/animals/\hyperlink{species_8h}{species.\+h}\item 
+src/renders/animals/\hyperlink{species_8cpp}{species.\+cpp}\end{DoxyCompactItemize}

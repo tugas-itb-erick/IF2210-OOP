@@ -8,7 +8,7 @@
 #include "animal.h"
 using namespace std;
 
-/** @class WaterAnimal.
+/** @class WaterAnimal
 	 * Adalah kelas anak Animal.
 	 * Menggunakan virtual inheritance untuk menghindari ambiguitas karena diamond inheritance.
 	 */

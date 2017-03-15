@@ -1,0 +1,8 @@
+<map id="Herbivore" name="Herbivore">
+<area shape="rect" id="node2" href="$classBear.html" title="{Bear\n||+ Bear()\l+ Bear()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="5,204,183,399"/>
+<area shape="rect" id="node3" href="$classChimpanzee.html" title="{Chimpanzee\n||+ Chimpanzee()\l+ Chimpanzee()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="207,204,384,399"/>
+<area shape="rect" id="node4" href="$classElephant.html" title="{Elephant\n||+ Elephant()\l+ Elephant()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="408,204,585,399"/>
+<area shape="rect" id="node5" href="$classGiraffe.html" title="{Giraffe\n||+ Giraffe()\l+ Giraffe()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="609,204,787,399"/>
+<area shape="rect" id="node6" href="$classHippopotamus.html" title="{Hippopotamus\n||+ Hippopotamus()\l+ Hippopotamus()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="811,204,988,399"/>
+<area shape="rect" id="node7" href="$classOrangutan.html" title="{Orangutan\n||+ Orangutan()\l+ Orangutan()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="1012,204,1189,399"/>
+</map>

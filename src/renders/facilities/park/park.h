@@ -5,7 +5,7 @@
 
 #include "../facility.h"
 
-/** @class Park.
+/** @class Park
 	 * Adalah kelas anak dari Facility.
 	 * Adalah representasi dari taman di zoo.
 	 */

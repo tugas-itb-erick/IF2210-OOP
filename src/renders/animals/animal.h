@@ -11,7 +11,7 @@
 #include <string>
 using namespace std;
 
-/** @class Animal.
+/** @class Animal
 	 * Adalah kelas anak dari Renderable karena Animal dapat dicetak.
 	 * Adalah kelas yang memiliki metode dan atribut binatang.
 	 */

@@ -5,7 +5,7 @@
 
 #include "../facility.h"
 
-/** @class Restaurant.
+/** @class Restaurant
 	 * Adalah kelas anak dari Facility.
 	 * Adalah representasi dari restoran.
 	 */
