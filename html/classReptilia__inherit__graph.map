@@ -1,6 +1,0 @@
-<map id="Reptilia" name="Reptilia">
-<area shape="rect" id="node3" href="$classAlligator.html" title="{Alligator\n||+ Alligator()\l+ Alligator()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="5,300,183,495"/>
-<area shape="rect" id="node4" href="$classKomodo.html" title="{Komodo\n||+ Komodo()\l+ Komodo()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="207,300,384,495"/>
-<area shape="rect" id="node5" href="$classTurtle.html" title="{Turtle\n||+ Turtle()\l+ Turtle()\l+ operator=()\l+ interact()\l+ clone()\l+ render()\l+ getColor()\l+ countConsumedMeat()\l+ countConsumedVeggie()\l}" alt="" coords="408,300,585,495"/>
-<area shape="rect" id="node2" href="$classVertebrate.html" title="{Vertebrate\n|# bloodTemp\l# heartChamber\l|+ Vertebrate()\l+ getBloodTemp()\l+ getHeartChamber()\l}" alt="" coords="223,5,368,127"/>
-</map>

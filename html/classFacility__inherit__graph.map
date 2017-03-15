@@ -1,9 +1,0 @@
-<map id="Facility" name="Facility">
-<area shape="rect" id="node4" href="$classPark.html" title="{Park\n||+ Park()\l+ Park()\l+ ~Park()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="5,623,103,789"/>
-<area shape="rect" id="node5" href="$classRestaurant.html" title="{Restaurant\n||+ Restaurant()\l+ Restaurant()\l+ ~Restaurant()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="127,623,242,789"/>
-<area shape="rect" id="node6" href="$classRoad.html" title="{Road\n||+ Road()\l+ Road()\l+ Road()\l+ ~Road()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="267,616,364,796"/>
-<area shape="rect" id="node2" href="$classCell.html" title="{Cell\n||+ Cell()\l+ Cell()\l+ Cell()\l+ ~Cell()\l+ operator=()\l+ clone()\l}" alt="" coords="136,233,233,384"/>
-<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n|# id\l# color\l|+ Renderable()\l+ Renderable()\l+ Renderable()\l+ ~Renderable()\l+ operator=()\l+ render()\l+ getColor()\l}" alt="" coords="127,5,243,185"/>
-<area shape="rect" id="node7" href="$classEntrance.html" title="{Entrance\n||+ Entrance()\l+ Entrance()\l+ ~Entrance()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="203,844,305,1009"/>
-<area shape="rect" id="node8" href="$classExit.html" title="{Exit\n||+ Exit()\l+ Exit()\l+ ~Exit()\l+ operator=()\l+ render()\l+ getColor()\l+ clone()\l}" alt="" coords="329,844,427,1009"/>
-</map>
