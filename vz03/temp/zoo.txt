@@ -1,0 +1,7 @@
+6 7
+A * - o * i A
+A - - L - - A
+A - L L - W A
+A - L * - W A
+A - - - - W A
+A R R R R R R
