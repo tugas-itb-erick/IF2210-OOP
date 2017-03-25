@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.*;
 
-abstract class Omnivore {
+public interface Omnivore {
   private double meatRatio;
   private double vegRatio; 
   

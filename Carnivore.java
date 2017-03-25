@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.*;
 
-abstract class Carnivore {
+public interface Carnivore {
   private double meatRatio;
   private final double vegRatio = 0;
   
