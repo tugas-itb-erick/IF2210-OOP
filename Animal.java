@@ -4,84 +4,144 @@
 import java.util.*;
 import java.lang.*;
 
-/*abstract*/ class Animal /*implements Renderable */{
+abstract class Animal implements Renderable {
 	protected String name;
 	protected double weight;
-	protected Sex s;
+	protected Sex sex;
 	protected int row;
 	protected int col;
-	protected boolean wild;
 
+	/**
+	 * Konstruktor
+	 */
 	public Animal(){
 		name = "unnamed";
 		weight = 0;
-		s = Sex.FEMALE;
+		sex = Sex.FEMALE;
 		row = 0;
 		col = 0;
-		wild = false;
 	}
-
-	public Animal(String _name, double _weight, Sex _s, int _r, int _c, boolean _w) {
+	/**
+	 * Konstruktor dengan parameter
+	 */
+	public Animal(String _name, double _weight, Sex _s, int _r, int _c) {
 		name = _name;
 		weight = _weight;
-		s = _s;
+		sex = _s;
 		row =_r;
 		col =_c;
-		wild = _w;
 	}
-
-	public String getName() {
+	
+	/**
+	 * Melakukan duplikasi binatang
+	 * @return binatang yang diduplikasi
+	 */
+	abstract public Animal Clone(); 
+	
+	/**
+	 * Mengembalikan nama dari binatang
+	 * @return nama binatang
+	 */
+	public String GetName() {
 		return name;
 	}
 
-	public double getWeight() {
+	/**
+	 * Mengembalikan berat dari binatang
+	 * @return berat binatang
+	 */
+	public double GetWeight() {
 		return weight;
 	}
 
-	public Sex getSex() {
-		return s;
+	/**
+	 * Mengembalikan jenis kelamin dari binatang
+	 * @return jenis kelamin binatang
+	 */
+	public Sex GetSex() {
+		return sex;
 	}
 
-	public int getRow() {
+	/**
+	 * Mengembalikan posisi baris dari binatang
+	 * @return posisi baris binatang
+	 */
+	public int GetRow() {
 		return row;
 	}
-
-	public int getCol() {
+	
+	/**
+	 * Mengembalikan posisi kolom dari binatang
+	 * @return posisi kolom binatang
+	 */
+	public int GetCol() {
 		return col;
 	}
 
-	public boolean getWild() {
-		return wild;
-	}
-
-	public void setName(String n) {
+	/**
+	 * Mengatur nama dari binatang
+	 * @param nama binatang
+	 */
+	public void SetName(String n) {
 		name = n;
 	}
 
-	public void setWeight(double w) {
+	/**
+	 * Mengatur berat dari binatang
+	 * @param berat binatang
+	 */
+	public void SetWeight(double w) {
 		weight = w;
 	}
 
-	public void setSex(Sex ns) {
-		s = ns;
+	/**
+	 * Mengatur jenis kelamin dari binatang
+	 * @param jenis kelamin binatang
+	 */
+	public void SetSex(Sex ns) {
+		sex = ns;
 	}
 
-	public void setRow(int r) {
+	/**
+	 * Mengatur posisi baris dari binatang
+	 * @param posisi baris binatang
+	 */
+	public void SetRow(int r) {
 		row = r;
 	}
 
-	public void setCol(int c) {
+	/**
+	 * Mengatur posisi kolom dari binatang
+	 * @param posisi kolom binatang
+	 */
+	public void SetCol(int c) {
 		col = c;
 	}
 
+	/**
+	 * Menampilkan data atribut dari binatang ke layar
+	 */
 	public void DisplayAnimalData() {
 		System.out.println("Name: " + name);
 		System.out.println("Weight: "+ weight);
-		System.out.println("Sex: "+ s);
+		System.out.println("Sex: "+ sex);
 		System.out.println("RowPosition: "+ row);
 		System.out.println("ColPosition: "+ col);
+		if (IsWild())
+			System.out.println("Wild: true");
+		else
+			System.out.println("Wild: false");
 	}
-
-	/*abstract*/ public void interact(){}
+	
+	/**
+	 * Mengembalikan liar/tidaknya binatang
+	 * @return true jika liar, false jika tidak liar
+	 */
+	abstract public boolean IsWild();
+	
+	/**
+	 * Menampilkan interaksi dari binatang
+	 */
+	abstract public void Interact();
 
 }
