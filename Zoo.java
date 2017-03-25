@@ -202,7 +202,7 @@ public class Zoo {
     }
     int i=0;
 
-    boolean path[row][col];
+    boolean[][] path = new boolean[row][col];
     for(int i=0; i<row; i++){
       for(int j=0; j<col; j++){
         if ((cell[i][j].Render() == 'o') || (cell[i][j].Render() == '-') || (cell[i][j].Render() == 'i'))

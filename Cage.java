@@ -85,7 +85,7 @@ public class Cage implements Renderable {
     boolean found = false;
 
     while ((i<n_animal) && (!found)){
-      if (animal[i].GetWild())
+      if (animal[i].IsWild())
         found = true;
       else
         i++;
@@ -174,7 +174,8 @@ public class Cage implements Renderable {
     int i = 0;
 
     while (i<n_animal){
-      int rd = ThreadLocalRandom.current().nextInt(1, 4+1);
+      Random rand = new Random();
+      int rd = rand.nextInt(4) + 1;
       switch (rd){ // 1-up, 2-right, 3-down, 4-left
         case 1:
         if (SearchPosition(animal[i].GetRow()-1, animal[i].GetCol()) && !SearchAnimal(animal[i].GetRow()-1, animal[i].GetCol()))
@@ -223,8 +224,7 @@ public class Cage implements Renderable {
     out.SetHabitat(in.GetHabitat());
 
     for(int i=0; i<out.GetSize(); i++){
-      out.GetRow(i) = in.GetRow(i);
-      out.GetCol(i) = in.GetCol(i);
+      out.AddPosition(in.GetRow(i), in.GetCol(i));
     }
     for(int i=0; i<in.GetTotalAnimal(); i++){
       out.AddAnimal(in.GetAnimal(i));
