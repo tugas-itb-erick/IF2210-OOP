@@ -26,7 +26,7 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Frog Clone()
+  public Turtle Clone()
   {
     Turtle out= new Turtle(name,weight,sex,row,col);
     return F;
