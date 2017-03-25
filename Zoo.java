@@ -43,7 +43,7 @@ public class Zoo {
   }
 
   Cell GetCell(int i, int j){
-    return cell[i][j]
+    return cell[i][j];
   }
 
   Cage GetCage(int i){
@@ -136,6 +136,16 @@ public class Zoo {
           case 'o' : cell[i][j] = new Exit(); break;*/
       }
     }
+  }
+
+  void PrintConsumedFood(){
+    double countm = 0, countv = 0;
+    for(int i=0; i<ncage; i++){
+      countm += cage[i].CountConsumedMeat();
+      countv += cage[i].CountConsumedVeggie();
+    }
+    System.out.println("Total Daging yang dikonsumsi: " + countm);
+    System.out.println("Total Sayur yang dikonsumsi: " + countv);
   }
 
 
