@@ -5,28 +5,15 @@ import java.util.*;
 import java.lang.*;
 
 public interface Carnivore {
-  private double meatRatio;
-  private final double vegRatio = 0;
-  
-  /** 
-   * Constructor.
-   */
-  public Carnivore() {
-    meatRatio = 0.5;
-  }
   /** 
    * Mengembalikan nilai rasio daging.
    * @return nilai rasio daging
    */
-  public double GetMeatRatio() final {
-    return meatRatio;
-  }
+  public double GetMeatRatio();
 
   /** 
    * Mengembalikan nilai rasio sayur.
    * @return nilai rasio sayur
    */
-  public double GetVegRatio() final {
-    return vegRatio;
-  }
+  public double GetVegRatio();
 }
