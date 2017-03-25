@@ -19,7 +19,6 @@ class Whale extends Animal/*, WaterAnimal, Carnivore, Mammalia*/ {
 	 * @param _s jenis kelamin hewan (MALE/FEMALE)
 	 * @param _r posisi hewan (baris)
 	 * @param _c posisi hewan (kolom)
-	 * @param _w buas atau jinaknya hewan (true=buas, false=jinak)
 	 */
 	public Whale(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);

@@ -23,6 +23,11 @@ abstract class Animal implements Renderable {
 	}
 	/**
 	 * Konstruktor dengan parameter
+	 * @param _name nama hewan
+	 * @param _weight berat hewan
+	 * @param _s jenis kelamin hewan (MALE/FEMALE)
+	 * @param _r posisi hewan (baris)
+	 * @param _c posisi hewan (kolom)
 	 */
 	public Animal(String _name, double _weight, Sex _s, int _r, int _c) {
 		name = _name;

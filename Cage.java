@@ -9,12 +9,14 @@ public class Cage implements Renderable {
   private int size; // size of cage
   private int used; // space used in cage
   private int n_animal; // total animals in cage
-  private int[] row; // row position of ith animal
-  private int[] col; // column position of ith animal
+  private int[] row; // row position cell
+  private int[] col; // column position of cell
   private Animal[] animal;
   private char habitat;
 
-  /******* CONSTRUCTOR *******/
+  /**
+	 * Konstruktor 
+	 */
   public Cage(){
     size = 10;
     used = 0;
@@ -25,6 +27,10 @@ public class Cage implements Renderable {
     habitat = '?';
   }
 
+	/**
+	 * Konstruktor dengan parameter
+	 * @param s ukuran kandang 
+	 */
   public Cage(int s){
     size = s;
     used = 0;
@@ -35,52 +41,89 @@ public class Cage implements Renderable {
     habitat = '?';
   }
 
-  /******* GETTER *******/
-  public int GetSize(){
+  /**
+	 * Mengembalikan ukuran kandang
+	 * @return ukuran kandang
+	 */
+  public int GetSize() {
     return size;
   }
 
-  public int GetTotalAnimal(){
+	/**
+	 * Mengembalikan jumlah binatang yang ada pada kandang
+	 * @return jumlah binatang 
+	 */
+  public int GetTotalAnimal() {
     return n_animal;
   }
-
-  public int GetRow(int i){
+	
+	/**
+	 * Mengembalikan posisi (baris) sel kandang ke-i
+	 * @return posisi(baris) sel kandang ke-i
+	 */
+  public int GetRow(int i) {
     return row[i];
   }
 
-  public int GetCol(int i){
+	/**
+	 * Mengembalikan posisi (kolom) sel kandang ke-i
+	 * @return posisi(kolom) sel kandang ke-i
+	 */
+  public int GetCol(int i) {
     return col[i];
   }
 
-  public Animal GetAnimal(int i){
+	/**
+	 * Mengembalikan binatang pada sel kandang ke-i
+	 * @return binatang pada sel kandang ke-i
+	 */
+  public Animal GetAnimal(int i) {
     return animal[i];
   }
 
-  public char GetHabitat(){
+	/**
+	 * Mengembalikan jenis habitat dari kandang ('l'/'w'/'a')
+	 * @return jenis habitat dari kandang ('l'/'w'/'a')
+	 */
+  public char GetHabitat() {
     return habitat;
   }
 
-  /******* SETTER *******/
-  public void SetHabitat(char h){
+  /**
+	 * Mengatur jenis habitat dari kandang ('l'/'w'/'a')
+	 * @param habitat dari kandang ('l'/'w'/'a')
+	 */
+  public void SetHabitat(char h) {
     habitat = h;
   }
 
+	/**
+	 * Mengatur ukuran dari kandang, isi kandang sebelumnya akan terhapus dan terbentuk kandang kosong berukuran baru
+	 * @param s ukuran kandang
+	 */
   // only use this if you want to recreate the cage i.e. input cage
   // WARNING all existing cage data will be lost
   // f.s. cage is empty with new size s
-  public void SetNewCage(int s){
+  public void SetNewCage(int s) {
     size = s;
     row = new int[size];
     col = new int[size];
     animal = new Animal[size];
   }
 
-  /******* PREDICATE *******/
-  public boolean IsFull(){
+  /**
+	 * Memeriksa apakah kandang penuh/tidak
+	 * @return true jika penuh, false jika tidak penuh
+	 */
+  public boolean IsFull() {
     return (double)n_animal >= (double)size*0.3;
   }
 
-  public boolean IsWild(){
+	/**
+	 * Memeriksa apakah terdapat hewan liar di kandang
+	 * @return true jika ada hewan liar, false jika tidak ada
+	 */
+  public boolean IsWild() {
     int i = 0;
     boolean found = false;
 
@@ -94,7 +137,11 @@ public class Cage implements Renderable {
     return found;
   }
 
-  public boolean SearchPosition(int r, int c){
+	/**
+	 * Memeriksa apakah terdapat posisi (r,c) pada kandang
+	 * @return true jika ada posisi (r,c) pada kandang, false jika tidak
+	 */
+  public boolean SearchPosition(int r, int c) {
     int i = 0;
     boolean found = false;
 
@@ -108,7 +155,11 @@ public class Cage implements Renderable {
     return found;
   }
 
-  public boolean SearchAnimal(int r, int c){
+	/**
+	 * Memeriksa apakah ada binatang pada sel (r,c)
+	 * @return true jika ada binatang, false jika tidak ada
+	 */
+  public boolean SearchAnimal(int r, int c) {
     int i = 0;
     boolean found = false;
 
@@ -122,7 +173,12 @@ public class Cage implements Renderable {
     return found;
   }
 
-  void AddPosition(int r, int c){
+	/**
+	 * Menambahkan suatu sel dengan koordinat (r,c) pada kandang
+	 * @param r koordinat baris
+	 * @param c koordinat kolom
+	 */
+  public void AddPosition(int r, int c) {
     if (used < size){
       row[used] = r;
       col[used] = c;
@@ -130,7 +186,11 @@ public class Cage implements Renderable {
     }
   }
 
-  void AddAnimal(Animal in){
+	/**
+	 * Menambahkan binatang pada kandang
+	 * @param in binatang yang ingin dimasukkan ke kandang
+	 */
+  public void AddAnimal(Animal in) {
     if (!IsFull()){
       boolean valid = !IsWild();
 
@@ -142,17 +202,28 @@ public class Cage implements Renderable {
     }
   }
 
+	/**
+	 * Mengembalikan jenis habitat kandang (format lower case) untuk ditampilkan pada layar
+	 * @return karakter jenis habitat kandang
+	 */
   @Override
-  public char Render(){
+  public char Render() {
     return Character.toLowerCase(habitat);
   }
 
+	/**
+	 * Mengembalikan jenis habitat kandang (format lower case) dengan kode warna untuk ditampilkan pada layar
+	 * @return kode warna beserta kode habutat
+	 */
   @Override
-  public String RenderWithColor(){
+  public String RenderWithColor() {
     return ANSI_WHITE + Render() + ANSI_RESET;
   }
 
-  void Print(){
+	/**
+	 * Menampilkan data kandang pada layar 
+	 */
+  public void Print(){
     System.out.println("Total size: " + size);
     for(int i=0; i<used; i++){
       System.out.println(row[i] + " " + col[i]);
@@ -162,7 +233,10 @@ public class Cage implements Renderable {
     }
   }
 
-  void Interact(){
+	/**
+	 * Menampilkan seluruh interaksi binatang yang terdapat pada kandang
+	 */
+  public void Interact(){
     int i = 0;
     while (i < n_animal){
       animal[i].Interact();
@@ -170,6 +244,9 @@ public class Cage implements Renderable {
     }
   }
 
+	/**
+	 * Merubah posisi binatang-binatang pada kandang
+	 */
   void MoveAnimal(){
     int i = 0;
 
@@ -202,6 +279,10 @@ public class Cage implements Renderable {
     }
   }
 
+	/**
+	 * Mengembalikan jumlah total daging yang dikonsumsi seluruh binatang pada kandang
+	 * @return jumlah daging
+	 */
   double CountConsumedMeat(){
     double sum = 0;
     for(int i=0; i<n_animal; i++){
@@ -210,6 +291,10 @@ public class Cage implements Renderable {
     return sum;
   }
 
+	/**
+	 * Mengembalikan jumlah total sayur yang dikonsumsi seluruh binatang pada kandang
+	 * @return jumlah daging
+	 */
   double CountConsumedVeggie(){
     double sum = 0;
     for(int i=0; i<n_animal; i++){
@@ -218,6 +303,10 @@ public class Cage implements Renderable {
     return sum;
   }
 
+	/**
+	 * Menduplikasi suatu kandang
+	 * @param kandang yang ingin diduplikasi
+	 */
   Cage Clone(Cage in){
     Cage out = new Cage(in.GetSize());
 
@@ -233,6 +322,10 @@ public class Cage implements Renderable {
     return out;
   }
 
+	/**
+	 * Membaca dan mengisi kandang dari scanner
+	 * @param in scanner yang akan dibaca
+	 */
   void Read(Scanner in){
     int s = in.nextInt();
     SetNewCage(s);
