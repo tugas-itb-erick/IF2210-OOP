@@ -2,6 +2,7 @@
 /* File : Template.java */
 
 import java.util.*;
+import java.lang.*;
 
 // contoh
 public class Template{
