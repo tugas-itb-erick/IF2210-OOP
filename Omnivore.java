@@ -4,30 +4,16 @@
 import java.util.*;
 import java.lang.*;
 
-abstract class Omnivore {
-  private double meatRatio;
-  private double vegRatio; 
-  
-  /** 
-   * Constructor.
-   */
-  public Omnivore() {
-    meatRatio = 0.3;
-    vegRatio = 0.3;
-  }
+public interface Omnivore {
   /** 
    * Mengembalikan nilai rasio daging.
    * @return nilai rasio daging
    */
-  public double GetMeatRatio() final {
-    return meatRatio;
-  }
+  public double GetMeatRatio();
 
   /** 
    * Mengembalikan nilai rasio sayur.
    * @return nilai rasio sayur
    */
-  public double GetVegRatio() final {
-    return vegRatio;
-  }
+  public double GetVegRatio();
 }
