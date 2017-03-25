@@ -27,8 +27,8 @@ public interface Renderable {
   public static final String ANSI_BOLD = "\u001B[1m";
   public static final String ANSI_UNDERLINE = "\u001B[4m";
 
-  public char render();
-  public String renderWithColor();
+  public char Render();
+  public String RenderWithColor();
 }
 
 /* Example:

@@ -15,7 +15,7 @@ public class Template{
     a = 0;
     x = new int[10];
   }
-  public int getA(){
+  public int GetA(){
     return a;
   }
 

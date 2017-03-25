@@ -8,21 +8,21 @@ class MCell extends Cell {
   MCell(){}
 
   @Override
-  public char render(){
+  public char Render(){
     return 'c';
   }
 
   @Override
-  public String renderWithColor(){
-    return ANSI_BOLD + ANSI_UNDERLINE + ANSI_GREEN + render() + ANSI_RESET;
+  public String RenderWithColor(){
+    return ANSI_BOLD + ANSI_UNDERLINE + ANSI_GREEN + Render() + ANSI_RESET;
   }
 
   public static void main(String[] args) {
     MCell tes = new MCell();
 
     System.out.println("tes");
-    System.out.println(tes.render());
-    System.out.println(tes.renderWithColor());
+    System.out.println(tes.Render());
+    System.out.println(tes.RenderWithColor());
     System.out.println("tes");
 
   }
