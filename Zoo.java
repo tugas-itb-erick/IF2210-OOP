@@ -61,19 +61,19 @@ public class Zoo {
     n_cage = 0;
   }
 
-  void AddCage(Cage c){
-    booleanean valid = true;
+  void AddCage(Cage in){
+    boolean valid = true;
     int i = 0;
 
-    while ((i < C.GetSize()) && valid){
-      if ((C.GetRow(i) < 0) || (C.GetCol(i) < 0))
+    while ((i < in.GetSize()) && valid){
+      if ((in.GetRow(i) < 0) || (in.GetCol(i) < 0))
         valid = false;
       else{
         int j = 0;
         while ((j < n_cage) && valid){
           int k = 0;
           while ((k < cage[j].GetSize()) && valid){
-            if ((C.GetRow(i) == cage[j].GetRow(k)) && (C.GetCol(i) == cage[j].GetCol(k)))
+            if ((in.GetRow(i) == cage[j].GetRow(k)) && (in.GetCol(i) == cage[j].GetCol(k)))
               valid = false;
             else
               k++;
@@ -89,14 +89,29 @@ public class Zoo {
       while ((i<row*col) && (cage[i].GetHabitat() != '?'))
         i++;
       if (i<row*col){
-        cage[i] = C.Clone();
+        cage[i] = in.Clone();
         ++n_cage;
       }
     }
   }
 
-  void AddAnimal(Animal c){
-
+  void AddAnimal(Animal in){
+    i = 0;
+    bool found = false;
+    while ((i < n_cage) && (cage[i].getHabitat() != '?') && !found){
+      int j = 0;
+      while ((j < cage[i].getSize()) && !found){
+        if ((cage[i].GetRow(j) == in.GetRow()) && (cage[i].GetCol(j) == in.GetCol()))
+          found = true;
+        else
+          j++;
+      }
+      if (!found)
+        i++;
+    }
+    if (found){
+      cage[i].AddAnimal(in);
+    }
   }
 
   void Display(int x1, int y1, int x2, int y2){
