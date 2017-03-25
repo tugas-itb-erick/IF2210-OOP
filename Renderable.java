@@ -24,7 +24,11 @@ public interface Renderable {
   public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
   public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
-  public String render();
+  public static final String ANSI_BOLD = "\u001B[1m";
+  public static final String ANSI_UNDERLINE = "\u001B[4m";
+
+  public char render();
+  public String renderWithColor();
 }
 
 /* Example:

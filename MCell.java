@@ -1,28 +1,29 @@
-/* NIM/Nama :  */
-/* File     : MRenderable.java */
+/* NIM/Nama : 13515057 / Erick Wijaya */
+/* File     : MCell.java */
 
 import java.util.*;
 import java.lang.*;
 
-class MRenderable implements Renderable {
-  MRenderable(){}
+class MCell extends Cell {
+  MCell(){}
 
   @Override
   public char render(){
-    return 'a';
+    return 'c';
   }
 
   @Override
   public String renderWithColor(){
-    return ANSI_BLUE_BACKGROUND + ANSI_RED + render() + ANSI_RESET;
+    return ANSI_BOLD + ANSI_UNDERLINE + ANSI_GREEN + render() + ANSI_RESET;
   }
 
   public static void main(String[] args) {
-    MRenderable tes = new MRenderable();
+    MCell tes = new MCell();
+
     System.out.println("tes");
     System.out.println(tes.render());
     System.out.println(tes.renderWithColor());
     System.out.println("tes");
-  }
 
+  }
 }

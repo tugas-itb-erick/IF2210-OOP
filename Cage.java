@@ -20,7 +20,16 @@ public class Cage implements Renderable {
     row = new int[size];
     col = new int[size];
     animal = new Animal[size];
-    habitat = '?'
+    habitat = '?';
+  }
+
+  Cage(int s){
+    size = s;
+    n_animal = 0;
+    row = new int[size];
+    col = new int[size];
+    animal = new Animal[size];
+    habitat = '?';
   }
 
   /******* GETTER *******/
@@ -77,9 +86,9 @@ public class Cage implements Renderable {
     boolean found = false;
 
     while ((i<n_animal) && (!found)){
-      /*if ((a[i]->getRow() == r) && (a[i]->getCol() == c))
+      if ((animal[i].getRow() == r) && (animal[i].getCol() == c))
         found = true;
-      else*/
+      else
         i++;
     }
 
@@ -87,8 +96,21 @@ public class Cage implements Renderable {
   }
 
   @Override
-  public String render(){
+  public String renderWithColor(){
     return ANSI_WHITE + Character.toLowerCase(habitat) + ANSI_RESET;
+  }
+
+  @Override
+  public char render(){
+    return Character.toLowerCase(habitat);
+  }
+
+  void interact(){
+    int i = 0;
+    while (i < n_animal){
+      animal[i].interact();
+      i++;
+    }
   }
 
 }

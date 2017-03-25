@@ -5,5 +5,5 @@ import java.util.*;
 import java.lang.*;
 
 abstract class Cell implements Renderable {
-
+  Cell(){}
 }
