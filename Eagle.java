@@ -49,7 +49,7 @@ class Eagle extends Animal/*, FlyingAnimal, Carnivore, Aves*/ {
 	 */
 	@Override
 	public char Render() {
-		return 'e';
+		return 'E';
 	}
 	
 	/**
@@ -67,7 +67,7 @@ class Eagle extends Animal/*, FlyingAnimal, Carnivore, Aves*/ {
 	 */
 	@Override
 	public boolean IsWild() {
-		return false;
+		return true;
 	}
 
 	/*
