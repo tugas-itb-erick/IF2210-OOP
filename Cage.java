@@ -149,7 +149,7 @@ public class Cage implements Renderable {
 
   @Override
   public String RenderWithColor(){
-    return ANSI_WHITE + Character.toLowerCase(habitat) + ANSI_RESET;
+    return ANSI_WHITE + Render() + ANSI_RESET;
   }
 
   void Print(){
