@@ -15,7 +15,7 @@ public class Cage implements Renderable {
   private char habitat;
 
   /******* CONSTRUCTOR *******/
-  Cage(){
+  public Cage(){
     size = 10;
     used = 0;
     n_animal = 0;
@@ -25,7 +25,7 @@ public class Cage implements Renderable {
     habitat = '?';
   }
 
-  Cage(int s){
+  public Cage(int s){
     size = s;
     used = 0;
     n_animal = 0;
@@ -239,7 +239,7 @@ public class Cage implements Renderable {
     for(int i=0; i<s; i++){
       int x = in.nextInt();
       int y = in.nextInt();
-      s.AddPosition(x, y);
+      AddPosition(x, y);
     }
   }
 

@@ -14,7 +14,7 @@ public class Zoo {
   private Cell[][] cell;
   private Cage[] cage;
 
-  Zoo(){
+  public Zoo(){
     row = DEFROW;
     col = DEFCOL;
     cell = new Cell[row][col];
@@ -22,7 +22,7 @@ public class Zoo {
     n_cage = 0;
   }
 
-  Zoo(int r, int c){
+  public Zoo(int r, int c){
     row = r;
     col = c;
     cell = new Cell[row][col];
@@ -62,7 +62,7 @@ public class Zoo {
   }
 
   void AddCage(Cage c){
-    boolean valid = true;
+    booleanean valid = true;
     int i = 0;
 
     while ((i < C.GetSize()) && valid){
@@ -72,7 +72,7 @@ public class Zoo {
         int j = 0;
         while ((j < n_cage) && valid){
           int k = 0;
-          while ((k < cg[j].GetSize()) && valid){
+          while ((k < cage[j].GetSize()) && valid){
             if ((C.GetRow(i) == cage[j].GetRow(k)) && (C.GetCol(i) == cage[j].GetCol(k)))
               valid = false;
             else
@@ -95,6 +95,10 @@ public class Zoo {
     }
   }
 
+  void AddAnimal(Animal c){
+
+  }
+
   void Display(int x1, int y1, int x2, int y2){
     if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >=col) || (x1 > x2) || (y1 > y2)){
       System.out.println("Indeks posisi zoo tidak boleh negatif atau lebih besar dari ukuran sebenarnya.");
@@ -114,7 +118,146 @@ public class Zoo {
   }
 
   void Tour(){
-    int x = ThreadLocalRandom.current().nextInt(10, 100 + 1);
+    boolean found = false;
+    int xen, yen, xex, yex;
+
+    // Get Random Entrance n Exit
+    while (!found){
+      int x = ThreadLocalRandom.current().nextInt(0, row);
+      int y = ThreadLocalRandom.current().nextInt(0, col);
+      int choice = ThreadLocalRandom.current().nextInt(0, 4);
+      if (choice == 0){
+        if (cell[x][0].Render() == 'i'){
+          found = true;
+          xen = x;
+          yen = 0;
+        }
+      }else if (choice == 1){
+        if (cell[x][col-1].Render() == 'i'){
+          found = true;
+          xen = x;
+          yen = col-1;
+        }
+      }else if (choice == 2){
+        if (cell[0][y].Render() == 'i'){
+          found = true;
+          xen = 0;
+          yen = y;
+        }
+      }else{
+        if (cell[row-1][y].Render() == 'i'){
+          found = true;
+          xen = row-1;
+          yen = y;
+        }
+      }
+    }
+
+    // Get Exit
+    found = false;
+    while (!found){
+      int x = ThreadLocalRandom.current().nextInt(0, row);
+      int y = ThreadLocalRandom.current().nextInt(0, col);
+      int choice = ThreadLocalRandom.current().nextInt(0, 4);
+      if (choice == 0){
+        if (cell[x][0].Render() == 'o'){
+          found = true;
+          xex = x;
+          yex = 0;
+        }
+      }else if (choice == 1){
+        if (cell[x][col-1].Render() == 'o'){
+          found = true;
+          xex = x;
+          yex = col-1;
+        }
+      }else if (choice == 2){
+        if (cell[0][y].Render() == 'o'){
+          found = true;
+          xex = 0;
+          yex = y;
+        }
+      }else{
+        if (cell[row-1][y].Render() == 'o'){
+          found = true;
+          xex = row-1;
+          yex = y;
+        }
+      }
+    }
+    int i=0;
+
+    boolean path[row][col];
+    for(int i=0; i<row; i++){
+      for(int j=0; j<col; j++){
+        if ((cell[i][j].Render() == 'o') || (cell[i][j].Render() == '-') || (cell[i][j].Render() == 'i'))
+          path[i][j] = true;
+        else
+          path[i][j] = false;
+      }
+    }
+
+    i = xen;
+    int j = yen;
+    while ((i != xex) || (j != yex)){
+      path[i][j] = false;
+      System.out.println("(" + i + "," + j + ") :");
+
+      boolean fcage = false;
+      int icage = 0;
+      while ((icage < n_cage) && !fcage){
+        if (cage[icage].SearchPosition(i+1, j)){
+          cage[icage].Interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < n_cage) && !fcage){
+        if (cage[icage].SearchPosition(i-1, j)){
+          cage[icage].Interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < n_cage) && !fcage){
+        if (cage[icage].SearchPosition(i, j+1)){
+          cage[icage].Interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < n_cage) && !fcage){
+        if (cage[icage].SearchPosition(i, j-1)){
+          cage[icage].Interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      if ((i+1<row) && path[i+1][j])
+        i++;
+      else if ((i-1>=0) && path[i-1][j])
+        i--;
+      else if ((j+1<col) && path[i][j+1])
+        j++;
+      else if ((j-1>=0) && path[i][j-1])
+        j--;
+      else
+        break;
+    }
   }
 
   void Read(Scanner in){
@@ -124,7 +267,7 @@ public class Zoo {
     SetNewZoo(r, c);
     for(int i=0; i<r; i++){
       for(int j=0; j<c; j++){
-        int k = in.nextChar();
+        char k = in.next().charAt(0);
         /*switch (k){
           case 'W' : cell[i][j] = new WaterHabitat(); break;
           case 'A' : cell[i][j] = new AirHabitat(); break;
@@ -140,7 +283,7 @@ public class Zoo {
 
   void PrintConsumedFood(){
     double countm = 0, countv = 0;
-    for(int i=0; i<ncage; i++){
+    for(int i=0; i<n_cage; i++){
       countm += cage[i].CountConsumedMeat();
       countv += cage[i].CountConsumedVeggie();
     }

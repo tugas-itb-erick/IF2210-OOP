@@ -5,7 +5,7 @@ import java.util.*;
 import java.lang.*;
 
 class MCell extends Cell {
-  MCell(){}
+  public MCell(){}
 
   @Override
   public char Render(){

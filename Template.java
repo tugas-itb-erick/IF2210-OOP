@@ -1,5 +1,5 @@
 /* NIM/Nama : 13515xxx / Abc Def */
-/* File : Template.java */
+/* File     : Template.java */
 
 import java.util.*;
 import java.lang.*;
