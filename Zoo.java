@@ -96,11 +96,11 @@ public class Zoo {
   }
 
   void AddAnimal(Animal in){
-    i = 0;
-    bool found = false;
-    while ((i < n_cage) && (cage[i].getHabitat() != '?') && !found){
+    int i = 0;
+    boolean found = false;
+    while ((i < n_cage) && (cage[i].GetHabitat() != '?') && !found){
       int j = 0;
-      while ((j < cage[i].getSize()) && !found){
+      while ((j < cage[i].GetSize()) && !found){
         if ((cage[i].GetRow(j) == in.GetRow()) && (cage[i].GetCol(j) == in.GetCol()))
           found = true;
         else
@@ -115,7 +115,7 @@ public class Zoo {
   }
 
   void Display(int x1, int y1, int x2, int y2){
-    if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >=col) || (x1 > x2) || (y1 > y2)){
+    if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >= col) || (x1 > x2) || (y1 > y2)){
       System.out.println("Indeks posisi zoo tidak boleh negatif atau lebih besar dari ukuran sebenarnya.");
     }
     else{
@@ -135,12 +135,13 @@ public class Zoo {
   void Tour(){
     boolean found = false;
     int xen, yen, xex, yex;
+    Random rand = new Random();
 
     // Get Random Entrance n Exit
     while (!found){
-      int x = ThreadLocalRandom.current().nextInt(0, row);
-      int y = ThreadLocalRandom.current().nextInt(0, col);
-      int choice = ThreadLocalRandom.current().nextInt(0, 4);
+      int x = rand.nextInt(row);
+      int y = rand.nextInt(col);
+      int choice = rand.nextInt(4);
       if (choice == 0){
         if (cell[x][0].Render() == 'i'){
           found = true;
@@ -171,9 +172,9 @@ public class Zoo {
     // Get Exit
     found = false;
     while (!found){
-      int x = ThreadLocalRandom.current().nextInt(0, row);
-      int y = ThreadLocalRandom.current().nextInt(0, col);
-      int choice = ThreadLocalRandom.current().nextInt(0, 4);
+      int x = rand.nextInt(row);
+      int y = rand.nextInt(col);
+      int choice = rand.nextInt(4);
       if (choice == 0){
         if (cell[x][0].Render() == 'o'){
           found = true;
@@ -200,7 +201,6 @@ public class Zoo {
         }
       }
     }
-    int i=0;
 
     boolean[][] path = new boolean[row][col];
     for(int i=0; i<row; i++){
@@ -212,7 +212,7 @@ public class Zoo {
       }
     }
 
-    i = xen;
+    int i = xen;
     int j = yen;
     while ((i != xex) || (j != yex)){
       path[i][j] = false;
@@ -283,15 +283,16 @@ public class Zoo {
     for(int i=0; i<r; i++){
       for(int j=0; j<c; j++){
         char k = in.next().charAt(0);
-        /*switch (k){
+        switch (k){
           case 'W' : cell[i][j] = new WaterHabitat(); break;
           case 'A' : cell[i][j] = new AirHabitat(); break;
-          case 'L' : cell[i][j] = new LandHabitat(); break;
+          case 'L' : cell[i][j] = new LandHabitat(); break;/*
           case '*' : cell[i][j] = new Park(); break;
           case 'R' : cell[i][j] = new Restaurant(); break;
           case '-' : cell[i][j] = new Road(); break;
           case 'i' : cell[i][j] = new Entrance(); break;
           case 'o' : cell[i][j] = new Exit(); break;*/
+        }
       }
     }
   }

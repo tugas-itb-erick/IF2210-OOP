@@ -5,11 +5,11 @@ import java.util.*;
 import java.lang.*;
 
 class AirHabitat extends Habitat{
-  /** 
+  /**
    * Constructor
    */
   public AirHabitat(){
-    super('A', WHITE);
+    super();
   }
   /**
    * Mengembalikan karakter untuk ditampilkan ke layar
@@ -18,11 +18,11 @@ class AirHabitat extends Habitat{
   public char Render(){
     return 'A';
   }
-  /** 
+  /**
    * Mengembalikan warna untuk ditampilkan ke layar
    * @return color warna renderable
    */
-  public Color RenderWithColor(){
+  public String RenderWithColor(){
     return ANSI_WHITE + Render() + ANSI_RESET;
   }
 }

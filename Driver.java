@@ -1,7 +1,20 @@
 /* NIM/Nama : 13515xxx / Abc Def */
 /* File     : Driver.java */
 
+import java.util.*;
+import java.io.*;
+
 public class Driver {
+  public static void ShowMenu(){
+    System.out.println("Selamat datang di Kebun Binatang Virtual Zoo!");
+    System.out.println("1. Menampilkan peta Kebun Binatang");
+    System.out.println("2. Menampilkan seluruh peta pada Kebun Binatang");
+    System.out.println("3. Menampilkan total makanan yang dimakan seluruh hewan");
+    System.out.println("4. Tour Kebun Binatang!");
+    System.out.println("5. Quit");
+    System.out.println("Pilih angka 1..5 :");
+  }
+
   public static void main(String[] args) {
     /* -- Create Zoo with its Components From File -- */
     Scanner inZoo = new Scanner(new File("zoo.txt"));
@@ -27,6 +40,7 @@ public class Driver {
     }
 
     /* -- Zoo Options -- */
+    int n;
     do{
       ShowMenu();
       n = in.nextInt();
