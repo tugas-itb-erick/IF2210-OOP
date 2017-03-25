@@ -20,7 +20,7 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
    * @param _c posisi hewan (kolom)
    */
   public Turtle(string _name, double _weight, Sex _s, int _r, int _c) {
-  	super(_name,  _weight, _s,  _r, _c, 'T', GREEN);
+  	super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
@@ -28,7 +28,7 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
    */
   public Frog Clone()
   {
-    Frog F = new Frog(name,weight,sex,row,col);
+    Turtle out= new Turtle(name,weight,sex,row,col);
     return F;
   }
   /** 

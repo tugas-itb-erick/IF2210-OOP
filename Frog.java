@@ -20,7 +20,7 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    * @param _c posisi hewan (kolom)
    */
   public Frog(string _name, double _weight, Sex _s, int _r, int _c) {
-  	//Animal(_name,  _weight, _s,  _r, _c, 'F', GREEN, false);
+		super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
@@ -28,8 +28,8 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    */
   public Frog Clone()
   {
-    Frog F = new Frog(name,weight,sex,row,col);
-    return F;
+    Frog out = new Frog(name,weight,sex,row,col);
+    return out;
   }
   /** 
     * Menampilkan interaksi hewan ke layar

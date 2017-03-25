@@ -1,14 +1,14 @@
 /* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Elephant.java			*/
+/* Nama file	: Bear.java			*/
 
 import java.util.*;
 import java.lang.*;
 
-class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
+class Bear extends Animal/*implements LandAnimal, Carnivore, Mammalia*/ {
 	/**
 	 * Constructor
 	 */
-	public Elephant() {
+	public Bear() {
 		super();
 	}
 	
@@ -20,7 +20,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 * @param _r posisi hewan (baris)
 	 * @param _c posisi hewan (kolom)
 	 */
-	public Elephant(String _name, double _weight, Sex _s, int _r, int _c) {
+	public Bear(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
 	
@@ -28,9 +28,9 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
 	 */
-	public Elephant Clone()
+	public Bear Clone()
 	{
-		Elephant out = new Elephant(name,weight,sex,row,col);
+		Bear out = new Bear(name,weight,sex,row,col);
 		return out;
 	}
 		
@@ -39,7 +39,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public void Interact() {
-		System.out.println("This elephant is trumpeting!!");
+		System.out.println("Growl.. Growl..");
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public char Render() {
-		return 'E';
+		return 'B';
 	}
 	
 	/**
@@ -66,7 +66,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public boolean IsWild() {
-		return false;
+		return true;
 	}
 
 	/*
@@ -78,3 +78,4 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	}	
 	*/
 }
+

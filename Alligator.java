@@ -20,7 +20,7 @@ class Alligator extends Animal implements LandAnimal, WaterAnimal, Carnivore, Re
    * @param _c posisi hewan (kolom)
    */
   public Alligator(string _name, double _weight, Sex _s, int _r, int _c) {
-  	super(_name,  _weight, _s,  _r, _c, 'A', GREEN);
+  	super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
