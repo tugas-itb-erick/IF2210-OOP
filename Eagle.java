@@ -1,14 +1,14 @@
 /* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Elephant.java			*/
+/* Nama file	: Eagle.java			*/
 
 import java.util.*;
 import java.lang.*;
 
-class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
+class Eagle extends Animal/*, FlyingAnimal, Carnivore, Aves*/ {
 	/**
 	 * Constructor
 	 */
-	public Elephant() {
+	public Eagle() {
 		super();
 	}
 	
@@ -21,7 +21,7 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	 * @param _c posisi hewan (kolom)
 	 * @param _w buas atau jinaknya hewan (true=buas, false=jinak)
 	 */
-	public Elephant(String _name, double _weight, Sex _s, int _r, int _c) {
+	public Eagle(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
 	
@@ -29,9 +29,9 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
 	 */
-	public Elephant Clone()
+	public Eagle Clone()
 	{
-		Elephant E = new Elephant(name,weight,sex,row,col);
+		Eagle E = new Eagle(name,weight,sex,row,col);
 		return E;
 	}
 		
@@ -40,7 +40,7 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public void Interact() {
-		System.out.println("This elephant is trumpeting!!");
+		System.out.println("This eagle is soaring in the sky!");
 	}
 	
 	/**
@@ -49,7 +49,7 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public char Render() {
-		return 'E';
+		return 'e';
 	}
 	
 	/**
@@ -58,7 +58,7 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public String RenderWithColor() {
-		return ANSI_YELLOW + Render() + ANSI_RESET;
+		return ANSI_RED + Render() + ANSI_RESET;
 	}
 	
 	/**
@@ -79,3 +79,4 @@ class Elephant extends Animal/*, LandAnimal, Herbivore, Mammalia*/ {
 	}	
 	*/
 }
+
