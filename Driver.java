@@ -5,6 +5,37 @@ import java.util.*;
 import java.io.*;
 
 public class Driver {
+  public static Zoo myZoo;
+
+  public static void CreateZoo(){
+    try{
+      Scanner inZoo = new Scanner(new File("zoo.txt"));
+      Scanner inCage = new Scanner(new File("cage.txt"));
+      Scanner inAnimal = new Scanner(new File("animal.txt"));
+      Scanner in = new Scanner(System.in);
+      Zoo myZoo = new Zoo();
+      // Read Zoo from file
+      myZoo.Read(inZoo);
+      // Read Cage from file and add to Zoo
+      int n_cage = inCage.nextInt();
+      for(int i=0; i<n_cage; i++){
+        Cage myCage = new Cage();
+        myCage.Read(inCage);
+        myZoo.AddCage(myCage);
+      }
+      // Read Animal from file and add to Zoo
+      int n_animal = inAnimal.nextInt();
+      for(int i=0; i<n_animal; i++){
+        AnimalFactory af = new AnimalFactory();
+        Animal myAnimal = af.Read(inAnimal);
+        myZoo.AddAnimal(myAnimal);
+      }
+    }
+    catch(FileNotFoundException e){
+      System.out.println(e);
+    }
+  }
+
   public static void ShowMenu(){
     System.out.println("Selamat datang di Kebun Binatang Virtual Zoo!");
     System.out.println("1. Menampilkan peta Kebun Binatang");
@@ -16,30 +47,8 @@ public class Driver {
   }
 
   public static void main(String[] args) {
-    /* -- Create Zoo with its Components From File -- */
-    Scanner inZoo = new Scanner(new File("zoo.txt"));
-    Scanner inCage = new Scanner(new File("cage.txt"));
-    Scanner inAnimal = new Scanner(new File("animal.txt"));
     Scanner in = new Scanner(System.in);
-    Zoo myZoo = new Zoo();
-    // Read Zoo from file
-    myZoo.Read(inZoo);
-    // Read Cage from file and add to Zoo
-    int n_cage = inCage.nextInt();
-    for(int i=0; i<n_cage; i++){
-      Cage myCage = new Cage();
-      myCage.Read(inCage);
-      myZoo.AddCage(myCage);
-    }
-    // Read Animal from file and add to Zoo
-    int n_animal = inAnimal.nextInt();
-    for(int i=0; i<n_animal; i++){
-      Animal myAnimal;
-      myAnimal.Read(inAnimal);
-      myZoo.AddAnimal(inAnimal);
-    }
-
-    /* -- Zoo Options -- */
+    CreateZoo();
     int n;
     do{
       ShowMenu();

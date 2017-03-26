@@ -15,7 +15,7 @@ public class Cage implements Renderable {
   private char habitat;
 
   /**
-	 * Konstruktor 
+	 * Konstruktor
 	 */
   public Cage(){
     size = 10;
@@ -29,7 +29,7 @@ public class Cage implements Renderable {
 
 	/**
 	 * Konstruktor dengan parameter
-	 * @param s ukuran kandang 
+	 * @param s ukuran kandang
 	 */
   public Cage(int s){
     size = s;
@@ -51,12 +51,12 @@ public class Cage implements Renderable {
 
 	/**
 	 * Mengembalikan jumlah binatang yang ada pada kandang
-	 * @return jumlah binatang 
+	 * @return jumlah binatang
 	 */
   public int GetTotalAnimal() {
     return n_animal;
   }
-	
+
 	/**
 	 * Mengembalikan posisi (baris) sel kandang ke-i
 	 * @return posisi(baris) sel kandang ke-i
@@ -106,6 +106,7 @@ public class Cage implements Renderable {
   // f.s. cage is empty with new size s
   public void SetNewCage(int s) {
     size = s;
+    used = 0;
     row = new int[size];
     col = new int[size];
     animal = new Animal[size];
@@ -179,7 +180,7 @@ public class Cage implements Renderable {
 	 * @param c koordinat kolom
 	 */
   public void AddPosition(int r, int c) {
-    if (used < size){
+    if (used <= size){
       row[used] = r;
       col[used] = c;
       used++;
@@ -221,7 +222,7 @@ public class Cage implements Renderable {
   }
 
 	/**
-	 * Menampilkan data kandang pada layar 
+	 * Menampilkan data kandang pada layar
 	 */
   public void Print(){
     System.out.println("Total size: " + size);
@@ -245,7 +246,7 @@ public class Cage implements Renderable {
   }
 
 	/**
-	 * Merubah posisi binatang-binatang pada kandang
+	 * Mengubah posisi binatang-binatang pada kandang
 	 */
   void MoveAnimal(){
     int i = 0;
@@ -307,16 +308,16 @@ public class Cage implements Renderable {
 	 * Menduplikasi suatu kandang
 	 * @param kandang yang ingin diduplikasi
 	 */
-  Cage Clone(Cage in){
-    Cage out = new Cage(in.GetSize());
+  Cage Clone(){
+    Cage out = new Cage(size);
 
-    out.SetHabitat(in.GetHabitat());
+    out.SetHabitat(habitat);
 
     for(int i=0; i<out.GetSize(); i++){
-      out.AddPosition(in.GetRow(i), in.GetCol(i));
+      out.AddPosition(row[i], col[i]);
     }
-    for(int i=0; i<in.GetTotalAnimal(); i++){
-      out.AddAnimal(in.GetAnimal(i));
+    for(int i=0; i<GetTotalAnimal(); i++){
+      out.AddAnimal(animal[i]);
     }
 
     return out;

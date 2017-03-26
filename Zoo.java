@@ -134,7 +134,7 @@ public class Zoo {
 
   void Tour(){
     boolean found = false;
-    int xen, yen, xex, yex;
+    int xen = 0, yen = 0, xex = 0, yex = 0;
     Random rand = new Random();
 
     // Get Random Entrance n Exit
