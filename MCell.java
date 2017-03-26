@@ -1,5 +1,6 @@
-/* NIM/Nama : 13515057 / Erick Wijaya */
-/* File     : MCell.java */
+/** @author NIM/Nama : 13515057 / Erick Wijaya 
+  * File     : MCell.java 
+  */
 
 import java.util.*;
 import java.lang.*;

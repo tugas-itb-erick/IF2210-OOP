@@ -1,6 +1,7 @@
-/* NIM/Nama : 13515057 / Erick Wijaya */
-/* File     : Zoo.java */
-
+/** @author NIM/Nama : 13515057 / Erick Wijaya 
+  * File     : Zoo.java 
+  */
+  
 import java.io.*;
 import java.util.*;
 import java.lang.*;
