@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.*;
 
-class Eagle extends Animal/*, FlyingAnimal, Carnivore, Aves*/ {
+class Eagle extends Animal/* implements FlyingAnimal, Carnivore, Aves*/ {
 	/**
 	 * Constructor
 	 */
@@ -30,8 +30,8 @@ class Eagle extends Animal/*, FlyingAnimal, Carnivore, Aves*/ {
 	 */
 	public Eagle Clone()
 	{
-		Eagle E = new Eagle(name,weight,sex,row,col);
-		return E;
+		Eagle out = new Eagle(name,weight,sex,row,col);
+		return out;
 	}
 		
 	/**

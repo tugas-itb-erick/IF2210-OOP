@@ -20,7 +20,7 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
    * @param _c posisi hewan (kolom)
    */
   public Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c) {
-  	super(_name,  _weight, _s,  _r, _c, 'H', GREEN);
+  	super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
@@ -28,8 +28,8 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
    */
   public Hippopotamus Clone()
   {
-    Hippopotamus H = new Hippopotamus(name,weight,sex,row,col);
-    return H;
+    Hippopotamus out = new Hippopotamus(name,weight,sex,row,col);
+    return out;
   }
   /** 
    * Menampilkan interaksi hewan ke layar

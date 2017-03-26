@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.*;
 
-class Whale extends Animal/*, WaterAnimal, Carnivore, Mammalia*/ {
+class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	/**
 	 * Constructor
 	 */
@@ -30,8 +30,8 @@ class Whale extends Animal/*, WaterAnimal, Carnivore, Mammalia*/ {
 	 */
 	public Whale Clone()
 	{
-		Whale E = new Whale(name,weight,sex,row,col);
-		return E;
+		Whale out = new Whale(name,weight,sex,row,col);
+		return out;
 	}
 		
 	/**

@@ -1,14 +1,14 @@
 /* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Elephant.java			*/
+/* Nama file	: PuffFish.java			*/
 
 import java.util.*;
 import java.lang.*;
 
-class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
+class PuffFish extends Animal/* implements WaterAnimal, Omnivore, Pisces*/ {
 	/**
 	 * Constructor
 	 */
-	public Elephant() {
+	public PuffFish() {
 		super();
 	}
 	
@@ -20,7 +20,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 * @param _r posisi hewan (baris)
 	 * @param _c posisi hewan (kolom)
 	 */
-	public Elephant(String _name, double _weight, Sex _s, int _r, int _c) {
+	public PuffFish(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
 	
@@ -28,9 +28,9 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
 	 */
-	public Elephant Clone()
+	public PuffFish Clone()
 	{
-		Elephant out = new Elephant(name,weight,sex,row,col);
+		PuffFish out = new PuffFish(name,weight,sex,row,col);
 		return out;
 	}
 		
@@ -39,7 +39,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public void Interact() {
-		System.out.println("This elephant is trumpeting!!");
+		System.out.println("This puff fish is fat!");
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public char Render() {
-		return 'E';
+		return 'F';
 	}
 	
 	/**
@@ -57,7 +57,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	 */
 	@Override
 	public String RenderWithColor() {
-		return ANSI_YELLOW + Render() + ANSI_RESET;
+		return ANSI_CYAN + Render() + ANSI_RESET;
 	}
 	
 	/**
@@ -78,3 +78,4 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	}	
 	*/
 }
+
