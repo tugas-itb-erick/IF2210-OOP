@@ -1,5 +1,7 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File     : Hippopotamus.java                */
+/**
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
+ * File : Hippopotamus.java                
+ */
 
 import java.util.*;
 import java.lang.*;
@@ -11,7 +13,7 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
   public Hippopotamus() {
     super();
   }
-  /**
+  /** 
    * Consructor dengan parameter
    * @param _name nama binatang
    * @param _weight berat
@@ -19,7 +21,7 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
    * @param _r posisi hewan (baris)
    * @param _c posisi hewan (kolom)
    */
-  public Hippopotamus(string _name, double _weight, Sex _s, int _r, int _c) {
+  public Hippopotamus(String _name, double _weight, Sex _s, int _r, int _c) {
   	super(_name,  _weight, _s,  _r, _c);
   }
   /**
@@ -28,17 +30,17 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
    */
   public Hippopotamus Clone()
   {
-    Hippopotamus out = new Hippopotamus(name,weight,sex,row,col);
-    return out;
+    Hippopotamus H = new Hippopotamus(name,weight,sex,row,col);
+    return H;
   }
-  /**
+  /** 
    * Menampilkan interaksi hewan ke layar
    */
   @Override
   public void Interact() {
   	System.out.println("This hippo is so big");
   }
-  /**
+  /** 
    * Mengembalikan karakter id tiap hewan
    * @return karakter tiap hewan
    */
@@ -46,7 +48,7 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
   public char Render() {
     return 'H';
   }
-  /**
+  /** 
    * Mengembalikan warna dari hewan
    * @return warna cetak hewan
    */
@@ -62,18 +64,18 @@ class Hippopotamus extends Animal implements LandAnimal, WaterAnimal, Herbivore,
   public boolean IsWild() {
     return true;
   }
-  /**
+  /** 
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  public double CountConsumedMeat() {
-    return weight*meatRatio;
-  }
-  /**
+  //public double CountConsumedMeat() {
+    //return weight*meatRatio;
+  //}
+  /** 
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  public double CountConsumedVeggie() {
-    return weight*vegRatio;
-  }
+  //public double CountConsumedVeggie() {
+    //return weight*vegRatio;
+  //}
 }

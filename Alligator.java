@@ -1,5 +1,7 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File     : Alligator.java                   */
+/**
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
+ * File : Alligator.java     
+ */
 
 import java.util.*;
 import java.lang.*;
@@ -19,7 +21,7 @@ class Alligator extends Animal implements LandAnimal, WaterAnimal, Carnivore, Re
    * @param _r posisi hewan (baris)
    * @param _c posisi hewan (kolom)
    */
-  public Alligator(string _name, double _weight, Sex _s, int _r, int _c) {
+  public Alligator(String _name, double _weight, Sex _s, int _r, int _c) {
   	super(_name,  _weight, _s,  _r, _c);
   }
   /**
@@ -52,7 +54,7 @@ class Alligator extends Animal implements LandAnimal, WaterAnimal, Carnivore, Re
    */
   @Override
   public String RenderWithColor() {
-    return ANSI_GREEN + render() + ANSI_RESET;
+    return ANSI_GREEN + Render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
@@ -66,14 +68,14 @@ class Alligator extends Animal implements LandAnimal, WaterAnimal, Carnivore, Re
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  public double CountConsumedMeat() {
-    return weight*meatRatio;
-  }
+  //public double CountConsumedMeat() {
+    //return weight*meatRatio;
+  //}
   /** 
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  public double CountConsumedVeggie() {
-    return weight*vegRatio;
-  }
+  //public double CountConsumedVeggie() {
+    //return weight*vegRatio;
+  //}
 }

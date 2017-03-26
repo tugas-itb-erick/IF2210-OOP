@@ -1,5 +1,7 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File     : Frog.java                        */
+/**
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
+ * File : Frog.java         
+ */
 
 import java.util.*;
 import java.lang.*;
@@ -19,8 +21,8 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    * @param _r posisi hewan (baris)
    * @param _c posisi hewan (kolom)
    */
-  public Frog(string _name, double _weight, Sex _s, int _r, int _c) {
-		super(_name,  _weight, _s,  _r, _c);
+  public Frog(String _name, double _weight, Sex _s, int _r, int _c) {
+  	super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
@@ -28,8 +30,8 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    */
   public Frog Clone()
   {
-    Frog out = new Frog(name,weight,sex,row,col);
-    return out;
+    Frog F = new Frog(name,weight,sex,row,col);
+    return F;
   }
   /** 
     * Menampilkan interaksi hewan ke layar
@@ -52,7 +54,7 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    */
   @Override
   public String RenderWithColor() {
-    return ANSI_GREEN + render() + ANSI_RESET;
+    return ANSI_GREEN + Render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
@@ -66,14 +68,14 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  public double CountConsumedMeat() {
-    return weight*meatRatio;
-  }
+  //public double CountConsumedMeat() {
+    //return weight*meatRatio;
+  //}
   /** 
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  public double CountConsumedVeggie() {
-    return weight*vegRatio;
-  }
+  //public double CountConsumedVeggie() {
+    //return weight*vegRatio;
+  //}
 }
