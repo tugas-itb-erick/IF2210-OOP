@@ -1,4 +1,5 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya
+/** 
+  * @author NIM/Nama : 13515057 / Erick Wijaya
   * Nama File        : Zoo.java
   */
 
@@ -14,7 +15,9 @@ public class Zoo {
   private int n_cage;
   private Cell[][] cell;
   private Cage[] cage;
-
+  /**
+    * Konstruktor
+    */
   public Zoo(){
     row = DEFROW;
     col = DEFCOL;
@@ -22,7 +25,11 @@ public class Zoo {
     cage = new Cage[row*col];
     n_cage = 0;
   }
-
+  /**
+    * Konstruktor dengan parameter
+    * @param r jumlah baris
+    * @param c jumlah kolom
+    */
   public Zoo(int r, int c){
     row = r;
     col = c;
@@ -30,27 +37,48 @@ public class Zoo {
     cage = new Cage[row*col];
     n_cage = 0;
   }
-
+  /**
+    * Mengembalikan jumlah baris
+    * @return jumlah baris
+    */
   int GetRow(){
     return row;
   }
-
+  /**
+    * Mengembalikan jumlah kolom
+    * @return jumlah kolom
+    */
   int GetCol(){
     return col;
   }
-
+  /**
+    * Mengembalikan jumlah kandang yang ada pada kebun binatang
+    * @return jumlah kandang
+    */
   int GetTotalCage(){
     return n_cage;
   }
-
+  /**
+    * Mengembalikan sel ke (i,j)
+    * @return sel ke (i,j)
+    */
   Cell GetCell(int i, int j){
     return cell[i][j];
   }
-
+  /**
+    * Mengembalikan kandang ke-i
+    * @return kandang ke-i
+    */
   Cage GetCage(int i){
     return cage[i];
   }
-
+  /**
+    * Mengatur jumlah baris dan kolom dari kebun binatang
+    * Isi kebun binatang yang lama akan hilang, terbentuk kebun binatang baru 
+    * dengan jumlah baris dan kolom sesuai parameter
+    * @param r jumlah baris
+    * @param c jumlah kolom
+    */
   // only use this if you want to recreate the zoo i.e. input zoo
   // WARNING all existing zoo data (cells and animals) will be lost
   // f.s. zoo is empty with new size rxc with
@@ -74,7 +102,8 @@ public class Zoo {
         while ((j < n_cage) && valid){
           int k = 0;
           while ((k < cage[j].GetSize()) && valid){
-            if ((in.GetRow(i) == cage[j].GetRow(k)) && (in.GetCol(i) == cage[j].GetCol(k)))
+            if ((in.GetRow(i) == cage[j].GetRow(k)) && 
+               (in.GetCol(i) == cage[j].GetCol(k)))
               valid = false;
             else
               k++;
@@ -93,14 +122,18 @@ public class Zoo {
       }
     }
   }
-
+  /**
+    * Menambahkan binatang pada kebun binatang
+    * @param binatang yang ingin ditambahkan 
+    */
   void AddAnimal(Animal in){
     int i = 0;
     boolean found = false;
     while ((i < n_cage) && (cage[i].GetHabitat() != '?') && !found){
       int j = 0;
       while ((j < cage[i].GetSize()) && !found){
-        if ((cage[i].GetRow(j) == in.GetRow()) && (cage[i].GetCol(j) == in.GetCol()))
+        if ((cage[i].GetRow(j) == in.GetRow()) && 
+          (cage[i].GetCol(j) == in.GetCol()))
           found = true;
         else
           j++;
@@ -112,10 +145,18 @@ public class Zoo {
       cage[i].AddAnimal(in);
     }
   }
-
+  /**
+    * Menampilkan kebun binatang dengan batas-batas tertentu
+    * @param x1 batas baris teratas
+    * @param x1 batas kolom terkiri
+    * @param x1 batas baris terbawah
+    * @param x1 batas kolom terkanan
+    */
   void Display(int x1, int y1, int x2, int y2){
-    if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >= col) || (x1 > x2) || (y1 > y2)){
-      System.out.println("Indeks posisi zoo tidak boleh negatif atau lebih besar dari ukuran sebenarnya.");
+    if ((x1 < 0) || (x2 >= row) || (y1 < 0) || (y2 >= col) || (x1 > x2) 
+       || (y1 > y2)){
+      System.out.println("Indeks posisi zoo tidak boleh negatif atau 
+                          lebih besar dari ukuran sebenarnya.");
     }
     else{
       for(int i=x1; i<=x2; i++){
@@ -135,7 +176,8 @@ public class Zoo {
                 int i2 = 0;
                 boolean found2 = false;
                 while ((i2 < cage[k].GetTotalAnimal()) && !found2){
-                  if ((cage[k].GetAnimal(i2).GetRow() == i) && (cage[k].GetAnimal(i2).GetCol() == j))
+                  if ((cage[k].GetAnimal(i2).GetRow() == i) && 
+                      (cage[k].GetAnimal(i2).GetCol() == j))
                     found2 = true;
                   else
                     i2++;
@@ -143,7 +185,8 @@ public class Zoo {
 
                 if (found2){
                   System.out.print(cage[k].GetAnimal(i2).RenderWithColor());
-                //  printColor(cg[k].GetAnimal(i2)->render(), cg[k].GetAnimal(i2)->getColor());
+                /*  printColor(cg[k].GetAnimal(i2)->render(),
+                               cg[k].GetAnimal(i2)->getColor());*/
                 }else{
                   System.out.print(cage[k].RenderWithColor());
                 //  printColor(cg[k].render(), cg[k].getColor());
@@ -163,11 +206,15 @@ public class Zoo {
       }
     }
   }
-
+  /**
+    * Menampilkan keseluruhan kebun binatang
+    */
   void Display(){
     Display(0, 0, row-1, col-1);
   }
-
+  /**
+    * Melakukan tour pada kebun binatang
+    */
   void Tour(){
     boolean found = false;
     int xen = 0, yen = 0, xex = 0, yex = 0;
@@ -241,7 +288,8 @@ public class Zoo {
     boolean[][] path = new boolean[row][col];
     for(int i=0; i<row; i++){
       for(int j=0; j<col; j++){
-        if ((cell[i][j].Render() == 'o') || (cell[i][j].Render() == '-') || (cell[i][j].Render() == 'i'))
+        if ((cell[i][j].Render() == 'o') || (cell[i][j].Render() == '-') || 
+                                            (cell[i][j].Render() == 'i'))
           path[i][j] = true;
         else
           path[i][j] = false;
@@ -310,7 +358,10 @@ public class Zoo {
         break;
     }
   }
-
+  /**
+    * Membaca kebun binatang dari input suatu scanner
+    * @param in scanner input
+    */
   void Read(Scanner in){
     int r = in.nextInt();
     int c = in.nextInt();
@@ -332,16 +383,17 @@ public class Zoo {
       }
     }
   }
-
+  /**
+    * Menampilkan total makanan yang dikonsumsi di kebun binatang 
+    */
   void PrintConsumedFood(){
     double countm = 0, countv = 0;
-    for(int i=0; i<n_cage; i++){ //System.out.println(cage[i].GetAnimal(0).CountConsumedVeggie());
+    for(int i=0; i<n_cage; i++){ 
+      //System.out.println(cage[i].GetAnimal(0).CountConsumedVeggie());
       countm += cage[i].CountConsumedMeat();
       countv += cage[i].CountConsumedVeggie();
     }
     System.out.println("Total Daging yang dikonsumsi: " + countm);
     System.out.println("Total Sayur yang dikonsumsi: " + countv);
   }
-
-
 }
