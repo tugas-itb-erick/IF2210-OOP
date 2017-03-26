@@ -5,7 +5,7 @@ import java.util.*;
 import java.io.*;
 
 public class Driver {
-  public static Zoo myZoo;
+  public static Zoo myZoo = new Zoo();
 
   public static void CreateZoo(){
     try{
@@ -13,7 +13,7 @@ public class Driver {
       Scanner inCage = new Scanner(new File("cage.txt"));
       Scanner inAnimal = new Scanner(new File("animal.txt"));
       Scanner in = new Scanner(System.in);
-      Zoo myZoo = new Zoo();
+      myZoo = new Zoo();
       // Read Zoo from file
       myZoo.Read(inZoo);
       // Read Cage from file and add to Zoo

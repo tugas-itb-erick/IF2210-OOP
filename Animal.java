@@ -36,13 +36,13 @@ abstract class Animal implements Renderable {
 		row =_r;
 		col =_c;
 	}
-	
+
 	/**
 	 * Melakukan duplikasi binatang
 	 * @return binatang yang diduplikasi
 	 */
-	abstract public Animal Clone(); 
-	
+	abstract public Animal Clone();
+
 	/**
 	 * Mengembalikan nama dari binatang
 	 * @return nama binatang
@@ -74,7 +74,7 @@ abstract class Animal implements Renderable {
 	public int GetRow() {
 		return row;
 	}
-	
+
 	/**
 	 * Mengembalikan posisi kolom dari binatang
 	 * @return posisi kolom binatang
@@ -137,16 +137,27 @@ abstract class Animal implements Renderable {
 		else
 			System.out.println("Wild: false");
 	}
-	
+
 	/**
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika tidak liar
 	 */
 	abstract public boolean IsWild();
-	
+
 	/**
 	 * Menampilkan interaksi dari binatang
 	 */
 	abstract public void Interact();
 
+	/**
+   * Mengembalikan jumlah daging yang dikonsumsi
+   * @return jumlah daging yang dikonsumsi
+   */
+  //abstract public double CountConsumedMeat();
+
+  /**
+   * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
+   * @return jumlah makanan tumbuhan yang dikonsumsi
+   */
+  //abstract public double CountConsumedVeggie();
 }
