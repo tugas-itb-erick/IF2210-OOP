@@ -67,7 +67,7 @@ public class Cockatoo extends Animal implements /*FlyingAnimal, */ Omnivore, Ave
   public int GetHeartChamber() {
     return 2;
   }
- /** 
+ /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
@@ -95,6 +95,7 @@ public class Cockatoo extends Animal implements /*FlyingAnimal, */ Omnivore, Ave
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
+  @Override
   public double CountConsumedMeat() {
     return weight*GetVegRatio();
   }
@@ -102,6 +103,7 @@ public class Cockatoo extends Animal implements /*FlyingAnimal, */ Omnivore, Ave
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
+  @Override
   public double CountConsumedVeggie() {
     return weight*GetMeatRatio();
   }

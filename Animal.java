@@ -155,11 +155,11 @@ abstract public class Animal implements Renderable {
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  //abstract public double CountConsumedMeat();
+  abstract public double CountConsumedMeat();
 
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  //abstract public double CountConsumedVeggie();
+  abstract public double CountConsumedVeggie();
 }

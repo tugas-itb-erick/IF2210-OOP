@@ -335,7 +335,7 @@ public class Zoo {
 
   void PrintConsumedFood(){
     double countm = 0, countv = 0;
-    for(int i=0; i<n_cage; i++){
+    for(int i=0; i<n_cage; i++){ //System.out.println(cage[i].GetAnimal(0).CountConsumedVeggie());
       countm += cage[i].CountConsumedMeat();
       countv += cage[i].CountConsumedVeggie();
     }

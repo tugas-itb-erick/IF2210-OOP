@@ -285,10 +285,11 @@ public class Cage implements Renderable {
 	 * Mengembalikan jumlah total daging yang dikonsumsi seluruh binatang pada kandang
 	 * @return jumlah daging
 	 */
-  double CountConsumedMeat(){
+  public double CountConsumedMeat(){
     double sum = 0;
-    for(int i=0; i<n_animal; i++){
-      //sum += animal[i].CountConsumedMeat();
+    for(int i=0; i<n_animal; i++){ /*System.out.println(i + " " + (animal[i] instanceof Giraffe));
+    animal[i].DisplayAnimalData();*/
+      sum += animal[i].CountConsumedMeat();
     }
     return sum;
   }
@@ -297,10 +298,10 @@ public class Cage implements Renderable {
 	 * Mengembalikan jumlah total sayur yang dikonsumsi seluruh binatang pada kandang
 	 * @return jumlah daging
 	 */
-  double CountConsumedVeggie(){
+  public double CountConsumedVeggie(){
     double sum = 0;
     for(int i=0; i<n_animal; i++){
-      //sum += animal[i].CountConsumedMeat();
+      sum += animal[i].CountConsumedVeggie();
     }
     return sum;
   }

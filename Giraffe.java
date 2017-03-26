@@ -63,11 +63,11 @@ public class Giraffe extends Animal implements /*LandAnimal,*/ Herbivore, Mammal
   public boolean IsWild() {
     return false;
   }
-    @Override
+  @Override
   public int GetHeartChamber() {
     return 4;
   }
- /** 
+ /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
@@ -95,6 +95,7 @@ public class Giraffe extends Animal implements /*LandAnimal,*/ Herbivore, Mammal
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
+  @Override
   public double CountConsumedMeat() {
     return weight*GetVegRatio();
   }
@@ -102,6 +103,7 @@ public class Giraffe extends Animal implements /*LandAnimal,*/ Herbivore, Mammal
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
+  @Override
   public double CountConsumedVeggie() {
     return weight*GetMeatRatio();
   }

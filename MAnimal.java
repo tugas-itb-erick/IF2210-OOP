@@ -6,7 +6,8 @@ import java.lang.*;
 
 public class MAnimal {
 	public static void main(String[] args) {
-    Animal tesAnimal = new Animal("GreyElephant",200, Sex.MALE, 2, 2, true);
+    Animal tesAnimal = new Piranha("GreyElephant",200, Sex.MALE, 2, 2);
     tesAnimal.DisplayAnimalData();
+		System.out.println(tesAnimal.CountConsumedVeggie());
   }
 }

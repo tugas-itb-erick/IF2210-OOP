@@ -67,7 +67,7 @@ public class BlueTang extends Animal implements /*WaterAnimal, */Omnivore, Pisce
   public int GetHeartChamber() {
     return 2;
   }
-  /** 
+  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
@@ -81,7 +81,7 @@ public class BlueTang extends Animal implements /*WaterAnimal, */Omnivore, Pisce
    */
   @Override
   public double GetVegRatio() {
-  return 0;
+    return 0;
   }
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
@@ -89,7 +89,7 @@ public class BlueTang extends Animal implements /*WaterAnimal, */Omnivore, Pisce
    */
   @Override
   public double GetMeatRatio() {
-  return 0.05;
+    return 0.05;
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi

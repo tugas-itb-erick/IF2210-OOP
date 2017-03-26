@@ -11,11 +11,11 @@ public interface Omnivore {
    * Mengembalikan nilai rasio daging.
    * @return nilai rasio daging
    */
-  abstract public double GetMeatRatio();
+  public double GetMeatRatio();
 
   /**
    * Mengembalikan nilai rasio sayur.
    * @return nilai rasio sayur
    */
-  abstract public double GetVegRatio();
+  public double GetVegRatio();
 }

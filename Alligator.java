@@ -63,7 +63,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
   public boolean IsWild() {
     return true;
   }
-  /** 
+  /**
    * Mengembalikan jumlah ruang jantung hewan
    * @return jumlah ruang jantung hewan
    */
@@ -71,7 +71,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
   public int GetHeartChamber() {
 	  return 4;
   }
- /** 
+ /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
@@ -99,6 +99,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
+  @Override
   public double CountConsumedMeat() {
     return weight*GetVegRatio();
   }
@@ -106,6 +107,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
+  @Override
   public double CountConsumedVeggie() {
     return weight*GetMeatRatio();
   }
