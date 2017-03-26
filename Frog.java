@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Frog extends Animal /*implements LandAnimal, WaterAnimal, Carnivore, Amphibia*/ {
+public class Frog extends Animal implements /*LandAnimal, WaterAnimal,*/ Carnivore, Amphibia {
   /**
    * Constructor
    */
@@ -22,14 +22,13 @@ public class Frog extends Animal /*implements LandAnimal, WaterAnimal, Carnivore
    * @param _c posisi hewan (kolom)
    */
   public Frog(String _name, double _weight, Sex _s, int _r, int _c) {
-  	super(_name,  _weight, _s,  _r, _c);
+    super(_name,  _weight, _s,  _r, _c);
   }
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Frog Clone()
-  {
+  public Frog Clone() {
     Frog F = new Frog(name,weight,sex,row,col);
     return F;
   }
@@ -38,7 +37,7 @@ public class Frog extends Animal /*implements LandAnimal, WaterAnimal, Carnivore
     */
   @Override
   public void Interact() {
-  	System.out.println("Croag.... Croag.... Ribbet... Ribbet...");
+    System.out.println("Croag.... Croag.... Ribbet... Ribbet...");
   }
   /**
    * Mengembalikan karakter id tiap hewan
@@ -64,18 +63,46 @@ public class Frog extends Animal /*implements LandAnimal, WaterAnimal, Carnivore
   public boolean IsWild() {
     return false;
   }
+    @Override
+  public int GetHeartChamber() {
+    return 4;
+  }
+ /** 
+   * Mengembalikan jenis darah hewan ('h'/'c')
+   * @return jenis darah hewan ('h'/'c')
+   */
+  @Override
+  public char GetBloodTemperature() {
+    return 'c';
+  }
+  /**
+   * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
+   * @return ratio sayur yang dibutuhkan hewan
+   */
+  @Override
+  public double GetVegRatio() {
+    return 0;
+  }
+  /**
+   * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
+   * @return ratio sayur yang dibutuhkan hewan
+   */
+  @Override
+  public double GetMeatRatio() {
+    return 0.03;
+  }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  //public double CountConsumedMeat() {
-    //return weight*meatRatio;
-  //}
+  public double CountConsumedMeat() {
+    return weight*GetVegRatio();
+  }
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  //public double CountConsumedVeggie() {
-    //return weight*vegRatio;
-  //}
+  public double CountConsumedVeggie() {
+    return weight*GetMeatRatio();
+  }
 }

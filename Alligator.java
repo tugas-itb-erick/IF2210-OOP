@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Alligator extends Animal /*implements LandAnimal, WaterAnimal, Carnivore, Reptilia*/ {
+public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Carnivore, Reptilia {
   /**
    * Constructor
    */
@@ -28,8 +28,7 @@ public class Alligator extends Animal /*implements LandAnimal, WaterAnimal, Carn
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Alligator Clone()
-  {
+  public Alligator Clone() {
     Alligator A = new Alligator(name,weight,sex,row,col);
     return A;
   }
@@ -64,18 +63,50 @@ public class Alligator extends Animal /*implements LandAnimal, WaterAnimal, Carn
   public boolean IsWild() {
     return true;
   }
+  /** 
+   * Mengembalikan jumlah ruang jantung hewan
+   * @return jumlah ruang jantung hewan
+   */
+  @Override
+  public int GetHeartChamber() {
+	  return 4;
+  }
+ /** 
+   * Mengembalikan jenis darah hewan ('h'/'c')
+   * @return jenis darah hewan ('h'/'c')
+   */
+  @Override
+  public char GetBloodTemperature() {
+	  return 'c';
+  }
+  /**
+   * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
+   * @return ratio sayur yang dibutuhkan hewan
+   */
+  @Override
+  public double GetVegRatio() {
+	return 0;
+  }
+  /**
+   * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
+   * @return ratio sayur yang dibutuhkan hewan
+   */
+  @Override
+  public double GetMeatRatio() {
+	return 0.2;
+  }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  //public double CountConsumedMeat() {
-    //return weight*meatRatio;
-  //}
+  public double CountConsumedMeat() {
+    return weight*GetVegRatio();
+  }
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  //public double CountConsumedVeggie() {
-    //return weight*vegRatio;
-  //}
+  public double CountConsumedVeggie() {
+    return weight*GetMeatRatio();
+  }
 }
