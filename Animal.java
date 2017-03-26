@@ -8,202 +8,202 @@ import java.lang.*;
 
 public class Animal {
   private Species species;
-	private String name;
-	private double weight;
-	private Sex sex;
+  private String name;
+  private double weight;
+  private Sex sex;
   private int heart_chamber;
   private char blood;
   private double veg_ratio;
   private double meat_ratio;
   private char id;
-	private int row;
-	private int col;
+  private int row;
+  private int col;
   private Habitat habitat;
   private int wild;
-	
-	/** 
-	 * Konstruktor
-	 */
-	public Animal() {
-		name="unnamed";
-		weight = 0;
-		sex = Sex.FEMALE;
+  
+  /** 
+   * Konstruktor
+   */
+  public Animal() {
+    name="unnamed";
+    weight = 0;
+    sex = Sex.FEMALE;
     heart_chamber=0;
     blood = '?';
     veg_ratio = 0;
     meat_ratio = 0;
     id = '?';
-		row = 0;
-		col = 0;
+    row = 0;
+    col = 0;
     habitat = Habitat.HABITAT_NONE;
     wild = 0;
-	}
-	
-	/**
-	 * Konstruktor dengan parameter
-	 * @param _name nama hewan
-	 * @param _weight berat hewan
-	 * @param _sex jenis kelamin hewan (MALE/FEMALE)
+  }
+  
+  /**
+   * Konstruktor dengan parameter
+   * @param _name nama hewan
+   * @param _weight berat hewan
+   * @param _sex jenis kelamin hewan (MALE/FEMALE)
    * @param _hc jumlah ruang jantung
    * @param _blood jenis darah ('h'/'c')
    * @param _veg rasio sayur
    * @param _meat rasio daging
    * @param _id karakter id hewan
-	 * @param _row posisi hewan (baris)
-	 * @param _col posisi hewan (kolom)
+   * @param _row posisi hewan (baris)
+   * @param _col posisi hewan (kolom)
    * @param _habitat jenis hewan bedasarkan tempat hidup
    * @param _wild liar/tidaknya hewan
-	 */
-	public Animal(String _name, double _weight, Sex _sex, int _hc, char _blood, 
+   */
+  public Animal(String _name, double _weight, Sex _sex, int _hc, char _blood, 
                 double _veg, double _meat, char _id, int _row, int _col, 
                 Habitat _habitat,int _wild) {
-		name = _name;
-		weight = _weight;
-		sex = _sex;
+    name = _name;
+    weight = _weight;
+    sex = _sex;
     heart_chamber = _hc;
     blood = _blood;
     veg_ratio = _veg;
     meat_ratio = _meat;
     id = _id;
-		row = _row;
-		col =_col;
+    row = _row;
+    col =_col;
     habitat = _habitat; 
     wild = _wild;
-	}
-	
-	/**
-	 * Melakukan duplikasi binatang
-	 * @return binatang yang diduplikasi
-	 */
-	public Animal Clone() {
+  }
+  
+  /**
+   * Melakukan duplikasi binatang
+   * @return binatang yang diduplikasi
+   */
+  public Animal Clone() {
     Animal out = new Animal(name, weight, sex, heart_chamber, blood, veg_ratio,
                             meat_ratio, id, row, col, habitat, wild);
     return out;
   }
-	
-	/**
-	 * Mengembalikan nama dari binatang
-	 * @return nama binatang
-	 */
-	public String GetName() {
-		return name;
-	}
-
-	/**
-	 * Mengembalikan berat dari binatang
-	 * @return berat binatang
-	 */
-	public double GetWeight() {
-		return weight;
-	}
-
-	/**
-	 * Mengembalikan jenis kelamin dari binatang
-	 * @return jenis kelamin binatang
-	 */
-	public Sex GetSex() {
-		return sex;
-	}
   
   /**
-	 * Mengembalikan ruang jantung dari binatang
-	 * @return ruang jantung binatang
-	 */
-	public int GetHeartChamber() {
-		return heart_chamber;
-	}
-  
-  /**
-	 * Mengembalikan jenis darah (panas/dingin) dari binatang
-	 * @return jenis darah (panas/dingin)  binatang
-	 */
-	public char GetBlood() {
-		return blood;
-	}
-  
-  /**
-	 * Mengembalikan rasio konsumsi sayur dari binatang
-	 * @return rasio konsumsi sayur binatang
-	 */
-	public double GetVegRat() {
-		return veg_ratio;
-	}
-  
-  /**
-	 * Mengembalikan rasio konsumsi daging dari binatang
-	 * @return rasio konsumsi daging binatang
-	 */
-	public double GetMeatRat() {
-		return meat_ratio;
-	}
+   * Mengembalikan nama dari binatang
+   * @return nama binatang
+   */
+  public String GetName() {
+    return name;
+  }
 
   /**
-	 * Mengembalikan id dari binatang
-	 * @return id binatang
-	 */
-	public char GetId() {
-		return id;
-	}
-  
-	/**
-	 * Mengembalikan posisi baris dari binatang
-	 * @return posisi baris binatang
-	 */
-	public int GetRow() {
-		return row;
-	}
+   * Mengembalikan berat dari binatang
+   * @return berat binatang
+   */
+  public double GetWeight() {
+    return weight;
+  }
 
-	/**
-	 * Mengembalikan posisi kolom dari binatang
-	 * @return posisi kolom binatang
-	 */
-	public int GetCol() {
-		return col;
-	}
+  /**
+   * Mengembalikan jenis kelamin dari binatang
+   * @return jenis kelamin binatang
+   */
+  public Sex GetSex() {
+    return sex;
+  }
   
   /**
-	 * Mengembalikan habitat dari binatang
-	 * @return id binatang
-	 */
-	public Habitat GetHabitat() {
-		return habitat;
-	}
+   * Mengembalikan ruang jantung dari binatang
+   * @return ruang jantung binatang
+   */
+  public int GetHeartChamber() {
+    return heart_chamber;
+  }
   
   /**
-	 * Memeriksa liar/tidaknya binatang
-	 * @return id binatang
-	 */
+   * Mengembalikan jenis darah (panas/dingin) dari binatang
+   * @return jenis darah (panas/dingin)  binatang
+   */
+  public char GetBlood() {
+    return blood;
+  }
+  
+  /**
+   * Mengembalikan rasio konsumsi sayur dari binatang
+   * @return rasio konsumsi sayur binatang
+   */
+  public double GetVegRat() {
+    return veg_ratio;
+  }
+  
+  /**
+   * Mengembalikan rasio konsumsi daging dari binatang
+   * @return rasio konsumsi daging binatang
+   */
+  public double GetMeatRat() {
+    return meat_ratio;
+  }
+
+  /**
+   * Mengembalikan id dari binatang
+   * @return id binatang
+   */
+  public char GetId() {
+    return id;
+  }
+  
+  /**
+   * Mengembalikan posisi baris dari binatang
+   * @return posisi baris binatang
+   */
+  public int GetRow() {
+    return row;
+  }
+
+  /**
+   * Mengembalikan posisi kolom dari binatang
+   * @return posisi kolom binatang
+   */
+  public int GetCol() {
+    return col;
+  }
+  
+  /**
+   * Mengembalikan habitat dari binatang
+   * @return id binatang
+   */
+  public Habitat GetHabitat() {
+    return habitat;
+  }
+  
+  /**
+   * Memeriksa liar/tidaknya binatang
+   * @return id binatang
+   */
   public boolean IsWild() { 
     return (wild==1);
   }
 
-	/**
-	 * Menampilkan data atribut dari binatang ke layar
-	 */
-	public void DisplayAnimalData() {
-		System.out.println("Name: " + name);
-		System.out.println("Weight: "+ weight);
-		System.out.println("Sex: "+ sex);
+  /**
+   * Menampilkan data atribut dari binatang ke layar
+   */
+  public void DisplayAnimalData() {
+    System.out.println("Name: " + name);
+    System.out.println("Weight: "+ weight);
+    System.out.println("Sex: "+ sex);
     System.out.println("HeartChamber: " + heart_chamber);
     System.out.println("Blood: " + blood);
     System.out.println("VegRatio: " + veg_ratio);
     System.out.println("MeatRatio: " + meat_ratio);
     System.out.println("Id: " + id);
-		System.out.println("RowPosition: "+ row);
-		System.out.println("ColPosition: "+ col);
+    System.out.println("RowPosition: "+ row);
+    System.out.println("ColPosition: "+ col);
     System.out.println("Habitat: "+ habitat);
-		if (IsWild())
-			System.out.println("Wild: true");
-		else
-			System.out.println("Wild: false");
-	}
+    if (IsWild())
+      System.out.println("Wild: true");
+    else
+      System.out.println("Wild: false");
+  }
 
-	/**
-	 * Menampilkan interaksi dari binatang
-	 */
-	public void Interact() {
+  /**
+   * Menampilkan interaksi dari binatang
+   */
+  public void Interact() {
     if (species == species.ELEPHANT)
-		System.out.println("This elephant is trumpeting!!");
+    System.out.println("This elephant is trumpeting!!");
     else if (species == species.GIRAFFE)
       System.out.println("This girrafe is eating high tree leaves");
     else if (species == species.LION)
@@ -254,7 +254,7 @@ public class Animal {
       System.out.println("ERROR: Nama spesies salah");
   }
 
-	/**
+  /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
@@ -279,10 +279,10 @@ public class Animal {
   }
   
   /**
-	 * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
-	 * @return kode warna dan karakter binatang
-	 */
-	public String RenderWithColor() {
+   * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
+   * @return kode warna dan karakter binatang
+   */
+  public String RenderWithColor() {
     if (habitat==habitat.LANDANIMAL)
       return Color.ANSI_YELLOW + Render() + Color.ANSI_RESET;
     else if (habitat==habitat.WATERANIMAL)
@@ -291,5 +291,5 @@ public class Animal {
       return Color.ANSI_RED + GetId() + Color.ANSI_RESET;
     else
       return Color.ANSI_WHITE + GetId() + Color.ANSI_RESET;
-	}
+  }
 }
