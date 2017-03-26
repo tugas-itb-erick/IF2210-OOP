@@ -1,6 +1,6 @@
-/* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Tiger.java			*/
-
+/** @author NIM / Nama	: 13515144 / William	
+  * Nama file	: Tiger.java			
+  */
 import java.util.*;
 import java.lang.*;
 
