@@ -1,4 +1,5 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya
+/** 
+  * @author NIM/Nama : 13515057 / Erick Wijaya
   * Nama File        : Renderable.java 
   */
 
@@ -28,8 +29,16 @@ public interface Renderable {
   public static final String ANSI_BOLD = "\u001B[1m";
   public static final String ANSI_UNDERLINE = "\u001B[4m";
 
-  public char Render();
-  public String RenderWithColor();
+  /**
+    * Mengembalikan suatu karakter\
+    * @return karakter yang akan ditampilkan
+    */
+  abstract public char Render();
+  /**
+    * Mengembalikan suatu karakter beserta kode warna
+    * @return kode warna beserta karakter yang akan ditampilkan
+    */
+  abstract public String RenderWithColor();
 }
 
 /* Example:

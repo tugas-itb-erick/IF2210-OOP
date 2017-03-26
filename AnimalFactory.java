@@ -1,4 +1,5 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya
+/** 
+  * @author NIM/Nama : 13515057 / Erick Wijaya
   * Nama File        : AnimalFactory.java 
   */
 
@@ -7,8 +8,16 @@ import java.util.*;
 import java.lang.*;
 
 public class AnimalFactory {
+  /** 
+  * Konstruktor
+  */
   public AnimalFactory(){}
 
+  /** 
+  * Mengembalikan objek binatang dari suatu input "Scanner"
+  * @param in scanner input
+  * @return binatang yang diciptakan
+  */
   public Animal Read(Scanner in){
     String s = in.next();
     String name = in.next();
@@ -93,7 +102,5 @@ public class AnimalFactory {
     else{
       return new Elephant(name, weight, sex, row, col);
     }
-
   }
-
 }
