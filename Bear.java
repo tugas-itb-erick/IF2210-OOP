@@ -1,5 +1,6 @@
-/* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Bear.java			*/
+/** @author NIM / Nama	: 13515144 / William
+  * Nama file	: Bear.java			
+  */
 
 import java.util.*;
 import java.lang.*;

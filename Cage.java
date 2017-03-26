@@ -1,5 +1,6 @@
-/* NIM/Nama : 13515057 / Erick Wijaya */
-/* File     : Cage.java */
+/** @author NIM/Nama : 13515057 / Erick Wijaya 
+  *	File     : Cage.java 
+  */
 
 import java.io.*;
 import java.util.*;

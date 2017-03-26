@@ -1,5 +1,5 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File     : Carnivore.java                   */
+/** @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
+			File     : Carnivore.java                   */
 
 import java.util.*;
 import java.lang.*;

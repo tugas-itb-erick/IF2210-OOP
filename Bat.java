@@ -1,5 +1,5 @@
-/* NIM / Nama	: 13515144 / William	*/
-/* Nama file	: Bat.java			*/
+/** NIM / Nama	: 13515144 / William	
+	Nama file	: Bat.java			*/
 
 import java.util.*;
 import java.lang.*;
