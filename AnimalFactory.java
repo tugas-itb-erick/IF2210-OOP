@@ -46,7 +46,7 @@ public class AnimalFactory {
       return new Dolphin(name, weight, sex, row, col);
     }
     else if (s.equalsIgnoreCase("Clownfish")){
-      return new Clownfish(name, weight, sex, row, col);
+      return new ClownFish(name, weight, sex, row, col);
     }
     else if (s.equalsIgnoreCase("BlueTang")){
       return new BlueTang(name, weight, sex, row, col);
