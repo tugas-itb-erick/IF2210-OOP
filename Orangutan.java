@@ -97,7 +97,7 @@ public class Orangutan extends Animal implements /*LandAnimal,*/ Omnivore, Mamma
    */
   @Override
   public double CountConsumedMeat() {
-    return weight*GetVegRatio();
+    return weight*GetMeatRatio();
   }
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
@@ -105,6 +105,6 @@ public class Orangutan extends Animal implements /*LandAnimal,*/ Omnivore, Mamma
    */
   @Override
   public double CountConsumedVeggie() {
-    return weight*GetMeatRatio();
+    return weight*GetVegRatio();
   }
 }
