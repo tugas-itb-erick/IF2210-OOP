@@ -1,12 +1,19 @@
-/* NIM/Nama : 13515xxx / Abc Def */
-/* File     : Driver.java */
+/**
+  * @author NIM/Nama : 13515057 / Erick Wijaya
+  * File     : Driver.java 
+  */
 
 import java.util.*;
 import java.io.*;
 
 public class Driver {
+  /**
+    * Konstruktor
+    */
   public static Zoo myZoo = new Zoo();
-
+  /**
+    * Membuat sebuah kebun binatang
+    */
   public static void CreateZoo(){
     try{
       Scanner inZoo = new Scanner(new File("zoo.txt"));
@@ -35,7 +42,9 @@ public class Driver {
       System.out.println(e);
     }
   }
-
+  /**
+    * Menampilkan daftar pilihan menu utama
+    */
   public static void ShowMenu(){
     System.out.println("Selamat datang di Kebun Binatang Virtual Zoo!");
     System.out.println("1. Menampilkan peta Kebun Binatang");
@@ -45,7 +54,9 @@ public class Driver {
     System.out.println("5. Quit");
     System.out.println("Pilih angka 1..5 :");
   }
-
+  /**
+    * main program
+    */
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     CreateZoo();
