@@ -85,11 +85,8 @@ public class Zoo {
     }
 
     if (valid){
-      i = 0;
-      while ((i<row*col) && (cage[i].GetHabitat() != '?'))
-        i++;
-      if (i<row*col){
-        cage[i] = in.Clone();
+      if (n_cage <= row*col){
+        cage[n_cage] = in.Clone();
         ++n_cage;
       }
     }
@@ -121,7 +118,7 @@ public class Zoo {
     else{
       for(int i=x1; i<=x2; i++){
         for(int j=y1; j<y2; j++){
-
+          System.out.print(cell[i][j].Render() + " ");
         }
         System.out.println();
       }
@@ -286,12 +283,12 @@ public class Zoo {
         switch (k){
           case 'W' : cell[i][j] = new WaterHabitat(); break;
           case 'A' : cell[i][j] = new AirHabitat(); break;
-          case 'L' : cell[i][j] = new LandHabitat(); break;/*
-          case '*' : cell[i][j] = new Park(); break;
-          case 'R' : cell[i][j] = new Restaurant(); break;
-          case '-' : cell[i][j] = new Road(); break;
-          case 'i' : cell[i][j] = new Entrance(); break;
-          case 'o' : cell[i][j] = new Exit(); break;*/
+          case 'L' : cell[i][j] = new LandHabitat(); break;
+          case '*' : cell[i][j] = new LandHabitat(); break;
+          case 'R' : cell[i][j] = new LandHabitat(); break;
+          case '-' : cell[i][j] = new LandHabitat(); break;
+          case 'i' : cell[i][j] = new LandHabitat(); break;
+          case 'o' : cell[i][j] = new LandHabitat(); break;
         }
       }
     }
