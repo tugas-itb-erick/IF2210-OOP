@@ -29,8 +29,7 @@ public class Lion extends Animal implements /*LandAnimal,*/ Carnivore, Mammalia 
    * @return hewan yang ingin diduplikasi
    */
   public Lion Clone() {
-    Lion out = new Lion(name,weight,sex,row,col);
-    return out;
+    return new Lion(name,weight,sex,row,col);
   }
   /**
    * Menampilkan interaksi hewan

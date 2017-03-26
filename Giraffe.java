@@ -29,8 +29,7 @@ public class Giraffe extends Animal implements /*LandAnimal,*/ Herbivore, Mammal
    * @return hewan yang ingin diduplikasi
    */
   public Giraffe Clone() {
-    Giraffe out = new Giraffe(name,weight,sex,row,col);
-    return out;
+    return new Giraffe(name,weight,sex,row,col);
   }
   /**
    * Menampilkan interaksi hewan

@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mammalia*/ {
+public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mammalia {
   /**
    * Constructor
    */
@@ -63,6 +63,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
   public boolean IsWild() {
     return false;
   }
+  
   @Override
   public int GetHeartChamber() {
     return 4;

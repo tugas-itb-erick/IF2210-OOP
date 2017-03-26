@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
+public class Orangutan extends Animal implements /*LandAnimal,*/ Omnivore, Mammalia {
   /**
    * Constructor
    */
@@ -63,7 +63,7 @@ public class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammali
   public boolean IsWild() {
     return false;
   }
-   @Override
+  @Override
   public int GetHeartChamber() {
     return 4;
   }

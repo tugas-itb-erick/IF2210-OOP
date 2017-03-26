@@ -287,8 +287,8 @@ public class Cage implements Renderable {
 	 */
   public double CountConsumedMeat(){
     double sum = 0;
-    for(int i=0; i<n_animal; i++){ /*System.out.println(i + " " + (animal[i] instanceof Giraffe));
-    animal[i].DisplayAnimalData();*/
+    for(int i=0; i<n_animal; i++){ System.out.println(i + " " + (animal[i] instanceof Giraffe));
+    animal[i].DisplayAnimalData();
       sum += animal[i].CountConsumedMeat();
     }
     return sum;

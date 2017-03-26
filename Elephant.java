@@ -29,8 +29,7 @@ public class Elephant extends Animal implements /*LandAnimal,*/ Herbivore, Mamma
    * @return hewan yang ingin diduplikasi
    */
   public Elephant Clone() {
-    Elephant out = new Elephant(name,weight,sex,row,col);
-      return out;
+    return new Elephant(name,weight,sex,row,col);
   }
   /**
    * Menampilkan interaksi hewan
