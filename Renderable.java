@@ -1,5 +1,6 @@
-/* NIM/Nama : 13515057 / Erick Wijaya */
-/* File     : Renderable.java */
+/** @author NIM/Nama : 13515057 / Erick Wijaya
+  * Nama File        : Renderable.java 
+  */
 
 import java.util.*;
 import java.lang.*;

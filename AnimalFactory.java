@@ -1,5 +1,5 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya 
-  * File     : AnimalFactory.java 
+/** @author NIM/Nama : 13515057 / Erick Wijaya
+  * Nama File        : AnimalFactory.java 
   */
 
 import java.io.*;

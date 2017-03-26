@@ -1,10 +1,12 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File : LandHabitat.java */
+/**
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi
+ * File : LandHabitat.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-class LandHabitat extends Habitat{
+public class LandHabitat extends Habitat{
    /**
    * Constructor
    */

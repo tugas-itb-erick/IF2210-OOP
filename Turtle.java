@@ -1,19 +1,19 @@
 /**
- * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
- * File : Turtle.java 
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi
+ * File : Turtle.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptilia {
+public class Turtle extends Animal /*implements LandAnimal, WaterAnimal, Omnivore, Reptilia*/ {
   /**
    * Constructor
    */
   public Turtle() {
     super();
   }
-  /** 
+  /**
    * Consructor dengan parameter
    * @param _name nama binatang
    * @param _weight berat
@@ -33,14 +33,14 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
     Frog F = new Frog(name,weight,sex,row,col);
     return F;
   }
-  /** 
+  /**
    * Menampilkan interaksi hewan ke layar
    */
   @Override
   public void Interact() {
   	System.out.println("This turtle is walking slowly");
   }
-  /** 
+  /**
    * Mengembalikan karakter id tiap hewan
    * @return karakter tiap hewan
    */
@@ -48,7 +48,7 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
   public char Render() {
   	return 'T';
   }
-  /** 
+  /**
    * Mengembalikan warna dari hewan
    * @return warna cetak hewan
    */
@@ -64,14 +64,14 @@ class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptil
   public boolean IsWild() {
     return false;
   }
-  /** 
+  /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   //public double CountConsumedMeat() {
   	//return weight*meatRatio;
   //}
-  /** 
+  /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */

@@ -1,19 +1,19 @@
-/** 
- * @author NIM / Nama	: 13515144 / William	
- *	Nama file	: Elephant.java			
+/**
+ * @author NIM / Nama	: 13515144 / William
+ *	Nama file	: Elephant.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
+public class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	/**
 	 * Constructor
 	 */
 	public Elephant() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor dengan parameter
 	 * @param _name nama hewan
@@ -25,7 +25,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	public Elephant(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
-	
+
 	/**
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
@@ -35,7 +35,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 		Elephant out = new Elephant(name,weight,sex,row,col);
 		return out;
 	}
-		
+
 	/**
 	 * Menampilkan interaksi hewan
 	 */
@@ -43,7 +43,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	public void Interact() {
 		System.out.println("This elephant is trumpeting!!");
 	}
-	
+
 	/**
 	 * Mengembalikan karakter dari binatang untuk ditampilkan
 	 * @return karakter dari binatang
@@ -52,7 +52,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	public char Render() {
 		return 'E';
 	}
-	
+
 	/**
 	 * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
 	 * @return kode warna dan karakter binatang
@@ -61,7 +61,7 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	public String RenderWithColor() {
 		return ANSI_YELLOW + Render() + ANSI_RESET;
 	}
-	
+
 	/**
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika jinak
@@ -77,6 +77,6 @@ class Elephant extends Animal/*implements LandAnimal, Herbivore, Mammalia*/ {
 	}
 	public double CountConsumedVeggie(){
 		return weight*vegRatio;
-	}	
+	}
 	*/
 }

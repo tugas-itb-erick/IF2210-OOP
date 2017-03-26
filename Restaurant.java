@@ -1,10 +1,12 @@
-/* NIM/Nama : 13515087 / Audrestaurantyonata */
-/* File : Restaurant.java */
+/**
+ * @author NIM / Nama : 13515087 / Audry Nyonata
+ *  Nama file : Restaurant.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-class Restaurant extends Facility{
+public class Restaurant extends Facility{
    /**
    * Constructor
    */

@@ -1,10 +1,12 @@
-/* NIM/Nama : 13515087 / Audry Nyonata */
-/* File : Park.java */
+/**
+ * @author NIM / Nama : 13515087 / Audry Nyonata
+ *  Nama file : Park.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-class Park extends Facility{
+public class Park extends Facility{
    /**
    * Constructor
    */

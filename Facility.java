@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.*;
 
-abstract class Facility extends Cell {
+abstract public class Facility extends Cell {
   /**
    * Constructor.
    */

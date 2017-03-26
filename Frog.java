@@ -1,19 +1,19 @@
 /**
- * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
- * File : Frog.java         
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi
+ * File : Frog.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibia {
+public class Frog extends Animal /*implements LandAnimal, WaterAnimal, Carnivore, Amphibia*/ {
   /**
    * Constructor
    */
   public Frog() {
     super();
   }
-  /** 
+  /**
    * Consructor dengan parameter
    * @param _name nama binatang
    * @param _weight berat
@@ -33,14 +33,14 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
     Frog F = new Frog(name,weight,sex,row,col);
     return F;
   }
-  /** 
+  /**
     * Menampilkan interaksi hewan ke layar
     */
   @Override
   public void Interact() {
   	System.out.println("Croag.... Croag.... Ribbet... Ribbet...");
   }
-  /** 
+  /**
    * Mengembalikan karakter id tiap hewan
    * @return karakter tiap hewan
    */
@@ -48,7 +48,7 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
   public char Render() {
     return 'F';
   }
-  /** 
+  /**
    * Mengembalikan warna dari hewan
    * @return warna cetak hewan
    */
@@ -64,14 +64,14 @@ class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, Amphibi
   public boolean IsWild() {
     return false;
   }
-  /** 
+  /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   //public double CountConsumedMeat() {
     //return weight*meatRatio;
   //}
-  /** 
+  /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */

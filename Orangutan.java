@@ -1,19 +1,19 @@
-/** 
- * @author NIM / Nama	: 13515144 / William	
- *	Nama file	: Orangutan.java			
+/**
+ * @author NIM / Nama	: 13515144 / William
+ *	Nama file	: Orangutan.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
+public class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	/**
 	 * Constructor
 	 */
 	public Orangutan() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor dengan parameter
 	 * @param _name nama hewan
@@ -25,7 +25,7 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	public Orangutan(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
-	
+
 	/**
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
@@ -35,7 +35,7 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 		Orangutan out = new Orangutan(name,weight,sex,row,col);
 		return out;
 	}
-		
+
 	/**
 	 * Menampilkan interaksi hewan
 	 */
@@ -43,7 +43,7 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	public void Interact() {
 		System.out.println("This orangutan is playing on a tree!");
 	}
-	
+
 	/**
 	 * Mengembalikan karakter dari binatang untuk ditampilkan
 	 * @return karakter dari binatang
@@ -52,7 +52,7 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	public char Render() {
 		return 'O';
 	}
-	
+
 	/**
 	 * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
 	 * @return kode warna dan karakter binatang
@@ -61,7 +61,7 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	public String RenderWithColor() {
 		return ANSI_YELLOW + Render() + ANSI_RESET;
 	}
-	
+
 	/**
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika jinak
@@ -77,7 +77,6 @@ class Orangutan extends Animal/* implements LandAnimal, Omnivore, Mammalia*/ {
 	}
 	public double CountConsumedVeggie(){
 		return weight*vegRatio;
-	}	
+	}
 	*/
 }
-

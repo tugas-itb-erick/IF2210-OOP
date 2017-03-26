@@ -1,10 +1,12 @@
-/* NIM/Nama : 13515078 / Veren Iliana Kurniadi */
-/* File     : AirHabitat.java                  */
+/**
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi
+ * File : AirHabitat.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-class AirHabitat extends Habitat{
+public class AirHabitat extends Habitat{
   /**
    * Constructor
    */

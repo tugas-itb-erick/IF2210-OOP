@@ -1,10 +1,12 @@
-/* NIM/Nama : 13515087 / Audry Nyonata */
-/* File : Road.java */
+/**
+ * @author NIM / Nama : 13515087 / Audry Nyonata
+ *  Nama file : Road.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-class Road extends Facility{
+public class Road extends Facility{
    /**
    * Constructor
    */

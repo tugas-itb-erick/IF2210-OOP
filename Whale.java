@@ -1,19 +1,19 @@
-/** 
- * @author NIM / Nama	: 13515144 / William	
- *	Nama file	: Whale.java			
+/**
+ * @author NIM / Nama	: 13515144 / William
+ *	Nama file	: Whale.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
+public class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	/**
 	 * Constructor
 	 */
 	public Whale() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor dengan parameter
 	 * @param _name nama hewan
@@ -25,7 +25,7 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	public Whale(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
-	
+
 	/**
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
@@ -35,7 +35,7 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 		Whale out = new Whale(name,weight,sex,row,col);
 		return out;
 	}
-		
+
 	/**
 	 * Menampilkan interaksi hewan
 	 */
@@ -43,7 +43,7 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	public void Interact() {
 		System.out.println("This whale created a huge splash!");
 	}
-	
+
 	/**
 	 * Mengembalikan karakter dari binatang untuk ditampilkan
 	 * @return karakter dari binatang
@@ -52,7 +52,7 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	public char Render() {
 		return 'W';
 	}
-	
+
 	/**
 	 * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
 	 * @return kode warna dan karakter binatang
@@ -61,7 +61,7 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	public String RenderWithColor() {
 		return ANSI_CYAN + Render() + ANSI_RESET;
 	}
-	
+
 	/**
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika jinak
@@ -77,7 +77,6 @@ class Whale extends Animal/* implements WaterAnimal, Carnivore, Mammalia*/ {
 	}
 	public double CountConsumedVeggie(){
 		return weight*vegRatio;
-	}	
+	}
 	*/
 }
-

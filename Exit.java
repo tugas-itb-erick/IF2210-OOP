@@ -1,12 +1,12 @@
-/** 
- * @author NIM / Nama : 13515087 / Audry Nyonata  
- *  Nama file : Exit.java      
+/**
+ * @author NIM / Nama : 13515087 / Audry Nyonata
+ *  Nama file : Exit.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Exit extends Road{
+public class Exit extends Road{
    /**
    * Constructor
    */

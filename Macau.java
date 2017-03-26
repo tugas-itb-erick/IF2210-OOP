@@ -1,19 +1,19 @@
-/** 
- * @author NIM / Nama	: 13515144 / William	
- *	Nama file	: Macau.java			
+/**
+ * @author NIM / Nama	: 13515144 / William
+ *	Nama file	: Macau.java
  */
 
 import java.util.*;
 import java.lang.*;
 
-class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
+public class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	/**
 	 * Constructor
 	 */
 	public Macau() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor dengan parameter
 	 * @param _name nama hewan
@@ -25,7 +25,7 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	public Macau(String _name, double _weight, Sex _s, int _r, int _c) {
 		super(_name, _weight, _s, _r, _c);
 	}
-	
+
 	/**
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
@@ -35,7 +35,7 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 		Macau out = new Macau(name,weight,sex,row,col);
 		return out;
 	}
-		
+
 	/**
 	 * Menampilkan interaksi hewan
 	 */
@@ -43,7 +43,7 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	public void Interact() {
 		System.out.println("This macau is very pretty!");
 	}
-	
+
 	/**
 	 * Mengembalikan karakter dari binatang untuk ditampilkan
 	 * @return karakter dari binatang
@@ -52,7 +52,7 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	public char Render() {
 		return 'M';
 	}
-	
+
 	/**
 	 * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
 	 * @return kode warna dan karakter binatang
@@ -61,7 +61,7 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	public String RenderWithColor() {
 		return ANSI_RED + Render() + ANSI_RESET;
 	}
-	
+
 	/**
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika jinak
@@ -77,7 +77,6 @@ class Macau extends Animal/* implements FlyingAnimal, Omnivore, Aves*/ {
 	}
 	public double CountConsumedVeggie(){
 		return weight*vegRatio;
-	}	
+	}
 	*/
 }
-

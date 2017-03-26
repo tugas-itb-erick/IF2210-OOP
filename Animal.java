@@ -1,11 +1,12 @@
-/** Nama / NIM	: William / 13515144
-  * Nama file	: Animal.java			
-  */
+/**
+ * @author NIM / Nama	: 13515144 / William
+ *	Nama file	: Animal.java
+ */
 
 import java.util.*;
 import java.lang.*;
 
-abstract class Animal implements Renderable {
+abstract public class Animal implements Renderable {
 	protected String name;
 	protected double weight;
 	protected Sex sex;

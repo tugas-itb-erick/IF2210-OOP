@@ -1,7 +1,7 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya 
-  * File     : Zoo.java 
+/** @author NIM/Nama : 13515057 / Erick Wijaya
+  * Nama File        : Zoo.java
   */
-  
+
 import java.io.*;
 import java.util.*;
 import java.lang.*;
@@ -120,6 +120,43 @@ public class Zoo {
       for(int i=x1; i<=x2; i++){
         for(int j=y1; j<y2; j++){
           System.out.print(cell[i][j].Render() + " ");
+          int k = 0;
+          boolean found = false;
+
+          // search cage
+          while ((k < n_cage) && !found){
+            int l = 0;
+            while ((l < cage[k].GetSize()) && !found){
+              if ((cage[k].GetRow(l) == i) && (cage[k].GetCol(l) == j)){
+                found = true;
+
+                // search animal
+                int i2 = 0;
+                boolean found2 = false;
+                while ((i2 < cage[k].GetTotalAnimal()) && !found2){
+                  if ((cage[k].GetAnimal(i2).GetRow() == i) && (cage[k].GetAnimal(i2).GetCol() == j))
+                    found2 = true;
+                  else
+                    i2++;
+                }
+
+                if (found2){
+                  System.out.print(cage[k].GetAnimal(i2).RenderWithColor());
+                //  printColor(cg[k].GetAnimal(i2)->render(), cg[k].GetAnimal(i2)->getColor());
+                }else{
+                  System.out.print(cage[k].RenderWithColor());
+                //  printColor(cg[k].render(), cg[k].getColor());
+                }
+
+              }
+              ++l;
+            }
+            ++k;
+          }
+          if (!found){
+            System.out.print(cell[i][j].Render());
+          }
+          System.out.print(" ");
         }
         System.out.println();
       }
@@ -285,11 +322,11 @@ public class Zoo {
           case 'W' : cell[i][j] = new WaterHabitat(); break;
           case 'A' : cell[i][j] = new AirHabitat(); break;
           case 'L' : cell[i][j] = new LandHabitat(); break;
-          case '*' : cell[i][j] = new LandHabitat(); break;
-          case 'R' : cell[i][j] = new LandHabitat(); break;
-          case '-' : cell[i][j] = new LandHabitat(); break;
-          case 'i' : cell[i][j] = new LandHabitat(); break;
-          case 'o' : cell[i][j] = new LandHabitat(); break;
+          case '*' : cell[i][j] = new Park(); break;
+          case 'R' : cell[i][j] = new Restaurant(); break;
+          case '-' : cell[i][j] = new Road(); break;
+          case 'i' : cell[i][j] = new Entrance(); break;
+          case 'o' : cell[i][j] = new Exit(); break;
         }
       }
     }
