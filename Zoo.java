@@ -88,6 +88,7 @@ public class Zoo {
     if (valid){
       if (n_cage <= row*col){
         cage[n_cage] = in.Clone();
+        cage[n_cage].SetHabitat(cell[cage[n_cage].GetRow(0)][cage[n_cage].GetCol(0)].Render());
         ++n_cage;
       }
     }
@@ -118,8 +119,8 @@ public class Zoo {
     }
     else{
       for(int i=x1; i<=x2; i++){
-        for(int j=y1; j<y2; j++){
-          System.out.print(cell[i][j].Render() + " ");
+        for(int j=y1; j<=y2; j++){
+          //System.out.print(cell[i][j].Render() + " ");
           int k = 0;
           boolean found = false;
 

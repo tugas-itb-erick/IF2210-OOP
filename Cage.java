@@ -1,5 +1,5 @@
-/** @author NIM/Nama : 13515057 / Erick Wijaya 
-  *	File     : Cage.java 
+/** @author NIM/Nama : 13515057 / Erick Wijaya
+  *	File     : Cage.java
   */
 
 import java.io.*;
@@ -198,7 +198,7 @@ public class Cage implements Renderable {
 
 
       if (valid){
-        animal[n_animal] = in/*.clone()*/;
+        animal[n_animal] = in.Clone();
         ++n_animal;
       }
     }
