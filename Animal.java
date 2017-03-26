@@ -1,5 +1,6 @@
 /** Nama / NIM	: William / 13515144
-	Nama file	: Animal.java			*/
+  * Nama file	: Animal.java			
+  */
 
 import java.util.*;
 import java.lang.*;
