@@ -1,5 +1,7 @@
-/* NIM/Nama : 13515087 / Audry Nyonata */
-/* File : MEntrance.java */
+/** 
+ * @author NIM / Nama : 13515087 / Audry Nyonata  
+ *  Nama file : MEntrance.java      
+ */
 
 import java.util.*;
 import java.lang.*;
