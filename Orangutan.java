@@ -1,6 +1,7 @@
-/** @author NIM / Nama	: 13515144 / William	
-  * Nama file	: Orangutan.java			
-  */
+/** 
+ * @author NIM / Nama	: 13515144 / William	
+ *	Nama file	: Orangutan.java			
+ */
 
 import java.util.*;
 import java.lang.*;

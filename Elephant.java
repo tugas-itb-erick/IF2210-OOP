@@ -1,6 +1,7 @@
-/** @author NIM / Nama	: 13515144 / William	
-  * Nama file	: Elephant.java			
-  */
+/** 
+ * @author NIM / Nama	: 13515144 / William	
+ *	Nama file	: Elephant.java			
+ */
 
 import java.util.*;
 import java.lang.*;

@@ -1,6 +1,8 @@
-/** @author NIM / Nama	: 13515144 / William	
-  * Nama file	: Cockatoo.java			
-  */
+/** 
+ * @author NIM / Nama	: 13515144 / William	
+ *	Nama file	: Cockatoo.java			
+ */
+
 import java.util.*;
 import java.lang.*;
 

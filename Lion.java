@@ -1,6 +1,7 @@
-/** @author NIM / Nama	: 13515144 / William	
-  * Nama file	: Lion.java			
-  */
+/** 
+ * @author NIM / Nama	: 13515144 / William	
+ *	Nama file	: Lion.java			
+ */
 
 import java.util.*;
 import java.lang.*;
