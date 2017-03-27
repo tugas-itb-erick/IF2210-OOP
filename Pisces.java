@@ -11,11 +11,11 @@ public interface Pisces {
    * Mengembalikan jumlah ruang jantung hewan
    * @return jumlah ruang jantung hewan
    */
-  abstract public int GetHeartChamber();
+  abstract public int getHeartChamber();
 
   /** 
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
-  abstract public char GetBloodTemperature();
+  abstract public char getBloodTemperature();
 }

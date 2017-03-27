@@ -33,12 +33,12 @@ public interface Renderable {
     * Mengembalikan suatu karakter\
     * @return karakter yang akan ditampilkan
     */
-  abstract public char Render();
+  abstract public char render();
   /**
     * Mengembalikan suatu karakter beserta kode warna
     * @return kode warna beserta karakter yang akan ditampilkan
     */
-  abstract public String RenderWithColor();
+  abstract public String renderWithColor();
 }
 
 /* Example:

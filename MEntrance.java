@@ -12,8 +12,8 @@ class MEntrance extends Entrance{
   public static void main(String[] args) {
     MEntrance tes = new MEntrance();
     System.out.println("tes");
-    System.out.println(tes.Render());
-    System.out.println(tes.RenderWithColor());
+    System.out.println(tes.render());
+    System.out.println(tes.renderWithColor());
     System.out.println("tes");
   }
 

@@ -18,7 +18,7 @@ public class AnimalFactory {
   * @param in scanner input
   * @return binatang yang diciptakan
   */
-  public Animal Read(Scanner in){
+  public Animal read(Scanner in){
     String s = in.next();
     String name = in.next();
     double weight = in.nextDouble();

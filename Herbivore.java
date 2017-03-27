@@ -11,11 +11,11 @@ public interface Herbivore {
    * Mengembalikan nilai rasio daging.
    * @return nilai rasio daging
    */
-  public double GetMeatRatio();
+  public double getMeatRatio();
 
   /**
    * Mengembalikan nilai rasio sayur.
    * @return nilai rasio sayur
    */
-  public double GetVegRatio();
+  public double getVegRatio();
 }

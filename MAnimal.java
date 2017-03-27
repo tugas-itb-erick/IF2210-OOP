@@ -8,6 +8,6 @@ public class MAnimal {
 	public static void main(String[] args) {
     Animal tesAnimal = new Piranha("GreyElephant",200, Sex.MALE, 2, 2);
     tesAnimal.DisplayAnimalData();
-		System.out.println(tesAnimal.CountConsumedVeggie());
+		System.out.println(tesAnimal.countConsumedVeggie());
   }
 }

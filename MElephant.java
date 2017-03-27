@@ -11,9 +11,9 @@ public class MElephant {
     Elephant1.DisplayAnimalData();
     
     System.out.println();
-    System.out.println("Test fungsi Clone()");
+    System.out.println("Test fungsi clone()");
     Elephant Elephant2 = new Elephant();
-    Elephant2 = Elephant1.Clone();
+    Elephant2 = Elephant1.clone();
     Elephant2.DisplayAnimalData();
   }
 }

@@ -17,14 +17,14 @@ public class Exit extends Road{
    * Mengembalikan karakter untuk ditampilkan ke layar
    * @return id bertipe char
    */
-  public char Render(){
+  public char render(){
     return 'o';
   }
   /**
    * Mengembalikan warna untuk ditampilkan ke layar
    * @return color warna renderable
    */
-  public String RenderWithColor(){
-    return ANSI_WHITE + Render() + ANSI_RESET;
+  public String renderWithColor(){
+    return ANSI_WHITE + render() + ANSI_RESET;
   }
 }

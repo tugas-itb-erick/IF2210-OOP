@@ -90,6 +90,7 @@ public class BlueTang extends Animal implements /*WaterAnimal, */Omnivore, Pisce
   @Override
   public double GetMeatRatio() {
     return 0.05;
+  }
     /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
