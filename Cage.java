@@ -231,7 +231,7 @@ public class Cage implements Renderable {
       System.out.println(row[i] + " " + col[i]);
     }
     for(int i=0; i<nAnimal; i++){
-      animal[i].DisplayAnimalData();
+      animal[i].displayAnimalData();
     }
   }
 
@@ -258,22 +258,22 @@ public class Cage implements Renderable {
       switch (rd){ // 1-up, 2-right, 3-down, 4-left
         case 1:
         if (searchPosition(animal[i].getRow()-1, animal[i].getCol()) && !SearchAnimal(animal[i].getRow()-1, animal[i].getCol()))
-          animal[i].SetRow(animal[i].getRow()-1);
+          animal[i].setRow(animal[i].getRow()-1);
         break;
 
         case 2:
         if (searchPosition(animal[i].getRow(), animal[i].getCol()+1) && !SearchAnimal(animal[i].getRow(), animal[i].getCol()+1))
-          animal[i].SetCol(animal[i].getCol()+1);
+          animal[i].setCol(animal[i].getCol()+1);
         break;
 
         case 3:
         if (searchPosition(animal[i].getRow()+1, animal[i].getCol()) && !SearchAnimal(animal[i].getRow()+1, animal[i].getCol()))
-          animal[i].SetRow(animal[i].getRow()+1);
+          animal[i].setRow(animal[i].getRow()+1);
         break;
 
         case 4:
         if (searchPosition(animal[i].getRow(), animal[i].getCol()-1) && !SearchAnimal(animal[i].getRow(), animal[i].getCol()-1))
-          animal[i].SetCol(animal[i].getCol()-1);
+          animal[i].setCol(animal[i].getCol()-1);
         break;
       }
 

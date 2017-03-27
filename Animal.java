@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-abstract public class Animal implements renderable {
+abstract public class Animal implements Renderable {
 	protected String name;
 	protected double weight;
 	protected Sex sex;
@@ -134,7 +134,7 @@ abstract public class Animal implements renderable {
 		System.out.println("Sex: "+ sex);
 		System.out.println("RowPosition: "+ row);
 		System.out.println("ColPosition: "+ col);
-		if (IsWild())
+		if (isWild())
 			System.out.println("Wild: true");
 		else
 			System.out.println("Wild: false");
