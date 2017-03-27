@@ -1,7 +1,7 @@
-/** 
+/**
   * @author NIM/Nama: 13515144 / William
   * Nama file : Color.java
-  */  
+  */
 
 public class Color {
   public static final String ANSI_RESET = "\u001B[0m";
