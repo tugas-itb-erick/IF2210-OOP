@@ -92,19 +92,19 @@ public class Whale extends Animal implements /*WaterAnimal,*/ Carnivore, Mammali
     return 0.05;
   }
   /**
+   * Mengembalikan jumlah sayur yang dikonsumsi
+   * @return jumlah sayur yang dikonsumsi
+   */
+  @Override
+  public double CountConsumedVeggie() {
+    return weight*GetVegRatio();
+  }
+  /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   @Override
   public double CountConsumedMeat() {
-    return weight*GetVegRatio();
-  }
-  /**
-   * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
-   * @return jumlah makanan tumbuhan yang dikonsumsi
-   */
-  @Override
-  public double CountConsumedVeggie() {
     return weight*GetMeatRatio();
   }
 }

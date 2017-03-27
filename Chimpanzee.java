@@ -82,7 +82,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    */
   @Override
   public double GetVegRatio() {
-    return 0;
+    return 0.02;
   }
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
@@ -90,7 +90,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    */
   @Override
   public double GetMeatRatio() {
-  return 0.05;
+  return 0.02;
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi

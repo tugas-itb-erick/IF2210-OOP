@@ -85,7 +85,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    */
   @Override
   public double GetVegRatio() {
-	return 0;
+	  return 0;
   }
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
@@ -93,7 +93,15 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    */
   @Override
   public double GetMeatRatio() {
-	return 0.2;
+	  return 0.2;
+  }
+  /**
+   * Mengembalikan jumlah sayur yang dikonsumsi
+   * @return jumlah sayur yang dikonsumsi
+   */
+  @Override
+  public double CountConsumedVeggie() {
+    return weight*GetVegRatio();
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
@@ -101,14 +109,6 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    */
   @Override
   public double CountConsumedMeat() {
-    return weight*GetVegRatio();
-  }
-  /**
-   * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
-   * @return jumlah makanan tumbuhan yang dikonsumsi
-   */
-  @Override
-  public double CountConsumedVeggie() {
     return weight*GetMeatRatio();
   }
 }
