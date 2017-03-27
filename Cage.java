@@ -92,10 +92,10 @@ public class Cage {
 
   /**
 	 * Mengatur jenis habitat dari kandang ('l'/'w'/'a')
-	 * @param habitat dari kandang ('l'/'w'/'a')
+	 * @param _habitat dari kandang ('l'/'w'/'a')
 	 */
-  public void SetHabitat(char h) {
-    habitat = h;
+  public void SetHabitat(char _habitat) {
+    habitat = _habitat;
   }
 
 	/**
@@ -175,6 +175,24 @@ public class Cage {
     return found;
   }
 
+  /**
+   * Memeriksa apakah ada binatang dengan species _species
+   * @return true jika ada binatang dengan species _species, false jika tidak ada
+   */
+  public boolean SearchAnimal(Species _species) {
+    int i = 0;
+    boolean found = false;
+
+    while ((i<n_animal) && (!found)){
+      if (animal[i].GetSpecies() == _species)
+        found = true;
+      else
+        i++;
+    }
+
+    return found;
+  }
+
 	/**
 	 * Menambahkan suatu sel dengan koordinat (r,c) pada kandang
 	 * @param r koordinat baris
@@ -193,13 +211,28 @@ public class Cage {
 	 * @param in binatang yang ingin dimasukkan ke kandang
 	 */
   public void AddAnimal(Animal in) {
-    if (!IsFull()){
-      boolean valid = !IsWild();
+    if (!IsFull() && ((in.GetFirstHabitat() == GetHabitat()) || (in.GetSecondHabitat() == GetHabitat()))){
+      boolean valid = false;
 
+      if (!SearchAnimal(in.GetRow(), in.GetCol())){ // if there is no other animal in the target coordinate
+        if (IsWild()){
+          if (in.IsWild())
+            valid = !SearchAnimal(in.GetSpecies()); // wild animal only live with the same species
+          else
+            valid = false;
+        }else{
+          if (in.IsWild()){
+            valid = n_animal == 0; // wild animal cannot live with unwild animal unless there's no other animal
+          }
+          else{
+            valid = true;
+          }
+        }
+      }
 
       if (valid){
         animal[n_animal] = in.Clone();
-        ++n_animal; //System.out.println(n_animal);
+        ++n_animal;
       }
     }
   }

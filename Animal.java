@@ -18,7 +18,8 @@ public class Animal {
   private char id;
   private int row;
   private int col;
-  private Habitat habitat;
+  private char habitat_1;
+  private char habitat_2;
   private boolean wild;
 
   /**
@@ -36,7 +37,8 @@ public class Animal {
     id = '?';
     row = 0;
     col = 0;
-    habitat = Habitat.HABITAT_NONE;
+    habitat_1 = '?';
+    habitat_2 = '?';
     wild = false;
   }
 
@@ -53,11 +55,11 @@ public class Animal {
    * @param _id karakter id Animal
    * @param _row posisi Animal (baris)
    * @param _col posisi Animal (kolom)
-   * @param _habitat jenis Animal bedasarkan tempat hidup
+   * @param _habitat karakter yang merepresentasikan habitat
    * @param _wild liar/tidaknya Animal
    */
   public Animal(Species _species, String _name, double _weight, Sex _sex, int _hc, char _blood,
-                double _veg, double _meat, char _id, int _row, int _col,Habitat _habitat, boolean _wild) {
+                double _veg, double _meat, char _id, int _row, int _col, char _habitat_1, char _habitat_2, boolean _wild) {
     species = _species;
     name = _name;
     weight = _weight;
@@ -69,7 +71,8 @@ public class Animal {
     id = _id;
     row = _row;
     col =_col;
-    habitat = _habitat;
+    habitat_1 = _habitat_1;
+    habitat_2 = _habitat_2;
     wild = _wild;
   }
 
@@ -79,7 +82,7 @@ public class Animal {
    */
   public Animal Clone() {
     return new Animal(species, name, weight, sex, heart_chamber, blood,
-                      veg_ratio, meat_ratio, id, row, col, habitat, wild);
+                      veg_ratio, meat_ratio, id, row, col, habitat_1, habitat_2, wild);
   }
   /**
    * Mengembalikan species dari Animal
@@ -168,11 +171,18 @@ public class Animal {
     return col;
   }
   /**
-   * Mengembalikan habitat dari Animal
+   * Mengembalikan habitat pertama dari Animal
    * @return id Animal
    */
-  public Habitat GetHabitat() {
-    return habitat;
+  public char GetFirstHabitat() {
+    return habitat_1;
+  }
+  /**
+   * Mengembalikan habitat pertama dari Animal
+   * @return id Animal
+   */
+  public char GetSecondHabitat() {
+    return habitat_2;
   }
   /**
    * Memeriksa liar/tidaknya Animal
@@ -229,12 +239,13 @@ public class Animal {
    * @param _id karakter id Animal
    * @param _row posisi Animal (baris)
    * @param _col posisi Animal (kolom)
-   * @param _habitat jenis Animal bedasarkan tempat hidup
+   * @param _habitat_1 karakter yang merepresentasikan habitat
+   * @param _habitat_2 karakter yang merepresentasikan habitat kedua (sama dengan habitat_1 bila bukan amfibi)
    * @param _wild liar/tidaknya Animal
    */
   public void SetAll(Species _species, String _name, double _weight, Sex _sex,
                       int _hc, char _blood, double _veg, double _meat, char _id,
-                      int _row, int _col, Habitat _habitat, boolean _wild) {
+                      int _row, int _col, char _habitat_1, char _habitat_2, boolean _wild) {
     species = _species;
     name = _name;
     weight = _weight;
@@ -246,7 +257,8 @@ public class Animal {
     id = _id;
     row = _row;
     col =_col;
-    habitat = _habitat;
+    habitat_1 = _habitat_1;
+    habitat_2 = _habitat_2;
     wild = _wild;
   }
   /**
@@ -264,7 +276,8 @@ public class Animal {
     System.out.println("Id: " + id);
     System.out.println("RowPosition: "+ row);
     System.out.println("ColPosition: "+ col);
-    System.out.println("Habitat: "+ habitat);
+    System.out.println("Habitat 1: "+ habitat_1);
+    System.out.println("Habitat 2: "+ habitat_2);
     if (IsWild())
       System.out.println("Wild: true");
     else
@@ -349,20 +362,41 @@ public class Animal {
   public char Render() {
     return GetId();
   }
+  /**
+   * Mengembalikan true bila Animal herbivore, yaitu memiliki rasio sayur > 0 dan rasio daging = 0
+   * @return true bila rasio sayur > 0 dan rasio daging = 0
+   */
+  public boolean IsHerbivore(){
+    return (veg_ratio > 0) && (meat_ratio == 0);
+  }
+  /**
+   * Mengembalikan true bila Animal carnivore, yaitu memiliki rasio sayur = 0 dan rasio daging > 0
+   * @return true bila rasio sayur = 0 dan rasio daging > 0
+   */
+  public boolean IsCarnivore(){
+    return (veg_ratio == 0) && (meat_ratio > 0);
+  }
+  /**
+   * Mengembalikan true bila Animal omnivore, yaitu memiliki rasio sayur > 0 dan rasio daging > 0
+   * @return true bila rasio sayur > 0 dan rasio daging > 0
+   */
+  public boolean IsOmnivore(){
+    return (veg_ratio > 0) && (meat_ratio > 0);
+  }
 
   /**
    * Mengembalikan string berisi kode warna dan karakter dari Animal untuk ditampilkan
    * @return kode warna dan karakter Animal
    */
   public String RenderWithColor() {
-    if (habitat == Habitat.LANDANIMAL)
+    if ((habitat_1 == 'L') && (habitat_2 == habitat_1))
       return Color.ANSI_YELLOW + Render() + Color.ANSI_RESET;
-    else if (habitat == Habitat.WATERANIMAL)
-      return Color.ANSI_CYAN + GetId() + Color.ANSI_RESET;
-    else if (habitat == Habitat.FLYINGANIMAL)
-      return Color.ANSI_RED + GetId() + Color.ANSI_RESET;
-    else
-      return Color.ANSI_WHITE + GetId() + Color.ANSI_RESET;
+    else if ((habitat_1 == 'W') && (habitat_2 == habitat_1))
+      return Color.ANSI_CYAN + Render() + Color.ANSI_RESET;
+    else if ((habitat_1 == 'A') && (habitat_2 == habitat_1))
+      return Color.ANSI_RED + Render() + Color.ANSI_RESET;
+    else // Amphibious
+      return Color.ANSI_GREEN + Render() + Color.ANSI_RESET;
   }
   /**
   * Mengembalikan objek Animal dari suatu input "Scanner"
@@ -374,81 +408,81 @@ public class Animal {
     String _name = in.next();
     double _weight = in.nextDouble();
     String _sex_s = in.next();
-    Sex _sex = (_sex_s.equalsIgnoreCase("MALE"))? Sex.MALE : Sex.FEMALE;
+    Sex _sex = _sex_s.equalsIgnoreCase("MALE") ? Sex.MALE : Sex.FEMALE;
     int _row = in.nextInt();
     int _col = in.nextInt();
 
     if (s.equalsIgnoreCase("Elephant")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0.05, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0.05, 0, 'E', _row, _col, 'L', 'L', false);
     }
     else if (s.equalsIgnoreCase("Giraffe")){
-      SetAll(Species.GIRAFFE, _name, _weight, _sex, 4, 'h', 0.05, 0, 'G', _row, _col, Habitat.LANDANIMAL, false); //TODO: Lengkapin sisanya
+      SetAll(Species.GIRAFFE, _name, _weight, _sex, 4, 'h', 0.05, 0, 'G', _row, _col, 'L', 'L', false); //TODO: Lengkapin darah, jantung, dn makanan
     }
     else if (s.equalsIgnoreCase("Lion")){
-      SetAll(Species.LION, _name, _weight, _sex, 4, 'h', 0, 0.05, 'L', _row, _col, Habitat.LANDANIMAL, true);
+      SetAll(Species.LION, _name, _weight, _sex, 4, 'h', 0, 0.05, 'L', _row, _col, 'L', 'L', true);
     }
     else if (s.equalsIgnoreCase("Tiger")){
-      SetAll(Species.TIGER, _name, _weight, _sex, 4, 'h', 0, 0.05, 'T', _row, _col, Habitat.LANDANIMAL, true);
+      SetAll(Species.TIGER, _name, _weight, _sex, 4, 'h', 0, 0.05, 'T', _row, _col, 'L', 'L', true);
     }
     else if (s.equalsIgnoreCase("Orangutan")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.ORANGUTAN, _name, _weight, _sex, 4, 'h', 0.03, 0.03, 'O', _row, _col, 'L', 'L', false);
     }
     else if (s.equalsIgnoreCase("Chimpanzee")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.CHIMPANZEE, _name, _weight, _sex, 4, 'h', 0.03, 0.03, 'C', _row, _col, 'L', 'L', false);
     }
     else if (s.equalsIgnoreCase("Komodo")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.KOMODO, _name, _weight, _sex, 4, 'h', 0, 0.05, 'K', _row, _col, 'L', 'L', false);
     }
     else if (s.equalsIgnoreCase("Bear")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.BEAR, _name, _weight, _sex, 4, 'h', 0, 0.05, 'B', _row, _col, 'L', 'L', false);
     }
     else if (s.equalsIgnoreCase("Whale")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.WHALE, _name, _weight, _sex, 4, 'h', 0, 0.05, 'W', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("Dolphin")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.DOLPHIN, _name, _weight, _sex, 4, 'h', 0, 0.05, 'D', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("Clownfish")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.CLOWNFISH, _name, _weight, _sex, 4, 'h', 0.03, 0.03, 'C', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("BlueTang")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.BLUETANG, _name, _weight, _sex, 4, 'h', 0.05, 0, 'B', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("Piranha")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.PIRANHA, _name, _weight, _sex, 4, 'h', 0, 0.05, 'P', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("PuffFish")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.PUFFFISH, _name, _weight, _sex, 4, 'h', 0.05, 0, 'P', _row, _col, 'W', 'W', false);
     }
     else if (s.equalsIgnoreCase("Eagle")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0.05, 'E', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Cendrawasih")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.CENDRAWASIH, _name, _weight, _sex, 4, 'h', 0, 0.05, 'C', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Owl")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.OWL, _name, _weight, _sex, 4, 'h', 0, 0.05, 'O', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Bat")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.BAT, _name, _weight, _sex, 4, 'h', 0.03, 0.03, 'B', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Macau")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.MACAU, _name, _weight, _sex, 4, 'h', 0.05, 0, 'M', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Cockatoo")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.COCKATOO, _name, _weight, _sex, 4, 'h', 0.05, 0, 'C', _row, _col, 'A', 'A', false);
     }
     else if (s.equalsIgnoreCase("Frog")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.FROG, _name, _weight, _sex, 4, 'h', 0, 0.05, 'F', _row, _col, 'L', 'W', false);
     }
     else if (s.equalsIgnoreCase("Alligator")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.ALLIGATOR, _name, _weight, _sex, 4, 'h', 0, 0.05, 'A', _row, _col, 'L', 'W', false);
     }
     else if (s.equalsIgnoreCase("Hippopotamus")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.HIPPOPOTAMUS, _name, _weight, _sex, 4, 'h', 0, 0.05, 'H', _row, _col, 'L', 'W', false);
     }
     else if (s.equalsIgnoreCase("Turtle")){
-      SetAll(Species.ELEPHANT, _name, _weight, _sex, 4, 'h', 0, 0, 'E', _row, _col, Habitat.LANDANIMAL, false);
+      SetAll(Species.TURTLE, _name, _weight, _sex, 4, 'h', 0.05, 0, 'T', _row, _col, 'L', 'W', false);
     }
     else{
       new Animal();

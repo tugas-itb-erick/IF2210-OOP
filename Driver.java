@@ -51,8 +51,9 @@ public class Driver {
     System.out.println("2. Menampilkan seluruh peta pada Kebun Binatang");
     System.out.println("3. Menampilkan total makanan yang dimakan seluruh hewan");
     System.out.println("4. Tour Kebun Binatang!");
-    System.out.println("5. Quit");
-    System.out.println("Pilih angka 1..5 :");
+    System.out.println("5. Real Time Tour!");
+    System.out.println("6. Quit");
+    System.out.println("Pilih angka 1..6 :");
   }
   /**
     * main program
@@ -80,12 +81,15 @@ public class Driver {
           myZoo.Tour();
           break;
         case 5:
+          myZoo.RealTimeTour();
+          break;
+        case 6:
           System.out.print("Thank You For Visiting Our Zoo");
           break;
         default:
           break;
       }
       System.out.println();
-    }while(n != 5);
+    }while(n != 6);
   }
 }
