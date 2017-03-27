@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class AirHabitat extends Habitat{
+public class AirHabitat extends Habitat {
   /**
    * Constructor
    */
@@ -17,14 +17,14 @@ public class AirHabitat extends Habitat{
    * Mengembalikan karakter untuk ditampilkan ke layar
    * @return id bertipe char
    */
-  public char Render(){
+  public char render(){
     return 'A';
   }
   /**
    * Mengembalikan warna untuk ditampilkan ke layar
    * @return color warna renderable
    */
-  public String RenderWithColor(){
-    return ANSI_WHITE + Render() + ANSI_RESET;
+  public String renderWithColor(){
+    return ANSI_WHITE + render() + ANSI_RESET;
   }
 }
