@@ -1,6 +1,6 @@
 /**
   * @author NIM/Nama : 13515057 / Erick Wijaya
-  * File     : Driver.java 
+  * File             : Driver.java
   */
 
 import java.util.*;
@@ -8,7 +8,7 @@ import java.io.*;
 
 public class Driver {
   /**
-    * Konstruktor
+    * Deklarasi objek myZoo
     */
   public static Zoo myZoo = new Zoo();
   /**

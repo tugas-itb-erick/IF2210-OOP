@@ -309,7 +309,7 @@ public class Cage implements Renderable {
 	 * Menduplikasi suatu kandang
 	 * @param kandang yang ingin diduplikasi
 	 */
-  Cage Clone(){
+  public Cage Clone(){
     Cage out = new Cage(size);
 
     out.SetHabitat(habitat);
@@ -328,7 +328,7 @@ public class Cage implements Renderable {
 	 * Membaca dan mengisi kandang dari scanner
 	 * @param in scanner yang akan dibaca
 	 */
-  void Read(Scanner in){
+  public void Read(Scanner in){
     int s = in.nextInt();
     SetNewCage(s);
     for(int i=0; i<s; i++){

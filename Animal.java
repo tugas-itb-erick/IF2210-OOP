@@ -86,7 +86,7 @@ abstract public class Animal implements Renderable {
 	}
 
 	/**
-	 * Mengatur nama dari binatang
+	 * Mengubah nama dari binatang
 	 * @param nama binatang
 	 */
 	public void SetName(String n) {
@@ -94,7 +94,7 @@ abstract public class Animal implements Renderable {
 	}
 
 	/**
-	 * Mengatur berat dari binatang
+	 * Mengubah berat dari binatang
 	 * @param berat binatang
 	 */
 	public void SetWeight(double w) {
@@ -102,7 +102,7 @@ abstract public class Animal implements Renderable {
 	}
 
 	/**
-	 * Mengatur jenis kelamin dari binatang
+	 * Mengubah jenis kelamin dari binatang
 	 * @param jenis kelamin binatang
 	 */
 	public void SetSex(Sex ns) {
@@ -110,7 +110,7 @@ abstract public class Animal implements Renderable {
 	}
 
 	/**
-	 * Mengatur posisi baris dari binatang
+	 * Mengubah posisi baris dari binatang
 	 * @param posisi baris binatang
 	 */
 	public void SetRow(int r) {
@@ -118,7 +118,7 @@ abstract public class Animal implements Renderable {
 	}
 
 	/**
-	 * Mengatur posisi kolom dari binatang
+	 * Mengubah posisi kolom dari binatang
 	 * @param posisi kolom binatang
 	 */
 	public void SetCol(int c) {
