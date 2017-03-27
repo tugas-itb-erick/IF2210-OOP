@@ -28,7 +28,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Hippopotamus Clone() {
+  public Hippopotamus clone() {
     Hippopotamus H = new Hippopotamus(name,weight,sex,row,col);
       return H;
   }

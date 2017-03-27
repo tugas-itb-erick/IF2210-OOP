@@ -28,7 +28,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Chimpanzee Clone(){
+  public Chimpanzee clone(){
     Chimpanzee out = new Chimpanzee(name,weight,sex,row,col);
     return out;
   }

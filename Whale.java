@@ -28,7 +28,7 @@ public class Whale extends Animal implements /*WaterAnimal,*/ Carnivore, Mammali
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Whale Clone() {
+  public Whale clone() {
     Whale out = new Whale(name,weight,sex,row,col);
     return out;
   }

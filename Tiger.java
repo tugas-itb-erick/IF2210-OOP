@@ -28,7 +28,7 @@ public class Tiger extends Animal implements /*LandAnimal,*/ Carnivore, Mammalia
 	 * Melakukan clone hewan
 	 * @return hewan yang ingin diduplikasi
 	 */
-	public Tiger Clone() {
+	public Tiger clone() {
 		Tiger out = new Tiger(name,weight,sex,row,col);
 		return out;
 	}

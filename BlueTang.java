@@ -28,7 +28,7 @@ public class BlueTang extends Animal implements /*WaterAnimal, */Omnivore, Pisce
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public BlueTang Clone() {
+  public BlueTang clone() {
     BlueTang out = new BlueTang(name,weight,sex,row,col);
     return out;
   }

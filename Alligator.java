@@ -28,7 +28,7 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Alligator Clone() {
+  public Alligator clone() {
     Alligator A = new Alligator(name,weight,sex,row,col);
     return A;
   }

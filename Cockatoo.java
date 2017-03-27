@@ -28,7 +28,7 @@ public class Cockatoo extends Animal implements /*FlyingAnimal, */ Omnivore, Ave
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Cockatoo Clone() {
+  public Cockatoo clone() {
     Cockatoo out = new Cockatoo(name,weight,sex,row,col);
     return out;
   }

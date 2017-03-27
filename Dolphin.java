@@ -28,7 +28,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Dolphin Clone() {
+  public Dolphin clone() {
     Dolphin out = new Dolphin(name,weight,sex,row,col);
       return out;
   }

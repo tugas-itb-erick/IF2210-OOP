@@ -28,7 +28,7 @@ public class ClownFish extends Animal implements /*WaterAnimal,*/ Omnivore, Pisc
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public ClownFish Clone() {
+  public ClownFish clone() {
     ClownFish out = new ClownFish(name,weight,sex,row,col);
     return out;
   }

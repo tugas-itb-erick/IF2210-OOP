@@ -28,7 +28,7 @@ public class Elephant extends Animal implements /*LandAnimal,*/ Herbivore, Mamma
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Elephant Clone() {
+  public Elephant clone() {
     return new Elephant(name,weight,sex,row,col);
   }
   /**

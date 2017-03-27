@@ -28,7 +28,7 @@ public class Bear extends Animal implements /*LandAnimal,*/ Carnivore, Mammalia 
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Bear Clone() {
+  public Bear clone() {
     Bear out = new Bear(name,weight,sex,row,col);
     return out;
   }

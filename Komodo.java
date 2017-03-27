@@ -28,7 +28,7 @@ public class Komodo extends Animal implements /*LandAnimal,*/ Carnivore, Reptili
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Komodo Clone() {
+  public Komodo clone() {
     Komodo out = new Komodo(name,weight,sex,row,col);
       return out;
   }

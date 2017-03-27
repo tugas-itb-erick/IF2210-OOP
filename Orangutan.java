@@ -28,7 +28,7 @@ public class Orangutan extends Animal implements /*LandAnimal,*/ Omnivore, Mamma
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Orangutan Clone() {
+  public Orangutan clone() {
     Orangutan out = new Orangutan(name,weight,sex,row,col);
     return out;
   }

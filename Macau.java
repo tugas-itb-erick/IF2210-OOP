@@ -28,7 +28,7 @@ public class Macau extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Macau Clone() {
+  public Macau clone() {
     Macau out = new Macau(name,weight,sex,row,col);
       return out;
   }

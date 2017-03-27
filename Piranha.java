@@ -28,7 +28,7 @@ public class Piranha extends Animal implements /*WaterAnimal, */Carnivore, Mamma
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Piranha Clone() {
+  public Piranha clone() {
     Piranha out = new Piranha(name,weight,sex,row,col);
     return out;
   }

@@ -28,7 +28,7 @@ public class Owl extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Owl Clone() {
+  public Owl clone() {
     Owl out = new Owl(name,weight,sex,row,col);
     return out;
   }

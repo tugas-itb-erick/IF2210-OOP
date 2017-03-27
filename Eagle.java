@@ -28,7 +28,7 @@ public class Eagle extends Animal implements /*FlyingAnimal,*/ Carnivore, Aves {
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Eagle Clone() {
+  public Eagle clone() {
     Eagle out = new Eagle(name,weight,sex,row,col);
       return out;
   }

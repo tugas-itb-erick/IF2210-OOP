@@ -28,7 +28,7 @@ public class Bat extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Bat Clone() {
+  public Bat clone() {
     Bat out = new Bat(name,weight,sex,row,col);
       return out;
   }

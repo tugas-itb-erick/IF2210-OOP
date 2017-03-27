@@ -28,7 +28,7 @@ public class PuffFish extends Animal implements /*WaterAnimal, */Omnivore, Pisce
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public PuffFish Clone() {
+  public PuffFish clone() {
     PuffFish out = new PuffFish(name,weight,sex,row,col);
     return out;
   }

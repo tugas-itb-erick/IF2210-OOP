@@ -28,7 +28,7 @@ public class Turtle extends Animal implements /*LandAnimal, WaterAnimal,*/ Omniv
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Frog Clone() {
+  public Frog clone() {
     Frog F = new Frog(name,weight,sex,row,col);
     return F;
   }

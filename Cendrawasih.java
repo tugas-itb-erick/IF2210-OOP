@@ -28,7 +28,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
-  public Cendrawasih Clone() {
+  public Cendrawasih clone() {
     Cendrawasih out = new Cendrawasih(name,weight,sex,row,col);
     return out;
   }
