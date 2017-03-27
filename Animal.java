@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-abstract public class Animal implements Renderable {
+abstract public class Animal implements renderable {
 	protected String name;
 	protected double weight;
 	protected Sex sex;
@@ -43,13 +43,13 @@ abstract public class Animal implements Renderable {
 	 * Melakukan duplikasi binatang
 	 * @return binatang yang diduplikasi
 	 */
-	abstract public Animal Clone();
+	abstract public Animal clone();
 
 	/**
 	 * Mengembalikan nama dari binatang
 	 * @return nama binatang
 	 */
-	public String GetName() {
+	public String getName() {
 		return name;
 	}
 
@@ -57,7 +57,7 @@ abstract public class Animal implements Renderable {
 	 * Mengembalikan berat dari binatang
 	 * @return berat binatang
 	 */
-	public double GetWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
@@ -65,7 +65,7 @@ abstract public class Animal implements Renderable {
 	 * Mengembalikan jenis kelamin dari binatang
 	 * @return jenis kelamin binatang
 	 */
-	public Sex GetSex() {
+	public Sex getSex() {
 		return sex;
 	}
 
@@ -73,7 +73,7 @@ abstract public class Animal implements Renderable {
 	 * Mengembalikan posisi baris dari binatang
 	 * @return posisi baris binatang
 	 */
-	public int GetRow() {
+	public int getRow() {
 		return row;
 	}
 
@@ -81,7 +81,7 @@ abstract public class Animal implements Renderable {
 	 * Mengembalikan posisi kolom dari binatang
 	 * @return posisi kolom binatang
 	 */
-	public int GetCol() {
+	public int getCol() {
 		return col;
 	}
 
@@ -89,7 +89,7 @@ abstract public class Animal implements Renderable {
 	 * Mengubah nama dari binatang
 	 * @param nama binatang
 	 */
-	public void SetName(String n) {
+	public void setName(String n) {
 		name = n;
 	}
 
@@ -97,7 +97,7 @@ abstract public class Animal implements Renderable {
 	 * Mengubah berat dari binatang
 	 * @param berat binatang
 	 */
-	public void SetWeight(double w) {
+	public void setWeight(double w) {
 		weight = w;
 	}
 
@@ -105,7 +105,7 @@ abstract public class Animal implements Renderable {
 	 * Mengubah jenis kelamin dari binatang
 	 * @param jenis kelamin binatang
 	 */
-	public void SetSex(Sex ns) {
+	public void setSex(Sex ns) {
 		sex = ns;
 	}
 
@@ -113,7 +113,7 @@ abstract public class Animal implements Renderable {
 	 * Mengubah posisi baris dari binatang
 	 * @param posisi baris binatang
 	 */
-	public void SetRow(int r) {
+	public void setRow(int r) {
 		row = r;
 	}
 
@@ -121,14 +121,14 @@ abstract public class Animal implements Renderable {
 	 * Mengubah posisi kolom dari binatang
 	 * @param posisi kolom binatang
 	 */
-	public void SetCol(int c) {
+	public void setCol(int c) {
 		col = c;
 	}
 
 	/**
 	 * Menampilkan data atribut dari binatang ke layar
 	 */
-	public void DisplayAnimalData() {
+	public void displayAnimalData() {
 		System.out.println("Name: " + name);
 		System.out.println("Weight: "+ weight);
 		System.out.println("Sex: "+ sex);
@@ -144,22 +144,22 @@ abstract public class Animal implements Renderable {
 	 * Mengembalikan liar/tidaknya binatang
 	 * @return true jika liar, false jika tidak liar
 	 */
-	abstract public boolean IsWild();
+	abstract public boolean isWild();
 
 	/**
 	 * Menampilkan interaksi dari binatang
 	 */
-	abstract public void Interact();
+	abstract public void interact();
 
 	/**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
-  abstract public double CountConsumedMeat();
+  abstract public double countConsumedMeat();
 
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
-  abstract public double CountConsumedVeggie();
+  abstract public double countConsumedVeggie();
 }
