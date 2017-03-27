@@ -36,7 +36,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * Menampilkan interaksi hewan
    */
   @Override
-  public void Interact() {
+  public void interact() {
     System.out.println("U u a a ... U u a a");
   }
   /**
@@ -44,7 +44,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return karakter dari binatang
    */
   @Override
-  public char Render() {
+  public char render() {
     return 'C';
   }
   /**
@@ -52,20 +52,20 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return kode warna dan karakter binatang
    */
   @Override
-  public String RenderWithColor() {
-    return ANSI_YELLOW + Render() + ANSI_RESET;
+  public String renderWithColor() {
+    return ANSI_YELLOW + render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
    */
   @Override
-  public boolean IsWild() {
+  public boolean isWild() {
     return false;
   }
   
   @Override
-  public int GetHeartChamber() {
+  public int getHeartChamber() {
     return 4;
   }
  /**
@@ -73,7 +73,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return jenis darah hewan ('h'/'c')
    */
   @Override
-  public char GetBloodTemperature() {
+  public char getBloodTemperature() {
     return 'h';
   }
   /**
@@ -81,7 +81,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetVegRatio() {
+  public double getVegRatio() {
     return 0.02;
   }
   /**
@@ -89,7 +89,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetMeatRatio() {
+  public double getMeatRatio() {
   return 0.02;
   }
   /**
@@ -97,15 +97,15 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
    * @return jumlah daging yang dikonsumsi
    */
   @Override
-  public double CountConsumedMeat() {
-    return weight*GetVegRatio();
+  public double countConsumedMeat() {
+    return weight*getVegRatio();
   }
   /**
    * Mengembalikan jumlah makanan tumbuhan yang dikonsumsi
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
   @Override
-  public double CountConsumedVeggie() {
-    return weight*GetMeatRatio();
+  public double countConsumedVeggie() {
+    return weight*getMeatRatio();
   }
 }

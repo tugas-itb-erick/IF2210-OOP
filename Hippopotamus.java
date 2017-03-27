@@ -36,7 +36,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * Menampilkan interaksi hewan ke layar
    */
   @Override
-  public void Interact() {
+  public void interact() {
     System.out.println("This hippo is so big");
   }
   /**
@@ -44,7 +44,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return karakter tiap hewan
    */
   @Override
-  public char Render() {
+  public char render() {
     return 'H';
   }
   /**
@@ -52,19 +52,19 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return warna cetak hewan
    */
   @Override
-  public String RenderWithColor() {
-    return ANSI_GREEN + Render() + ANSI_RESET;
+  public String renderWithColor() {
+    return ANSI_GREEN + render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
    */
   @Override
-  public boolean IsWild() {
+  public boolean isWild() {
     return true;
   }
     @Override
-  public int GetHeartChamber() {
+  public int getHeartChamber() {
     return 4;
   }
  /**
@@ -72,7 +72,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return jenis darah hewan ('h'/'c')
    */
   @Override
-  public char GetBloodTemperature() {
+  public char getBloodTemperature() {
     return 'h';
   }
   /**
@@ -80,7 +80,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetVegRatio() {
+  public double getVegRatio() {
     return 0.1;
   }
   /**
@@ -88,7 +88,7 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetMeatRatio() {
+  public double getMeatRatio() {
     return 0;
   }
   /**
@@ -96,15 +96,15 @@ public class Hippopotamus extends Animal implements /*LandAnimal, WaterAnimal, *
    * @return jumlah sayur yang dikonsumsi
    */
   @Override
-  public double CountConsumedVeggie() {
-    return weight*GetVegRatio();
+  public double countConsumedVeggie() {
+    return weight*getVegRatio();
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   @Override
-  public double CountConsumedMeat() {
-    return weight*GetMeatRatio();
+  public double countConsumedMeat() {
+    return weight*getMeatRatio();
   }
 }

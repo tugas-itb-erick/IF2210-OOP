@@ -36,7 +36,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * Menampilkan interaksi hewan
    */
   @Override
-  public void Interact() {
+  public void interact() {
     System.out.println("This dolphin loves to jump!");
   }
   /**
@@ -44,7 +44,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return karakter dari binatang
    */
   @Override
-  public char Render() {
+  public char render() {
     return 'D';
   }
   /**
@@ -52,19 +52,19 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return kode warna dan karakter binatang
    */
   @Override
-  public String RenderWithColor() {
-    return ANSI_CYAN + Render() + ANSI_RESET;
+  public String renderWithColor() {
+    return ANSI_CYAN + render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
    */
   @Override
-  public boolean IsWild() {
+  public boolean isWild() {
     return false;
   }
     @Override
-  public int GetHeartChamber() {
+  public int getHeartChamber() {
     return 4;
   }
  /**
@@ -72,7 +72,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return jenis darah hewan ('h'/'c')
    */
   @Override
-  public char GetBloodTemperature() {
+  public char getBloodTemperature() {
     return 'h';
   }
   /**
@@ -80,7 +80,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetVegRatio() {
+  public double getVegRatio() {
     return 0;
   }
   /**
@@ -88,7 +88,7 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetMeatRatio() {
+  public double getMeatRatio() {
     return 0.05;
   }
   /**
@@ -96,15 +96,15 @@ public class Dolphin extends Animal implements /*WaterAnimal,*/ Carnivore, Mamma
    * @return jumlah sayur yang dikonsumsi
    */
   @Override
-  public double CountConsumedVeggie() {
-    return weight*GetVegRatio();
+  public double countConsumedVeggie() {
+    return weight*getVegRatio();
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   @Override
-  public double CountConsumedMeat() {
-    return weight*GetMeatRatio();
+  public double countConsumedMeat() {
+    return weight*getMeatRatio();
   }
 }

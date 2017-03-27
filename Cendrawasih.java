@@ -36,7 +36,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * Menampilkan interaksi hewan
    */
   @Override
-  public void Interact() {
+  public void interact() {
     System.out.println("This cendrawasih is resting gracefully!");
   }
   /**
@@ -44,7 +44,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return karakter dari binatang
    */
   @Override
-  public char Render() {
+  public char render() {
     return 'C';
   }
   /**
@@ -52,19 +52,19 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return kode warna dan karakter binatang
    */
   @Override
-  public String RenderWithColor() {
-    return ANSI_RED + Render() + ANSI_RESET;
+  public String renderWithColor() {
+    return ANSI_RED + render() + ANSI_RESET;
   }
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
    */
   @Override
-  public boolean IsWild() {
+  public boolean isWild() {
     return false;
   }
   @Override
-  public int GetHeartChamber() {
+  public int getHeartChamber() {
     return 3;
   }
   /**
@@ -72,7 +72,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return jenis darah hewan ('h'/'c')
    */
   @Override
-  public char GetBloodTemperature() {
+  public char getBloodTemperature() {
     return 'h';
   }
   /**
@@ -80,7 +80,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetVegRatio() {
+  public double getVegRatio() {
     return 0.02;
   }
   /**
@@ -88,7 +88,7 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
-  public double GetMeatRatio() {
+  public double getMeatRatio() {
     return 0;
   }
   /**
@@ -96,15 +96,15 @@ public class Cendrawasih extends Animal implements /*FlyingAnimal,*/ Omnivore, A
    * @return jumlah sayur yang dikonsumsi
    */
   @Override
-  public double CountConsumedVeggie() {
-    return weight*GetVegRatio();
+  public double countConsumedVeggie() {
+    return weight*getVegRatio();
   }
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
    */
   @Override
-  public double CountConsumedMeat() {
-    return weight*GetMeatRatio();
+  public double countConsumedMeat() {
+    return weight*getMeatRatio();
   }
 }
