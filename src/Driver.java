@@ -33,7 +33,7 @@ public class Driver {
       for (int i = 0; i < numCage; i++) {
         Cage myCage = new Cage();
         myCage.read(inumCage);
-        myZoo.AddCage(myCage);
+        myZoo.addCage(myCage);
       }
       // read Animal from file and add to Zoo
       int numAnimal = inumAnimal.nextInt();
