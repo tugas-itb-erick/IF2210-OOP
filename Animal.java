@@ -162,4 +162,16 @@ abstract public class Animal implements Renderable {
    * @return jumlah makanan tumbuhan yang dikonsumsi
    */
   abstract public double countConsumedVeggie();
+
+	/**
+	 * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+	 * @return karakter yang merepresentasikan habitat
+	 */
+	abstract public char getFirstHabitat();
+
+	/**
+	 * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+	 * @return karakter yang merepresentasikan habitat
+	 */
+	abstract public char getSecondHabitat();
 }

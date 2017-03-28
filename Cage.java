@@ -161,7 +161,7 @@ public class Cage implements Renderable {
 	 * Memeriksa apakah ada binatang pada sel (r,c)
 	 * @return true jika ada binatang, false jika tidak ada
 	 */
-  public boolean SearchAnimal(int r, int c) {
+  public boolean searchAnimal(int r, int c) {
     int i = 0;
     boolean found = false;
 
@@ -174,7 +174,23 @@ public class Cage implements Renderable {
 
     return found;
   }
+  /**
+   * Memeriksa apakah ada binatang dengan species _species pada cage
+   * @return true jika ada binatang dengan species _species, false jika tidak ada
+   */
+  public boolean searchAnimal(Animal _species) {
+    int i = 0;
+    boolean found = false;
 
+    while ((i<nAnimal) && (!found)){
+      if (animal[i].renderWithColor() == _species.renderWithColor())
+        found = true;
+      else
+        i++;
+    }
+
+    return found;
+  }
 	/**
 	 * Menambahkan suatu sel dengan koordinat (r,c) pada kandang
 	 * @param r koordinat baris
@@ -193,9 +209,24 @@ public class Cage implements Renderable {
 	 * @param in binatang yang ingin dimasukkan ke kandang
 	 */
   public void addAnimal(Animal in) {
-    if (!isFull()){
-      boolean valid = !isWild();
+    if (!isFull() && ((in.getFirstHabitat() == getHabitat()) || (in.getSecondHabitat() == getHabitat()))){
+      boolean valid = false;
 
+      if (!searchAnimal(in.getRow(), in.getCol())){ // if there is no other animal in the target coordinate
+        if (isWild()){
+          if (in.isWild())
+            valid = !searchAnimal(in); // wild animal only live with the same species
+          else
+            valid = false;
+        }else{
+          if (in.isWild()){
+            valid = nAnimal == 0; // wild animal cannot live with unwild animal unless there's no other animal
+          }
+          else{
+            valid = true;
+          }
+        }
+      }
 
       if (valid){
         animal[nAnimal] = in.clone();
@@ -257,22 +288,22 @@ public class Cage implements Renderable {
       int rd = rand.nextInt(4) + 1;
       switch (rd){ // 1-up, 2-right, 3-down, 4-left
         case 1:
-        if (searchPosition(animal[i].getRow()-1, animal[i].getCol()) && !SearchAnimal(animal[i].getRow()-1, animal[i].getCol()))
+        if (searchPosition(animal[i].getRow()-1, animal[i].getCol()) && !searchAnimal(animal[i].getRow()-1, animal[i].getCol()))
           animal[i].setRow(animal[i].getRow()-1);
         break;
 
         case 2:
-        if (searchPosition(animal[i].getRow(), animal[i].getCol()+1) && !SearchAnimal(animal[i].getRow(), animal[i].getCol()+1))
+        if (searchPosition(animal[i].getRow(), animal[i].getCol()+1) && !searchAnimal(animal[i].getRow(), animal[i].getCol()+1))
           animal[i].setCol(animal[i].getCol()+1);
         break;
 
         case 3:
-        if (searchPosition(animal[i].getRow()+1, animal[i].getCol()) && !SearchAnimal(animal[i].getRow()+1, animal[i].getCol()))
+        if (searchPosition(animal[i].getRow()+1, animal[i].getCol()) && !searchAnimal(animal[i].getRow()+1, animal[i].getCol()))
           animal[i].setRow(animal[i].getRow()+1);
         break;
 
         case 4:
-        if (searchPosition(animal[i].getRow(), animal[i].getCol()-1) && !SearchAnimal(animal[i].getRow(), animal[i].getCol()-1))
+        if (searchPosition(animal[i].getRow(), animal[i].getCol()-1) && !searchAnimal(animal[i].getRow(), animal[i].getCol()-1))
           animal[i].setCol(animal[i].getCol()-1);
         break;
       }

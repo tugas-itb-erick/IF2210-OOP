@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Eagle extends Animal implements /*FlyingAnimal,*/ Carnivore, Aves {
+public class Eagle extends Animal implements FlyingAnimal, Carnivore, Aves {
   /**
    * Constructor
    */
@@ -106,5 +106,21 @@ public class Eagle extends Animal implements /*FlyingAnimal,*/ Carnivore, Aves {
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'A';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'A';
   }
 }

@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Owl extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
+public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   /**
    * Constructor
    */
@@ -63,7 +63,7 @@ public class Owl extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
   public boolean isWild() {
     return false;
   }
-    @Override
+  @Override
   public int getHeartChamber() {
     return 3;
   }
@@ -106,5 +106,21 @@ public class Owl extends Animal implements /*FlyingAnimal,*/ Omnivore, Aves {
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'A';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'A';
   }
 }

@@ -92,18 +92,34 @@ public class Zoo {
 
   public void AddCage(Cage in){
     boolean valid = true;
+    char first_habitat = '?';
     int i = 0;
 
+    i = 0;
+    if ((in.getRow(i) < 0) || (in.getCol(i) < 0) || (in.getRow(i) >= row) || (in.getCol(i) >= col))
+      valid = false;
+    else
+      first_habitat = cell[in.getRow(i)][in.getCol(i)].render();
+
+    if (valid){
+      valid = ((cell[in.getRow(i)][in.getCol(i)].render() == 'L') ||
+              (cell[in.getRow(i)][in.getCol(i)].render() == 'W')  ||
+              (cell[in.getRow(i)][in.getCol(i)].render() == 'A'));
+    }
+
     while ((i < in.getSize()) && valid){
-      if ((in.getRow(i) < 0) || (in.getCol(i) < 0))
+      if ((in.getRow(i) < 0) || (in.getCol(i) < 0) || (in.getRow(i) >= row) || (in.getCol(i) >= col))
         valid = false;
       else{
+        // check if cage does not take more than one habitat
+        valid = cell[in.getRow(i)][in.getCol(i)].render() == first_habitat;
+
+        // check if there's exist another cage
         int j = 0;
         while ((j < nCage) && valid){
           int k = 0;
           while ((k < cage[j].getSize()) && valid){
-            if ((in.getRow(i) == cage[j].getRow(k)) &&
-               (in.getCol(i) == cage[j].getCol(k)))
+            if ((in.getRow(i) == cage[j].getRow(k)) && (in.getCol(i) == cage[j].getCol(k)))
               valid = false;
             else
               k++;
@@ -198,6 +214,56 @@ public class Zoo {
         }
         System.out.println();
       }
+    }
+  }
+  /**
+    * Menampilkan kebun binatang dengan meng-highlight posisi rxc
+    * @param r posisi baris yang ingin di-highlight
+    * @param c posisi kolom yang ingin di-highlight
+    */
+  public void display(int r, int c){
+    for(int i=0; i<row; i++){
+      for(int j=0; j<col; j++){
+        int k = 0;
+        boolean found = false;
+
+        // search cage
+        while ((k < nCage) && !found){
+          int l = 0;
+          while ((l < cage[k].getSize()) && !found){
+            if ((cage[k].getRow(l) == i) && (cage[k].getCol(l) == j)){
+              found = true;
+
+              // search animal
+              int i2 = 0;
+              boolean found2 = false;
+              while ((i2 < cage[k].getTotalAnimal()) && !found2){
+                if ((cage[k].getAnimal(i2).getRow() == i) &&
+                    (cage[k].getAnimal(i2).getCol() == j))
+                  found2 = true;
+                else
+                  i2++;
+              }
+
+              if (found2){
+                System.out.print(cage[k].getAnimal(i2).renderWithColor());
+              }else{
+                System.out.print(cage[k].renderWithColor());
+              }
+            }
+            ++l;
+          }
+          ++k;
+        }
+        if (!found){
+          if ((i == r) && (j == c))
+            System.out.print("\u001B[43m" + cell[i][j].render() + "\u001B[0m");
+          else
+            System.out.print(cell[i][j].render());
+        }
+        System.out.print(" ");
+      }
+      System.out.println();
     }
   }
   /**
@@ -353,6 +419,167 @@ public class Zoo {
     }
   }
   /**
+    * Melakukan real time tour, yaitu pengguna dapat melihat langkah
+    * demi langkah saat tour, dan animal dapat bergerak pada real time tour.
+    */
+  public void realTimeTour(){
+    boolean found = false;
+    int xen = 0, yen = 0, xex = 0, yex = 0;
+    Random rand = new Random();
+
+    // get Random Entrance n Exit
+    while (!found){
+      int x = rand.nextInt(row);
+      int y = rand.nextInt(col);
+      int choice = rand.nextInt(4);
+      if (choice == 0){
+        if (cell[x][0].render() == 'i'){
+          found = true;
+          xen = x;
+          yen = 0;
+        }
+      }else if (choice == 1){
+        if (cell[x][col-1].render() == 'i'){
+          found = true;
+          xen = x;
+          yen = col-1;
+        }
+      }else if (choice == 2){
+        if (cell[0][y].render() == 'i'){
+          found = true;
+          xen = 0;
+          yen = y;
+        }
+      }else{
+        if (cell[row-1][y].render() == 'i'){
+          found = true;
+          xen = row-1;
+          yen = y;
+        }
+      }
+    }
+
+    // get Exit
+    found = false;
+    while (!found){
+      int x = rand.nextInt(row);
+      int y = rand.nextInt(col);
+      int choice = rand.nextInt(4);
+      if (choice == 0){
+        if (cell[x][0].render() == 'o'){
+          found = true;
+          xex = x;
+          yex = 0;
+        }
+      }else if (choice == 1){
+        if (cell[x][col-1].render() == 'o'){
+          found = true;
+          xex = x;
+          yex = col-1;
+        }
+      }else if (choice == 2){
+        if (cell[0][y].render() == 'o'){
+          found = true;
+          xex = 0;
+          yex = y;
+        }
+      }else{
+        if (cell[row-1][y].render() == 'o'){
+          found = true;
+          xex = row-1;
+          yex = y;
+        }
+      }
+    }
+
+    boolean[][] path = new boolean[row][col];
+    for(int i=0; i<row; i++){
+      for(int j=0; j<col; j++){
+        if ((cell[i][j].render() == 'o') || (cell[i][j].render() == '-') ||
+                                            (cell[i][j].render() == 'i'))
+          path[i][j] = true;
+        else
+          path[i][j] = false;
+      }
+    }
+
+    int i = xen;
+    int j = yen;
+    while ((i != xex) || (j != yex)){
+      // clearscreen
+      System.out.print("\033[H\033[2J");
+      System.out.flush();
+      display(i, j);
+
+      path[i][j] = false;
+      System.out.println("(" + i + "," + j + ") :");
+
+      boolean fcage = false;
+      int icage = 0;
+      while ((icage < nCage) && !fcage){
+        if (cage[icage].searchPosition(i+1, j)){
+          cage[icage].interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < nCage) && !fcage){
+        if (cage[icage].searchPosition(i-1, j)){
+          cage[icage].interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < nCage) && !fcage){
+        if (cage[icage].searchPosition(i, j+1)){
+          cage[icage].interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      fcage = false;
+      icage = 0;
+      while ((icage < nCage) && !fcage){
+        if (cage[icage].searchPosition(i, j-1)){
+          cage[icage].interact();
+          fcage = true;
+        }else{
+          icage++;
+        }
+      }
+
+      System.out.println("Press enter to continue... ");
+      try{
+        System.in.read();
+      }catch(Exception e){}
+
+      for(int k=0; k<nCage; ++k)
+        cage[k].moveAnimal();
+
+      if ((i+1<row) && path[i+1][j])
+        i++;
+      else if ((i-1>=0) && path[i-1][j])
+        i--;
+      else if ((j+1<col) && path[i][j+1])
+        j++;
+      else if ((j-1>=0) && path[i][j-1])
+        j--;
+      else
+        break;
+
+    }
+  }
+  /**
     * Membaca kebun binatang dari input suatu scanner
     * @param in scanner input
     */
@@ -386,7 +613,7 @@ public class Zoo {
       countm += cage[i].countConsumedMeat();
       countv += cage[i].countConsumedVeggie();
     }
-    System.out.println("Total Daging yang dikonsumsi: " + countm);
-    System.out.println("Total Sayur yang dikonsumsi: " + countv);
+    System.out.printf("Total Daging yang dikonsumsi: %.2f daging\n", countm);
+    System.out.printf("Total Sayur yang dikonsumsi: %.2f sayur\n", countv);
   }
 }

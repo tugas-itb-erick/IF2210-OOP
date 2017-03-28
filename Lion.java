@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Lion extends Animal implements /*LandAnimal,*/ Carnivore, Mammalia {
+public class Lion extends Animal implements LandAnimal, Carnivore, Mammalia {
   /**
    * Constructor
    */
@@ -105,5 +105,21 @@ public class Lion extends Animal implements /*LandAnimal,*/ Carnivore, Mammalia 
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'L';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'L';
   }
 }

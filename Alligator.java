@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Carnivore, Reptilia {
+public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carnivore, Reptilia {
   /**
    * Constructor
    */
@@ -110,5 +110,21 @@ public class Alligator extends Animal implements /*LandAnimal, WaterAnimal,*/ Ca
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'L';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'W';
   }
 }

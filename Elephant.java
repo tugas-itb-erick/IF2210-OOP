@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Elephant extends Animal implements /*LandAnimal,*/ Herbivore, Mammalia {
+public class Elephant extends Animal implements LandAnimal, Herbivore, Mammalia {
   /**
    * Constructor
    */
@@ -105,5 +105,21 @@ public class Elephant extends Animal implements /*LandAnimal,*/ Herbivore, Mamma
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'L';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'L';
   }
 }

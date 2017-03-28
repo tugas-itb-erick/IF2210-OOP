@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mammalia {
+public class Chimpanzee extends Animal implements LandAnimal, Omnivore, Mammalia {
   /**
    * Constructor
    */
@@ -63,7 +63,7 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
   public boolean isWild() {
     return false;
   }
-  
+
   @Override
   public int getHeartChamber() {
     return 4;
@@ -107,5 +107,21 @@ public class Chimpanzee extends Animal implements /*LandAnimal,*/ Omnivore, Mamm
   @Override
   public double countConsumedVeggie() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'L';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'L';
   }
 }

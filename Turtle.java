@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Turtle extends Animal implements /*LandAnimal, WaterAnimal,*/ Omnivore, Reptilia {
+public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptilia {
   /**
    * Constructor
    */
@@ -106,5 +106,21 @@ public class Turtle extends Animal implements /*LandAnimal, WaterAnimal,*/ Omniv
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'L';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'W';
   }
 }

@@ -6,7 +6,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class PuffFish extends Animal implements /*WaterAnimal, */Omnivore, Pisces {
+public class PuffFish extends Animal implements WaterAnimal, Omnivore, Pisces {
   /**
    * Constructor
    */
@@ -106,5 +106,21 @@ public class PuffFish extends Animal implements /*WaterAnimal, */Omnivore, Pisce
   @Override
   public double countConsumedMeat() {
     return weight*getMeatRatio();
+  }
+  /**
+   * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getFirstHabitat(){
+    return 'W';
+  }
+  /**
+   * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
+   * @return karakter yang merepresentasikan habitat
+   */
+  @Override
+  public char getSecondHabitat(){
+    return 'W';
   }
 }
