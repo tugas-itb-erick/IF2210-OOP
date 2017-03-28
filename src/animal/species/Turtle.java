@@ -45,8 +45,8 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
    * @return hewan yang ingin diduplikasi
    */
   @Override
-  public Frog clone() {
-    return new Frog(name,weight,sex,row,col);
+  public Turtle clone() {
+    return new Turtle(name,weight,sex,row,col);
   }
 
   /**

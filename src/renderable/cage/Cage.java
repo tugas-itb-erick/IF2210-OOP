@@ -190,7 +190,7 @@ public class Cage implements Renderable {
     boolean found = false;
 
     while ((i < numAnimal) && (!found)) {
-      if (animal[i].renderWithColor() == parSpecies.renderWithColor()) {
+      if (animal[i].render() == parSpecies.render()) {
         found = true;
       } else {
         i++;
