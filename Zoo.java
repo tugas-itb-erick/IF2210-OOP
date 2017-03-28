@@ -402,16 +402,31 @@ public class Zoo {
         }
       }
 
+      List<Integer> move = new ArrayList<Integer>();
       if ((i+1<row) && path[i+1][j])
-        i++;
-      else if ((i-1>=0) && path[i-1][j])
-        i--;
-      else if ((j+1<col) && path[i][j+1])
-        j++;
-      else if ((j-1>=0) && path[i][j-1])
-        j--;
-      else
+        move.add(1);
+      if ((i-1>=0) && path[i-1][j])
+        move.add(2);
+      if ((j+1<col) && path[i][j+1])
+        move.add(3);
+      if ((j-1>=0) && path[i][j-1])
+        move.add(4);
+
+      if (move.isEmpty()) {
         break;
+      }
+
+      else {
+        int next = rand.nextInt(move.size());
+        if (move.get(next) == 1)
+          i++;
+        else if (move.get(next) == 2)
+          i--;
+        else if (move.get(next) == 3)
+          j++;
+        else
+          j--;
+      }
     }
   }
 
@@ -550,16 +565,31 @@ public class Zoo {
         }
       }
 
+      List<Integer> move = new ArrayList<Integer>();
       if ((i+1<row) && path[i+1][j])
-        i++;
-      else if ((i-1>=0) && path[i-1][j])
-        i--;
-      else if ((j+1<col) && path[i][j+1])
-        j++;
-      else if ((j-1>=0) && path[i][j-1])
-        j--;
-      else
+        move.add(1);
+      if ((i-1>=0) && path[i-1][j])
+        move.add(2);
+      if ((j+1<col) && path[i][j+1])
+        move.add(3);
+      if ((j-1>=0) && path[i][j-1])
+        move.add(4);
+
+      if (move.isEmpty()) {
         break;
+      }
+
+      else {
+        int next = rand.nextInt(move.size());
+        if (move.get(next) == 1)
+          i++;
+        else if (move.get(next) == 2)
+          i--;
+        else if (move.get(next) == 3)
+          j++;
+        else
+          j--;
+      }
 
       System.out.println("Press enter to continue... ");
       try{
