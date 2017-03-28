@@ -5,31 +5,29 @@
 
 package facility.restaurant;
 
-import java.util.*;
-
 import facility.Facility;
 
-import java.lang.*;
-
-public class Restaurant extends Facility{
-   /**
-   * Constructor
+public class Restaurant extends Facility {
+  /**
+   * Constructor.
    */
-  public Restaurant(){
+  public Restaurant() {
     super();
   }
+  
   /**
-   * Mengembalikan karakter untuk ditampilkan ke layar
+   * Mengembalikan karakter untuk ditampilkan ke layar.
    * @return id bertipe char
    */
-  public char render(){
+  public char render() {
     return 'R';
   }
+  
   /**
-   * Mengembalikan warna untuk ditampilkan ke layar
+   * Mengembalikan warna untuk ditampilkan ke layar.
    * @return color warna renderable
    */
-  public String renderWithColor(){
+  public String renderWithColor() {
     return ANSI_WHITE + render() + ANSI_RESET;
   }
 }

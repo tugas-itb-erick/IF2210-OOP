@@ -5,12 +5,10 @@
 
 package animal.habitat;
 
-import java.util.*;
-import java.lang.*;
-
 public interface FlyingAnimal {
   /**
-   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang terbang
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang terbang.
    */
-  public void fly();
+  public abstract void fly();
 }
+

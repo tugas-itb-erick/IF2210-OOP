@@ -1,10 +1,9 @@
-/** @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
-			File     : Carnivore.java                   */
+/** 
+ * @author NIM/Nama : 13515078 / Veren Iliana Kurniadi 
+ * File : Carnivore.java                   
+ */
 
 package animal.diet;
-
-import java.util.*;
-import java.lang.*;
 
 public interface Carnivore {
   /** 

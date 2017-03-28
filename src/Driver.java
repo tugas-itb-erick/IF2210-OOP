@@ -3,55 +3,54 @@
   * File             : Driver.java
   */
 
-import java.util.*;
-import java.io.*;
-
-import zoo.*;
 import animal.*;
-import animal.factory.*;
-import renderable.*;
+import animal.factory.AnimalFactory;
+import java.io.*;
+import java.util.*;
 import renderable.cage.Cage;
+import zoo.Zoo;
 
 public class Driver {
   /**
-    * Deklarasi objek myZoo
+    * Deklarasi objek myZoo.
     */
   public static Zoo myZoo;
+  
   /**
-    * Membuat sebuah kebun binatang
+    * Membuat sebuah kebun binatang.
     */
-  public static void createZoo(){
-    try{
+  public static void createZoo() {
+    try {
       Scanner inZoo = new Scanner(new File("zoo.txt"));
-      Scanner inCage = new Scanner(new File("cage.txt"));
-      Scanner inAnimal = new Scanner(new File("animal.txt"));
+      Scanner inumCage = new Scanner(new File("cage.txt"));
+      Scanner inumAnimal = new Scanner(new File("animal.txt"));
       Scanner in = new Scanner(System.in);
       myZoo = new Zoo();
       // read Zoo from file
       myZoo.read(inZoo);
       // read Cage from file and add to Zoo
-      int nCage = inCage.nextInt();
-      for(int i=0; i<nCage; i++){
+      int numCage = inumCage.nextInt();
+      for (int i = 0; i < numCage; i++) {
         Cage myCage = new Cage();
-        myCage.read(inCage);
+        myCage.read(inumCage);
         myZoo.AddCage(myCage);
       }
       // read Animal from file and add to Zoo
-      int nAnimal = inAnimal.nextInt();
-      for(int i=0; i<nAnimal; i++){
+      int numAnimal = inumAnimal.nextInt();
+      for (int i = 0; i < numAnimal; i++) {
         AnimalFactory af = new AnimalFactory();
-        Animal myAnimal = af.read(inAnimal);
+        Animal myAnimal = af.read(inumAnimal);
         myZoo.addAnimal(myAnimal);
       }
-    }
-    catch(FileNotFoundException e){
+    } catch (FileNotFoundException e) {
       System.out.println(e);
     }
   }
+  
   /**
-    * Menampilkan daftar pilihan menu utama
+    * Menampilkan daftar pilihan menu utama.
     */
-  public static void showMenu(){
+  public static void showMenu() {
     System.out.println("Selamat datang di Kebun Binatang Virtual Zoo!");
     System.out.println("1. Menampilkan peta Kebun Binatang");
     System.out.println("2. Menampilkan seluruh peta pada Kebun Binatang");
@@ -61,20 +60,24 @@ public class Driver {
     System.out.println("6. Quit");
     System.out.println("Pilih angka 1..6 :");
   }
+  
   /**
-    * main program
+    * main program.
     */
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
     createZoo();
     int n;
-    do{
+    do {
       showMenu();
       n = in.nextInt();
       switch (n) {
         case 1:
           System.out.print("Input angka x1 y1 x2 y2 : ");
-          int x1 = in.nextInt(), y1 = in.nextInt(), x2 = in.nextInt(), y2 = in.nextInt();
+          int x1 = in.nextInt(); 
+          int y1 = in.nextInt();
+          int x2 = in.nextInt(); 
+          int y2 = in.nextInt();
           myZoo.display(x1, y1, x2, y2);
           break;
         case 2:
@@ -96,6 +99,6 @@ public class Driver {
           break;
       }
       System.out.println();
-    }while(n != 6);
+    } while (n != 6);
   }
 }

@@ -5,9 +5,6 @@
 
 package animal.diet;
 
-import java.util.*;
-import java.lang.*;
-
 public interface Herbivore {
   /**
    * Mengembalikan nilai rasio daging.
@@ -21,3 +18,4 @@ public interface Herbivore {
    */
   public double getVegRatio();
 }
+

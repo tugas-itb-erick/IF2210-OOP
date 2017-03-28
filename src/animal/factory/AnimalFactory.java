@@ -5,108 +5,80 @@
 
 package animal.factory;
 
-import java.io.*;
-import java.util.*;
-
 import animal.*;
-import animal.sex.*;
+import animal.sex.Sex;
 import animal.species.*;
-
-import java.lang.*;
+import java.util.*;
 
 public class AnimalFactory {
   /** 
-  * Konstruktor
+  * Konstruktor.
   */
-  public AnimalFactory(){}
+  public AnimalFactory() {}
 
   /** 
-  * Mengembalikan objek binatang dari suatu input "Scanner"
+  * Mengembalikan objek binatang dari suatu input "Scanner".
   * @param in scanner input
   * @return binatang yang diciptakan
   */
-  public Animal read(Scanner in){
+  public Animal read(Scanner in) {
     String s = in.next();
     String name = in.next();
     double weight = in.nextDouble();
-    String sex_s = in.next();
-    Sex sex = (sex_s.equalsIgnoreCase("MALE"))? Sex.MALE : Sex.FEMALE;
+    String parSex = in.next();
+    Sex sex = (parSex.equalsIgnoreCase("MALE")) ? Sex.MALE : Sex.FEMALE;
     int row = in.nextInt();
     int col = in.nextInt();
 
-    if (s.equalsIgnoreCase("Elephant")){
+    if (s.equalsIgnoreCase("Elephant")) {
       return new Elephant(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Giraffe")){
+    } else if (s.equalsIgnoreCase("Giraffe")) {
       return new Giraffe(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Lion")){
+    } else if (s.equalsIgnoreCase("Lion")) {
       return new Lion(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Tiger")){
+    } else if (s.equalsIgnoreCase("Tiger")) {
       return new Tiger(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Orangutan")){
+    } else if (s.equalsIgnoreCase("Orangutan")) {
       return new Orangutan(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Chimpanzee")){
+    } else if (s.equalsIgnoreCase("Chimpanzee")) {
       return new Chimpanzee(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Komodo")){
+    } else if (s.equalsIgnoreCase("Komodo")) {
       return new Komodo(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Bear")){
+    } else if (s.equalsIgnoreCase("Bear")) {
       return new Bear(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Whale")){
+    } else if (s.equalsIgnoreCase("Whale")) {
       return new Whale(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Dolphin")){
+    } else if (s.equalsIgnoreCase("Dolphin")) {
       return new Dolphin(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Clownfish")){
+    } else if (s.equalsIgnoreCase("Clownfish")) {
       return new ClownFish(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("BlueTang")){
+    } else if (s.equalsIgnoreCase("BlueTang")) {
       return new BlueTang(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Piranha")){
+    } else if (s.equalsIgnoreCase("Piranha")) {
       return new Piranha(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("PuffFish")){
+    } else if (s.equalsIgnoreCase("PuffFish")) {
       return new PuffFish(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Eagle")){
+    } else if (s.equalsIgnoreCase("Eagle")) {
       return new Eagle(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Cendrawasih")){
+    } else if (s.equalsIgnoreCase("Cendrawasih")) {
       return new Cendrawasih(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Owl")){
+    } else if (s.equalsIgnoreCase("Owl")) {
       return new Owl(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Bat")){
+    } else if (s.equalsIgnoreCase("Bat")) {
       return new Bat(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Macau")){
+    } else if (s.equalsIgnoreCase("Macau")) {
       return new Macau(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Cockatoo")){
+    } else if (s.equalsIgnoreCase("Cockatoo")) {
       return new Cockatoo(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Frog")){
+    } else if (s.equalsIgnoreCase("Frog")) {
       return new Frog(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Alligator")){
+    } else if (s.equalsIgnoreCase("Alligator")) {
       return new Alligator(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Hippopotamus")){
+    } else if (s.equalsIgnoreCase("Hippopotamus")) {
       return new Hippopotamus(name, weight, sex, row, col);
-    }
-    else if (s.equalsIgnoreCase("Turtle")){
+    } else if (s.equalsIgnoreCase("Turtle")) {
       return new Turtle(name, weight, sex, row, col);
-    }
-    else{
+    } else {
       return new Elephant(name, weight, sex, row, col);
     }
   }

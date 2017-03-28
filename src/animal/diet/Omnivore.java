@@ -5,9 +5,6 @@
 
 package animal.diet;
 
-import java.util.*;
-import java.lang.*;
-
 public interface Omnivore {
   /**
    * Mengembalikan nilai rasio daging.

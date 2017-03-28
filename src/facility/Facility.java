@@ -3,13 +3,9 @@
 
 package facility;
 
-import java.util.*;
-
 import renderable.cell.Cell;
 
-import java.lang.*;
-
-abstract public class Facility extends Cell {
+public abstract class Facility extends Cell {
   /**
    * Constructor.
    */

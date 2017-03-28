@@ -4,12 +4,8 @@
 
 package renderable.cell;
 
-import java.util.*;
-
 import renderable.Renderable;
 
-import java.lang.*;
-
-abstract public class Cell implements Renderable {
-  public Cell(){}
+public abstract class Cell implements Renderable {
+  public Cell() {}
 }

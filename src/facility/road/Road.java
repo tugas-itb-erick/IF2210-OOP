@@ -5,31 +5,29 @@
 
 package facility.road;
 
-import java.util.*;
-
 import facility.Facility;
 
-import java.lang.*;
-
-public class Road extends Facility{
-   /**
-   * Constructor
+public class Road extends Facility {
+  /**
+   * Constructor.
    */
-  public Road(){
+  public Road() {
     super();
   }
+  
   /**
-   * Mengembalikan karakter untuk ditampilkan ke layar
+   * Mengembalikan karakter untuk ditampilkan ke layar.
    * @return id bertipe char
    */
-  public char render(){
+  public char render() {
     return '-';
   }
+  
   /**
-   * Mengembalikan warna untuk ditampilkan ke layar
+   * Mengembalikan warna untuk ditampilkan ke layar.
    * @return color warna renderable
    */
-  public String renderWithColor(){
+  public String renderWithColor() {
     return ANSI_WHITE + render() + ANSI_RESET;
   }
 }

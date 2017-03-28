@@ -5,9 +5,6 @@
 
 package renderable;
 
-import java.util.*;
-import java.lang.*;
-
 public interface Renderable {
   public static final String ANSI_RESET = "\u001B[0m";
   public static final String ANSI_BLACK = "\u001B[30m";
@@ -32,19 +29,23 @@ public interface Renderable {
   public static final String ANSI_UNDERLINE = "\u001B[4m";
 
   /**
-    * Mengembalikan suatu karakter\
+    * Mengembalikan suatu karakter.
     * @return karakter yang akan ditampilkan
     */
-  abstract public char render();
+  public abstract char render();
+  
   /**
-    * Mengembalikan suatu karakter beserta kode warna
+    * Mengembalikan suatu karakter beserta kode warna.
     * @return kode warna beserta karakter yang akan ditampilkan
     */
-  abstract public String renderWithColor();
+  public abstract String renderWithColor();
 }
 
 /* Example:
-System.out.println(ANSI_GREEN_BACKGROUND + "This text has a green background but default text!" + ANSI_RESET");
-System.out.println(ANSI_RED + "This text has red text but a default background!" + ANSI_RESET");
-System.out.println(ANSI_GREEN_BACKGROUND + ANSI_RED + "This text has a green background and red text!" + ANSI_RESET");
+System.out.println(ANSI_GREEN_BACKGROUND 
+  + "This text has a green background but default text!" + ANSI_RESET");
+System.out.println(ANSI_RED 
+  + "This text has red text but a default background!" + ANSI_RESET");
+System.out.println(ANSI_GREEN_BACKGROUND + ANSI_RED 
+  + "This text has a green background and red text!" + ANSI_RESET");
 */

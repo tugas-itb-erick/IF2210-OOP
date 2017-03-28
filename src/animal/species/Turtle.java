@@ -5,37 +5,43 @@
 
 package animal.species;
 
+import animal.Animal;
+import animal.diet.Carnivore;
+import animal.diet.Herbivore;
+import animal.diet.Omnivore;
+import animal.habitat.AirHabitat;
+import animal.habitat.LandHabitat;
+import animal.habitat.WaterHabitat;
+import animal.sex.Sex;
+import animal.vertebrate.Amphibia;
+import animal.vertebrate.Aves;
+import animal.vertebrate.Mammalia;
+import animal.vertebrate.Pisces;
+import animal.vertebrate.Reptilia;
 import java.util.*;
-import java.lang.*;
-
-import animal.*;
-import animal.diet.*;
-import animal.habitat.*;
-import animal.vertebrate.*;
-import animal.sex.*;
 
 public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore, Reptilia {
   /**
-   * Constructor
+   * Constructor.
    */
   public Turtle() {
     super();
   }
 
   /**
-   * Consructor dengan parameter
-   * @param _name nama binatang
-   * @param _weight berat
-   * @param _s jenis kelamin
-   * @param _r posisi hewan (baris)
-   * @param _c posisi hewan (kolom)
+   * Consructor dengan parameter.
+   * @param parName nama binatang
+   * @param parWeight berat
+   * @param parSex jenis kelamin
+   * @param parRow posisi hewan (baris)
+   * @param parCol posisi hewan (kolom)
    */
-  public Turtle(String _name, double _weight, Sex _s, int _r, int _c) {
-    super(_name,  _weight, _s,  _r, _c);
+  public Turtle(String parName, double parWeight, Sex parSex, int parRow, int parCol) {
+    super(parName,  parWeight, parSex,  parRow, parCol);
   }
 
   /**
-   * Melakukan clone hewan
+   * Melakukan clone hewan.
    * @return hewan yang ingin diduplikasi
    */
   @Override
@@ -44,7 +50,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Menampilkan interaksi hewan ke layar
+   * Menampilkan interaksi hewan ke layar.
    */
   @Override
   public void interact() {
@@ -52,7 +58,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan karakter id tiap hewan
+   * Mengembalikan karakter id tiap hewan.
    * @return karakter tiap hewan
    */
   @Override
@@ -61,7 +67,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan warna dari hewan
+   * Mengembalikan warna dari hewan.
    * @return warna cetak hewan
    */
   @Override
@@ -70,7 +76,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan liar/tidaknya binatang
+   * Mengembalikan liar/tidaknya binatang.
    * @return true jika liar, false jika jinak
    */
   @Override
@@ -78,13 +84,17 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
     return false;
   }
 
+  /**
+   * Mengembalikan jumlah ruang jantung hewan.
+   * @return jumlah ruang jantung hewan
+   */
   @Override
   public int getHeartChamber() {
     return 4;
   }
 
- /**
-   * Mengembalikan jenis darah hewan ('h'/'c')
+  /**
+   * Mengembalikan jenis darah hewan ('h'/'c').
    * @return jenis darah hewan ('h'/'c')
    */
   @Override
@@ -93,7 +103,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
+   * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan.
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
@@ -102,7 +112,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
+   * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan.
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
@@ -111,21 +121,21 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mengembalikan jumlah sayur yang dikonsumsi
+   * Mengembalikan jumlah sayur yang dikonsumsi.
    * @return jumlah sayur yang dikonsumsi
    */
   @Override
   public double countConsumedVeggie() {
-    return weight*getVegRatio();
+    return weight * getVegRatio();
   }
 
   /**
-   * Mengembalikan jumlah daging yang dikonsumsi
+   * Mengembalikan jumlah daging yang dikonsumsi.
    * @return jumlah daging yang dikonsumsi
    */
   @Override
   public double countConsumedMeat() {
-    return weight*getMeatRatio();
+    return weight * getMeatRatio();
   }
 
   /**
@@ -133,7 +143,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getFirstHabitat(){
+  public char getFirstHabitat() {
     return 'L';
   }
 
@@ -142,12 +152,12 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getSecondHabitat(){
+  public char getSecondHabitat() {
     return 'W';
   }
 
   /**
-   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari.
    */
   @Override
   public void run() {
@@ -155,7 +165,7 @@ public class Turtle extends Animal implements LandAnimal, WaterAnimal, Omnivore,
   }
 
   /**
-   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berenang
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berenang.
    */
   @Override
   public void swim() {

@@ -5,18 +5,15 @@
 
 package animal.vertebrate;
 
-import java.util.*;
-import java.lang.*;
-
 public interface Amphibia {
   /**
-   * Mengembalikan jumlah ruang jantung hewan
+   * Mengembalikan jumlah ruang jantung hewan.
    * @return jumlah ruang jantung hewan
    */
   public int getHeartChamber();
 
   /**
-   * Mengembalikan jenis darah hewan ('h'/'c')
+   * Mengembalikan jenis darah hewan ('h'/'c').
    * @return jenis darah hewan ('h'/'c')
    */
   public char getBloodTemperature();

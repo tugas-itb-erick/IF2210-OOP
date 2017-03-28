@@ -5,13 +5,9 @@
 
 package habitat;
 
-import java.util.*;
-
 import renderable.cell.Cell;
 
-import java.lang.*;
-
-abstract public class Habitat extends Cell {
+public abstract class Habitat extends Cell {
   /**
    * Constructor.
    */
@@ -19,3 +15,4 @@ abstract public class Habitat extends Cell {
     super();
   }
 }
+

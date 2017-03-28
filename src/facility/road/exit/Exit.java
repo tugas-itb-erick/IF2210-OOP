@@ -5,31 +5,29 @@
 
 package facility.road.exit;
 
-import java.util.*;
-
 import facility.road.Road;
 
-import java.lang.*;
-
-public class Exit extends Road{
-   /**
-   * Constructor
+public class Exit extends Road {
+  /**
+   * Constructor.
    */
-  public Exit(){
+  public Exit() {
     super();
   }
+  
   /**
-   * Mengembalikan karakter untuk ditampilkan ke layar
+   * Mengembalikan karakter untuk ditampilkan ke layar.
    * @return id bertipe char
    */
-  public char render(){
+  public char render() {
     return 'o';
   }
+  
   /**
-   * Mengembalikan warna untuk ditampilkan ke layar
+   * Mengembalikan warna untuk ditampilkan ke layar.
    * @return color warna renderable
    */
-  public String renderWithColor(){
+  public String renderWithColor() {
     return ANSI_WHITE + render() + ANSI_RESET;
   }
 }
