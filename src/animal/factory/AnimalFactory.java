@@ -5,9 +5,20 @@
 
 package animal.factory;
 
-import animal.*;
+import animal.Animal;
+import animal.diet.Carnivore;
+import animal.diet.Herbivore;
+import animal.diet.Omnivore;
+import animal.habitat.FlyingAnimal;
+import animal.habitat.LandAnimal;
+import animal.habitat.WaterAnimal;
 import animal.sex.Sex;
 import animal.species.*;
+import animal.vertebrate.Amphibia;
+import animal.vertebrate.Aves;
+import animal.vertebrate.Mammalia;
+import animal.vertebrate.Pisces;
+import animal.vertebrate.Reptilia;
 import java.util.*;
 
 public class AnimalFactory {
