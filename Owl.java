@@ -13,6 +13,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public Owl() {
     super();
   }
+
   /**
    * Constructor dengan parameter
    * @param _name nama hewan
@@ -24,14 +25,16 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public Owl(String _name, double _weight, Sex _s, int _r, int _c) {
     super(_name, _weight, _s, _r, _c);
   }
+
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
+  @Override
   public Owl clone() {
-    Owl out = new Owl(name,weight,sex,row,col);
-    return out;
+    return new Owl(name,weight,sex,row,col);
   }
+
   /**
    * Menampilkan interaksi hewan
    */
@@ -39,6 +42,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public void interact() {
     System.out.println("Hooo... Hooo...");
   }
+
   /**
    * Mengembalikan karakter dari binatang untuk ditampilkan
    * @return karakter dari binatang
@@ -47,6 +51,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public char render() {
     return 'O';
   }
+
   /**
    * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
    * @return kode warna dan karakter binatang
@@ -55,6 +60,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public String renderWithColor() {
     return ANSI_RED + render() + ANSI_RESET;
   }
+
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
@@ -63,10 +69,12 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public boolean isWild() {
     return false;
   }
+
   @Override
   public int getHeartChamber() {
     return 3;
   }
+
  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
@@ -75,6 +83,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public char getBloodTemperature() {
     return 'h';
   }
+
   /**
    * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -83,6 +92,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public double getVegRatio() {
     return 0.02;
   }
+
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -91,6 +101,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public double getMeatRatio() {
     return 0.02;
   }
+
   /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
@@ -99,6 +110,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public double countConsumedVeggie() {
     return weight*getVegRatio();
   }
+
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
@@ -107,6 +119,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public double countConsumedMeat() {
     return weight*getMeatRatio();
   }
+
   /**
    * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -115,6 +128,7 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   public char getFirstHabitat(){
     return 'A';
   }
+
   /**
    * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -122,5 +136,13 @@ public class Owl extends Animal implements FlyingAnimal, Omnivore, Aves {
   @Override
   public char getSecondHabitat(){
     return 'A';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang flying
+   */
+  @Override
+  public void fly() {
+    System.out.println("I'm flying!");
   }
 }

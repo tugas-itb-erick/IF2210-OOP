@@ -13,6 +13,7 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public Bear() {
     super();
   }
+
   /**
    * Constructor dengan parameter
    * @param _name nama hewan
@@ -24,14 +25,16 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public Bear(String _name, double _weight, Sex _s, int _r, int _c) {
     super(_name, _weight, _s, _r, _c);
   }
+
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
+  @Override
   public Bear clone() {
-    Bear out = new Bear(name,weight,sex,row,col);
-    return out;
+    return new Bear(name,weight,sex,row,col);
   }
+
   /**
    * Menampilkan interaksi hewan
    */
@@ -39,6 +42,7 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public void interact() {
     System.out.println("Growl.. Growl..");
   }
+
   /**
    * Mengembalikan karakter dari binatang untuk ditampilkan
    * @return karakter dari binatang
@@ -47,6 +51,7 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public char render() {
     return 'B';
   }
+
   /**
    * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
    * @return kode warna dan karakter binatang
@@ -55,6 +60,7 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public String renderWithColor() {
     return ANSI_YELLOW + render() + ANSI_RESET;
   }
+
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
@@ -63,10 +69,12 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public boolean isWild() {
     return true;
   }
+
   @Override
   public int getHeartChamber() {
     return 4;
   }
+
  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
@@ -75,22 +83,25 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public char getBloodTemperature() {
     return 'h';
   }
+
   /**
    * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
   public double getVegRatio() {
-  return 0;
+    return 0;
   }
+
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
    */
   @Override
   public double getMeatRatio() {
-  return 0.05;
+    return 0.05;
   }
+
   /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
@@ -99,6 +110,7 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public double countConsumedVeggie() {
     return weight*getVegRatio();
   }
+
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
@@ -107,20 +119,30 @@ public class Bear extends Animal implements LandAnimal, Carnivore, Mammalia {
   public double countConsumedMeat() {
     return weight*getMeatRatio();
   }
+
   /**
    * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getFirstHabitat(){
+  public char getFirstHabitat() {
     return 'L';
   }
+
   /**
    * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getSecondHabitat(){
+  public char getSecondHabitat() {
     return 'L';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari
+   */
+  @Override
+  public void run() {
+    System.out.println("I'm running!");
   }
 }

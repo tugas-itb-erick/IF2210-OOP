@@ -13,6 +13,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public Frog() {
     super();
   }
+
   /**
    * Consructor dengan parameter
    * @param _name nama binatang
@@ -24,14 +25,16 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public Frog(String _name, double _weight, Sex _s, int _r, int _c) {
     super(_name,  _weight, _s,  _r, _c);
   }
+
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
+  @Override
   public Frog clone() {
-    Frog F = new Frog(name,weight,sex,row,col);
-    return F;
+    return new Frog(name,weight,sex,row,col);
   }
+
   /**
     * Menampilkan interaksi hewan ke layar
     */
@@ -39,6 +42,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public void interact() {
     System.out.println("Croag.... Croag.... Ribbet... Ribbet...");
   }
+
   /**
    * Mengembalikan karakter id tiap hewan
    * @return karakter tiap hewan
@@ -47,6 +51,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public char render() {
     return 'F';
   }
+
   /**
    * Mengembalikan warna dari hewan
    * @return warna cetak hewan
@@ -55,6 +60,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public String renderWithColor() {
     return ANSI_GREEN + render() + ANSI_RESET;
   }
+
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
@@ -63,10 +69,12 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public boolean isWild() {
     return false;
   }
-    @Override
+
+  @Override
   public int getHeartChamber() {
     return 4;
   }
+
  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
@@ -75,6 +83,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public char getBloodTemperature() {
     return 'c';
   }
+
   /**
    * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -83,6 +92,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public double getVegRatio() {
     return 0;
   }
+
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -91,6 +101,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public double getMeatRatio() {
     return 0.03;
   }
+
   /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
@@ -99,6 +110,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public double countConsumedVeggie() {
     return weight*getVegRatio();
   }
+
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
@@ -107,6 +119,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public double countConsumedMeat() {
     return weight*getMeatRatio();
   }
+
   /**
    * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -115,6 +128,7 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   public char getFirstHabitat(){
     return 'L';
   }
+
   /**
    * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -122,5 +136,21 @@ public class Frog extends Animal implements LandAnimal, WaterAnimal, Carnivore, 
   @Override
   public char getSecondHabitat(){
     return 'W';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari
+   */
+  @Override
+  public void run() {
+    System.out.println("I'm running and jumping!");
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berenang
+   */
+  @Override
+  public void swim() {
+    System.out.println("I can swim too!");
   }
 }

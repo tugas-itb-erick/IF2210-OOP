@@ -13,7 +13,7 @@ public class Whale extends Animal implements WaterAnimal, Carnivore, Mammalia {
   public Whale() {
     super();
   }
-  
+
   /**
    * Constructor dengan parameter
    * @param _name nama hewan
@@ -31,8 +31,7 @@ public class Whale extends Animal implements WaterAnimal, Carnivore, Mammalia {
    * @return hewan yang ingin diduplikasi
    */
   public Whale clone() {
-    Whale out = new Whale(name,weight,sex,row,col);
-    return out;
+    return new Whale(name,weight,sex,row,col);
   }
 
   /**
@@ -136,5 +135,13 @@ public class Whale extends Animal implements WaterAnimal, Carnivore, Mammalia {
   @Override
   public char getSecondHabitat(){
     return 'W';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berenang
+   */
+  @Override
+  public void swim() {
+    System.out.println("I'm swimming!");
   }
 }

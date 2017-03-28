@@ -13,6 +13,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public Alligator() {
     super();
   }
+
   /**
    * Consructor dengan parameter
    * @param _name nama binatang
@@ -24,14 +25,16 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public Alligator(String _name, double _weight, Sex _s, int _r, int _c) {
   	super(_name,  _weight, _s,  _r, _c);
   }
+
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
+  @Override
   public Alligator clone() {
-    Alligator A = new Alligator(name,weight,sex,row,col);
-    return A;
+    return new Alligator(name,weight,sex,row,col);
   }
+
   /**
    * Menampilkan interaksi hewan ke layar
    */
@@ -39,6 +42,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public void interact() {
   	System.out.println("Hiss.....");
   }
+
   /**
    * Mengembalikan karakter id tiap hewan
    * @return karakter tiap hewan
@@ -47,6 +51,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public char render() {
     return 'A';
   }
+
   /**
    * Mengembalikan warna dari hewan
    * @return warna cetak hewan
@@ -55,6 +60,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public String renderWithColor() {
     return ANSI_GREEN + render() + ANSI_RESET;
   }
+
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
@@ -63,6 +69,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public boolean isWild() {
     return true;
   }
+
   /**
    * Mengembalikan jumlah ruang jantung hewan
    * @return jumlah ruang jantung hewan
@@ -71,6 +78,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public int getHeartChamber() {
 	  return 4;
   }
+
  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
@@ -79,6 +87,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public char getBloodTemperature() {
 	  return 'c';
   }
+
   /**
    * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -87,6 +96,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public double getVegRatio() {
 	  return 0;
   }
+
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -95,6 +105,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public double getMeatRatio() {
 	  return 0.2;
   }
+
   /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
@@ -103,6 +114,7 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public double countConsumedVeggie() {
     return weight*getVegRatio();
   }
+
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
@@ -111,20 +123,38 @@ public class Alligator extends Animal implements LandAnimal, WaterAnimal, Carniv
   public double countConsumedMeat() {
     return weight*getMeatRatio();
   }
+
   /**
    * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getFirstHabitat(){
+  public char getFirstHabitat() {
     return 'L';
   }
+
   /**
    * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
    */
   @Override
-  public char getSecondHabitat(){
+  public char getSecondHabitat() {
     return 'W';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari
+   */
+  @Override
+  public void run() {
+    System.out.println("I'm running!");
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berenang
+   */
+  @Override
+  public void swim() {
+    System.out.println("I'm swimming!");
   }
 }

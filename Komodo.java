@@ -13,6 +13,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public Komodo() {
     super();
   }
+
   /**
    * Constructor dengan parameter
    * @param _name nama hewan
@@ -24,14 +25,16 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public Komodo(String _name, double _weight, Sex _s, int _r, int _c) {
     super(_name, _weight, _s, _r, _c);
   }
+
   /**
    * Melakukan clone hewan
    * @return hewan yang ingin diduplikasi
    */
+  @Override
   public Komodo clone() {
-    Komodo out = new Komodo(name,weight,sex,row,col);
-      return out;
+    return new Komodo(name,weight,sex,row,col);
   }
+
   /**
    * Menampilkan interaksi hewan
    */
@@ -39,6 +42,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public void interact() {
     System.out.println("So amazing komodo!!");
   }
+
   /**
    * Mengembalikan karakter dari binatang untuk ditampilkan
    * @return karakter dari binatang
@@ -47,6 +51,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public char render() {
     return 'K';
   }
+
   /**
    * Mengembalikan string berisi kode warna dan karakter dari binatang untuk ditampilkan
    * @return kode warna dan karakter binatang
@@ -55,6 +60,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public String renderWithColor() {
     return ANSI_YELLOW + render() + ANSI_RESET;
   }
+
   /**
    * Mengembalikan liar/tidaknya binatang
    * @return true jika liar, false jika jinak
@@ -63,11 +69,13 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public boolean isWild() {
     return true;
   }
-    @Override
+
+  @Override
   public int getHeartChamber() {
     return 4;
   }
- /**
+
+  /**
    * Mengembalikan jenis darah hewan ('h'/'c')
    * @return jenis darah hewan ('h'/'c')
    */
@@ -75,6 +83,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public char getBloodTemperature() {
     return 'c';
   }
+
   /**
    * Mengembalikan jumlah ratio sayur yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -83,6 +92,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public double getVegRatio() {
     return 0;
   }
+
   /**
    * Mengembalikan jumlah ratio daging yang dibutuhkan terhadap berat hewan
    * @return ratio sayur yang dibutuhkan hewan
@@ -91,6 +101,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public double getMeatRatio() {
     return 0.05;
   }
+
   /**
    * Mengembalikan jumlah sayur yang dikonsumsi
    * @return jumlah sayur yang dikonsumsi
@@ -99,6 +110,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public double countConsumedVeggie() {
     return weight*getVegRatio();
   }
+
   /**
    * Mengembalikan jumlah daging yang dikonsumsi
    * @return jumlah daging yang dikonsumsi
@@ -107,6 +119,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public double countConsumedMeat() {
     return weight*getMeatRatio();
   }
+
   /**
    * Mengembalikan habitat pertama, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -115,6 +128,7 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   public char getFirstHabitat(){
     return 'L';
   }
+
   /**
    * Mengembalikan habitat kedua, didefinisikan pada kelas yang mengimplemen.
    * @return karakter yang merepresentasikan habitat
@@ -122,5 +136,13 @@ public class Komodo extends Animal implements LandAnimal, Carnivore, Reptilia {
   @Override
   public char getSecondHabitat(){
     return 'L';
+  }
+
+  /**
+   * Mencetak tulisan yang merepresentasi objek pengimplemen sedang berlari
+   */
+  @Override
+  public void run() {
+    System.out.println("I'm running!");
   }
 }
