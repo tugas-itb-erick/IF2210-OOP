@@ -2,6 +2,7 @@ package renderable.cage;
 
 import static org.junit.Assert.*;
 
+import animal.sex.Sex;
 import animal.species.*;
 import org.junit.Before;
 import org.junit.Test;
