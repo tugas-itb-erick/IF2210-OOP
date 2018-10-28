@@ -1,2 +1,2 @@
-# virtual-zoo-java
+# Virtual Zoo
 Virtual Zoo in JAVA

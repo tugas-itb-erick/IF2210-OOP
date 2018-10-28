@@ -1,2 +1,2 @@
-# vz02-java
+# VZ02
 Virtual Zoo VZ02 Java
