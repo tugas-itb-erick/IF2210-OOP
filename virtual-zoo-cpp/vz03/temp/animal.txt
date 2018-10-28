@@ -1,0 +1,4 @@
+Cendrawasih cen  321  f 1 0
+Elephant    lol  1244 m 2 2
+Tiger       mon  21   m 2 3
+Piranha     ike  1    f 2 5

@@ -1,0 +1,10 @@
+src/animal/animal.cpp
+src/animal/animal.h
+src/cage/cage.cpp
+src/cage/cage.h
+src/cell/cell.cpp
+src/cell/cell.h
+src/main.cpp
+src/other/other.h
+src/zoo/zoo.cpp
+src/zoo/zoo.h
